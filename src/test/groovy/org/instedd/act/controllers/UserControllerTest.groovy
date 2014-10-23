@@ -15,7 +15,7 @@ class UserControllerTest extends Specification{
     
     def "controller indexes users"() {
         setup:
-        controller.create([organization: 'msf-spain', location: 'Sierra Leone/Northern Province/Kambia District/Kambia'])
+        controller.create(organization: 'msf-spain', location: 'Sierra Leone/Northern Province/Kambia District/Kambia')
         when:
         def users = controller.index()
         then:

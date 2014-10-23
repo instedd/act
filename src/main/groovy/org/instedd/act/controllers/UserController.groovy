@@ -7,7 +7,7 @@ class UserController {
     def users = []
     
     def index() {
-        return users
+        users
     }
     
     def create(params) {
