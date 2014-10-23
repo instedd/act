@@ -11,7 +11,8 @@ class UserController {
     }
     
     def create(params) {
-        users.add(new User(params.organization, params.location))
+        def user = new User(params.organization, params.location)
+        users.add(user)
     }
 
 }
