@@ -17,4 +17,22 @@ class JSONExporter {
         json name: aCase.patientName, phone: aCase.patientPhone, age: aCase.patientAge, sex: aCase.patientSex, reason: aCase.reason
         json.toString()
     }
+    
+    def write(object) {
+        this.fileFor(object).withWriter { out ->
+            out.writeLine(this.toJSON(object))
+        }
+    }
+    
+    // FIXME: refactor
+    def fileFor(object) {
+        new File(targetDirectory, object.hashCode() + ".json")
+    }
+    
+    File targetDirectory
+    
+    def JSONExporter() {
+        targetDirectory = new File("json/export")
+        targetDirectory.mkdirs()
+    }
 }
