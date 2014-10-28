@@ -6,8 +6,8 @@ class User {
     def User() {
         //default constructor
     }
-    def User(organization, locationList) {
+    def User(organization, location) {
         this.organization = organization
-        this.location = locationList.split('/')
+        this.location = location
     }
 }

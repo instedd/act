@@ -12,7 +12,7 @@ class JSONExporterTest extends Specification{
 
     def "serializes users"() {
         setup:
-        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia')
+        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia'.split("/"))
         when:
         def jsonUser = exporter.toJSON(user)
         def parsedUser = parser.parseText(jsonUser)
@@ -37,7 +37,7 @@ class JSONExporterTest extends Specification{
     
     def "writes users"() {
         setup:
-        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia')
+        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia'.split("/"))
         File outputFile = new File(exporter.targetDirectory, user.hashCode() + ".json")
         when:
         exporter.write(user)
@@ -70,7 +70,7 @@ class JSONExporterTest extends Specification{
     
     def "writes in custom paths"() {
         setup:
-        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia')
+        def user = new User('msf-spain', 'Sierra Leone/Northern Province/Kambia District/Kambia'.split("/"))
         def targetDirectory = new File("tmp/dir")
         targetDirectory.mkdirs()
         def targetFile = new File(targetDirectory, user.hashCode() + ".json")
