@@ -7,25 +7,31 @@ class RsyncDaemon {
     String targetDir
     String sourceHost
     String targetHost
+    Boolean waitingForSync = false
     
-    def watch() {
-        while (true) {
-            try {
+    def requestSync() {
+        if (!waitingForSync) {
+            this.waitingForSync = true
+            Thread.start {
                 this.sync()
-                System.sleep(5000)
-            } catch (Exception exception) {
-                println("Exception while rsync watching:")
-                exception.printStackTrace();
+                this.waitingForSync = false
             }
         }
     }
 
-    def sync() {
+    synchronized sync() {
+        def stdout = new StringBuffer()
+        def stderr = new StringBuffer()
+        
         def command = this.commandLine()
         println(command)
-        def process = command.execute()
-        println(process.text)
-        println(process.err.text)
+        
+        Process process = command.execute()
+        process.consumeProcessOutput(stdout, stderr)
+        process.waitFor()
+        
+        println(stdout)
+        println(stderr)
     }
 
     def commandLine() {
