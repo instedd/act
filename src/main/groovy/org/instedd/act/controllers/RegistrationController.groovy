@@ -42,7 +42,7 @@ class RegistrationController {
 		view.clearError()
 		
 		def organizationName = view.organizationName
-		def locationPath = view.locationPath.findAll { l -> !l.empty }
+		def locationPath = view.locationPath
 
 		boolean missingOrganization = Strings.isNullOrEmpty(organizationName)
 		boolean missingLocation = locationPath.empty

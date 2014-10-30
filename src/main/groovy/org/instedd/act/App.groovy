@@ -1,7 +1,8 @@
 package org.instedd.act
 
-import org.instedd.act.models.DataStore;
-import org.instedd.act.models.LocationTree;
+import org.instedd.act.models.DataStore
+import org.instedd.act.models.Location
+import org.instedd.act.models.LocationTree
 
 import com.google.inject.Binder
 import com.google.inject.Guice
@@ -20,11 +21,11 @@ class App {
 
 		def mockLocationTree = [
 			rootLocations: {
-				["Guinea", "Liberia", "Nigeria", "Sierra Leone"]
+				["Guinea", "Liberia", "Nigeria", "Sierra Leone"].collect { name -> new Location(1L, name) }
 			},
 			children: { path ->
-				if (path.length < 3) {
-					[1,2,3].collect { i -> "${path.last()} > ${i}" }
+				if (path.size() < 3) {
+					[1,2,3].collect { i -> new Location(Long.valueOf(i), "${path.last()} > ${i}") }
 				} else {
 					[]
 				}

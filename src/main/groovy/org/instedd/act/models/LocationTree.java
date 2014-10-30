@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface LocationTree {
 
-	List<String> rootLocations();
+	List<Location> rootLocations();
 
-	List<String> children(String[] path);
+	List<Location> children(List<Location> path);
 	
 }

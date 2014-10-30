@@ -1,6 +1,5 @@
 package org.instedd.act.ui
 
-import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridBagConstraints as GBC
 import java.awt.GridBagLayout
@@ -14,6 +13,7 @@ import javax.swing.JPanel
 import javax.swing.JTextField
 
 import org.instedd.act.controllers.RegistrationController
+import org.instedd.act.models.Location
 
 
 class RegistrationForm extends JFrame {
@@ -142,7 +142,7 @@ class RegistrationForm extends JFrame {
 		fieldsContainer.updateUI()
 	}
 	
-	String[] locationPathUntilLevel(int level) {
+	List<Location> locationPathUntilLevel(int level) {
 		locationPath.take(level + 1)
 	}
 	
@@ -150,8 +150,8 @@ class RegistrationForm extends JFrame {
 		organizationInput.text
 	}
 	
-	String[] getLocationPath() {
-		locationSelectors.collect { selector -> selector.selectedItem }
+	List<Location> getLocationPath() {
+		locationSelectors.collect { selector -> selector.selectedItem }.findAll { l -> l != "" }
 	}
 	
 	void displayError(String error) {
