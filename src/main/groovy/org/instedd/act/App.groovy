@@ -1,6 +1,7 @@
 package org.instedd.act
 
 import org.instedd.act.models.DataStore
+import org.instedd.act.models.JsonDataStore;
 import org.instedd.act.models.Location
 import org.instedd.act.models.LocationTree
 
@@ -16,7 +17,6 @@ class App {
 		injector.getInstance(AppUI.class).start()
 	}
 
-	
 	static class ActModule implements Module {
 
 		def mockLocationTree = [
@@ -32,13 +32,8 @@ class App {
 			}
 		] as LocationTree
 		
-		def mockDataStore = [ 
-			isUserRegistered: { false },
-			register: { user -> println "User for organization ${user.organization} registered in ${user.location}" }
-		] as DataStore
-	
 		void configure(Binder binder) {
-			binder.bind(DataStore.class).toInstance(mockDataStore)
+			binder.bind(DataStore.class).to(JsonDataStore.class)
 			binder.bind(LocationTree.class).toInstance(mockLocationTree)
 		}
 

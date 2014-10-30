@@ -1,13 +1,13 @@
 package org.instedd.act.models
 
 class User {
-    String organization
-    List<String> location
-    def User() {
-        //default constructor
-    }
-    def User(organization, location) {
+
+	String organization
+    Location location
+
+	def User(String organization, Location location) {
         this.organization = organization
         this.location = location
     }
+
 }

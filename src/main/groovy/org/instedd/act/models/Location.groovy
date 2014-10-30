@@ -3,11 +3,11 @@ package org.instedd.act.models
 
 class Location {
 
-	long geonameId;
+	long id;
 	String name;
 	
-	Location(long geonameId, String name) {
-		this.geonameId = geonameId
+	Location(long id, String name) {
+		this.id = id
 		this.name = name
 	}
 

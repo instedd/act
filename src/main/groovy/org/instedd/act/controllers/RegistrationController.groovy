@@ -54,7 +54,7 @@ class RegistrationController {
 		} else if (missingLocation){
 			view.displayError("Please specify your location.")
 		} else {
-			def user = new User(organizationName, locationPath)
+			def user = new User(organizationName, locationPath.last())
 			dataStore.register(user)
 		}
 	}
