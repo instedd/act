@@ -27,7 +27,7 @@ class LocationsTreeGenerator {
     }
     
     def saveTree(tree, outputFile) {
-        new File(outputFile).withWriter { out ->
+        new File(outputFile).withWriter('UTF-8') { out ->
             def builder = new JsonBuilder(tree)
             out.write(packed ? builder.toString() : builder.toPrettyString())
         }

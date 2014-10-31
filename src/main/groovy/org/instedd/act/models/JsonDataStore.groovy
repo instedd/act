@@ -26,7 +26,7 @@ class JsonDataStore implements DataStore {
 	@Override
 	public synchronized void register(User user) {
 		Preconditions.checkState(!userRegistered)
-		new File(targetDirectory, "user.json").withWriter { out ->
+		new File(targetDirectory, "user.json").withWriter('UTF-8') { out ->
 			out.writeLine(this.userJson(user))
 		}
 	}

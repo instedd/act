@@ -22,7 +22,7 @@ class LocationsCrawler {
     }
     
     def saveTree(tree, outputFile) {
-        new File(outputFile).withWriter { out ->
+        new File(outputFile).withWriter('UTF-8') { out ->
             def builder = new JsonBuilder(tree)
             out.write(packed ? builder.toString() : builder.toPrettyString())
         }
@@ -48,7 +48,7 @@ class LocationsCrawler {
     def save(id, data) {
         def isError = this.isStatusMessageError(data.status?.message)
         def newFile = new File(this.outputDir, "${ isError ? 'errored-' : ''}${id}.json")
-        newFile.withWriter { out ->
+        newFile.withWriter('UTF-8') { out ->
             out.writeLine(data.toString())
         }
         println "Writting ${id} to ${newFile.path}"
