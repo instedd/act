@@ -1,5 +1,7 @@
 package org.instedd.act.models
 
+import org.instedd.act.App;
+
 import groovy.json.JsonBuilder
 
 import com.google.common.base.Preconditions
@@ -9,7 +11,7 @@ class JsonDataStore implements DataStore {
 	File targetDirectory
 	
 	JsonDataStore() {
-		this(new File("json/export"))
+		this(new File(App.JSON_SYNC_PATH))
 	}
 	
 	JsonDataStore(File targetDirectory) {

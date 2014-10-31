@@ -33,5 +33,5 @@ class AppUI {
 	void registrationDone() {
 		new NewCaseForm().visible = true
 	}
-		
+
 }
