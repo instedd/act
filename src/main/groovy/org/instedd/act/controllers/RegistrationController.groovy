@@ -1,15 +1,18 @@
 package org.instedd.act.controllers
 
-import org.instedd.act.models.DataStore;
-import org.instedd.act.models.LocationTree;
+import org.instedd.act.AppUI
+import org.instedd.act.models.DataStore
+import org.instedd.act.models.LocationTree
 import org.instedd.act.models.User
+import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
 
-import com.google.common.base.Strings;
+import com.google.common.base.Strings
 import com.google.inject.Inject
 
 class RegistrationController {
 
+	@Inject AppUI app
 	@Inject DataStore dataStore
 	@Inject LocationTree locationTree
 	
@@ -56,6 +59,8 @@ class RegistrationController {
 		} else {
 			def user = new User(organizationName, locationPath.last())
 			dataStore.register(user)
+			view.dispose()
+			app.registrationDone()
 		}
 	}
 		

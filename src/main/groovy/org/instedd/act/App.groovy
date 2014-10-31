@@ -33,7 +33,7 @@ class App {
 		] as LocationTree
 		
 		void configure(Binder binder) {
-			binder.bind(DataStore.class).to(JsonDataStore.class)
+			binder.bind(DataStore.class).to(JsonDataStore.class).asEagerSingleton();
 			binder.bind(LocationTree.class).toInstance(mockLocationTree)
 		}
 

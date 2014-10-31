@@ -25,9 +25,13 @@ class AppUI {
 			if (!dataStore.isUserRegistered()) {
 				registrationController.buildView()
 			} else {
-				new NewCaseForm().visible = true
+				registrationDone();
 			}
 		}
 	}
-	
+
+	void registrationDone() {
+		new NewCaseForm().visible = true
+	}
+		
 }
