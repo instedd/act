@@ -12,6 +12,7 @@ import javax.swing.WindowConstants;
 
 import org.instedd.act.controllers.RegistrationController
 import org.instedd.act.models.DataStore;
+import org.instedd.act.sync.Daemon
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
 
@@ -19,6 +20,7 @@ class AppUI {
 
 	@Inject DataStore dataStore
 	@Inject RegistrationController registrationController
+	@Inject Daemon daemon
 	
 	void start() {
 		SwingUtilities.invokeLater {
@@ -31,6 +33,7 @@ class AppUI {
 	}
 
 	void registrationDone() {
+		daemon.requestSync()
 		new NewCaseForm().visible = true
 	}
 

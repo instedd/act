@@ -4,12 +4,11 @@ import com.google.common.base.Preconditions;
 
 class RsyncSynchronizer implements DocumentSynchronizer {
     
-	String baseCommand = "rsync -avz --remove-source-files"
+	String baseCommand = "rsync -avz"
     String sourceDir
     String targetDir
     String sourceHost
     String targetHost
-    Boolean waitingForSync = false
 
 	RsyncSynchronizer() {
 		checkRsyncAvailable()
@@ -39,16 +38,6 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		}
 	}
 	
-	def requestSync() {
-		if (!waitingForSync) {
-			this.waitingForSync = true
-			Thread.start {
-				this.syncDocuments()
-				this.waitingForSync = false
-			}
-		}
-	}
-
 	def commandLine() {
 		String command = "${baseCommand} "
 		if (sourceHost) {
