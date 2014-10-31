@@ -1,17 +1,20 @@
 package org.instedd.act.models
 
-import org.instedd.act.App;
-
 import groovy.json.JsonBuilder
 
+import org.instedd.act.App
+import org.instedd.act.Settings
+
 import com.google.common.base.Preconditions
+import com.google.inject.Inject
 
 class JsonDataStore implements DataStore {
 
 	File targetDirectory
 	
-	JsonDataStore() {
-		this(new File(App.JSON_SYNC_PATH))
+	@Inject
+	JsonDataStore(Settings settings) {
+		this(new File(settings.get("sync.sourceDir")))
 	}
 	
 	JsonDataStore(File targetDirectory) {

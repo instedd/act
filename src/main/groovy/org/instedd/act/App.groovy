@@ -14,11 +14,6 @@ import com.google.inject.Module
 
 class App {
 
-	static String JSON_SYNC_PATH = "store"
-	
-	/** time in minutes between the end of a synchronization task and the beginning of the next one */
-	static int JSON_SYNC_INTERVAL = 1
-	
 	static main(args) {
 		def injector = Guice.createInjector(new ActModule())
 		
@@ -29,6 +24,7 @@ class App {
 	static class ActModule implements Module {
 		
 		void configure(Binder binder) {
+			binder.bind(Settings.class).asEagerSingleton();
 			binder.bind(DataStore.class).to(JsonDataStore.class).asEagerSingleton();
 			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations-packed.json')))
 			binder.bind(DocumentSynchronizer.class).toInstance(new RsyncSynchronizer([sourceDir: 'store/', targetDir: '/tmp/store']))
