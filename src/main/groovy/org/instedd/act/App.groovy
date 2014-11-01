@@ -27,7 +27,7 @@ class App {
 			binder.bind(Settings.class).asEagerSingleton();
 			binder.bind(DataStore.class).to(JsonDataStore.class).asEagerSingleton();
 			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations-packed.json')))
-			binder.bind(DocumentSynchronizer.class).toInstance(new RsyncSynchronizer([sourceDir: 'store/', targetDir: '/tmp/store']))
+			binder.bind(DocumentSynchronizer.class).to(RsyncSynchronizer.class).asEagerSingleton();
 		}
 
 	}

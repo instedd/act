@@ -6,13 +6,18 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 import org.instedd.act.Settings
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 import com.google.common.util.concurrent.AbstractScheduledService
 import com.google.common.util.concurrent.AbstractScheduledService.Scheduler
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.inject.Inject
 
 class Daemon extends AbstractScheduledService {
 
+	protected final static Logger logger = LoggerFactory.getLogger(Daemon.class)
+	
 	@Inject DocumentSynchronizer synchronizer
 	
 	Scheduler scheduler
@@ -23,7 +28,9 @@ class Daemon extends AbstractScheduledService {
 	@Inject
 	Daemon(Settings settings) {
 		scheduler = Scheduler.newFixedDelaySchedule(0, settings.getInt("sync.interval.seconds"), TimeUnit.SECONDS)
-		manualSyncExecutor = Executors.newSingleThreadExecutor()
+		
+		def threadFactory = new ThreadFactoryBuilder().setNameFormat("manual-sync").build()
+		manualSyncExecutor = Executors.newSingleThreadExecutor(threadFactory)
 	}
 	
 	// If two consecutive manual syncs arrive, the second one will be discarded
@@ -31,19 +38,23 @@ class Daemon extends AbstractScheduledService {
 	// process.
 	public void requestSync() {
 		if (!waitingForSync.getAndSet(true)) {
+			logger.info("Submitting request for synchronization (triggered by application event)")
 			manualSyncExecutor.submit {
 				synchronizer.syncDocuments()
 				waitingForSync.set(false)
 			}
+		} else {
+			logger.info("There is already a pending synchronization process, will not trigger another one")
 		}
 	}
 	
 	@Override
 	protected void runOneIteration() throws Exception {
 		try {
+			logger.debug("Running document synchronizer")
 			synchronizer.syncDocuments();
 		} catch (Exception e) {
-			// TODO: log!
+			logger.warn("An error occurred synchronizing documents with server", e)
 		}
 	}
 
@@ -51,5 +62,5 @@ class Daemon extends AbstractScheduledService {
 	protected Scheduler scheduler() {
 		return scheduler;
 	}
-
+	
 }

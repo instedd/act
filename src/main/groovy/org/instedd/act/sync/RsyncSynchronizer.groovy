@@ -1,52 +1,76 @@
 package org.instedd.act.sync
 
+import org.apache.commons.lang.StringUtils;
+import org.instedd.act.Settings;
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Preconditions;
+import com.google.inject.Inject;
 
 class RsyncSynchronizer implements DocumentSynchronizer {
     
+	Logger logger = LoggerFactory.getLogger(RsyncSynchronizer.class)
+	
 	String baseCommand = "rsync -avz"
     String sourceDir
     String targetDir
     String sourceHost
     String targetHost
 
+	def sourceRoute() { route(sourceHost, sourceDir) }
+	def targetRoute() { route(targetHost, targetDir) }
+	def commandLine() { "${baseCommand} ${sourceRoute()} ${targetRoute()}" }
+	
 	RsyncSynchronizer() {
 		checkRsyncAvailable()
 	}
 	
+	@Inject
+	RsyncSynchronizer(Settings settings) {
+		this()
+		sourceDir  = settings.get("sync.sourceDir")
+		sourceHost = settings.get("sync.sourceHost")
+		targetDir  = settings.get("sync.targetDir")
+		targetHost = settings.get("sync.targetHost")
+		
+		logger.info("Will sync files in ${sourceRoute()} to ${targetRoute()}")
+	}
+		
 	@Override
 	public synchronized void syncDocuments() {
-        def stdout = new StringBuffer()
-        def stderr = new StringBuffer()
+        def stdoutBuffer = new StringBuffer()
+        def stderrBuffer = new StringBuffer()
         
         def command = this.commandLine()
-        println(command)
+        logger.debug("Running rsync: {}", command) 
         
         Process process = command.execute()
-        process.consumeProcessOutput(stdout, stderr)
+        process.consumeProcessOutput(stdoutBuffer, stderrBuffer)
         process.waitFor()
-        
-        println(stdout)
-        println(stderr)		
+
+		def stdout = stdoutBuffer.toString()
+		def stderr = stderrBuffer.toString()
+		if (StringUtils.isEmpty(stderr)) {
+			logger.trace("Standard output for rsync was:\n{}", stdout)        
+		} else {
+			logger.warn("Standard output for rsync was:\n{}", stdout)
+			logger.warn("Error output for rsync was:\n{}", stderr)
+		}
 	}
 	
 	void checkRsyncAvailable() {
 		try {
-			"rsync --help"
+			"rsync --help".execute()
+			logger.info("Rsync presence test successful")
 		} catch (Exception e) {
+			logger.warn("Could not run test rsync command. Please check that the executable is available.", e)
 			throw new IllegalStateException("Could not run test rsync command. Please check that the executable is available.", e) 
 		}
 	}
 	
-	def commandLine() {
-		String command = "${baseCommand} "
-		if (sourceHost) {
-			command += "${sourceHost}:"
-		}
-		command += "${sourceDir} "
-		if (targetHost) {
-			command += "${targetHost}:"
-		}
-		command += "${targetDir}"
+	def route(String host, String dir) {
+		def prefix = StringUtils.isEmpty(host) ? "" : "${host}:"
+		"${prefix}${dir}"
 	}
 }
