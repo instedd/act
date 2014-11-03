@@ -10,6 +10,7 @@
 // Apply the groovy plugin to add support for Groovy
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
+apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -31,3 +32,5 @@ dependencies {
 	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'
     compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.5.0'
 }
+
+mainClassName = "org.instedd.act.App"
