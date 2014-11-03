@@ -2,6 +2,7 @@ package org.instedd.act.sync
 
 import org.apache.commons.lang.StringUtils;
 import org.instedd.act.Settings;
+import org.instedd.act.models.DataStore;
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory;
 
@@ -27,11 +28,16 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	@Inject
-	RsyncSynchronizer(Settings settings) {
+	RsyncSynchronizer(Settings settings, DataStore dataStore) {
 		this()
+		
+		if (!dataStore.deviceIdentifierGenerated) {
+			dataStore.saveDeviceIdentifier(UUID.randomUUID().toString());
+		}
+		
 		sourceDir  = settings.get("sync.sourceDir")
 		sourceHost = settings.get("sync.sourceHost")
-		targetDir  = settings.get("sync.targetDir")
+		targetDir  = "${settings.get("sync.targetDir")}/${dataStore.deviceIdentifier}"
 		targetHost = settings.get("sync.targetHost")
 		
 		logger.info("Will sync files in ${sourceRoute()} to ${targetRoute()}")

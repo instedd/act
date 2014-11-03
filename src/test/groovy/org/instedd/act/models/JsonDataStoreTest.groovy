@@ -6,10 +6,15 @@ import com.google.common.io.Files
 
 class JsonDataStoreTest extends GroovyTestCase {
 
-	def tmpDir = Files.createTempDir()
-	def dataStore = new JsonDataStore(tmpDir)
+	File tmpDir
+	DataStore dataStore
 	
-	def cleanup() {
+	void setUp() {
+		tmpDir = Files.createTempDir()
+		dataStore = new JsonDataStore(tmpDir)
+	}
+	
+	void tearDown() {
 		tmpDir.delete()
 	}
 	
@@ -43,5 +48,28 @@ class JsonDataStoreTest extends GroovyTestCase {
 		dataStore.register(new User("instedd", new Location(1L, "Buenos Aires")))
 		assert dataStore.userRegistered == true
 	}
+
+	void "test informs no identifier was generated when first initialized"() {
+		assert dataStore.deviceIdentifierGenerated == false
+	}	
+
+	void "test informs if identifier was previously generated"() {
+		dataStore.saveDeviceIdentifier("device00001")
+		assert dataStore.deviceIdentifierGenerated == true
+		def id = dataStore.deviceIdentifier
+		assert id == "device00001"
+	}
 	
+	void "test doesn't allow to change device identifier"() {
+		dataStore.saveDeviceIdentifier("device00001")
+		shouldFail { dataStore.saveDeviceIdentifier("device00002") }
+	}
+	
+	void "test doesn't allow setting null identifier"() {
+		shouldFail(IllegalArgumentException.class) { dataStore.saveDeviceIdentifier(null) }
+	}
+	
+	void "test doesn't allow setting empty identifier"() {
+		shouldFail(IllegalArgumentException.class) { dataStore.saveDeviceIdentifier("") }
+	}
 }
