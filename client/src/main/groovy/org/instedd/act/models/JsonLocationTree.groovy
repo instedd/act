@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 class JsonLocationTree implements LocationTree {
 
     List<Location> rootLocations
-    Map<Location, Location> hierarchy = [:]
+    Map<Location, Collection<Location>> hierarchy = [:]
 
     JsonLocationTree(File locationsFile) {
         if (!locationsFile.exists()) {
