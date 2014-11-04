@@ -40,8 +40,13 @@ class Daemon extends AbstractScheduledService {
 		if (!waitingForSync.getAndSet(true)) {
 			logger.info("Submitting request for synchronization (triggered by application event)")
 			manualSyncExecutor.submit {
-				synchronizer.syncDocuments()
-				waitingForSync.set(false)
+				try {
+					synchronizer.syncDocuments()
+				} catch (Exception e) {
+					logger.warn("An error occurred synchronizing documents with server", e)
+				} finally {
+					waitingForSync.set(false)
+				}
 			}
 		} else {
 			logger.info("There is already a pending synchronization process, will not trigger another one")
