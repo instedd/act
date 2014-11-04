@@ -4,6 +4,7 @@ import org.instedd.act.AppUI
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.LocationTree
 import org.instedd.act.models.User
+import org.instedd.act.sync.DocumentSynchronizer;
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
 
@@ -14,6 +15,7 @@ class RegistrationController {
 
 	@Inject AppUI app
 	@Inject DataStore dataStore
+	@Inject DocumentSynchronizer synchronizer
 	@Inject LocationTree locationTree
 	
 	RegistrationForm view
@@ -59,6 +61,7 @@ class RegistrationController {
 		} else {
 			def user = new User(organizationName, locationPath.last())
 			dataStore.register(user)
+			synchronizer.queueForSync("user.json", user.asJson().toString())
 			view.dispose()
 			app.registrationDone()
 		}

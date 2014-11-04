@@ -1,5 +1,7 @@
 package org.instedd.act.models
 
+import groovy.json.JsonBuilder
+
 class User {
 
 	String organization
@@ -10,4 +12,10 @@ class User {
         this.location = location
     }
 
+	def asJson() {
+		def json = new JsonBuilder()
+		json organization: organization, location: location.id
+		json
+	}
+	
 }

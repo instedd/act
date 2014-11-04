@@ -5,5 +5,4 @@
 bin/
 build/
 
-store_local
-store_server
+data

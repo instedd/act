@@ -16,7 +16,7 @@ class JsonDataStore implements DataStore {
 	
 	@Inject
 	JsonDataStore(Settings settings) {
-		this(new File(settings.get("sync.sourceDir")))
+		this(new File(settings.get("jsonStore.path")))
 	}
 	
 	JsonDataStore(File targetDirectory) {
@@ -34,16 +34,10 @@ class JsonDataStore implements DataStore {
 	public synchronized void register(User user) {
 		Preconditions.checkState(!userRegistered, "User is already registered")
 		new File(targetDirectory, "user.json").withWriter('UTF-8') { out ->
-			out.writeLine(this.userJson(user))
+			out.writeLine(user.asJson().toString())
 		}
 	}
 	
-	def userJson(User user) {
-		def json = new JsonBuilder()
-		json organization: user.organization, location: user.location.id
-		json.toString()
-	}
-
 	@Override
 	public boolean isDeviceIdentifierGenerated() {
 		return userIdentityFile().isFile();

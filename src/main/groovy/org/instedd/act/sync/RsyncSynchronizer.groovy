@@ -1,5 +1,7 @@
 package org.instedd.act.sync
 
+import java.io.File;
+
 import org.apache.commons.lang.StringUtils;
 import org.instedd.act.Settings;
 import org.instedd.act.models.DataStore;
@@ -13,7 +15,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
     
 	Logger logger = LoggerFactory.getLogger(RsyncSynchronizer.class)
 	
-	String baseCommand = "rsync -avz"
+	String baseCommand = "rsync -avz --remove-source-files"
     String sourceDir
     String targetDir
     String sourceHost
@@ -64,6 +66,13 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			logger.warn("Error output for rsync was:\n{}", stderr)
 		}
 	}
+
+	@Override
+	public void queueForSync(String documentName, String content) {
+		new File(sourceDir, documentName).withWriter('UTF-8') { out ->
+			out.writeLine(content)
+		}
+	}
 	
 	void checkRsyncAvailable() {
 		try {
@@ -77,6 +86,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	
 	def route(String host, String dir) {
 		def prefix = StringUtils.isEmpty(host) ? "" : "${host}:"
+		dir = dir.endsWith("/") ? dir : "${dir}/"
 		"${prefix}${dir}"
 	}
 }
