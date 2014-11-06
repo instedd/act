@@ -17,14 +17,14 @@ class Case {
 
 	def asJson() {
 		def json = new JsonBuilder()
-		json id: id,
+		json guid: id,
 		name: name,
-		phone: phone,
+		phone_number: phone,
 		age: age,
 		gender: gender,
-		preferredDialect: preferredDialect,
-		reasons: reasons,
-		notes: notes
+		dialect_code: preferredDialect,
+		symptoms: reasons,
+		note: notes
 		json
 	}
 }
