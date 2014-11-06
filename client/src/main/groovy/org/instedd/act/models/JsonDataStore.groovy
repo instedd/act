@@ -1,13 +1,9 @@
 package org.instedd.act.models
 
-import groovy.json.JsonBuilder
-
-import org.apache.commons.lang.StringUtils;
-import org.instedd.act.App
 import org.instedd.act.Settings
 
 import com.google.common.base.Preconditions
-import com.google.common.base.Strings;
+import com.google.common.base.Strings
 import com.google.inject.Inject
 
 class JsonDataStore implements DataStore {
@@ -37,6 +33,13 @@ class JsonDataStore implements DataStore {
 			out.writeLine(user.asJson().toString())
 		}
 	}
+    
+    @Override
+    public synchronized void register(Case aCase) {
+        new File(targetDirectory, "case-${aCase.hashCode()}.json").withWriter('UTF-8') { out ->
+            out.writeLine(aCase.asJson().toString())
+        }
+    }
 	
 	@Override
 	public boolean isDeviceIdentifierGenerated() {

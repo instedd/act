@@ -13,4 +13,6 @@ public interface DataStore {
 	
 	void register(User user);
 	
+	void register(Case aCase);
+	
 }

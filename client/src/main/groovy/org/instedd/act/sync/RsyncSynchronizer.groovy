@@ -38,6 +38,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		}
 		
 		sourceDir  = settings.get("sync.sourceDir")
+        new File(sourceDir).mkdirs()
 		sourceHost = settings.get("sync.sourceHost")
 		targetDir  = "${settings.get("sync.targetDir")}/${dataStore.deviceIdentifier}"
 		targetHost = settings.get("sync.targetHost")

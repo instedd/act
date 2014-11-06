@@ -1,25 +1,20 @@
 package org.instedd.act
 
-import java.awt.BorderLayout;
-
-import com.google.inject.Inject;
-import com.google.inject.Injector
-
-import groovy.swing.SwingBuilder
-
 import javax.swing.SwingUtilities
-import javax.swing.WindowConstants;
 
+import org.instedd.act.controllers.CasesController
 import org.instedd.act.controllers.RegistrationController
-import org.instedd.act.models.DataStore;
+import org.instedd.act.models.DataStore
 import org.instedd.act.sync.Daemon
 import org.instedd.act.ui.NewCaseForm
-import org.instedd.act.ui.RegistrationForm
+
+import com.google.inject.Inject
 
 class AppUI {
 
 	@Inject DataStore dataStore
 	@Inject RegistrationController registrationController
+    @Inject CasesController casesController
 	@Inject Daemon daemon
 	
 	void start() {
@@ -34,7 +29,7 @@ class AppUI {
 
 	void registrationDone() {
 		daemon.requestSync()
-		new NewCaseForm().visible = true
+		casesController.buildView()
 	}
 
 }
