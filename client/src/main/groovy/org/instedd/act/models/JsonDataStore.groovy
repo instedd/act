@@ -36,7 +36,7 @@ class JsonDataStore implements DataStore {
     
     @Override
     public synchronized void register(Case aCase) {
-        new File(targetDirectory, "case-${aCase.hashCode()}.json").withWriter('UTF-8') { out ->
+        new File(targetDirectory, "case-${aCase.id}.json").withWriter('UTF-8') { out ->
             out.writeLine(aCase.asJson().toString())
         }
     }
