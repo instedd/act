@@ -2,6 +2,7 @@ class Case < ActiveRecord::Base
 
   belongs_to :device
   
+  validates_presence_of :guid
   validates_presence_of :device
 
   def self.save_from_sync_file(device_guid, file_content)
@@ -13,6 +14,7 @@ class Case < ActiveRecord::Base
     end
 
     Case.create! device_id: device_id,\
+                 guid: json["guid"],\
                  patient_name: json["name"],\
                  patient_phone_number: json["phone_number"],\
                  patient_age: json["age"].to_i,\

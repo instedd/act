@@ -4,6 +4,7 @@ describe "creation of entities based on sync'ed files" do
 
   let(:sample_case_info) do
     {
+      guid: "CASE123",
       name: "John Doe",
       phone_number: "1111111",
       age: "21",
@@ -34,6 +35,7 @@ describe "creation of entities based on sync'ed files" do
     c = Case.first
     
     expect(c.device).to eq(device)
+    expect(c.guid).to eq(sample_case_info[:guid])
     expect(c.patient_name).to eq(sample_case_info[:name])
     expect(c.patient_phone_number).to eq(sample_case_info[:phone_number])
     expect(c.patient_age).to eq(sample_case_info[:age].to_i)
