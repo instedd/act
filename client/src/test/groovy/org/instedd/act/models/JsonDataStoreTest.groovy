@@ -19,7 +19,7 @@ class JsonDataStoreTest extends GroovyTestCase {
 	}
 	
 	void "test saves a json file with user information"(){
-		dataStore.register(new User("instedd", new Location(1L, "Buenos Aires")))
+		dataStore.register(new User("instedd", new Location(1L, "Buenos Aires"), "+5491155555555"))
 		def savedFiles = tmpDir.listFiles()
 		savedFiles.size() == 1
 		def userFile = savedFiles[0]
@@ -29,10 +29,11 @@ class JsonDataStoreTest extends GroovyTestCase {
 		def json = new JsonSlurper().parse(userFile)
 		assert json.location == 1
 		assert json.organization == "instedd"
+		assert json.supervisorNumber == "+5491155555555"
 	}
 
 	void "test does not allow to register more than once"() {
-		def user = new User("instedd", new Location(1L, "Buenos Aires"))
+		def user = new User("instedd", new Location(1L, "Buenos Aires"), "+5491155555555")
 		
 		dataStore.register(user)
 		shouldFail {
@@ -45,7 +46,7 @@ class JsonDataStoreTest extends GroovyTestCase {
 	}
 	
 	void "test informs that a user was registered after registration"() {
-		dataStore.register(new User("instedd", new Location(1L, "Buenos Aires")))
+		dataStore.register(new User("instedd", new Location(1L, "Buenos Aires"), "+5491155555555"))
 		assert dataStore.userRegistered == true
 	}
 

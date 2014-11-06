@@ -24,6 +24,7 @@ class RegistrationForm extends JFrame {
 	JTextField organizationInput
 	List<JComboBox> locationSelectors = []
 	JLabel errorLabel
+	JTextField fieldSupervisorNumberInput
 	
 	RegistrationForm(RegistrationController controller) {
 		this.controller = controller
@@ -40,7 +41,7 @@ class RegistrationForm extends JFrame {
 	
 	JPanel createForm(rootLocations) {
 		def form = new JPanel(new GridBagLayout())
-		form.setPreferredSize(new Dimension(350, 220))
+		form.setPreferredSize(new Dimension(380, 380))
 		
 		//----- intro text
 		def c = new GBC()
@@ -50,17 +51,18 @@ class RegistrationForm extends JFrame {
 		c.fill = GBC.HORIZONTAL
 		c.ipady = 10
 		c.ipadx = 5
-		form.add(new JLabel("<html><p>Please enter your organization information before <br> uploading case information</p></html>"), c)
+		form.add(new JLabel("<html>Please enter your organization information before uploading case information</html>"), c)
 		
 		
 		//----- fields
 		c = new GBC()
 		c.gridy = 1
 		c.anchor = GBC.NORTH
-		c.weighty = 80
+		c.weighty = 85
 
 		fieldsContainer = new JPanel(new GridBagLayout())
 		addField "Organization", createOrganizationInput()
+		addField "<html>Field supervisor number</html>", createFieldSupervisorInput()
 		addField "Location", 	 createLocationSelector(rootLocations)
 		form.add fieldsContainer, c
 		
@@ -69,6 +71,7 @@ class RegistrationForm extends JFrame {
 		c.gridy = 2
 		c.weighty = 5
 		c.anchor = GBC.CENTER
+		c.fill = GBC.HORIZONTAL
 		
 		errorLabel = new JLabel("")
 		form.add(errorLabel, c)
@@ -87,6 +90,10 @@ class RegistrationForm extends JFrame {
 	
 	JComponent createOrganizationInput() {
 		organizationInput = new JTextField(20)
+	}
+	
+	JComponent createFieldSupervisorInput() {
+		fieldSupervisorNumberInput = new JTextField(20)
 	}
 	
 	JComboBox createLocationSelector(locations) {
@@ -150,12 +157,16 @@ class RegistrationForm extends JFrame {
 		organizationInput.text
 	}
 	
+	String getFieldSupervisorNumber() {
+		fieldSupervisorNumberInput.text
+	}
+	
 	List<Location> getLocationPath() {
 		locationSelectors.collect { selector -> selector.selectedItem }.findAll { l -> l != "" }
 	}
 	
 	void displayError(String error) {
-		errorLabel.setText(error)
+		errorLabel.setText("<html>${error}</html>")
 	}
 	
 	void clearError() {
