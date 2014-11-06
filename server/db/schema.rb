@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20141105210640) do
     t.integer  "device_id"
     t.string   "patient_name"
     t.string   "patient_phone_number"
-    t.string   "patient_age"
+    t.integer  "patient_age"
     t.string   "patient_gender"
     t.string   "dialect_code"
-    t.text     "symptoms"
+    t.string   "symptoms",             default: [], array: true
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"

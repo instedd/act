@@ -4,10 +4,10 @@ class CreateCases < ActiveRecord::Migration
       t.integer :device_id
       t.string  :patient_name
       t.string  :patient_phone_number
-      t.string  :patient_age
+      t.integer :patient_age
       t.string  :patient_gender
       t.string  :dialect_code
-      t.text    :symptoms
+      t.string  :symptoms, array: true, default: []
       t.text    :note
       t.timestamps
     end
