@@ -28,6 +28,10 @@ gem 'rails_config', '= 0.4.2'
 
 gem 'filewatcher'
 
+group :test do
+  gem "timecop"
+end
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-debugger'

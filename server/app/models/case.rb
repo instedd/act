@@ -24,4 +24,22 @@ class Case < ActiveRecord::Base
                  note: json["note"]
   end
 
+  def as_json_for_api
+    ret = self.as_json.select do |k|
+      [
+        "guid",
+        "patient_name",
+        "patient_phone_number",
+        "patient_age",
+        "patient_gender",
+        "dialect_code",
+        "symptoms",
+        "note"
+      ].include? k
+    end
+
+    ret[:timestamp] = self.created_at
+    ret
+  end
+
 end
