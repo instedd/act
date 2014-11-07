@@ -3,7 +3,7 @@ package org.instedd.act.models
 import spock.lang.*
 
 class CaseTest extends Specification{
-    def "creates users"() {
+    def "creates cases"() {
         when:
         def aCase = new Case(name: 'John Doe', phone: '55513562', age: 42, gender: 'Male', reasons: ['Has fever'])
         then:

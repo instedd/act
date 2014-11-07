@@ -3,7 +3,7 @@ package org.instedd.act.controllers
 import org.instedd.act.AppUI
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.LocationTree
-import org.instedd.act.models.User
+import org.instedd.act.models.Device
 import org.instedd.act.sync.DocumentSynchronizer;
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
@@ -57,9 +57,9 @@ class RegistrationController {
 		if (missingOrganization || missingLocation || missingSupervisorNumber) {
 			view.displayError("Please specify your organization, location and field supervisor phone number.")
 		} else {
-			def user = new User(organizationName, locationPath.last(), fieldSupervisorNumber)
-			dataStore.register(user)
-			synchronizer.queueForSync("user.json", user.asJson().toString())
+			def device = new Device(organizationName, locationPath.last(), fieldSupervisorNumber)
+			dataStore.register(device)
+			synchronizer.queueForSync("device.json", device.asJson().toString())
 			view.dispose()
 			app.registrationDone()
 		}

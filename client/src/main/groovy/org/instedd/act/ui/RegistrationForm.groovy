@@ -28,7 +28,7 @@ class RegistrationForm extends JFrame {
 	
 	RegistrationForm(RegistrationController controller) {
 		this.controller = controller
-		this.title = "User registration"
+		this.title = "Device registration"
 		this.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 		this.resizable = false
 	}

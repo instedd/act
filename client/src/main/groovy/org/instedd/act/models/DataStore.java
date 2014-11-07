@@ -9,9 +9,9 @@ public interface DataStore {
 	
 	void saveDeviceIdentifier(String identifier);
 	
-	boolean isUserRegistered();
+	boolean isDeviceRegistered();
 	
-	void register(User user);
+	void register(Device device);
 	
 	void register(Case aCase);
 	

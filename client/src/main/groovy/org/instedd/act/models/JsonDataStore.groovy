@@ -21,16 +21,16 @@ class JsonDataStore implements DataStore {
 	}
 	
 	@Override
-	public boolean isUserRegistered() {
-		def userFile = new File(targetDirectory, "user.json");
-		userFile.exists() && userFile.isFile();
+	public boolean isDeviceRegistered() {
+		def deviceFile = new File(targetDirectory, "device.json");
+		deviceFile.exists() && deviceFile.isFile();
 	}
 
 	@Override
-	public synchronized void register(User user) {
-		Preconditions.checkState(!userRegistered, "User is already registered")
-		new File(targetDirectory, "user.json").withWriter('UTF-8') { out ->
-			out.writeLine(user.asJson().toString())
+	public synchronized void register(Device device) {
+		Preconditions.checkState(!deviceRegistered, "Device is already registered")
+		new File(targetDirectory, "device.json").withWriter('UTF-8') { out ->
+			out.writeLine(device.asJson().toString())
 		}
 	}
     
@@ -43,7 +43,7 @@ class JsonDataStore implements DataStore {
 	
 	@Override
 	public boolean isDeviceIdentifierGenerated() {
-		return userIdentityFile().isFile();
+		return deviceIdentityFile().isFile();
 	}
 
 	@Override
@@ -51,15 +51,15 @@ class JsonDataStore implements DataStore {
 		Preconditions.checkArgument(!Strings.isNullOrEmpty(identifier), "Invalid identifier")
 		Preconditions.checkState(!isDeviceIdentifierGenerated(), "Device identifier was already generated")
 
-		userIdentityFile().withWriter('UTF-8') { out ->
+		deviceIdentityFile().withWriter('UTF-8') { out ->
 			out.writeLine(identifier)
 		}
 	}
 
 	@Override
 	public String getDeviceIdentifier() {
-		return userIdentityFile().text.trim();
+		return deviceIdentityFile().text.trim();
 	}
 	
-	def userIdentityFile() { new File(targetDirectory, "device_id") }
+	def deviceIdentityFile() { new File(targetDirectory, "device_id") }
 }

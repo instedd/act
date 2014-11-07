@@ -19,7 +19,7 @@ class AppUI {
 	
 	void start() {
 		SwingUtilities.invokeLater {
-			if (!dataStore.isUserRegistered()) {
+			if (!dataStore.isDeviceRegistered()) {
 				registrationController.buildView()
 			} else {
 				registrationDone();

@@ -2,13 +2,13 @@ package org.instedd.act.models
 
 import groovy.json.JsonBuilder
 
-class User {
+class Device {
 
 	String organization
     Location location
 	String supervisorNumber
 
-	def User(String organization, Location location, String supervisorNumber) {
+	def Device(String organization, Location location, String supervisorNumber) {
         this.organization = organization
         this.location = location
 		this.supervisorNumber = supervisorNumber

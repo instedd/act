@@ -1,5 +1,5 @@
 namespace :file_monitor do
-  
+
   desc "Monitor new sync'ed documents and save them in our database"
 
   task start: :environment do
@@ -19,7 +19,7 @@ namespace :file_monitor do
     device_id = parts[1]
 
     case
-    when filename.match(/user.*/)
+    when filename.match(/device.*/)
       Device.save_from_sync_file(device_id, file_content)
     when filename.match(/case.*/)
       Case.save_from_sync_file(device_id, file_content)

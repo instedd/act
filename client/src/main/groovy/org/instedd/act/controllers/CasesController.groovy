@@ -4,7 +4,6 @@ import org.instedd.act.AppUI
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.LocationTree
-import org.instedd.act.models.User
 import org.instedd.act.sync.DocumentSynchronizer;
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
