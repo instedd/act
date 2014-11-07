@@ -11,7 +11,7 @@ describe ApiController, type: :controller do
     expect(JSON.parse(response.body)).to eq([])
   end
 
-  it "returns all available events if no since_date is specified" do    
+  it "returns all available events if no since_id is specified" do    
     device.cases.create! sample_params
 
     xhr :get, :cases
@@ -20,41 +20,19 @@ describe ApiController, type: :controller do
     expect(json_response.size).to eq(1)
 
     case_json = json_response[0]
-    expect(case_json.keys).to match_array(sample_params.keys + ["timestamp"])
-    expect(case_json["timestamp"]).to be_present
+    expect(case_json.keys).to match_array(sample_params.keys + ["id"])
+    expect(case_json["id"]).to eq(device.cases.first.id)
     sample_params.each { |k, v| expect(case_json[k]).to eq(v) }
   end
 
-  it "returns only events strictly after specified date" do
-    Timecop.freeze Time.new(2000, 01, 1, 0, 0, 0, '+00:00').utc
-    device.cases.create! sample_params({guid: "CASE1"})
-    
-    Timecop.freeze Time.new(2000, 01, 1, 12, 0, 0, '+00:00').utc
-    device.cases.create! sample_params({guid: "CASE2"})
-
-    Timecop.freeze Time.new(2000, 01, 2, 0, 0, 0, '+00:00').utc
+  it "returns only events strictly after specified id" do
+    device.cases.create! sample_params({guid: "CASE1"})    
+    since_id = device.cases.create!(sample_params({guid: "CASE2"})).id
     device.cases.create! sample_params({guid: "CASE3"})
 
-    Timecop.freeze Time.new(2000, 01, 3, 0, 0, 0, '+00:00').utc
-    device.cases.create! sample_params({guid: "CASE4"})
+    xhr :get, :cases, { since_id: since_id }
 
-    xhr :get, :cases, { since_date: Time.new(2000, 01, 1, 0, 0, 0, '+00:00').utc }
-
-    expect(json_response.map { |c| c["guid"] }).to eq(["CASE2", "CASE3", "CASE4"])
-  end
-
-  it "returns dates in the same format used for querying" do
-    Timecop.freeze Time.new(2000, 01, 1, 0, 0, 0, '+00:00').utc
-    device.cases.create! sample_params({guid: "CASE1"})
-
-    xhr :get, :cases
-    max_date = json_response[0]["timestamp"]
-
-    Timecop.freeze Time.new(2000, 01, 2, 0, 0, 0, '+00:00').utc
-    device.cases.create! sample_params({guid: "CASE2"})
-
-    xhr :get, :cases, { since_date: max_date }
-    expect(json_response.map { |c| c["guid"] }).to eq(["CASE2"])
+    expect(json_response.map { |c| c["guid"] }).to eq(["CASE3"])
   end
 
   def json_response

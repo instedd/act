@@ -27,6 +27,7 @@ class Case < ActiveRecord::Base
   def as_json_for_api
     ret = self.as_json.select do |k|
       [
+        "id",
         "guid",
         "patient_name",
         "patient_phone_number",
@@ -37,9 +38,6 @@ class Case < ActiveRecord::Base
         "note"
       ].include? k
     end
-
-    ret[:timestamp] = self.created_at
-    ret
   end
 
 end
