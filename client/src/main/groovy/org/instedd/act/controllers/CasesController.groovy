@@ -4,6 +4,7 @@ import org.instedd.act.AppUI
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.LocationTree
+import org.instedd.act.sync.Daemon
 import org.instedd.act.sync.DocumentSynchronizer;
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
@@ -16,6 +17,7 @@ class CasesController {
 	@Inject AppUI app
 	@Inject DataStore dataStore
 	@Inject DocumentSynchronizer synchronizer
+	@Inject Daemon daemon
 
 	NewCaseForm view
 
@@ -74,6 +76,7 @@ class CasesController {
 			def newCase = new Case([name: name, phone: phone, age: age, gender: view.gender, preferredDialect: dialect, reasons: view.reasons, notes: view.notes])
 			dataStore.register(newCase)
 			synchronizer.queueForSync("case-${newCase.id}.json", newCase.asJson().toString())
+			daemon.requestSync()
 			view.displayMessage("Case successfully registered")
 			view.clearValues()
 		}
