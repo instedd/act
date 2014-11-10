@@ -4,6 +4,7 @@ import java.awt.Dimension
 import java.awt.GridBagConstraints as GBC
 import java.awt.GridBagLayout
 
+import javax.swing.BorderFactory
 import javax.swing.JButton
 import javax.swing.JComboBox
 import javax.swing.JComponent
@@ -41,7 +42,8 @@ class RegistrationForm extends JFrame {
 	
 	JPanel createForm(rootLocations) {
 		def form = new JPanel(new GridBagLayout())
-		form.setPreferredSize(new Dimension(380, 380))
+		form.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
+		form.setPreferredSize(new Dimension(405, 380))
 		
 		//----- intro text
 		def c = new GBC()
@@ -59,6 +61,8 @@ class RegistrationForm extends JFrame {
 		c.gridy = 1
 		c.anchor = GBC.NORTH
 		c.weighty = 85
+		c.weightx = 1
+		c.fill = GBC.HORIZONTAL
 
 		fieldsContainer = new JPanel(new GridBagLayout())
 		addField "Organization", createOrganizationInput()
@@ -121,6 +125,7 @@ class RegistrationForm extends JFrame {
 		fieldsContainer.add(label, c)
 
 		c = new GBC()
+		c.weightx = 1
 		c.gridwidth = GBC.REMAINDER
 		c.fill = GBC.HORIZONTAL
 	
