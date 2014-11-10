@@ -203,9 +203,7 @@ class NewCaseForm extends JFrame {
         nameField.text = ""
         phoneField.text = ""
         ageField.text = ""
-        genderButtons.buttons.each { button ->
-            button.setSelected(false)
-        }
+        genderButtons.clearSelection()
         dialectCombo.setSelectedIndex(-1)
         reasonsChecks.each { checkbox ->
             checkbox.setSelected(false)
