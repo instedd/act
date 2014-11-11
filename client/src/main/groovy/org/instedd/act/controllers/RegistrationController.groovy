@@ -48,16 +48,17 @@ class RegistrationController {
 		
 		def organizationName = view.organizationName
 		def locationPath = view.locationPath
-		def fieldSupervisorNumber = view.fieldSupervisorNumber
+		def supervisorName = view.supervisorName
+		def supervisorNumber = view.supervisorNumber
 
 		boolean missingOrganization = Strings.isNullOrEmpty(organizationName)
 		boolean missingLocation = locationPath.empty
-		boolean missingSupervisorNumber = Strings.isNullOrEmpty(fieldSupervisorNumber)
+		boolean missingSupervisorNumber = Strings.isNullOrEmpty(supervisorNumber)
 		
 		if (missingOrganization || missingLocation || missingSupervisorNumber) {
 			view.displayError("Please specify your organization, location and field supervisor phone number.")
 		} else {
-			def device = new Device(organizationName, locationPath.last(), fieldSupervisorNumber)
+			def device = new Device(organizationName, locationPath.last(), supervisorName, supervisorNumber)
 			dataStore.register(device)
 			synchronizer.queueForSync("device.json", device.asJson().toString())
 			view.dispose()

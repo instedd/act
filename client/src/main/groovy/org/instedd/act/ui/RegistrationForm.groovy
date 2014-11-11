@@ -25,6 +25,7 @@ class RegistrationForm extends JFrame {
 	JTextField organizationInput
 	List<JComboBox> locationSelectors = []
 	JLabel errorLabel
+	JTextField fieldSupervisorNameInput
 	JTextField fieldSupervisorNumberInput
 	
 	RegistrationForm(RegistrationController controller) {
@@ -66,7 +67,8 @@ class RegistrationForm extends JFrame {
 
 		fieldsContainer = new JPanel(new GridBagLayout())
 		addField "Organization", createOrganizationInput()
-		addField "<html>Field supervisor number</html>", createFieldSupervisorInput()
+		addField "<html>Supervisor name</html>", createSupervisorNameInput()
+		addField "<html>Supervisor number</html>", createSupervisorPhoneInput()
 		addField "Location", 	 createLocationSelector(rootLocations)
 		form.add fieldsContainer, c
 		
@@ -96,7 +98,11 @@ class RegistrationForm extends JFrame {
 		organizationInput = new JTextField(20)
 	}
 	
-	JComponent createFieldSupervisorInput() {
+	JComponent createSupervisorNameInput() {
+		fieldSupervisorNameInput = new JTextField(20)
+	}
+	
+	JComponent createSupervisorPhoneInput() {
 		fieldSupervisorNumberInput = new JTextField(20)
 	}
 	
@@ -162,7 +168,11 @@ class RegistrationForm extends JFrame {
 		organizationInput.text
 	}
 	
-	String getFieldSupervisorNumber() {
+	String getSupervisorName() {
+		fieldSupervisorNameInput.text
+	}
+	
+	String getSupervisorNumber() {
 		fieldSupervisorNumberInput.text
 	}
 	

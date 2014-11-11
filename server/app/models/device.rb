@@ -15,6 +15,7 @@ class Device < ActiveRecord::Base
       Device.create! guid: device_guid,\
                      organization_name: json["organization"],\
                      location_id: json["location"].to_i,\
+                     supervisor_name: json["supervisorName"],\
                      supervisor_phone_number: json["supervisorNumber"]
     end
   end
