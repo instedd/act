@@ -1,5 +1,9 @@
 package org.instedd.act.models
 
+import java.util.List;
+
+import groovy.json.JsonBuilder;
+import groovy.json.JsonSlurper
 import groovy.sql.Sql;
 
 import org.instedd.act.db.DatabaseConnector
@@ -29,7 +33,7 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public synchronized void register(Case aCase) {
-		throw new RuntimeException("not implemented")
+		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes])
 	}
 
 	@Override
@@ -40,13 +44,19 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public synchronized void saveDeviceIdentifier(String identifier) {
 		sql.execute("insert into device_info (guid) values (${identifier})")
-//		sql.dataSet("device_info").add([guid: identifier])
 	}
 
 	@Override
 	public String getDeviceIdentifier() {
 		sql.execute("select guid from device_info limit 1") { isResultSet, resultSet ->
 			resultSet[0]
+		}
+	}
+
+	@Override
+	public List<Case> listCases() {
+		sql.rows("select * from cases").collect { row ->
+			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick])
 		}
 	}
 }
