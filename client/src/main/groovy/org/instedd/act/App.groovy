@@ -1,9 +1,13 @@
 package org.instedd.act
 
+import org.instedd.act.db.DatabaseConnector;
+import org.instedd.act.db.Migrator
+import org.instedd.act.db.SqliteConnector;
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.JsonDataStore
 import org.instedd.act.models.JsonLocationTree
 import org.instedd.act.models.LocationTree
+import org.instedd.act.models.SqliteDataStore;
 import org.instedd.act.sync.Daemon
 import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.RsyncSynchronizer
@@ -24,10 +28,18 @@ class App {
 	static class ActModule implements Module {
 		
 		void configure(Binder binder) {
-			binder.bind(Settings.class).asEagerSingleton();
-			binder.bind(DataStore.class).to(JsonDataStore.class).asEagerSingleton();
+			Settings settings = new Settings()
+			binder.bind(Settings.class).toInstance(settings)
+			DatabaseConnector connector = new SqliteConnector(settings)
+			binder.bind(DatabaseConnector.class).toInstance(connector)
+			migrateDatabase(connector)
+			binder.bind(DataStore.class).to(SqliteDataStore.class).asEagerSingleton();
 			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations-packed.json')))
 			binder.bind(DocumentSynchronizer.class).to(RsyncSynchronizer.class).asEagerSingleton();
+		}
+		
+		void migrateDatabase(DatabaseConnector connector) {
+			new Migrator(connector).migrate()
 		}
 
 	}

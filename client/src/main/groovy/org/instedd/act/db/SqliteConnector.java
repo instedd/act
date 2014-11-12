@@ -26,7 +26,7 @@ public class SqliteConnector implements DatabaseConnector {
 			connection = DriverManager.getConnection("jdbc:sqlite:"
 					+ databaseFilename);
 
-			connection.setAutoCommit(false);
+			connection.setAutoCommit(true);
 		} catch (Exception ex) {
 			throw new RuntimeException("Sqlite connection failed, check the database: "
 					+ databaseFilename + " exists", ex);

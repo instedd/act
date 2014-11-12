@@ -14,19 +14,13 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.inject.Inject;
-
 public class Migrator {
 	public static final String MIGRATIONS_PATH = "db/migration";
 	public static final String CHANGELOG = "db/migration/changelog";
 	
 	protected final static Logger logger = LoggerFactory.getLogger(Migrator.class);
 
-	@Inject DatabaseConnector connector;
-
-	public Migrator() {
-		this(null);
-	}
+	private DatabaseConnector connector;
 
 	public Migrator(DatabaseConnector connector) {
 		this.connector = connector;
