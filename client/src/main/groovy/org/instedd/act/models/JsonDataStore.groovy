@@ -1,5 +1,7 @@
 package org.instedd.act.models
 
+import groovy.json.JsonSlurper
+
 import org.instedd.act.Settings
 
 import com.google.common.base.Preconditions
@@ -62,4 +64,12 @@ class JsonDataStore implements DataStore {
 	}
 	
 	def deviceIdentityFile() { new File(targetDirectory, "device_id") }
+	
+	@Override
+	public List<Case> listCases() {
+		targetDirectory.listFiles()
+					   .findAll { f -> f.name.startsWith("case") }
+					   .collect { f -> Case.fromJson(new JsonSlurper().parseText(f.text)) }
+					   .sort { c -> c.name }
+	}
 }

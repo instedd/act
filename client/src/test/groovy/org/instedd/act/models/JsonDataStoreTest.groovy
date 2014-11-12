@@ -73,4 +73,21 @@ class JsonDataStoreTest extends GroovyTestCase {
 	void "test doesn't allow setting empty identifier"() {
 		shouldFail(IllegalArgumentException.class) { dataStore.saveDeviceIdentifier("") }
 	}
+	
+	void "test lists saved cases"() {
+		def c = new Case([
+			id: 1,
+			name: "J",
+			phone: "111",
+			age: 25,
+			gender: "M",
+			preferredDialect: "ES",
+			reasons: ["A", "B"],
+			notes: "Nothing"])
+		
+		dataStore.register(c)
+		
+		assert dataStore.listCases().size() == 1
+		assert dataStore.listCases().contains(c)
+	}
 }

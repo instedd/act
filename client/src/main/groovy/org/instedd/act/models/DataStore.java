@@ -1,5 +1,7 @@
 package org.instedd.act.models;
 
+import java.util.List;
+
 
 public interface DataStore {
 
@@ -14,5 +16,6 @@ public interface DataStore {
 	void register(Device device);
 	
 	void register(Case aCase);
-	
+
+	List<Case> listCases();
 }

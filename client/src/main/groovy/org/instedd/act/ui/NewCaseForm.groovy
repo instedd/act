@@ -4,6 +4,7 @@ import java.awt.BorderLayout
 import java.awt.Button
 import java.awt.Color
 import java.awt.Component
+import java.awt.Dialog
 import java.awt.Dimension
 import java.awt.FlowLayout
 import java.awt.Label
@@ -14,6 +15,7 @@ import javax.swing.BoxLayout
 import javax.swing.ButtonGroup
 import javax.swing.JCheckBox
 import javax.swing.JComboBox
+import javax.swing.JDialog
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
@@ -22,13 +24,14 @@ import javax.swing.JScrollPane
 import javax.swing.JTextArea
 import javax.swing.text.DefaultStyledDocument
 
-import org.instedd.act.controllers.CasesController
+import org.instedd.act.controllers.CaseListController
+import org.instedd.act.models.Case
 
 import components.DocumentSizeFilter
 
-class NewCaseForm extends JFrame {
+class NewCaseForm extends JDialog {
     
-    CasesController controller
+    CaseListController controller
     
     TextField nameField
     TextField phoneField
@@ -77,18 +80,19 @@ class NewCaseForm extends JFrame {
         notesField.text ?: ""
     }
 
-    NewCaseForm(CasesController casesController) {
-        this.controller = casesController 
-        title = "New case"
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+    NewCaseForm(JFrame parentFrame, CaseListController casesController) {
+		super(parentFrame, "New case", Dialog.ModalityType.DOCUMENT_MODAL)
+		setLocationRelativeTo(parentFrame)
+        this.controller = casesController
+        defaultCloseOperation = JFrame.DISPOSE_ON_CLOSE
         this.resizable = false
     }
     
     def addNewCase() {
-        controller.submit()
+        controller.newCaseSubmitted()
     }
     
-    def build(contactReasons, availableDialects) {
+    def build() {
         JPanel panel = new JPanel()
         panel.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS))
@@ -130,7 +134,7 @@ class NewCaseForm extends JFrame {
         subpanel.setLayout(new BoxLayout(subpanel, BoxLayout.X_AXIS))
         subpanel.add(new Label('Dialect preference'))
         
-        dialectCombo = new JComboBox(availableDialects)
+        dialectCombo = new JComboBox(Case.AVAILABLE_DIALECTS)
         dialectCombo.setSelectedIndex(-1)
         subpanel.add(dialectCombo)
         panel.add(subpanel)
@@ -143,7 +147,7 @@ class NewCaseForm extends JFrame {
         def reasonsPanel = new JPanel()
         reasonsPanel.setLayout(new BoxLayout(reasonsPanel, BoxLayout.Y_AXIS))
         reasonsChecks = []
-        contactReasons.each { reason ->
+        Case.CONTACT_REASONS.each { reason ->
             JCheckBox reasonCheck = new JCheckBox(reason)
             reasonsPanel.add(reasonCheck)
             reasonsChecks.add(reasonCheck)
@@ -198,16 +202,5 @@ class NewCaseForm extends JFrame {
     def displayMessage(message) {
         messagesField.text = "<html>${message}</html>"
     }
-    
-    def clearValues() {
-        nameField.text = ""
-        phoneField.text = ""
-        ageField.text = ""
-        genderButtons.clearSelection()
-        dialectCombo.setSelectedIndex(-1)
-        reasonsChecks.each { checkbox ->
-            checkbox.setSelected(false)
-        }
-        notesField.text = ''
-    }
+
 }
