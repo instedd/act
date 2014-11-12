@@ -6,7 +6,7 @@ namespace :file_monitor do
     Rails.logger = Logger.new(STDOUT)
     
     @jobs = Queue.new
-    @sync_directory = Settings.sync_directory
+    @sync_directory = Settings.sync_directory_inbox
 
     enqueue_preexisting_files
     start_monitoring

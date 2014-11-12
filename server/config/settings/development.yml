@@ -1,1 +1,2 @@
-sync_directory: "../data/server/inbox"
+sync_directory_inbox: "../data/server/inbox"
+sync_directory_outbox: "../data/server/outbox"

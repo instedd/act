@@ -32,7 +32,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	def remoteInboxRoute() { route(inboxHost, remoteInboxDir) }
 	
 	def uploadCommandLine() { "${baseCommand} ${localOutboxRoute()} ${remoteOutboxRoute()}" }
-	def downloadCommandLine() { "${baseCommand} ${localInboxRoute()} ${remoteInboxRoute()}" }
+	def downloadCommandLine() { "${baseCommand} ${remoteInboxRoute()} ${localInboxRoute()}" }
 	
 	RsyncSynchronizer() {
 		checkRsyncAvailable()
