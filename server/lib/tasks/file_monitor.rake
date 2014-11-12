@@ -11,6 +11,7 @@ namespace :file_monitor do
     enqueue_preexisting_files
     start_monitoring
 
+    Rails.logger.info "Monitoring files in #{@sync_directory}..."
     while true
       next_file = @jobs.pop
       ActiveRecord::Base.transaction { process_file(next_file) }
