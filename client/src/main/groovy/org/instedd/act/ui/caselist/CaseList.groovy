@@ -66,6 +66,7 @@ class CaseList extends JFrame {
 		container.add newCaseButton
 		
 		pack()
+		setLocationRelativeTo(null)
 		visible = true
 	}
 
