@@ -19,7 +19,7 @@ class JsonDataStoreTest extends GroovyTestCase {
 	}
 	
 	void "test saves a json file with device information"(){
-		dataStore.register(new Device("instedd", new Location(1L, "Buenos Aires"), "+5491155555555"))
+		dataStore.register(new Device("instedd", new Location(1L, "Buenos Aires"), "John", "+5491155555555"))
 		def savedFiles = tmpDir.listFiles()
 		savedFiles.size() == 1
 		def deviceFile = savedFiles[0]
@@ -33,7 +33,7 @@ class JsonDataStoreTest extends GroovyTestCase {
 	}
 
 	void "test does not allow to register more than once"() {
-		def device = new Device("instedd", new Location(1L, "Buenos Aires"), "+5491155555555")
+		def device = new Device("instedd", new Location(1L, "Buenos Aires"), "John", "+5491155555555")
 		
 		dataStore.register(device)
 		shouldFail {
@@ -46,7 +46,7 @@ class JsonDataStoreTest extends GroovyTestCase {
 	}
 	
 	void "test informs that a device was registered after registration"() {
-		dataStore.register(new Device("instedd", new Location(1L, "Buenos Aires"), "+5491155555555"))
+		dataStore.register(new Device("instedd", new Location(1L, "Buenos Aires"), "John", "+5491155555555"))
 		assert dataStore.deviceRegistered == true
 	}
 
