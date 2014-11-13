@@ -13,6 +13,7 @@ class Case {
 	Collection reasons
 	String notes
 	String id = UUID.randomUUID().toString()
+	Boolean sick
 
 	static String[] CONTACT_REASONS = [
 			"Fever",
@@ -33,6 +34,18 @@ class Case {
 			"French",
 			"Kiswahili"
 	] as String[]
+	
+	
+	String followUpLabel() {
+		if (sick == null) {
+			"-"
+		} else if (sick) {
+			"Confirmed sick"
+		} else {
+			"Confirmed not sick"
+		}
+	}
+	
 	
 	def asJson() {
 		def json = new JsonBuilder()

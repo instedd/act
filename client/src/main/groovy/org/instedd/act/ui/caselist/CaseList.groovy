@@ -7,13 +7,17 @@ import javax.swing.BorderFactory
 import javax.swing.BoxLayout
 import javax.swing.JButton
 import javax.swing.JFrame
+import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTable
+import javax.swing.table.DefaultTableCellRenderer
 import javax.swing.table.TableColumn
 
 import org.instedd.act.controllers.CaseListController
 import org.instedd.act.models.Case
+
+import sun.swing.table.DefaultTableCellHeaderRenderer
 
 class CaseList extends JFrame {
 
@@ -21,17 +25,17 @@ class CaseList extends JFrame {
 	CaseTableModel tableModel
 	
 	def columnDefinitions = [
-		["Id", 					String.class],
 		["Name", 				String.class],
 		["Phone number", 		String.class],
 		["Age", 				String.class],
 		["Gender", 				String.class],
 		["Preferred Dialect", 	String.class],
 		["Reasons", 			String.class],
-		["Notes", 				String.class]
+		["Notes", 				String.class],
+		["Follow up",			String.class]
 	]
 	
-	def toRow = { Case c -> [c.id, c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes] }
+	def toRow = { Case c -> [c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
 	
 	CaseList(CaseListController controller) {
 		this.controller = controller
@@ -48,9 +52,10 @@ class CaseList extends JFrame {
 		tableModel = new CaseTableModel(columnDefinitions, toRow, cases)
 		def table = new JTable(tableModel)
 		table.fillsViewportHeight = true
+		table.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
 		column(table, "Age").preferredWidth = 35
 		column(table, "Gender").preferredWidth = 50
-		
+		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
 		
 		def gridPane = new JScrollPane(table)
 		gridPane.alignmentX = Component.CENTER_ALIGNMENT
@@ -85,5 +90,17 @@ class CaseList extends JFrame {
 	
 	void updateCases(List<Case> cases) {
 		tableModel.updateCases(cases)
+	}
+		
+	def centeredHeaderTextRenderer() {
+		def renderer = new DefaultTableCellHeaderRenderer()
+		renderer.setHorizontalAlignment(JLabel.CENTER)
+		renderer
+	}
+	
+	def followUpInformationCellRenderer() {
+		def renderer = new DefaultTableCellRenderer()
+		renderer.setHorizontalAlignment(JLabel.CENTER)
+		renderer
 	}
 }
