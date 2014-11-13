@@ -4,7 +4,6 @@ import org.instedd.act.db.DatabaseConnector;
 import org.instedd.act.db.Migrator
 import org.instedd.act.db.SqliteConnector;
 import org.instedd.act.models.DataStore
-import org.instedd.act.models.JsonDataStore
 import org.instedd.act.models.JsonLocationTree
 import org.instedd.act.models.LocationTree
 import org.instedd.act.models.SqliteDataStore;
