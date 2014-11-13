@@ -8,11 +8,13 @@ import groovy.json.JsonSlurper
 import groovy.sql.Sql;
 
 import org.instedd.act.db.DatabaseConnector
+import org.instedd.act.misc.DocumentExporter
 
 import com.google.inject.Inject
 
 class SqliteDataStore implements DataStore {
 	DatabaseConnector connector
+	@Inject DocumentExporter exporter
 	Sql sql
 	
 	@Inject
@@ -30,11 +32,13 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public synchronized void register(Device device) {
 		sql.execute("update device_info set organization = ${device.organization}, location = ${device.location.id}, supervisor_name = ${device.supervisorName}, supervisor_number = ${device.supervisorNumber}")
+		exporter.exportDeviceInfo()
 	}
 
 	@Override
 	public synchronized void register(Case aCase) {
 		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes])
+		exporter.exportCase(aCase)
 	}
 
 	@Override

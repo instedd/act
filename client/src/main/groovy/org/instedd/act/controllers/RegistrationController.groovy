@@ -4,7 +4,6 @@ import org.instedd.act.AppUI
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.LocationTree
 import org.instedd.act.models.Device
-import org.instedd.act.sync.DocumentSynchronizer;
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.RegistrationForm
 
@@ -15,7 +14,6 @@ class RegistrationController {
 
 	@Inject AppUI app
 	@Inject DataStore dataStore
-	@Inject DocumentSynchronizer synchronizer
 	@Inject LocationTree locationTree
 	
 	RegistrationForm view
@@ -60,7 +58,6 @@ class RegistrationController {
 		} else {
 			def device = new Device(organizationName, locationPath.last(), supervisorName, supervisorNumber)
 			dataStore.register(device)
-			synchronizer.queueForSync("device.json", device.asJson().toString())
 			view.dispose()
 			app.registrationDone()
 		}

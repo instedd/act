@@ -3,7 +3,6 @@ package org.instedd.act.controllers
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
 import org.instedd.act.sync.Daemon
-import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.caselist.CaseList
 
@@ -13,7 +12,6 @@ import com.google.inject.Inject
 class CaseListController {
 
 	@Inject DataStore dataStore
-	@Inject DocumentSynchronizer synchronizer
 	@Inject Daemon daemon
 
 	@Inject NewCaseController newCaseController
@@ -32,7 +30,6 @@ class CaseListController {
 
 	void caseCreated(Case newCase) {
 		dataStore.register(newCase)
-		synchronizer.queueForSync("case-${newCase.id}.json", newCase.asJson().toString())
 		daemon.requestSync()
 		
 		caseList.updateCases(dataStore.listCases())
