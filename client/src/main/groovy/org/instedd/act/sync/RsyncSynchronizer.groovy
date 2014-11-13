@@ -15,6 +15,8 @@ class RsyncSynchronizer implements DocumentSynchronizer {
     
 	Logger logger = LoggerFactory.getLogger(RsyncSynchronizer.class)
 	
+	@Inject DataStore dataStore
+	
 	String baseCommand = "rsync -iaz --remove-source-files"
 	
 	String localOutboxDir
@@ -41,6 +43,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	@Inject
 	RsyncSynchronizer(Settings settings, DataStore dataStore) {
 		this()
+		this.dataStore = dataStore
 		
 		if (!dataStore.deviceIdentifierGenerated) {
 			dataStore.saveDeviceIdentifier(UUID.randomUUID().toString());
@@ -62,37 +65,15 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 		
 	@Override
-	public synchronized void syncDocuments() {
+	public void syncDocuments() {
 		this.uploadDocuments()
 		this.downloadDocuments()
 	}
 	
-	public synchronized void uploadDocuments() {
-        def stdoutBuffer = new StringBuffer()
-        def stderrBuffer = new StringBuffer()
-        
-        def command = this.uploadCommandLine()
-        logger.debug("Running rsync: {}", command) 
-        
-        Process process = command.execute()
-        process.consumeProcessOutput(stdoutBuffer, stderrBuffer)
-        process.waitFor()
-
-		def stdout = stdoutBuffer.toString()
-		def stderr = stderrBuffer.toString()
-		if (StringUtils.isEmpty(stderr)) {
-			logger.trace("Standard output for rsync was:\n{}", stdout)        
-		} else {
-			logger.warn("Standard output for rsync was:\n{}", stdout)
-			logger.warn("Error output for rsync was:\n{}", stderr)
-		}
-	}
-	
-	public synchronized void downloadDocuments() {
+	public synchronized void sync(command, transferIndicator, onFilesTransfered) {
 		def stdoutBuffer = new StringBuffer()
 		def stderrBuffer = new StringBuffer()
 		
-		def command = this.downloadCommandLine()
 		logger.debug("Running rsync: {}", command)
 		
 		Process process = command.execute()
@@ -108,15 +89,34 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			logger.warn("Error output for rsync was:\n{}", stderr)
 		}
 		
-		def inlines = stdout.readLines().findAll({ line ->
-			line.startsWith(">")
+		def transferredLines = stdout.readLines().findAll({ line ->
+			line.startsWith(transferIndicator)
 		})
-		def receivedFilenames = inlines.collect({ line -> line.split(" ", 2)[1]})
-		if(!receivedFilenames.empty) {
-			this.onFilesReceived(receivedFilenames)
+		def transferredFilenames = transferredLines.collect({ line -> line.split(" ", 2)[1]})
+		if(!transferredFilenames.empty) {
+			onFilesTransfered(transferredFilenames)
 		}
 	}
-
+	
+	public void uploadDocuments() {
+		this.sync(this.uploadCommandLine(), ">", { files ->
+			files.each { filename ->
+				println "Uploaded ${filename}"
+				if (filename == "device.json") {
+					dataStore.registerDeviceInfoSynced()
+				}
+			}
+		})
+	}
+	
+	public void downloadDocuments() {
+		this.sync(this.downloadCommandLine(), "<", {files ->
+			files.each { filename ->
+				println "Downloaded ${filename}"
+			}
+		})
+	}
+	
 	@Override
 	public void queueForSync(String documentName, String content) {
 		new File(localOutboxDir, documentName).withWriter('UTF-8') { out ->

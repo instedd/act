@@ -1,6 +1,7 @@
 package org.instedd.act.models;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface DataStore {
@@ -18,4 +19,10 @@ public interface DataStore {
 	void register(Case aCase);
 
 	List<Case> listCases();
+	
+	boolean needsSyncDeviceInfo();
+	
+	Map<String, Object> deviceInfo();
+	
+	void registerDeviceInfoSynced();
 }

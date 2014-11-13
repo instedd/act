@@ -1,6 +1,7 @@
 package org.instedd.act.models
 
 import java.util.List;
+import java.util.Map;
 
 import groovy.json.JsonBuilder;
 import groovy.json.JsonSlurper
@@ -48,9 +49,7 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public String getDeviceIdentifier() {
-		sql.execute("select guid from device_info limit 1") { isResultSet, resultSet ->
-			resultSet[0]
-		}
+		sql.firstRow("select guid from device_info limit 1").guid
 	}
 
 	@Override
@@ -58,5 +57,22 @@ class SqliteDataStore implements DataStore {
 		sql.rows("select * from cases").collect { row ->
 			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick])
 		}
+	}
+
+	@Override
+	public boolean needsSyncDeviceInfo() {
+		def device = sql.firstRow("select location, registered from device_info limit 1")
+		device.location && !device.registered
+	}
+
+	@Override
+	public Map<String, Object> deviceInfo() {
+		def device = sql.firstRow("select * from device_info limit 1")
+		[id: device.guid, organization: device.organization, location: device.location, supervisorNumber: device.supervisor_number, supervisorName: device.supervisor_name]
+	}
+
+	@Override
+	public void registerDeviceInfoSynced() {
+		sql.execute("update device_info set registered = ${true}")
 	}
 }
