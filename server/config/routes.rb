@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'api/v1/cases'       => 'api#cases'
-  put 'api/v1/cases/:guid' => 'api#update_case'
+  get 'api/v1/cases'     => 'api#cases'
+  put 'api/v1/cases/:id' => 'api#update_case'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

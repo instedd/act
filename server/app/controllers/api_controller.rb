@@ -12,7 +12,7 @@ class ApiController < ApplicationController
   def update_case
     _case = Case.joins(:device)
                 .select("cases.*, devices.guid as device_guid")
-                .find_by_guid params[:guid]
+                .find_by_id(params[:id])
     
     unless (_case.present? && !params[:sick].nil?)
       render nothing: true, status: 400

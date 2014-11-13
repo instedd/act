@@ -42,14 +42,15 @@ describe ApiController, type: :controller do
   describe "update case with call follow up information" do
 
     before(:each) { device.cases.create! sample_params({guid: "CASE1"}) }
+    let(:case_id)  { device.cases.first.id }
 
     it "fails if case does no exist" do
-      xhr :put, :update_case, guid: "NONEXISTENT"
+      xhr :put, :update_case, id: "NONEXISTENT"
       expect(response).to be_client_error
     end
 
     it "fails if is_sick parameter is not defined" do
-      xhr :put, :update_case, guid: "CASE1"
+      xhr :put, :update_case, id: case_id
       expect(response).to be_client_error
       expect(Case.find_by_guid("CASE1").sick).to be_nil
     end
@@ -57,7 +58,7 @@ describe ApiController, type: :controller do
     it "updates updates case sick status" do
       expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", true)
 
-      xhr :put, :update_case, guid: "CASE1", sick: true
+      xhr :put, :update_case, id: case_id, sick: true
       expect(response).to be_successful
       expect(Case.find_by_guid("CASE1")).to be_sick
     end
