@@ -70,7 +70,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		this.downloadDocuments()
 	}
 	
-	public synchronized void sync(command, transferIndicator, onFilesTransfered) {
+	public synchronized void sync(command, onFilesTransfered) {
 		def stdoutBuffer = new StringBuffer()
 		def stderrBuffer = new StringBuffer()
 		
@@ -90,7 +90,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		}
 		
 		def transferredLines = stdout.readLines().findAll({ line ->
-			line.startsWith(transferIndicator)
+			line.matches(/^[<>].*/) // starts with < or >
 		})
 		def transferredFilenames = transferredLines.collect({ line -> line.split(" ", 2)[1]})
 		if(!transferredFilenames.empty) {
@@ -99,7 +99,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	public void uploadDocuments() {
-		this.sync(this.uploadCommandLine(), ">", { files ->
+		this.sync(this.uploadCommandLine(), { files ->
 			files.each { filename ->
 				println "Uploaded ${filename}"
 				if (filename == "device.json") {
@@ -115,7 +115,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	public void downloadDocuments() {
-		this.sync(this.downloadCommandLine(), "<", {files ->
+		this.sync(this.downloadCommandLine(), {files ->
 			files.each { filename ->
 				println "Downloaded ${filename}"
 			}
