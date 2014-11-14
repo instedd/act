@@ -1,0 +1,1 @@
+ALTER TABLE cases ADD synced TINYINT default 0;

@@ -17,6 +17,9 @@ class SqliteToJsonExporter implements DocumentExporter {
 		if(datastore.needsSyncDeviceInfo()) {
 			this.exportDeviceInfo()
 		}
+		datastore.unsyncedCases().each { aCase ->
+			this.exportCase(aCase)
+		}
 	}
 	@Override
 	public void exportDeviceInfo() {

@@ -25,4 +25,8 @@ public interface DataStore {
 	Map<String, Object> deviceInfo();
 	
 	void registerDeviceInfoSynced();
+	
+	List<Case> unsyncedCases();
+	
+	void registerCaseSynced(String guid);
 }

@@ -14,6 +14,7 @@ class Case {
 	String notes
 	String id = UUID.randomUUID().toString()
 	Boolean sick
+	Boolean synced
 
 	static String[] CONTACT_REASONS = [
 			"Fever",
