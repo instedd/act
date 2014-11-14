@@ -1,5 +1,7 @@
 package org.instedd.act.misc
 
+import groovy.json.JsonBuilder;
+
 import org.instedd.act.models.Case;
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.Device;
@@ -23,7 +25,7 @@ class SqliteToJsonExporter implements DocumentExporter {
 	}
 	@Override
 	public void exportDeviceInfo() {
-		synchronizer.queueForSync("device.json", datastore.deviceInfo().toString())
+		synchronizer.queueForSync("device.json", new JsonBuilder(datastore.deviceInfo()).toString())
 	}
 	@Override
 	public void exportCase(Case aCase) {
