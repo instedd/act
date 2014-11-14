@@ -29,4 +29,6 @@ public interface DataStore {
 	List<Case> unsyncedCases();
 	
 	void registerCaseSynced(String guid);
+	
+	void updateSickCase(String guid, Boolean isSick);
 }

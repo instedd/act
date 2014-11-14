@@ -1,5 +1,7 @@
 package org.instedd.act.sync
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
 import java.io.File;
 
 import org.apache.commons.lang.StringUtils;
@@ -118,8 +120,18 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		this.sync(this.downloadCommandLine(), {files ->
 			files.each { filename ->
 				println "Downloaded ${filename}"
+				def matcher = filename =~ /^case-(.+)\.json$/
+				if(matcher.matches()) {
+					File downloadedFile = this.downloadedFile(filename)
+					dataStore.updateSickCase(matcher[0][1], new JsonSlurper().parseText(downloadedFile.text).sick)
+					downloadedFile.delete()
+				}
 			}
 		})
+	}
+	
+	File downloadedFile(filename) {
+		new File(new File(this.localInboxDir), filename)
 	}
 	
 	@Override

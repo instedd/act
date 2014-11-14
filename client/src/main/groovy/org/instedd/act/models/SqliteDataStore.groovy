@@ -91,4 +91,9 @@ class SqliteDataStore implements DataStore {
 	public void registerCaseSynced(String guid) {
 		sql.execute("update cases set synced = ${true} where guid = ${guid}")
 	}
+
+	@Override
+	public void updateSickCase(String guid, Boolean isSick) {
+		sql.execute("update cases set sick = ${isSick} where guid = ${guid}")
+	}
 }
