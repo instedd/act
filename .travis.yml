@@ -1,9 +1,12 @@
 language: ruby
 rvm:
-  - 2.1.0
+- 2.1.0
 jdk:
-  - oraclejdk7
+- oraclejdk7
 gemfile: server/Gemfile
-script: 
-  - sh ./client/.travis.sh
-  - sh ./server/.travis.sh
+script:
+- sh ./client/.travis.sh
+- sh ./server/.travis.sh
+notifications:
+  slack:
+    secure: kB5YzKxwrKgHbrdAZO7WavekCTJmYWwN8b6EAODDNGRJEYymw4ROEMsNB+KtxD/cLD+Pb1YTnZ7W7MCWb/ke6SlaRzBJj4NUlLCHk1tVt/L/u7cVUC+7QfUxTHVR0RK+L5nJTozN+2b60/HHnarlKO/Fb1EUpk/xyQxbdqekRjk=
