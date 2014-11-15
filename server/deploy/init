@@ -1,0 +1,6 @@
+#! /bin/bash
+
+#FIXME: run only if DB doesn't exist
+bundle exec rake db:setup
+
+/sbin/my_init
