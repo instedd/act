@@ -81,6 +81,7 @@ test:
 production:
   <<: *default
   database: act_production
-  username: postgres
-  host: <%= ENV['ACT_POSTGRES_PORT_5432_TCP_ADDR'] %>
-  port: <%= ENV['ACT_POSTGRES_PORT_5432_TCP_PORT'] %>
+  username: <%= ENV['ACT_DATABASE_USERNAME'] %>
+  password: <%= ENV['ACT_DATABASE_PASSWORD'] %>
+  host: <%= ENV['ACT_DATABASE_HOST'] %>
+  port: <%= ENV['ACT_DATABASE_PORT'] %>
