@@ -26,6 +26,7 @@ ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/init /act/init
 
 # # Add file monitor daemon
+RUN apt-get update && apt-get install -y rsync
 ADD deploy/act-sync.pub /root/.ssh/authorized_keys
 RUN mkdir /etc/service/act-filemonitor
 ADD deploy/act-filemonitor.sh /etc/service/act-filemonitor/run
