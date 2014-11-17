@@ -38,7 +38,7 @@ class RsyncCommandBuilder {
 	def inboxRemoteRoute() { route(remoteHost, inboxRemoteDir) }
 	
 	def shellCommand() {
-		"ssh -p ${remotePort} -l ${remoteUser} -i ${remoteKey} -oStrictHostKeyChecking=no"
+		"ssh -p ${remotePort} -l ${remoteUser} -i ${remoteKey} -oStrictHostKeyChecking=no -oBatchMode=yes"
 	}
 
 	def route(String host, String dir) {
