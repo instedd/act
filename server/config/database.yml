@@ -81,5 +81,7 @@ test:
 production:
   <<: *default
   database: act_production
-  username: act
+  username: <%= ENV['ACT_DATABASE_USERNAME'] %>
   password: <%= ENV['ACT_DATABASE_PASSWORD'] %>
+  host: <%= ENV['ACT_DATABASE_HOST'] %>
+  port: <%= ENV['ACT_DATABASE_PORT'] %>
