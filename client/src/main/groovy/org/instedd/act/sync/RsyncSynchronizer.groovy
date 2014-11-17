@@ -98,7 +98,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	public void downloadDocuments() {
-		this.sync(this.downloadCommandLine(), {files ->
+		this.sync(commandBuilder.buildDownloadCommand(), {files ->
 			files.each { filename ->
 				logger.trace "Downloaded ${filename}"
 				def matcher = filename =~ /^case-(.+)\.json$/
