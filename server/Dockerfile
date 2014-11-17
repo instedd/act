@@ -25,6 +25,10 @@ ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
 ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/init /act/init
 
+# Add file monitor daemon
+RUN mkdir /etc/service/act-filemonitor
+ADD deploy/act-filemonitor.sh /etc/service/act-filemonitor/run
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

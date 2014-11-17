@@ -8,6 +8,7 @@ namespace :file_monitor do
     @jobs = Queue.new
     @sync_directory = Settings.sync_directory_inbox
 
+    init_sync_directory
     enqueue_preexisting_files
     start_monitoring
 
@@ -15,6 +16,12 @@ namespace :file_monitor do
     while true
       next_file = @jobs.pop
       ActiveRecord::Base.transaction { process_file(next_file) }
+    end
+  end
+
+  def init_sync_directory
+    unless Dir.exists? @sync_directory
+      FileUtils.mkdir_p @sync_directory
     end
   end
 

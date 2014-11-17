@@ -1,0 +1,2 @@
+sync_directory_inbox: "/act/sync/inbox"
+sync_directory_outbox: "/act/sync/outbox"
