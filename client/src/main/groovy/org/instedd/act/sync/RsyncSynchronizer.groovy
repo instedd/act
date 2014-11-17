@@ -84,7 +84,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	public void uploadDocuments() {
 		this.sync(commandBuilder.buildUploadCommand(), { files ->
 			files.each { filename ->
-				println "Uploaded ${filename}"
+				logger.trace "Uploaded ${filename}"
 				if (filename == "device.json") {
 					dataStore.registerDeviceInfoSynced()
 				} else {
@@ -100,7 +100,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	public void downloadDocuments() {
 		this.sync(this.downloadCommandLine(), {files ->
 			files.each { filename ->
-				println "Downloaded ${filename}"
+				logger.trace "Downloaded ${filename}"
 				def matcher = filename =~ /^case-(.+)\.json$/
 				if(matcher.matches()) {
 					File downloadedFile = this.downloadedFile(filename)
@@ -120,10 +120,6 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		new File(commandBuilder.outboxLocalDir, documentName).withWriter('UTF-8') { out ->
 			out.writeLine(content)
 		}
-	}
-	
-	def onFilesReceived(filenames) {
-		filenames.each { filename -> println "Received ${filename}" }
 	}
 	
 	void checkRsyncAvailable() {
