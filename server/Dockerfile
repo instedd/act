@@ -10,6 +10,9 @@ CMD "/act/init"
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 
+# Install rsync
+RUN apt-get update && apt-get install -y rsync
+
 # Prepare folders
 RUN mkdir /home/app/webapp
 WORKDIR /home/app/webapp
@@ -25,8 +28,7 @@ ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
 ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/init /act/init
 
-# # Add file monitor daemon
-RUN apt-get update && apt-get install -y rsync
+# Add file monitor daemon
 ADD deploy/act-sync.pub /root/.ssh/authorized_keys
 RUN mkdir /etc/service/act-filemonitor
 ADD deploy/act-filemonitor.sh /etc/service/act-filemonitor/run
