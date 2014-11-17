@@ -2,6 +2,7 @@ package org.instedd.act.sync
 
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
+
 import java.io.File;
 
 import org.apache.commons.lang.StringUtils;
@@ -19,51 +20,35 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	
 	@Inject DataStore dataStore
 	
-	String baseCommand = "rsync -iaz --remove-source-files"
-	
-	String localOutboxDir
-	String remoteOutboxDir
-	String outboxHost
-	
-	String localInboxDir
-	String remoteInboxDir
-	String inboxHost
-
-	def localOutboxRoute() { route("", localOutboxDir) }
-	def remoteOutboxRoute() { route(outboxHost, remoteOutboxDir) }
-	
-	def localInboxRoute() { route("", localInboxDir) }
-	def remoteInboxRoute() { route(inboxHost, remoteInboxDir) }
-	
-	def uploadCommandLine() { "${baseCommand} ${localOutboxRoute()} ${remoteOutboxRoute()}" }
-	def downloadCommandLine() { "${baseCommand} ${remoteInboxRoute()} ${localInboxRoute()}" }
-	
-	RsyncSynchronizer() {
-		checkRsyncAvailable()
-	}
+	RsyncCommandBuilder commandBuilder
 	
 	@Inject
 	RsyncSynchronizer(Settings settings, DataStore dataStore) {
-		this()
 		this.dataStore = dataStore
 		
 		if (!dataStore.deviceIdentifierGenerated) {
 			dataStore.saveDeviceIdentifier(UUID.randomUUID().toString());
 		}
 		
-		localOutboxDir = settings.get("sync.outbox.localDir")
-		new File(localOutboxDir).mkdirs()
-		remoteOutboxDir = "${settings.get("sync.outbox.remoteDir")}/${dataStore.deviceIdentifier}"
-		outboxHost = settings.get("sync.outbox.remoteHost")
+		this.commandBuilder = new RsyncCommandBuilder([
+			remoteHost: settings.get('sync.remoteHost'),
+			remotePort: settings.get('sync.remotePort'),
+			remoteUser: settings.get('sync.remoteUser'),
+			remoteKey: settings.get('sync.remoteKey'),
+			
+			inboxLocalDir: settings.get('sync.inbox.localDir'),
+			inboxRemoteDir: "${settings.get('sync.inbox.remoteDir')}/${dataStore.deviceIdentifier}",
+			
+			outboxLocalDir: settings.get('sync.outbox.localDir'),
+			outboxRemoteDir: "${settings.get('sync.outbox.remoteDir')}/${dataStore.deviceIdentifier}",
+		])
 		
-		logger.info("Will sync files from ${localOutboxRoute()} to ${remoteOutboxRoute()}")
+		new File(commandBuilder.outboxLocalDir).mkdirs()
 		
-		localInboxDir = settings.get("sync.inbox.localDir")
-		new File(localInboxDir).mkdirs()
-		remoteInboxDir = "${settings.get("sync.inbox.remoteDir")}/${dataStore.deviceIdentifier}"
-		inboxHost = settings.get("sync.inbox.remoteHost")
+		checkRsyncAvailable()
 		
-		logger.info("Will sync files from ${remoteInboxRoute()} to ${localInboxRoute()}")
+		logger.info("Will sync files from ${commandBuilder.outboxLocalRoute()} to ${commandBuilder.outboxRemoteRoute()}")
+		logger.info("Will sync files from ${commandBuilder.inboxRemoteRoute()} to ${commandBuilder.inboxLocalRoute()}")
 	}
 		
 	@Override
@@ -76,7 +61,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		def stdoutBuffer = new StringBuffer()
 		def stderrBuffer = new StringBuffer()
 		
-		logger.debug("Running rsync: {}", command)
+		logger.debug("Running rsync: {}", command.toString())
 		
 		Process process = command.execute()
 		process.consumeProcessOutput(stdoutBuffer, stderrBuffer)
@@ -101,7 +86,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	public void uploadDocuments() {
-		this.sync(this.uploadCommandLine(), { files ->
+		this.sync(commandBuilder.buildUploadCommand(), { files ->
 			files.each { filename ->
 				println "Uploaded ${filename}"
 				if (filename == "device.json") {
@@ -117,7 +102,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	public void downloadDocuments() {
-		this.sync(this.downloadCommandLine(), {files ->
+		this.sync(commandBuilder.buildDownloadCommand(), {files ->
 			files.each { filename ->
 				println "Downloaded ${filename}"
 				def matcher = filename =~ /^case-(.+)\.json$/
@@ -131,12 +116,12 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 	
 	File downloadedFile(filename) {
-		new File(new File(this.localInboxDir), filename)
+		new File(new File(commandBuilder.inboxLocalDir), filename)
 	}
 	
 	@Override
 	public void queueForSync(String documentName, String content) {
-		new File(localOutboxDir, documentName).withWriter('UTF-8') { out ->
+		new File(commandBuilder.outboxLocalDir, documentName).withWriter('UTF-8') { out ->
 			out.writeLine(content)
 		}
 	}
@@ -147,7 +132,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	
 	void checkRsyncAvailable() {
 		try {
-			"rsync --help".execute()
+			commandBuilder.buildTestCommand().execute()
 			logger.info("Rsync presence test successful")
 		} catch (Exception e) {
 			logger.warn("Could not run test rsync command. Please check that the executable is available.", e)
@@ -155,9 +140,4 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		}
 	}
 	
-	def route(String host, String dir) {
-		def prefix = StringUtils.isEmpty(host) ? "" : "${host}:"
-		dir = dir.endsWith("/") ? dir : "${dir}/"
-		"${prefix}${dir}"
-	}
 }
