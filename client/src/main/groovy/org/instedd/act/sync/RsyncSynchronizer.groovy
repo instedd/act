@@ -4,6 +4,7 @@ import groovy.json.JsonSlurper
 
 import org.apache.commons.lang.StringUtils
 import org.instedd.act.Settings
+import org.instedd.act.authentication.Credentials
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -14,12 +15,13 @@ class RsyncSynchronizer implements DocumentSynchronizer {
     
 	Logger logger = LoggerFactory.getLogger(RsyncSynchronizer.class)
 	
-	@Inject DataStore dataStore
+	DataStore dataStore
+	Credentials credentials
 	
 	RsyncCommandBuilder commandBuilder
 	
 	@Inject
-	RsyncSynchronizer(Settings settings, DataStore dataStore) {
+	RsyncSynchronizer(Credentials credentials, Settings settings, DataStore dataStore) {
 		this.dataStore = dataStore
 		
 		if (!dataStore.deviceIdentifierGenerated) {
@@ -30,7 +32,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			remoteHost: settings.get('sync.remoteHost'),
 			remotePort: settings.get('sync.remotePort'),
 			remoteUser: settings.get('sync.remoteUser'),
-			remoteKey: settings.get('sync.remoteKey'),
+			remoteKey: credentials.privateKeyPath(),
 			
 			inboxLocalDir: settings.get('sync.inbox.localDir'),
 			inboxRemoteDir: "${settings.get('sync.inbox.remoteDir')}/${dataStore.deviceIdentifier}",

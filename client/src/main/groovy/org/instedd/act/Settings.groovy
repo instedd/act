@@ -23,7 +23,7 @@ class Settings {
 		props.getProperty(key)
 	}
 	
-	Strings get(String key, String defaultValue) {
+	String get(String key, String defaultValue) {
 		Optional.fromNullable(get(key)).or(defaultValue)
 	}
 	

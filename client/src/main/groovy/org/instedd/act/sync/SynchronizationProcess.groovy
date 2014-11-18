@@ -14,9 +14,9 @@ import com.google.common.util.concurrent.AbstractScheduledService.Scheduler
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.inject.Inject
 
-class Daemon extends AbstractScheduledService {
+class SynchronizationProcess extends AbstractScheduledService {
 
-	protected final static Logger logger = LoggerFactory.getLogger(Daemon.class)
+	protected final static Logger logger = LoggerFactory.getLogger(SynchronizationProcess.class)
 	
 	@Inject DocumentSynchronizer synchronizer
 	
@@ -26,7 +26,7 @@ class Daemon extends AbstractScheduledService {
 	AtomicBoolean waitingForSync = new AtomicBoolean(false)
 	
 	@Inject
-	Daemon(Settings settings) {
+	SynchronizationProcess(Settings settings) {
 		scheduler = Scheduler.newFixedDelaySchedule(0, settings.getInt("sync.interval.seconds"), TimeUnit.SECONDS)
 		
 		def threadFactory = new ThreadFactoryBuilder().setNameFormat("manual-sync").build()

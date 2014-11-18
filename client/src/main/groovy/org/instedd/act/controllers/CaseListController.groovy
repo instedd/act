@@ -2,7 +2,7 @@ package org.instedd.act.controllers
 
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
-import org.instedd.act.sync.Daemon
+import org.instedd.act.sync.SynchronizationProcess
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.caselist.CaseList
 
@@ -12,7 +12,7 @@ import com.google.inject.Inject
 class CaseListController {
 
 	@Inject DataStore dataStore
-	@Inject Daemon daemon
+	@Inject SynchronizationProcess daemon
 
 	@Inject NewCaseController newCaseController
 	

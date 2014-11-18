@@ -6,7 +6,7 @@ import org.instedd.act.controllers.CaseListController
 import org.instedd.act.controllers.NewCaseController
 import org.instedd.act.controllers.RegistrationController
 import org.instedd.act.models.DataStore
-import org.instedd.act.sync.Daemon
+import org.instedd.act.sync.SynchronizationProcess
 
 import com.google.inject.Inject
 
@@ -15,7 +15,7 @@ class AppUI {
 	@Inject DataStore dataStore
 	@Inject RegistrationController registrationController
 	@Inject CaseListController casesController
-	@Inject Daemon daemon
+	@Inject SynchronizationProcess daemon
 	
 	void start() {
 		SwingUtilities.invokeLater {

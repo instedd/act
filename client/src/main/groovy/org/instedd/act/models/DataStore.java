@@ -31,4 +31,5 @@ public interface DataStore {
 	void registerCaseSynced(String guid);
 	
 	void updateSickCase(String guid, Boolean isSick);
+	
 }
