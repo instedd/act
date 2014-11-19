@@ -21,13 +21,12 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public boolean isDeviceRegistered() {
-		def info = sql.firstRow("select organization, location, supervisor_number from device_info limit 1")
-		info && info.organization && info.location && info.supervisor_number
+	public boolean userInfoCompleted() {
+		sql.firstRow("select organization from device_info") != null
 	}
 
 	@Override
-	public synchronized void register(Device device) {
+	public synchronized void storeDeviceInfo(Device device) {
 		sql.execute("insert into device_info(organization, location, supervisor_name, supervisor_number) values (${device.organization}, ${device.location.id}, ${device.supervisorName}, ${device.supervisorNumber})")
 	}
 
@@ -45,7 +44,7 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public boolean needsSyncDeviceInfo() {
+	public boolean isDeviceKeyRegistered() {
 		def device = sql.firstRow("select registered from device_info limit 1")
 		device && !device.registered
 	}

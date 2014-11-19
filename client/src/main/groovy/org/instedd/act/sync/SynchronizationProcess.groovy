@@ -57,7 +57,7 @@ class SynchronizationProcess extends AbstractScheduledService {
 	
 	@Override
 	protected void runOneIteration() throws Exception {
-		if (dataStore.isDeviceRegistered() && !dataStore.needsSyncDeviceInfo()) {
+		if (dataStore.userInfoCompleted() && !dataStore.isDeviceKeyRegistered()) {
 			try {
 				logger.debug("Running document synchronizer")
 				synchronizer.syncDocuments();

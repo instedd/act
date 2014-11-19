@@ -2,7 +2,7 @@ package org.instedd.act
 
 import javax.swing.SwingUtilities
 
-import org.instedd.act.authentication.Registration
+import org.instedd.act.authentication.DeviceKeyRegistration
 import org.instedd.act.controllers.CaseListController
 import org.instedd.act.controllers.RegistrationController
 import org.instedd.act.models.DataStore
@@ -16,11 +16,10 @@ class AppUI {
 	@Inject RegistrationController registrationController
 	@Inject CaseListController casesController
 	@Inject SynchronizationProcess daemon
-	@Inject Registration registration
 		
 	void start() {
 		SwingUtilities.invokeLater {
-			if (!dataStore.isDeviceRegistered()) {
+			if (!dataStore.userInfoCompleted()) {
 				registrationController.buildView()
 			} else {
 				casesController.buildView()
@@ -29,7 +28,6 @@ class AppUI {
 	}
 
 	void registrationDone() {
-		registration.performInBackground()
 		casesController.buildView()
 	}
 

@@ -1,7 +1,7 @@
 package org.instedd.act
 
 import org.instedd.act.authentication.Credentials
-import org.instedd.act.authentication.Registration
+import org.instedd.act.authentication.DeviceKeyRegistration
 import org.instedd.act.db.DatabaseConnector
 import org.instedd.act.db.Migrator
 import org.instedd.act.db.SqliteConnector
@@ -40,7 +40,7 @@ class App {
 		
 		// resume if device is locally registered but information was
 		// not sent to the server.
-		injector.getInstance(Registration.class).ensureRegistered()
+		injector.getInstance(DeviceKeyRegistration.class).ensureRegistered()
 	}
 
 	static void migrateDatabase(DatabaseConnector connector) {

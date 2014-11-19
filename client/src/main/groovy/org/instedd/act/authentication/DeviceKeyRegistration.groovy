@@ -13,16 +13,24 @@ import org.slf4j.LoggerFactory
 
 import com.google.inject.Inject
 
-class Registration {
+/**
+ * This is the process of registering the client public key
+ * to the server.
+ * 
+ * It needs to be performed after the user submits the basic
+ * device information, so that the server administrator can
+ * decide whether to confirm this key or not.
+ */
+class DeviceKeyRegistration {
 
-	Logger logger = LoggerFactory.getLogger(Registration.class)
+	Logger logger = LoggerFactory.getLogger(DeviceKeyRegistration.class)
 
 	HTTPBuilder http	
 	DataStore dataStore
 	String publicKey
 	
 	@Inject
-	Registration(Settings settings,
+	DeviceKeyRegistration(Settings settings,
 				 Credentials credentials,
 				 DataStore dataStore) {
 		this.http = new HTTPBuilder(settings.get("server.apiUrl"))
@@ -31,7 +39,7 @@ class Registration {
 	}
 	
 	void ensureRegistered() {
-		if (dataStore.needsSyncDeviceInfo()) {
+		if (dataStore.isDeviceKeyRegistered()) {
 			performInBackground()
 		}
 	}

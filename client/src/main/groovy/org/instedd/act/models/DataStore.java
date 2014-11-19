@@ -6,17 +6,17 @@ import java.util.Map;
 
 public interface DataStore {
 
-	boolean isDeviceRegistered();
+	void storeDeviceInfo(Device device);
 	
-	void register(Device device);
+	boolean userInfoCompleted();
+	
+	Map<String, Object> deviceInfo();
+	
+	boolean isDeviceKeyRegistered();
 
 	void register(Case aCase);
 
 	List<Case> listCases();
-	
-	boolean needsSyncDeviceInfo();
-	
-	Map<String, Object> deviceInfo();
 	
 	void registerDeviceInfoSynced();
 	
