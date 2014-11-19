@@ -3,7 +3,6 @@ class Device < ActiveRecord::Base
   has_many :cases
 
   validates_presence_of [
-    :guid,
     :public_key,
     :organization_name,
     :location_id,
@@ -11,22 +10,11 @@ class Device < ActiveRecord::Base
     :supervisor_phone_number
   ]
 
-
-  def self.save_from_sync_file(device_guid, file_content)
-    device = Device.find_by_guid device_guid
-    json = JSON.parse file_content
-    
-    if device.present?
-      device.update_attributes organization_name: json["organization"],\
-                               location_id: json["location"].to_i
-    else
-      Device.create! guid: device_guid,\
-                     organization_name: json["organization"],\
-                     location_id: json["location"].to_i,\
-                     supervisor_name: json["supervisorName"],\
-                     supervisor_phone_number: json["supervisorNumber"]
-    end
+  before_save do |device|
+    device.guid ||= SecureRandom.hex(16).upcase
+    true
   end
+
   
   def self.sync_sick_status(device_guid, case_guid, sick_condition)
     document_name = "case-#{case_guid}.json"

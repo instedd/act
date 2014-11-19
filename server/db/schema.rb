@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141119153558) do
     t.datetime "updated_at"
     t.string   "supervisor_name"
     t.text     "public_key"
+    t.boolean  "confirmed",               default: false
   end
 
 end

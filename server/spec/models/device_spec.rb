@@ -2,11 +2,10 @@ require 'rails_helper'
 
 describe Device do
 
-  describe "required attributes" do
+  describe "creation" do
 
     let(:minimum_attributes) {
       {
-        guid: "GUID",
         public_key: "PK123",
         organization_name: "instedd",
         location_id: 123,
@@ -30,7 +29,12 @@ describe Device do
       expect { Device.create! minimum_attributes }.to change(Device, :count).by(1)
     end
 
+    it "is saved with generated GUID" do
+      device = Device.create! minimum_attributes
+      expect(device.guid).not_to be_blank
+    end
   end
+
 
 
 end

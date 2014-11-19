@@ -10,6 +10,26 @@ describe ApiController, type: :controller do
                                 supervisor_phone_number: "123"
   }
 
+  describe "device registration" do
+    
+    it "creates unconfirmed device using suplied information" do
+      params = {
+         publicKey: "PK123",
+         deviceInfo: {
+           organization: "instedd",
+           location: 111,
+           supervisorNumber: "222",
+           supervisorName: "John Doe"
+         }
+       }
+
+      expect { xhr :post, :register, params }.to change(Device, :count).by(1)
+      expect(response).to be_successful
+      expect(Device.first).not_to be_confirmed
+    end
+
+  end
+
   describe "listing cases" do
 
     it "returns empty json list when there are no cases" do
