@@ -38,7 +38,8 @@ class RsyncCommandBuilder {
 	def inboxRemoteRoute() { route(remoteHost, inboxRemoteDir) }
 	
 	def shellCommand() {
-		"ssh -p ${remotePort} -l ${remoteUser} -i ${remoteKey} -oStrictHostKeyChecking=no -oBatchMode=yes"
+		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}" 
+		"ssh -p ${remotePort} ${userParam} -i ${remoteKey} -oStrictHostKeyChecking=no -oBatchMode=yes"
 	}
 
 	def route(String host, String dir) {
@@ -48,7 +49,7 @@ class RsyncCommandBuilder {
 	}
 	
 	def validate() {
-		[remoteHost, remotePort, remoteUser, remoteKey].each { f ->
+		[remoteHost, remotePort, remoteKey].each { f ->
 			Preconditions.checkNotNull(f, "Remote host settings missing (required: host, port, user and path to ssh key")
 		}
 		[inboxLocalDir, inboxRemoteDir, outboxLocalDir, outboxRemoteDir].each { f ->

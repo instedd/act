@@ -1,3 +1,4 @@
 V1_create_device_info_table.sql
 V2_create_cases_table.sql
 V3_added_cases_synced_field.sql
+V4_remove_guid_from_device_info.sql

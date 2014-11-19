@@ -23,33 +23,18 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public boolean isDeviceRegistered() {
 		def info = sql.firstRow("select organization, location, supervisor_number from device_info limit 1")
-		info.organization && info.location && info.supervisor_number
+		info && info.organization && info.location && info.supervisor_number
 	}
 
 	@Override
 	public synchronized void register(Device device) {
-		sql.execute("update device_info set organization = ${device.organization}, location = ${device.location.id}, supervisor_name = ${device.supervisorName}, supervisor_number = ${device.supervisorNumber}")
+		sql.execute("insert into device_info(organization, location, supervisor_name, supervisor_number) values (${device.organization}, ${device.location.id}, ${device.supervisorName}, ${device.supervisorNumber})")
 	}
 
 	@Override
 	public synchronized void register(Case aCase) {
 		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes])
 		exporter.exportCase(aCase)
-	}
-
-	@Override
-	public boolean isDeviceIdentifierGenerated() {
-		sql.firstRow("select guid from device_info limit 1") != null
-	}
-
-	@Override
-	public synchronized void saveDeviceIdentifier(String identifier) {
-		sql.execute("insert into device_info (guid) values (${identifier})")
-	}
-
-	@Override
-	public String getDeviceIdentifier() {
-		sql.firstRow("select guid from device_info limit 1").guid
 	}
 
 	@Override
@@ -61,14 +46,14 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public boolean needsSyncDeviceInfo() {
-		def device = sql.firstRow("select location, registered from device_info limit 1")
-		device.location && !device.registered
+		def device = sql.firstRow("select registered from device_info limit 1")
+		device && !device.registered
 	}
 
 	@Override
 	public Map<String, Object> deviceInfo() {
 		def device = sql.firstRow("select * from device_info limit 1")
-		[id: device.guid, organization: device.organization, location: device.location, supervisorNumber: device.supervisor_number, supervisorName: device.supervisor_name]
+		[organization: device.organization, location: device.location, supervisorNumber: device.supervisor_number, supervisorName: device.supervisor_name]
 	}
 
 	@Override

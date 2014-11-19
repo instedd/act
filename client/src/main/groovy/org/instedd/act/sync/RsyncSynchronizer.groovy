@@ -24,10 +24,6 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	RsyncSynchronizer(Credentials credentials, Settings settings, DataStore dataStore) {
 		this.dataStore = dataStore
 		
-		if (!dataStore.deviceIdentifierGenerated) {
-			dataStore.saveDeviceIdentifier(UUID.randomUUID().toString());
-		}
-		
 		this.commandBuilder = new RsyncCommandBuilder([
 			remoteHost: settings.get('sync.remoteHost'),
 			remotePort: settings.get('sync.remotePort'),
@@ -35,10 +31,10 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			remoteKey: credentials.privateKeyPath(),
 			
 			inboxLocalDir: settings.get('sync.inbox.localDir'),
-			inboxRemoteDir: "${settings.get('sync.inbox.remoteDir')}/${dataStore.deviceIdentifier}",
+			inboxRemoteDir: "${settings.get('sync.inbox.remoteDir')}/FAKE_DEVICE_GUID",
 			
 			outboxLocalDir: settings.get('sync.outbox.localDir'),
-			outboxRemoteDir: "${settings.get('sync.outbox.remoteDir')}/${dataStore.deviceIdentifier}",
+			outboxRemoteDir: "${settings.get('sync.outbox.remoteDir')}/FAKE_DEVICE_GUID",
 		])
 		
 		new File(commandBuilder.outboxLocalDir).mkdirs()
