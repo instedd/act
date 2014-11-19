@@ -2,7 +2,15 @@ class Device < ActiveRecord::Base
 
   has_many :cases
 
-  validates_presence_of :guid
+  validates_presence_of [
+    :guid,
+    :public_key,
+    :organization_name,
+    :location_id,
+    :supervisor_name,
+    :supervisor_phone_number
+  ]
+
 
   def self.save_from_sync_file(device_guid, file_content)
     device = Device.find_by_guid device_guid

@@ -52,13 +52,11 @@ namespace :file_monitor do
     filename = parts[0]
     device_id = parts[1]
 
-    case
-    when filename.match(/device.*/)
-      Device.save_from_sync_file(device_id, file_content)
-      File.delete(path)
-    when filename.match(/case.*/)
+    if filename.match(/case.*/)
       Case.save_from_sync_file(device_id, file_content)
       File.delete(path)
+    else
+      Rails.logger.warn "Unrecognized file was synchronized by client: #{filename}"      
     end
   end
 

@@ -2,7 +2,13 @@ require 'rails_helper'
 
 describe ApiController, type: :controller do
   
-  let(:device) { Device.create! guid: "DEVICE_123", organization_name: "Instedd", location_id: 1 }
+  let(:device) { Device.create! guid: "GUID",\
+                                public_key: "PK123",\
+                                organization_name: "instedd",\
+                                location_id: 123,\
+                                supervisor_name: "John Doe",\
+                                supervisor_phone_number: "123"
+  }
 
   describe "listing cases" do
 

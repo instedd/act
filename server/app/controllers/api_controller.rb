@@ -1,6 +1,10 @@
 class ApiController < ApplicationController
 
   protect_from_forgery with: :null_session
+
+  def register
+    render nothing: true, status: 200
+  end
   
   def cases
     cases = Case.order(:created_at)

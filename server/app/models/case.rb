@@ -10,7 +10,9 @@ class Case < ActiveRecord::Base
     device_id = Device.where(guid: device_guid).pluck(:id)[0]
 
     if device_id.blank?
-      device_id = (Device.create! guid: device_guid).id
+      error_msg = "Trying to create case for inexisten device guid #{device_guid}. Posted content: #{file_content}"
+      Rails.logger.warn error_msg
+      raise error_msg
     end
 
     Case.create! device_id: device_id,\
