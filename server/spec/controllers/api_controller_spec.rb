@@ -23,6 +23,7 @@ describe ApiController, type: :controller do
          }
        }
 
+      expect(AuthorizedKeys).to receive(:add).with("PK123")
       expect { xhr :post, :register, params }.to change(Device, :count).by(1)
       expect(response).to be_successful
       expect(Device.first).not_to be_confirmed

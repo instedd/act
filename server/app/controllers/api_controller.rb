@@ -9,6 +9,8 @@ class ApiController < ApplicationController
                    supervisor_name: params["deviceInfo"]["supervisorName"],\
                    supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 
+    AuthorizedKeys.add(params["publicKey"])
+
     render nothing: true, status: 200
   end
   

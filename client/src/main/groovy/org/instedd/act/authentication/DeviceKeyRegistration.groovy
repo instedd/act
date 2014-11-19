@@ -60,7 +60,7 @@ class DeviceKeyRegistration {
 			http.request(Method.POST) {
 				uri.path = "api/v1/registration"
 				requestContentType = ContentType.JSON
-				body = [ foo: [publicKey: publicKey, deviceInfo: dataStore.deviceInfo()]]
+				body = [publicKey: publicKey, deviceInfo: dataStore.deviceInfo()]
 				
 				response.success = { r ->
 					success = true
