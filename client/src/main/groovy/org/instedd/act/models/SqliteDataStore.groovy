@@ -1,11 +1,8 @@
 package org.instedd.act.models
 
-import java.util.List;
-import java.util.Map;
-
-import groovy.json.JsonBuilder;
+import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
-import groovy.sql.Sql;
+import groovy.sql.Sql
 
 import org.instedd.act.db.DatabaseConnector
 import org.instedd.act.misc.DocumentExporter
@@ -32,7 +29,6 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public synchronized void register(Device device) {
 		sql.execute("update device_info set organization = ${device.organization}, location = ${device.location.id}, supervisor_name = ${device.supervisorName}, supervisor_number = ${device.supervisorNumber}")
-		exporter.exportDeviceInfo()
 	}
 
 	@Override

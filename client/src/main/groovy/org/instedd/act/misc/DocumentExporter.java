@@ -6,7 +6,5 @@ public interface DocumentExporter {
 
 	void exportDocuments();
 
-	void exportDeviceInfo();
-	
 	void exportCase(Case aCase);
 }

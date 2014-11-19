@@ -6,18 +6,20 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 import org.instedd.act.Settings
+import org.instedd.act.models.DataStore
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 import com.google.common.util.concurrent.AbstractScheduledService
+import com.google.common.util.concurrent.ThreadFactoryBuilder
 import com.google.common.util.concurrent.AbstractScheduledService.Scheduler
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.inject.Inject
 
 class SynchronizationProcess extends AbstractScheduledService {
 
 	protected final static Logger logger = LoggerFactory.getLogger(SynchronizationProcess.class)
 	
+	@Inject DataStore dataStore
 	@Inject DocumentSynchronizer synchronizer
 	
 	Scheduler scheduler
@@ -55,11 +57,15 @@ class SynchronizationProcess extends AbstractScheduledService {
 	
 	@Override
 	protected void runOneIteration() throws Exception {
-		try {
-			logger.debug("Running document synchronizer")
-			synchronizer.syncDocuments();
-		} catch (Exception e) {
-			logger.warn("An error occurred synchronizing documents with server", e)
+		if (dataStore.isDeviceRegistered() && !dataStore.needsSyncDeviceInfo()) {
+			try {
+				logger.debug("Running document synchronizer")
+				synchronizer.syncDocuments();
+			} catch (Exception e) {
+				logger.warn("An error occurred synchronizing documents with server", e)
+			}
+		} else {
+			logger.info("Skipping document synchronization until device is registered")
 		}
 	}
 

@@ -25,9 +25,14 @@ class Credentials {
 		this.publicKey = publicKey
 	}
 	
-	def privateKeyPath() {
+	String privateKeyPath() {
 		privateKey.absolutePath
 	}
+	
+	String publicKeyText() {
+		publicKey.text
+	}
+	
 	
 	/** Initializes a new pair of SSH keys if necessary. */
 	static Credentials initialize(String keysDirectoryPath) {

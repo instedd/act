@@ -1,6 +1,7 @@
 package org.instedd.act
 
 import org.instedd.act.authentication.Credentials
+import org.instedd.act.authentication.Registration
 import org.instedd.act.db.DatabaseConnector
 import org.instedd.act.db.Migrator
 import org.instedd.act.db.SqliteConnector
@@ -23,7 +24,7 @@ class App {
 		def settings = new Settings()
 		def credentials = Credentials.initialize(settings.get("sync.keyLocation", "."))
 		def connector = new SqliteConnector(settings)
-		
+
 		migrateDatabase(connector)
 		
 		def injector = Guice.createInjector(new ActModule([
@@ -35,6 +36,10 @@ class App {
 		injector.getInstance(DocumentExporter.class).exportDocuments()
 		injector.getInstance(AppUI.class).start()
 		injector.getInstance(Daemon.class).start()
+		
+		// resume if device is locally registered but information was
+		// not sent to the server.
+		injector.getInstance(Registration.class).ensureRegistered()
 	}
 
 	static void migrateDatabase(DatabaseConnector connector) {

@@ -87,13 +87,9 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		this.sync(commandBuilder.buildUploadCommand(), { files ->
 			files.each { filename ->
 				logger.trace "Uploaded ${filename}"
-				if (filename == "device.json") {
-					dataStore.registerDeviceInfoSynced()
-				} else {
-					def caseMatcher = filename =~ /case-(.+)\.json/
-					if (caseMatcher.matches()) {
-						dataStore.registerCaseSynced(caseMatcher[0][1])
-					}
+				def caseMatcher = filename =~ /case-(.+)\.json/
+				if (caseMatcher.matches()) {
+					dataStore.registerCaseSynced(caseMatcher[0][1])
 				}
 			}
 		})
