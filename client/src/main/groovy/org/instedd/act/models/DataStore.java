@@ -9,7 +9,7 @@ public interface DataStore {
 	boolean isDeviceRegistered();
 	
 	void register(Device device);
-	
+
 	void register(Case aCase);
 
 	List<Case> listCases();

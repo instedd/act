@@ -13,6 +13,7 @@ import org.instedd.act.models.LocationTree
 import org.instedd.act.models.SqliteDataStore
 import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.RsyncSynchronizer
+import org.instedd.act.sync.SynchronizationProcess;
 
 import com.google.inject.Binder
 import com.google.inject.Guice
@@ -35,7 +36,7 @@ class App {
 		
 		injector.getInstance(DocumentExporter.class).exportDocuments()
 		injector.getInstance(AppUI.class).start()
-		injector.getInstance(Daemon.class).start()
+		injector.getInstance(SynchronizationProcess.class).start()
 		
 		// resume if device is locally registered but information was
 		// not sent to the server.
