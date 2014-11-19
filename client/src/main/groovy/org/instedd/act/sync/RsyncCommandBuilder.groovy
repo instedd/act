@@ -12,10 +12,7 @@ class RsyncCommandBuilder {
 	String remoteKey
 		
 	String inboxLocalDir
-	String inboxRemoteDir
-	
 	String outboxLocalDir
-	String outboxRemoteDir
 	
 	def buildUploadCommand() {
 		validate()
@@ -31,28 +28,26 @@ class RsyncCommandBuilder {
 		"rsync --help"
 	}
 	
-	def outboxLocalRoute() { route("", outboxLocalDir) }
-	def outboxRemoteRoute() { route(remoteHost, outboxRemoteDir) }
+	def outboxLocalRoute() { localRoute(outboxLocalDir) }
+	def outboxRemoteRoute() { "${remoteHost}:/inbox" }
 	
-	def inboxLocalRoute() { route("", inboxLocalDir) }
-	def inboxRemoteRoute() { route(remoteHost, inboxRemoteDir) }
+	def inboxLocalRoute() { localRoute(inboxLocalDir) }
+	def inboxRemoteRoute() { "${remoteHost}:/outbox/" } //trailing slash prevents an 'outbox' directory to be created
 	
 	def shellCommand() {
 		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}" 
 		"ssh -p ${remotePort} ${userParam} -i ${remoteKey} -oStrictHostKeyChecking=no -oBatchMode=yes"
 	}
 
-	def route(String host, String dir) {
-		def prefix = StringUtils.isEmpty(host) ? "" : "${host}:"
+	def localRoute(String dir) {
 		dir = dir.endsWith("/") ? dir : "${dir}/"
-		"${prefix}${dir}"
 	}
 	
 	def validate() {
 		[remoteHost, remotePort, remoteKey].each { f ->
 			Preconditions.checkNotNull(f, "Remote host settings missing (required: host, port, user and path to ssh key")
 		}
-		[inboxLocalDir, inboxRemoteDir, outboxLocalDir, outboxRemoteDir].each { f ->
+		[inboxLocalDir, outboxLocalDir].each { f ->
 			Preconditions.checkNotNull(f, "Not all sync paths are configured")
 		}
 	}

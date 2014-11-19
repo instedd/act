@@ -31,10 +31,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			remoteKey: credentials.privateKeyPath(),
 			
 			inboxLocalDir: settings.get('sync.inbox.localDir'),
-			inboxRemoteDir: "${settings.get('sync.inbox.remoteDir')}/FAKE_DEVICE_GUID",
-			
-			outboxLocalDir: settings.get('sync.outbox.localDir'),
-			outboxRemoteDir: "${settings.get('sync.outbox.remoteDir')}/FAKE_DEVICE_GUID",
+			outboxLocalDir: settings.get('sync.outbox.localDir')
 		])
 		
 		new File(commandBuilder.outboxLocalDir).mkdirs()

@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe ApiController, type: :controller do
   
-  let(:device) { Device.create! guid: "GUID",\
-                                public_key: "PK123",\
+  let(:device) { Device.create! public_key: "PK123",\
                                 organization_name: "instedd",\
                                 location_id: 123,\
                                 supervisor_name: "John Doe",\
@@ -23,7 +22,13 @@ describe ApiController, type: :controller do
          }
        }
 
-      expect(AuthorizedKeys).to receive(:add).with("PK123")
+      expect(Device).to receive(:init_sync_path).with(anything)
+
+      expect(AuthorizedKeys).to receive(:add) do |device_guid, public_key|
+        expect(device_guid).not_to be_blank
+        expect(public_key).to eq("PK123")
+      end
+
       expect { xhr :post, :register, params }.to change(Device, :count).by(1)
       expect(response).to be_successful
       expect(Device.first).not_to be_confirmed

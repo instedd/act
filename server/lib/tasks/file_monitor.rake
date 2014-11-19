@@ -6,7 +6,8 @@ namespace :file_monitor do
     Rails.logger = Logger.new(STDOUT)
     
     @jobs = Queue.new
-    @sync_directory = Settings.sync_directory_inbox
+    @sync_directory = Settings.sync_directory
+    @watch_expression = "#{@sync_directory}/*/inbox/*"
 
     init_sync_directory
     enqueue_preexisting_files
@@ -26,7 +27,7 @@ namespace :file_monitor do
   end
 
   def enqueue_preexisting_files
-    preexisting_files = Dir[File.join(@sync_directory, "*/*")]
+    preexisting_files = Dir[@watch_expression]
     if preexisting_files.any?
       Rails.logger.info "Enqueuing #{preexisting_files.size} preexisting #{'file'.pluralize(preexisting_files.size)}."
       preexisting_files.each do |f|
@@ -38,7 +39,7 @@ namespace :file_monitor do
   def start_monitoring
     Thread.start do
       FileWatcher.new(@sync_directory).watch() do | path, event |
-        if event == :new
+        if event == :new and File.fnmatch(@watch_expression, path)
           Rails.logger.info "New file detected: #{path}."
           @jobs << path
         end
@@ -50,7 +51,7 @@ namespace :file_monitor do
     file_content = File.read(path)
     parts = path.split(File::SEPARATOR).reverse
     filename = parts[0]
-    device_id = parts[1]
+    device_id = parts[2]
 
     if filename.match(/case.*/)
       Case.save_from_sync_file(device_id, file_content)

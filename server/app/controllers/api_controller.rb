@@ -3,13 +3,14 @@ class ApiController < ApplicationController
   protect_from_forgery with: :null_session
 
   def register
-    Device.create! public_key: params["publicKey"],\
-                   organization_name: params["deviceInfo"]["organization"],\
-                   location_id: params["deviceInfo"]["location"].to_i,\
-                   supervisor_name: params["deviceInfo"]["supervisorName"],\
-                   supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
+    d = Device.create! public_key: params["publicKey"],\
+                       organization_name: params["deviceInfo"]["organization"],\
+                       location_id: params["deviceInfo"]["location"].to_i,\
+                       supervisor_name: params["deviceInfo"]["supervisorName"],\
+                       supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 
-    AuthorizedKeys.add(params["publicKey"])
+    Device.init_sync_path(d.guid)
+    AuthorizedKeys.add(d.guid, d.public_key)
 
     render nothing: true, status: 200
   end
