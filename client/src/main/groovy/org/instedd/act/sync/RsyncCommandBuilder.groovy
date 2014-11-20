@@ -10,7 +10,9 @@ class RsyncCommandBuilder {
 	String remotePort
 	String remoteUser
 	String remoteKey
-		
+
+	String knownHostsFilePath
+	
 	String inboxLocalDir
 	String outboxLocalDir
 	
@@ -35,8 +37,9 @@ class RsyncCommandBuilder {
 	def inboxRemoteRoute() { "${remoteHost}:/outbox/" } //trailing slash prevents an 'outbox' directory to be created
 	
 	def shellCommand() {
-		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}" 
-		"ssh -p ${remotePort} ${userParam} -i ${remoteKey} -oStrictHostKeyChecking=no -oBatchMode=yes"
+		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}"
+		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=\'${knownHostsFilePath}\'"  
+		"ssh -p ${remotePort} ${userParam} -i ${remoteKey} ${knownHostsParam} -oBatchMode=yes"
 	}
 
 	def localRoute(String dir) {

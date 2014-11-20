@@ -1,21 +1,66 @@
 package org.instedd.act.authentication
 
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory;
+import java.nio.charset.Charset;
 
+import groovyx.net.http.ContentType
+import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.Method
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
+import org.instedd.act.Settings
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
+import com.google.common.io.Files
+import com.google.inject.Inject
 class ServerSignatureDownload implements AuthenticationStep {
 
 	Logger logger = LoggerFactory.getLogger(ServerSignatureDownload.class) 
 	
+	boolean skip
+	
+	File signatureFile
+	HTTPBuilder http
+	
+	@Inject
+	ServerSignatureDownload(Settings settings) {
+		String signatureUrl = settings.get("server.signatureUrl")
+		skip = StringUtils.isEmpty(signatureUrl)
+		
+		if (skip) {
+			logger.info "Using default SSH known_hosts location"
+		} else {
+			this.http = new HTTPBuilder(signatureUrl)
+			this.signatureFile = new File(settings.get("sync.serverSignatureLocation"))
+		}
+	}
+	
 	@Override
 	public boolean ensureDone() {
-		logger.warn("SKIPPING SERVER SIGNATURE DOWNLOAD")
-		return true;
+		isDone() || attemptDownload()
 	}
 
 	@Override
 	public boolean isDone() {
-		return true;
+		skip || signatureFile.exists()
 	}
 
+	private boolean attemptDownload() {
+		def success = false
+		try {
+			// TODO: set file charset
+			http.request(Method.GET) {
+				requestContentType = ContentType.TEXT
+				response.success = { resp, reader ->
+					signatureFile.withWriter { out -> out.write reader.text }
+					success = true
+					logger.info "Successfully downloaded server signature"
+				}
+			}
+		} catch (Exception e) {
+			logger.warn("A problem occured communicating with the server to get its signature.", e)
+		}
+		return success;
+	}
 }

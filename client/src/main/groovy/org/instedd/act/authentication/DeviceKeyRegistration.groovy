@@ -25,7 +25,7 @@ class DeviceKeyRegistration implements AuthenticationStep {
 
 	Logger logger = LoggerFactory.getLogger(DeviceKeyRegistration.class)
 
-	HTTPBuilder http	
+	HTTPBuilder http
 	DataStore dataStore
 	String publicKey
 	
@@ -59,7 +59,7 @@ class DeviceKeyRegistration implements AuthenticationStep {
 		def success = false
 		try {
 			http.request(Method.POST) {
-				uri.path = "api/v1/registration"
+				uri.path = "registration"
 				requestContentType = ContentType.JSON
 				body = [publicKey: publicKey, deviceInfo: dataStore.deviceInfo()]
 				
