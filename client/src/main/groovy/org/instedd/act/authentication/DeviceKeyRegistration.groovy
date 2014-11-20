@@ -21,7 +21,7 @@ import com.google.inject.Inject
  * device information, so that the server administrator can
  * decide whether to confirm this key or not.
  */
-class DeviceKeyRegistration {
+class DeviceKeyRegistration implements AuthenticationStep {
 
 	Logger logger = LoggerFactory.getLogger(DeviceKeyRegistration.class)
 
@@ -37,24 +37,25 @@ class DeviceKeyRegistration {
 		this.publicKey = credentials.publicKeyText()
 		this.dataStore = dataStore
 	}
-	
-	void ensureRegistered() {
-		if (dataStore.isDeviceKeyRegistered()) {
-			performInBackground()
-		}
-	}
-				 
-	void performInBackground() {
-		new Thread({
-			while(!attemptRegister()) {
-				logger.warn("Will retry public key registration in 1 minute") //FIXME
-				Thread.sleep(60000)
-			}
-			dataStore.registerDeviceInfoSynced();
-		}).run()
+
+	@Override
+	public boolean ensureDone() {
+		isDone() || attemptRegister()
 	}
 
-	boolean attemptRegister() {
+	@Override
+	public boolean isDone() {
+		dataStore.isDeviceRegistered()
+	}
+
+	private boolean attemptRegister() {
+		if (!dataStore.userInfoCompleted()) {
+			logger.info "Will skip device key registration until user completes device registration information"
+			return false
+		}
+		
+		logger.info "Attempting to register device public key with server"
+		
 		def success = false
 		try {
 			http.request(Method.POST) {
@@ -63,6 +64,7 @@ class DeviceKeyRegistration {
 				body = [publicKey: publicKey, deviceInfo: dataStore.deviceInfo()]
 				
 				response.success = { r ->
+					dataStore.markDeviceRegistered()
 					success = true
 					logger.info("Successfully registered public key with server")
 				}
@@ -75,5 +77,5 @@ class DeviceKeyRegistration {
 		}
 		return success
 	}
-		
+				
 }

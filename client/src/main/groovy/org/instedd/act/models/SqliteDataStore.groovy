@@ -44,9 +44,9 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public boolean isDeviceKeyRegistered() {
+	public boolean isDeviceRegistered() {
 		def device = sql.firstRow("select registered from device_info limit 1")
-		device && !device.registered
+		device && device.registered
 	}
 
 	@Override
@@ -56,7 +56,7 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public void registerDeviceInfoSynced() {
+	public void markDeviceRegistered() {
 		sql.execute("update device_info set registered = ${true}")
 	}
 	

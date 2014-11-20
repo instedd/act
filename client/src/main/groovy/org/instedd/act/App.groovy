@@ -1,5 +1,6 @@
 package org.instedd.act
 
+import org.instedd.act.authentication.AuthenticationProcess;
 import org.instedd.act.authentication.Credentials
 import org.instedd.act.authentication.DeviceKeyRegistration
 import org.instedd.act.db.DatabaseConnector
@@ -21,9 +22,10 @@ import com.google.inject.Module
 
 class App {
 
+	static def settings = new Settings();
+	
 	static main(args) {
-		def settings = new Settings()
-		def credentials = Credentials.initialize(settings.get("sync.keyLocation", "."))
+		def credentials = Credentials.initialize(keyLocation())
 		def connector = new SqliteConnector(settings)
 
 		migrateDatabase(connector)
@@ -34,17 +36,19 @@ class App {
 			connector: connector
 		]))
 		
+		injector.getInstance(AuthenticationProcess.class).ensureDone()
 		injector.getInstance(DocumentExporter.class).exportDocuments()
 		injector.getInstance(AppUI.class).start()
 		injector.getInstance(SynchronizationProcess.class).start()
 		
-		// resume if device is locally registered but information was
-		// not sent to the server.
-		injector.getInstance(DeviceKeyRegistration.class).ensureRegistered()
 	}
 
 	static void migrateDatabase(DatabaseConnector connector) {
 		new Migrator(connector).migrate()
+	}
+	
+	static String keyLocation() {
+		settings.get("sync.keyLocation", ".")
 	}
 	
 	static class ActModule implements Module {

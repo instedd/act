@@ -12,13 +12,13 @@ public interface DataStore {
 	
 	Map<String, Object> deviceInfo();
 	
-	boolean isDeviceKeyRegistered();
+	boolean isDeviceRegistered();
 
+	void markDeviceRegistered();
+	
 	void register(Case aCase);
 
 	List<Case> listCases();
-	
-	void registerDeviceInfoSynced();
 	
 	List<Case> unsyncedCases();
 	

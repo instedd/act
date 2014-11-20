@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 import org.instedd.act.Settings
+import org.instedd.act.authentication.AuthenticationProcess
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -19,7 +20,7 @@ class SynchronizationProcess extends AbstractScheduledService {
 
 	protected final static Logger logger = LoggerFactory.getLogger(SynchronizationProcess.class)
 	
-	@Inject DataStore dataStore
+	@Inject AuthenticationProcess authenticationProcess
 	@Inject DocumentSynchronizer synchronizer
 	
 	Scheduler scheduler
@@ -57,7 +58,7 @@ class SynchronizationProcess extends AbstractScheduledService {
 	
 	@Override
 	protected void runOneIteration() throws Exception {
-		if (dataStore.userInfoCompleted() && !dataStore.isDeviceKeyRegistered()) {
+		if (authenticationProcess.done) {
 			try {
 				logger.debug("Running document synchronizer")
 				synchronizer.syncDocuments();
@@ -65,7 +66,7 @@ class SynchronizationProcess extends AbstractScheduledService {
 				logger.warn("An error occurred synchronizing documents with server", e)
 			}
 		} else {
-			logger.info("Skipping document synchronization until device is registered")
+			logger.info("Skipping document synchronization until device is authenticated")
 		}
 	}
 

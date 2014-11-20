@@ -1,7 +1,6 @@
 package org.instedd.act.controllers
 
 import org.instedd.act.AppUI
-import org.instedd.act.authentication.DeviceKeyRegistration;
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.Device
 import org.instedd.act.models.LocationTree
@@ -15,7 +14,6 @@ class RegistrationController {
 	@Inject AppUI app
 	@Inject DataStore dataStore
 	@Inject LocationTree locationTree
-	@Inject DeviceKeyRegistration keyRegistration
 	
 	RegistrationForm view
 	
@@ -60,7 +58,6 @@ class RegistrationController {
 			def device = new Device(organizationName, locationPath.last(), supervisorName, supervisorNumber)
 			dataStore.storeDeviceInfo(device)
 			view.dispose()
-			keyRegistration.performInBackground()
 			app.registrationDone()
 		}
 	}
