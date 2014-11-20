@@ -4,11 +4,9 @@ Rails.application.routes.draw do
   get  'api/v1/cases'     => 'api#cases'
   put  'api/v1/cases/:id' => 'api#update_case'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  root 'devices#index'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  resources :devices, :only => [:index, :update]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

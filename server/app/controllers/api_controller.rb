@@ -4,10 +4,10 @@ class ApiController < ApplicationController
 
   def register
     d = Device.create public_key: params["publicKey"],\
-                       organization_name: params["deviceInfo"]["organization"],\
-                       location_id: params["deviceInfo"]["location"].to_i,\
-                       supervisor_name: params["deviceInfo"]["supervisorName"],\
-                       supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
+                      organization_name: params["deviceInfo"]["organization"],\
+                      location_id: params["deviceInfo"]["location"].to_i,\
+                      supervisor_name: params["deviceInfo"]["supervisorName"],\
+                      supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 
     if d.save
       Device.init_sync_path(d.guid)

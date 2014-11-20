@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>ACT <small>Devices</small></h1>
+</div>
+
+<% if @devices.any? %>
+
+<table class="table table-hover">
+  <caption>Please confirm the following devices to allow them to upload new cases.</caption>
+  <thead>
+    <th>Organization name</th>
+    <th>Supervisor name</th>
+    <th>Supervisor phone number</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+  <% for @device in @devices %>
+  <tr>
+  
+    <td><%= @device.organization_name %></td>
+    <td><%= @device.supervisor_name %></td>
+    <td><%= @device.supervisor_phone_number %></td>
+    <td>
+      <%=
+         link_to 'Confirm',
+                 device_path(@device, confirmed: true),
+                 :method => 'put',
+                 :class => 'btn btn-default btn-sm btn-success'
+      %>
+    </td>
+  
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<div class="well text-center">
+  <h5>There are no devices pending for confirmation</h5>
+</div>
+
+<% end %>
