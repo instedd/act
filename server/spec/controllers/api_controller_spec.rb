@@ -28,11 +28,6 @@ describe ApiController, type: :controller do
     it "creates unconfirmed device using suplied information" do
       expect(Device).to receive(:init_sync_path).with(anything)
 
-      expect(AuthorizedKeys).to receive(:add) do |device_guid, public_key|
-        expect(device_guid).not_to be_blank
-        expect(public_key).to eq(valid_key)
-      end
-
       expect { xhr :post, :register, params }.to change(Device, :count).by(1)
       expect(response).to be_successful
       expect(Device.first).not_to be_confirmed
@@ -40,8 +35,7 @@ describe ApiController, type: :controller do
 
     it "rejects invalid public keys" do
       expect(Device).not_to receive(:init_sync_path)
-      expect(AuthorizedKeys).not_to receive(:add)
-
+      
       params[:publicKey] = "#{valid_key}\n#{valid_key}"
       xhr :post, :register, params
 
@@ -50,8 +44,7 @@ describe ApiController, type: :controller do
 
     it "accepts trailing newline in public key" do
       expect(Device).to receive(:init_sync_path)
-      expect(AuthorizedKeys).to receive(:add)
-
+      
       params[:publicKey] = "#{valid_key}\n"
       xhr :post, :register, params
 

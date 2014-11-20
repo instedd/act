@@ -11,8 +11,7 @@ class ApiController < ApplicationController
 
     if d.save
       Device.init_sync_path(d.guid)
-      AuthorizedKeys.add(d.guid, d.public_key)
-
+      
       render nothing: true, status: 200
     elsif d.errors.any?
       render text: d.errors.full_messages.to_s, status: 400
