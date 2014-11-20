@@ -1,37 +1,61 @@
 require 'rails_helper'
 
 describe ApiController, type: :controller do
-  
-  let(:device) { Device.create! public_key: "PK123",\
-                                organization_name: "instedd",\
+
+  let(:device) do
+    FactoryGirl.create :device, organization_name: "instedd",\
                                 location_id: 123,\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"
-  }
+  end
 
   describe "device registration" do
     
-    it "creates unconfirmed device using suplied information" do
-      params = {
-         publicKey: "PK123",
-         deviceInfo: {
-           organization: "instedd",
-           location: 111,
-           supervisorNumber: "222",
-           supervisorName: "John Doe"
-         }
-       }
+    let(:valid_key) { FactoryGirl.attributes_for(:device)[:public_key] }
 
+    let(:params) do
+      {
+        publicKey: valid_key,
+        deviceInfo: {
+          organization: "instedd",
+          location: 111,
+          supervisorNumber: "222",
+          supervisorName: "John Doe"
+        }
+      }
+    end
+
+    it "creates unconfirmed device using suplied information" do
       expect(Device).to receive(:init_sync_path).with(anything)
 
       expect(AuthorizedKeys).to receive(:add) do |device_guid, public_key|
         expect(device_guid).not_to be_blank
-        expect(public_key).to eq("PK123")
+        expect(public_key).to eq(valid_key)
       end
 
       expect { xhr :post, :register, params }.to change(Device, :count).by(1)
       expect(response).to be_successful
       expect(Device.first).not_to be_confirmed
+    end
+
+    it "rejects invalid public keys" do
+      expect(Device).not_to receive(:init_sync_path)
+      expect(AuthorizedKeys).not_to receive(:add)
+
+      params[:publicKey] = "#{valid_key}\n#{valid_key}"
+      xhr :post, :register, params
+
+      expect(response).not_to be_successful
+    end
+
+    it "accepts trailing newline in public key" do
+      expect(Device).to receive(:init_sync_path)
+      expect(AuthorizedKeys).to receive(:add)
+
+      params[:publicKey] = "#{valid_key}\n"
+      xhr :post, :register, params
+
+      expect(response).to be_successful
     end
 
   end

@@ -4,12 +4,11 @@ describe Device do
 
   describe "creation from synchronized json content" do
     let(:device) {
-     Device.create! guid: "GUID",\
-                    public_key: "PK123",\
-                    organization_name: "instedd",\
-                    location_id: 123,\
-                    supervisor_name: "John Doe",\
-                    supervisor_phone_number: "123"
+      FactoryGirl.create :device, guid: "GUID",\
+                                  organization_name: "instedd",\
+                                  location_id: 123,\
+                                  supervisor_name: "John Doe",\
+                                  supervisor_phone_number: "123"
     }
 
     let(:sample_case_info) do

@@ -4,15 +4,10 @@ describe Device do
 
   describe "creation" do
 
-    let(:minimum_attributes) {
-      {
-        public_key: "PK123",
-        organization_name: "instedd",
-        location_id: 123,
-        supervisor_name: "John Doe",
-        supervisor_phone_number: "123"
-      }
-    }
+    let(:minimum_attributes) do
+      attrs = [:organization_name, :location_id, :supervisor_name, :supervisor_phone_number, :public_key]
+      FactoryGirl.attributes_for(:device).slice(*attrs)
+    end
 
     it "validates presence of required fields" do
 

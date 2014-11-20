@@ -2,6 +2,8 @@ class Device < ActiveRecord::Base
 
   has_many :cases
 
+  validate :check_public_key
+
   validates_presence_of [
     :public_key,
     :organization_name,
@@ -13,6 +15,13 @@ class Device < ActiveRecord::Base
   before_save do |device|
     device.guid ||= SecureRandom.hex(16).upcase
     true
+  end
+
+  def check_public_key
+    match = /\Assh-rsa AAAA[0-9A-Za-z\+\/]+[=]{0,3} (.+@.+)\Z/.match public_key
+    if match.nil?
+      errors.add(:public_key, "is not valid")
+    end
   end
 
   
