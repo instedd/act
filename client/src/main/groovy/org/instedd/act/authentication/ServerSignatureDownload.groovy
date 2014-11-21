@@ -21,16 +21,18 @@ class ServerSignatureDownload implements AuthenticationStep {
 	boolean skip
 	
 	File signatureFile
+	URL signatureUrl
 	HTTPBuilder http
 	
 	@Inject
 	ServerSignatureDownload(Settings settings) {
-		String signatureUrl = settings.get("server.signatureUrl")
-		skip = StringUtils.isEmpty(signatureUrl)
+		String urlSetting = settings.get("server.signatureUrl")
+		skip = StringUtils.isEmpty(urlSetting)
 		
 		if (skip) {
 			logger.info "Using default SSH known_hosts location"
 		} else {
+			this.signatureUrl = new URL(settings.get("server.signatureUrl"))
 			this.http = new HTTPBuilder(signatureUrl)
 			this.signatureFile = new File(settings.get("sync.serverSignatureLocation"))
 		}
@@ -53,10 +55,14 @@ class ServerSignatureDownload implements AuthenticationStep {
 			http.request(Method.GET) {
 				requestContentType = ContentType.TEXT
 				response.success = { resp, reader ->
-					signatureFile.withWriter { out -> out.write reader.text }
+					def known_host_entry = "${signatureUrl.host} ${reader.text}"
+					signatureFile.withWriter { out -> out.write known_host_entry }
 					success = true
 					logger.info "Successfully downloaded server signature"
 				}
+				response.failure = { r ->
+					logger.warn("Server signature download was not successful. Server returned status code {}", r.status)
+			   }
 			}
 		} catch (Exception e) {
 			logger.warn("A problem occured communicating with the server to get its signature.", e)
