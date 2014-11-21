@@ -6,6 +6,31 @@
 echo "Copying SSH host public key to public directory of webapp"
 ln -s /etc/ssh/ssh_host_rsa_key.pub public
 
+echo "Ensuring sync directory is writable"
+chmod o+w /act/sync
+
+echo "Ensuring authorized_keys file is writable"
+
+#
+# TODO:
+#
+# Instead of lowering restrictions on authorized_keys file, we should enqueue
+# new keys so that they are added by another process with enough permissions.
+#
+touch /act/authorized_keys && chmod o+w /act/authorized_keys
+sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/act\/authorized_keys/' /etc/ssh/sshd_config
+
+# Disable password authentication
+sed -E -i 's/^#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+
+# FIXME:
+#
+# Strict prevents ssh logins when authorized_keys file permissions are too
+# permissive (ie != 600).
+#
+# We disable this to allow the nginx worker user to write to this file.
+sed -E -i 's/^#?StrictModes yes/StrictModes no/' /etc/ssh/sshd_config
+
 if (bundle exec rake db:version &> /dev/null);
   then bundle exec rake db:migrate;
   else bundle exec rake db:setup;
