@@ -28,6 +28,7 @@ RUN bundle exec rake assets:precompile
 ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
 ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/init /act/init
+ADD deploy/rrsync /act/rrsync
 
 # Add file monitor daemon
 ADD deploy/act-sync.pub /root/.ssh/authorized_keys
