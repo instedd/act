@@ -36,3 +36,158 @@ dependencies {
 }
 
 mainClassName = "org.instedd.act.App"
+def version = "1.0" // TODO: get this out of somewhere
+println "Version ${version}"
+
+
+
+task makeBuildDir {
+    description 'Makes build directory ./build'
+} << {
+    buildDir.mkdirs()
+}
+
+String getViVersion(String version) {
+    def components = (version =~ /\d+(?:\.\d+)+/)[0].split(/\./) as List
+    components += (["0"] * (4-components.size()))
+    return components.join('.')
+}
+
+task downloadWinrun4j (dependsOn: 'makeBuildDir') << {
+    def filename = "winrun4J-0.4.5.zip"
+    def url = "https://www.dropbox.com/s/j7z19jksvrjy5mg/winrun4J-0.4.5.zip?dl=1"
+    def zipFile = new File(buildDir, filename)
+    def zipDest = new File(buildDir, "winrun4j")
+    if (!buildDir.exists()) {
+        mkdir buildDir
+    }
+    println "Downloading ${filename} from ${url} to ${zipDest}..."
+    
+    ant.get(src: url, dest: zipFile, skipexisting: true, verbose: true)
+    delete zipDest
+    ant.unzip(src: zipFile, dest: zipDest)
+}
+
+task downloadJre (dependsOn: 'makeBuildDir') {
+} << {
+    def filename
+    filename = "jre-7u71-windows-i586.gz"
+    def url = "https://www.dropbox.com/s/kz3nj244qrs24x7/jre-7u71-windows-i586.gz?dl=1"
+
+    def tgzFile = new File(buildDir, filename)
+    println "Downloading ${filename} from ${url} to ${tgzFile}..."
+    
+    ant.get(src: url, dest: tgzFile, skipexisting: true, verbose: true)
+
+    ext.jrePackage = tgzFile
+}
+
+task downloadRsync (dependsOn: 'makeBuildDir') << {
+    def filename = "cwRsync.zip"
+    def url = "https://www.dropbox.com/s/io2ply67jrx1niv/cwRsync.zip?dl=1"
+    def zipFile = new File(buildDir, filename)
+    def zipDest = new File(buildDir, "cwRsync")
+    if (!buildDir.exists()) {
+        mkdir buildDir
+    }
+    println "Downloading ${filename} from ${url} to ${zipDest}..."
+    
+    ant.get(src: url, dest: zipFile, skipexisting: true, verbose: true)
+    delete zipDest
+    ant.unzip(src: zipFile, dest: zipDest)
+}
+
+task prepareNsis {
+    dependsOn cleanInstallApp
+    dependsOn installApp
+    dependsOn downloadWinrun4j
+    dependsOn downloadRsync
+
+    try {
+        def proc = ['which', 'makensis'].execute()
+        proc.waitFor()
+        ext.makensisPath = proc.in.text.trim()
+    } catch (e) {
+        println "Error finding makensis: ${e.message}"
+        ext.makensisPath = null
+    }
+} << {
+    def workDir = installApp.destinationDir
+
+    copy {
+        from file("dist/license.txt")
+        into workDir
+    }
+    copy {
+        from file("${buildDir}/winrun4j/winrun4j/bin/WinRun4J.exe")
+        from file("${buildDir}/winrun4j/winrun4j/bin/RCEDIT.exe")
+        
+        into "${workDir}/bin"
+    }
+    copy {
+        from file("dist/nsis/plugins/ExecDos.dll")
+        into "${workDir}/nsis"
+    }
+    copy {
+        from "${buildDir}/cwRsync/cwRsync/bin/"
+        into "${workDir}/cwRsync"
+    }
+}
+
+task installer {
+    dependsOn prepareNsis
+    dependsOn downloadJre
+    description "Create an installer using NSIS"
+} << {
+    def platform = "win32" // TODO: support win64
+    def workDir = installApp.destinationDir
+    def distDir = new File(buildDir, "distributions")
+    def nsiScriptName = "installer.nsi"
+    def nsisOutput = "ACT-${platform}-${version}.exe"
+    def installerFile = nsisOutput 
+
+    if (prepareNsis.makensisPath.empty) {
+        println "warning: makensis not found in your system"
+        return
+    }
+
+    copy {
+        from file("dist/act-client.ini")
+        into "${workDir}/bin/"
+    }
+
+    copy {
+        from file("json/locations-packed.json")
+        into "${workDir}/json"
+    }
+
+    println "Creating installer..."
+    copy {
+        from file(nsiScriptName)
+        into workDir
+    }
+    delete file("${workDir}/jre1.7.0_71")
+    copy {
+        from tarTree(resources.gzip(downloadJre.jrePackage))
+        into workDir
+    }
+
+    def nsisParams = [prepareNsis.makensisPath, "-V2", "-DVERSION=${version}", "-DVIVERSION=${getViVersion(version)}", "-DPLATFORM=${platform}"]
+
+    nsisParams.add(file("${workDir}/${nsiScriptName}"))
+    println nsisParams
+    def nsisProc = nsisParams.execute()
+    nsisProc.waitFor()
+    println nsisProc.text
+    println "Check ${workDir}/${nsisOutput}"
+    if (nsisProc.exitValue() != 0) {
+        throw new RuntimeException("makensis failed")
+    }
+
+    copy {
+        from file("${workDir}/${nsisOutput}")
+        into distDir
+        rename nsisOutput, installerFile
+    }
+    println "Created installer is in ${distDir}/${installerFile}"
+}

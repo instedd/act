@@ -37,7 +37,7 @@ class Credentials {
 	/** Initializes a new pair of SSH keys if necessary. */
 	static Credentials initialize(String keysDirectoryPath) {
 		def dir = new File(keysDirectoryPath)
-		Preconditions.checkArgument(dir.exists() && dir.isDirectory())
+		Preconditions.checkArgument(dir.exists() && dir.isDirectory(), "The directory ${keysDirectoryPath} should exist")
 		
 		def privateKey = new File(dir, "act_key")
 		if (!privateKey.exists()) {
