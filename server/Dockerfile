@@ -30,10 +30,10 @@ ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/init /act/init
 ADD deploy/rrsync /act/rrsync
 
-# Add file monitor daemon
-ADD deploy/act-sync.pub /root/.ssh/authorized_keys
-RUN mkdir /etc/service/act-filemonitor
-ADD deploy/act-filemonitor.sh /etc/service/act-filemonitor/run
+# Add background daemons
+RUN mkdir /etc/service/act-file-monitor /etc/service/act-keys-import
+ADD deploy/act-file-monitor.sh /etc/service/act-file-monitor/run
+ADD deploy/act-keys-import.sh  /etc/service/act-keys-import/run
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

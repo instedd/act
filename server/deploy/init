@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -e
+
 # Generate SSH host key
 /etc/my_init.d/00_regen_ssh_host_keys.sh
 
@@ -9,18 +11,12 @@ ln -F -s /etc/ssh/ssh_host_rsa_key.pub public
 echo "Ensuring sync directory is writable"
 chmod o+w /act/sync
 
-echo "Ensuring authorized_keys file is writable"
-
-#
-# TODO:
-#
-# Instead of lowering restrictions on authorized_keys file, we should enqueue
-# new keys so that they are added by another process with enough permissions.
-#
-touch /etc/ssh/authorized_keys && chmod o+w /etc/ssh/authorized_keys
-ln -F -s /etc/ssh/authorized_keys /act/authorized_keys
+echo "Setting up SSH daemon"
 
 # Use authorized_keys file in our persistent volume
+touch /etc/ssh/authorized_keys
+chmod 600 /etc/ssh/authorized_keys
+ln -F -s /etc/ssh/authorized_keys /act/authorized_keys
 sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/etc\/ssh\/authorized_keys/' /etc/ssh/sshd_config
 
 # Disable password authentication
@@ -28,14 +24,6 @@ sed -E -i 's/^#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/
 
 # Fix fox ssh login
 sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
-
-# FIXME:
-#
-# Strict prevents ssh logins when authorized_keys file permissions are too
-# permissive (ie != 600).
-#
-# We disable this to allow the nginx worker user to write to this file.
-sed -E -i 's/^#?StrictModes yes/StrictModes no/' /etc/ssh/sshd_config
 
 if (bundle exec rake db:version &> /dev/null);
   then bundle exec rake db:migrate;
