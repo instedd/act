@@ -25,7 +25,7 @@ class App {
 	static def settings = new Settings();
 	
 	static main(args) {
-		def credentials = Credentials.initialize(keyLocation())
+		def credentials = Credentials.initialize(settings.keyLocation())
 		def connector = new SqliteConnector(settings)
 
 		migrateDatabase(connector)
@@ -45,10 +45,6 @@ class App {
 
 	static void migrateDatabase(DatabaseConnector connector) {
 		new Migrator(connector).migrate()
-	}
-	
-	static String keyLocation() {
-		settings.get("sync.keyLocation", ".")
 	}
 	
 	static class ActModule implements Module {

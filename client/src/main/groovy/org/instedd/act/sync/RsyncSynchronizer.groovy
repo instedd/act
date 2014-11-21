@@ -30,10 +30,10 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			remoteUser: settings.get('sync.remoteUser'),
 			remoteKey: credentials.privateKeyPath(),
 			
-			knownHostsFilePath: settings.get('sync.serverSignatureLocation'), 
+			knownHostsFilePath: settings.serverSignatureLocation(), 
 			
-			inboxLocalDir: settings.get('sync.inbox.localDir'),
-			outboxLocalDir: settings.get('sync.outbox.localDir')
+			inboxLocalDir: settings.inboxDir(),
+			outboxLocalDir: settings.outboxDir()
 		])
 		
 		new File(commandBuilder.outboxLocalDir).mkdirs()

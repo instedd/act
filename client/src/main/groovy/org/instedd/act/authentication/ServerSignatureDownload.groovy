@@ -26,15 +26,15 @@ class ServerSignatureDownload implements AuthenticationStep {
 	
 	@Inject
 	ServerSignatureDownload(Settings settings) {
-		String urlSetting = settings.get("server.signatureUrl")
+		String urlSetting = settings.serverSignatureUrl()
 		skip = StringUtils.isEmpty(urlSetting)
 		
 		if (skip) {
 			logger.info "Using default SSH known_hosts location"
 		} else {
-			this.signatureUrl = new URL(settings.get("server.signatureUrl"))
+			this.signatureUrl = new URL(settings.serverSignatureUrl())
 			this.http = new HTTPBuilder(signatureUrl)
-			this.signatureFile = new File(settings.get("sync.serverSignatureLocation"))
+			this.signatureFile = new File(settings.serverSignatureLocation())
 		}
 	}
 	

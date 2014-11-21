@@ -35,4 +35,32 @@ class Settings {
 		Optional.fromNullable(getInt(key)).or(defaultValue)
 	}
 	
+	public String dataDir() {
+		this.get('local.dir', './')
+	}
+
+	public String databasePath() {
+		"${this.dataDir()}local.db"
+	}
+	
+	public String inboxDir() {
+		"${this.dataDir()}inbox/"
+	}
+	
+	public String outboxDir() {
+		"${this.dataDir()}outbox/"
+	}
+	
+	public String keyLocation() {
+		this.dataDir()
+	}
+	
+	public String serverSignatureUrl() {
+		this.get("server.signatureUrl")
+	}
+	
+	public String serverSignatureLocation() {
+		"${this.dataDir()}server_signature.key"
+	}
+	
 }

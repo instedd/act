@@ -13,7 +13,7 @@ public class SqliteConnector implements DatabaseConnector {
 
 	@Inject
 	public SqliteConnector(Settings settings) {
-		this(settings.get("database.path"));
+		this(settings.databasePath());
 	}
 
 	public SqliteConnector(String databaseFilename) {
