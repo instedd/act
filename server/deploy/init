@@ -26,6 +26,9 @@ sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/etc\/ssh\/authorized_
 # Disable password authentication
 sed -E -i 's/^#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 
+# Fix fox ssh login
+sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
 # FIXME:
 #
 # Strict prevents ssh logins when authorized_keys file permissions are too
