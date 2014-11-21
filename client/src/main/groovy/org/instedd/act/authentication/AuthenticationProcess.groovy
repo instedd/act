@@ -27,8 +27,8 @@ class AuthenticationProcess {
 	
 	void runStep(AuthenticationStep step) {
 		while(!step.ensureDone()) {
-			logger.warn("Will retry public key registration in 1 minute") //FIXME
-			Thread.sleep(60000)
+			logger.warn("Will retry last authentication step in 15 seconds") // TODO: move to settings?
+			Thread.sleep(15000)
 		}
 		stepDone(step)
 	}
