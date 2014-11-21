@@ -77,6 +77,8 @@ SpaceTexts none
 Section "Install" Install
   SetOutPath "$INSTDIR"
   File "license.txt"
+  
+  CreateDirectory "$INSTDIR\data"
 
   ;Add files
   SetOutPath "$INSTDIR\bin"

@@ -16,7 +16,7 @@ class Credentials {
 	
 	Credentials(File privateKey, File publicKey) {
 		Preconditions.checkNotNull(publicKey)
-		Preconditions.checkArgument(publicKey.exists() && publicKey.isFile())
+		Preconditions.checkArgument(publicKey.exists() && publicKey.isFile(), "Invalid public key file: ${publicKey}")
 		
 		// private key file is not readable, we cannot validate it more than this.
 		Preconditions.checkNotNull(privateKey)
