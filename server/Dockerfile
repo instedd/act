@@ -22,6 +22,7 @@ ADD Gemfile /home/app/webapp/
 ADD Gemfile.lock /home/app/webapp/
 RUN bundle install --without development test
 ADD . /home/app/webapp
+RUN bundle exec rake assets:precompile
 
 # Copy configuration and init files
 ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
