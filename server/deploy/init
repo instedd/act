@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Generate SSH host key
+/etc/my_init.d/00_regen_ssh_host_keys.sh
+
+echo "Copying SSH host public key to public directory of webapp"
+ln -s /etc/ssh/ssh_host_rsa_key.pub public
+
 if (bundle exec rake db:version &> /dev/null);
   then bundle exec rake db:migrate;
   else bundle exec rake db:setup;
