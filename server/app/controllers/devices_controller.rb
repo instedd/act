@@ -9,8 +9,6 @@ class DevicesController < ApplicationController
 
     device = Device.find_by_id(params[:id])
     device.confirmed = true
-
-    AuthorizedKeys.add(device.guid, device.public_key)
     device.save
     
     redirect_to action: :index

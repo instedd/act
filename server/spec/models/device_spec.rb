@@ -10,7 +10,6 @@ describe Device do
     end
 
     it "validates presence of required fields" do
-
       minimum_attributes.keys.each do |attribute_name|
         invalid_attributes = minimum_attributes.dup
         invalid_attributes.delete attribute_name
@@ -28,8 +27,17 @@ describe Device do
       device = Device.create! minimum_attributes
       expect(device.guid).not_to be_blank
     end
+
+    it "is not confirmed when just created" do
+      device = Device.create! minimum_attributes
+      expect(device).not_to be_confirmed
+    end
+
+    it "is not allowed for public key authentication when just created" do
+      device = Device.create! minimum_attributes
+      expect(device).not_to be_public_key_allowed
+    end
+
   end
-
-
 
 end

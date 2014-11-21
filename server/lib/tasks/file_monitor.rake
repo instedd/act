@@ -1,8 +1,8 @@
-namespace :file_monitor do
+namespace :act do
 
-  desc "Monitor new sync'ed documents and save them in our database"
+  desc "Monitor new synchronized documents and save them in our database"
 
-  task start: :environment do
+  task file_monitor: :environment do
     Rails.logger = Logger.new(STDOUT)
     
     @jobs = Queue.new

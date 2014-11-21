@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119153558) do
+ActiveRecord::Schema.define(version: 20141121191238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141119153558) do
     t.string   "supervisor_name"
     t.text     "public_key"
     t.boolean  "confirmed",               default: false
+    t.boolean  "public_key_allowed",      default: false
   end
 
 end
