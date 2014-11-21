@@ -4,7 +4,7 @@
 /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 echo "Copying SSH host public key to public directory of webapp"
-ln -s /etc/ssh/ssh_host_rsa_key.pub public
+ln -F -s /etc/ssh/ssh_host_rsa_key.pub public
 
 echo "Ensuring sync directory is writable"
 chmod o+w /act/sync
@@ -17,8 +17,11 @@ echo "Ensuring authorized_keys file is writable"
 # Instead of lowering restrictions on authorized_keys file, we should enqueue
 # new keys so that they are added by another process with enough permissions.
 #
-touch /act/authorized_keys && chmod o+w /act/authorized_keys
-sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/act\/authorized_keys/' /etc/ssh/sshd_config
+touch /etc/ssh/authorized_keys && chmod o+w /etc/ssh/authorized_keys
+ln -F -s /etc/ssh/authorized_keys /act/authorized_keys
+
+# Use authorized_keys file in our persistent volume
+sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/etc\/ssh\/authorized_keys/' /etc/ssh/sshd_config
 
 # Disable password authentication
 sed -E -i 's/^#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
