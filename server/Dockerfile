@@ -38,5 +38,9 @@ ADD deploy/act-filemonitor.sh /etc/service/act-filemonitor/run
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+VOLUME /var/lib/postgresql/data
+VOLUME /etc/ssh
+VOLUME /act/sync
+
 EXPOSE 22
 EXPOSE 80
