@@ -1,1 +1,3 @@
-sync_directory: "/act/sync"
+rrsync_location: /act/rrsync
+sync_directory: /act/sync
+authorized_keys_file: /act/authorized_keys
