@@ -6,7 +6,7 @@ set -e
 /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 echo "Copying SSH host public key to public directory of webapp"
-ln -F -s /etc/ssh/ssh_host_rsa_key.pub public
+ln -f -s /etc/ssh/ssh_host_rsa_key.pub public
 
 echo "Ensuring sync directory is writable"
 chmod o+w /act/sync
@@ -16,7 +16,7 @@ echo "Setting up SSH daemon"
 # Use authorized_keys file in our persistent volume
 touch /etc/ssh/authorized_keys
 chmod 600 /etc/ssh/authorized_keys
-ln -F -s /etc/ssh/authorized_keys /act/authorized_keys
+ln -f -s /etc/ssh/authorized_keys /act/authorized_keys
 sed -E -i 's/^#?AuthorizedKeysFile.*$/AuthorizedKeysFile \/etc\/ssh\/authorized_keys/' /etc/ssh/sshd_config
 
 # Disable password authentication
