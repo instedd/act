@@ -1,6 +1,7 @@
 package org.instedd.act.sync
 
 import org.apache.commons.lang.StringUtils
+import org.apache.commons.lang.SystemUtils;
 
 import com.google.common.base.Preconditions;
 
@@ -38,12 +39,21 @@ class RsyncCommandBuilder {
 	
 	def shellCommand() {
 		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}"
-		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=\'${knownHostsFilePath}\'"  
-		"ssh -p ${remotePort} ${userParam} -i \"${remoteKey}\" ${knownHostsParam} -oBatchMode=yes"
+		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=\"${cygwinPath(knownHostsFilePath)}\""
+		"ssh -p ${remotePort} ${userParam} -i \"${cygwinPath(remoteKey)}\" ${knownHostsParam} -oBatchMode=yes"
 	}
 
 	def localRoute(String dir) {
 		dir = dir.endsWith("/") ? dir : "${dir}/"
+		cygwinPath(dir)
+	}
+	
+	def cygwinPath(String path) {
+		if (SystemUtils.IS_OS_WINDOWS) {
+			path = path.replaceFirst(/^(.):\/*/, '/cygdrive/$1/') // replace "C:/something" with "/cygdrive/c/something" for rsync to understand it
+			path = path.replace("\\", "/")
+		}
+		path
 	}
 	
 	def validate() {
