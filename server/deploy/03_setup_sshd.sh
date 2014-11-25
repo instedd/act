@@ -2,15 +2,6 @@
 
 set -e
 
-# Generate SSH host key
-/etc/my_init.d/00_regen_ssh_host_keys.sh
-
-echo "Copying SSH host public key to public directory of webapp"
-ln -f -s /etc/ssh/ssh_host_rsa_key.pub public
-
-echo "Ensuring sync directory is writable"
-chmod o+w /act/sync
-
 echo "Setting up SSH daemon"
 
 # Use authorized_keys file in our persistent volume
@@ -24,10 +15,3 @@ sed -E -i 's/^#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/
 
 # Fix fox ssh login
 sed -i 's/session\s*required\s*pam_loginuid.so/session optional pam_loginuid.so/g' /etc/pam.d/sshd
-
-if (bundle exec rake db:version &> /dev/null);
-  then bundle exec rake db:migrate;
-  else bundle exec rake db:setup;
-fi;
-
-/sbin/my_init
