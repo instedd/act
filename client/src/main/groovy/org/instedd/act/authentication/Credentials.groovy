@@ -2,6 +2,7 @@
 
 package org.instedd.act.authentication
 
+import org.apache.commons.lang.SystemUtils;
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -45,7 +46,8 @@ class Credentials {
 			def stderrBuffer = new StringBuffer()
 			try {
 				logger.info("Generating a new pair of SSH keys [{}]", privateKey.absolutePath)
-				Process process = ["ssh-keygen", "-t", "rsa", "-N", "", "-f", privateKey.path].execute()
+				String emptyPassphrase = SystemUtils.IS_OS_WINDOWS ? "\"\"" : "" // windows ignores the argument if it's the empty string instead of passing an empty argument 
+				Process process = ["ssh-keygen", "-t", "rsa", "-N", emptyPassphrase, "-f", privateKey.path].execute()
 				process.consumeProcessOutput(stdoutBuffer, stderrBuffer)
 				process.waitForOrKill(5000)
 			} catch (Exception e) {
