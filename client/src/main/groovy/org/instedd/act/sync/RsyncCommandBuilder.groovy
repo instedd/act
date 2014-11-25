@@ -39,7 +39,7 @@ class RsyncCommandBuilder {
 	def shellCommand() {
 		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}"
 		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=\'${knownHostsFilePath}\'"  
-		"ssh -p ${remotePort} ${userParam} -i ${remoteKey} ${knownHostsParam} -oBatchMode=yes"
+		"ssh -p ${remotePort} ${userParam} -i \"${remoteKey}\" ${knownHostsParam} -oBatchMode=yes"
 	}
 
 	def localRoute(String dir) {
