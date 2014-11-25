@@ -71,8 +71,8 @@ task downloadWinrun4j (dependsOn: 'makeBuildDir') << {
 task downloadJre (dependsOn: 'makeBuildDir') {
 } << {
     def filename
-    filename = "jre-7u71-windows-i586.gz"
-    def url = "https://www.dropbox.com/s/kz3nj244qrs24x7/jre-7u71-windows-i586.gz?dl=1"
+    filename = "jre-7u72-windows-i586.gz"
+    def url = "https://www.dropbox.com/s/giwqqcjn6uh5p9l/jre-7u72-windows-i586.gz?dl=1"
 
     def tgzFile = new File(buildDir, filename)
     println "Downloading ${filename} from ${url} to ${tgzFile}..."

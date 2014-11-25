@@ -92,7 +92,7 @@ Section "Install" Install
   File "json\locations-packed.json"
 
   SetOutPath "$INSTDIR\jre"
-  File /r "jre1.7.0_71\*.*"
+  File /r "jre1.7.0_72\*.*"
 
 ; TODO: extract to a $INSTDIR\rsync subdir
   SetOutPath "$INSTDIR"
