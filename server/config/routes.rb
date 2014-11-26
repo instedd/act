@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   post 'api/v1/registration' => 'api#register'
   get  'api/v1/cases'     => 'api#cases'
   put  'api/v1/cases/:id' => 'api#update_case'

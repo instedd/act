@@ -28,6 +28,8 @@ gem 'rails_config', '= 0.4.2'
 
 gem 'filewatcher'
 
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-byebug'

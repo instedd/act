@@ -1,0 +1,18 @@
+#act-login {
+  margin-top: 40px;
+  form {
+    input {
+      margin-bottom: 8px;
+    }
+  }
+  form #error_explanation {
+    h2 {
+      font-size: 13px;
+    }
+    ul {
+      font-size: 13px;
+      list-style-type: none;
+      padding-left: 10px;
+    }
+  }
+}

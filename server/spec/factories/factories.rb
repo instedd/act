@@ -13,4 +13,9 @@ FactoryGirl.define do
                "GImg1IM8X43fs/+t6R0BO6scX user@client"
   end
 
+  factory :user do
+    email      "act_admin@instedd.org"
+    password   "12345678"
+  end
+
 end

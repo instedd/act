@@ -76,5 +76,4 @@ RSpec.configure do |config|
   end
 
   config.warnings = false
-
 end

@@ -4,7 +4,8 @@ describe DevicesController, type: :controller do
 
   describe "confirming devices" do
 
-    let(:device) { FactoryGirl.create :device, confirmed: false }
+    before(:each) { sign_in_user }
+    let(:device)  { FactoryGirl.create :device, confirmed: false }
 
     it "allows ssh access when device is confirmed" do
       put :update, id: device.id, confirmed: true

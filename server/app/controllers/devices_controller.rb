@@ -1,4 +1,4 @@
-class DevicesController < ApplicationController
+class DevicesController < AuthenticatedController
 
   def index
     @devices = Device.where(confirmed: false)
