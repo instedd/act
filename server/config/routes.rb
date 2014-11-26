@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :invitations => 'users/invitations' }
   post 'api/v1/registration' => 'api#register'
   get  'api/v1/cases'     => 'api#cases'
   put  'api/v1/cases/:id' => 'api#update_case'
 
   root 'devices#index'
 
-  resources :devices, :only => [:index, :update]
+  resources :devices, only: [:index, :update]
+  resources :users, only:   [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

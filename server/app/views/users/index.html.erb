@@ -1,0 +1,29 @@
+<%= link_to 'New user', new_user_invitation_path, class: 'btn btn-primary pull-right' %>
+
+
+<% if @users.any? %>
+
+<table class="table table-hover">
+  <thead>
+    <th>Username</th>
+    <th>Role</th>
+    <th>Registered since</th>
+  </thead>
+  <tbody>
+  <% for @user in @users %>
+  <tr>
+    <td><%= @user.email %></td>
+    <td><span class="label label-warning">TO DO</span></td>
+    <td><%= @user.created_at %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<div class="well text-center">
+  <h5>There are no devices pending for confirmation</h5>
+</div>
+
+<% end %>

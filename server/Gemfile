@@ -30,6 +30,8 @@ gem 'filewatcher'
 
 gem 'devise'
 
+gem 'devise_invitable'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-byebug'

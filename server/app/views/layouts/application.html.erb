@@ -9,9 +9,19 @@
 <body>
 
 <div class="container">
-<%= yield %>
-</div>
 
+<% unless current_user.nil? -%>
+<%= render "shared/navbar" %>
+<% end %>
+
+<% if notice -%>
+  <div class="alert alert-info"><%= notice %></div>
+<% end %>
+<% if alert -%>
+  <div class="alert alert-warning"><%= alert %></div>
+<% end %>
+
+<%= yield %>
 
 </body>
 </html>
