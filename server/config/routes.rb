@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'devices#index'
 
   resources :devices, only: [:index, :update]
+  resources :organizations, only: [:index, :new, :create]
   resources :users, only:   [:index]
 
   # Example of regular route:
