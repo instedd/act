@@ -60,18 +60,5 @@ class Case {
 		note: notes
 		json
 	}
-	
-	static Case fromJson(json) {
-		new Case([
-			id: json["guid"],
-			name: json["name"],
-			phone: json["phone_number"],
-			age: json["age"],
-			gender: json["gender"],
-			preferredDialect: json["dialect_code"],
-			reasons: json["symptoms"],
-			notes: json["note"]
-		])
-	}
-	
+
 }
