@@ -86,4 +86,22 @@ class CaseListController {
 		true
 	}
 	
+	def markAsSeen(Case aCase) {
+		dataStore.markCaseAsSeen(aCase)
+		aCase.updated = false
+	}
+	
+	void selectedCases(cases) {
+		def changed = false
+		cases.each { selectedCase ->
+			if(selectedCase.updated) { 
+				this.markAsSeen(selectedCase)
+				changed = true
+			}
+		}
+		if (changed) {
+			caseList.updateCases(dataStore.listCases())
+		}
+	}
+	
 }

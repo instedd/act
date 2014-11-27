@@ -13,11 +13,13 @@ class CaseTableModel extends AbstractTableModel {
 	def toRow
 		
 	Object[][] rows
+	Collection<Case> cases
 	
 	CaseTableModel(columnDefinitions, toRow, cases) {
 		this.columnDefinitions = columnDefinitions
 		this.toRow = toRow
 		this.rows = cases.collect toRow
+		this.cases = cases
 	}
 	
 	@Override
@@ -51,6 +53,15 @@ class CaseTableModel extends AbstractTableModel {
 	
 	void updateCases(List<Case> cases) {
 		this.rows = cases.collect toRow
+		this.cases = cases
 		fireTableDataChanged()
+	}
+	
+	boolean isCaseUpdated(int rowIndex) {
+		cases[rowIndex].updated
+	}
+	
+	Case getCase(int rowIndex) {
+		cases[rowIndex]
 	}
 }

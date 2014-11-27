@@ -11,6 +11,9 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTable
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent
+import javax.swing.event.ListSelectionListener
 import javax.swing.table.DefaultTableCellRenderer
 import javax.swing.table.TableColumn
 
@@ -54,6 +57,15 @@ class CaseList extends JFrame {
 		def table = new JTable(tableModel)
 		table.fillsViewportHeight = true
 		table.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
+		table.selectionModel.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent event) {
+				def selectedCases = table.selectedRows.collect { index ->
+					table.getModel().getCase(index)
+				}
+				this.controller.selectedCases(selectedCases)
+			}
+		})
 		column(table, "").preferredWidth = 5
 		column(table, "Age").preferredWidth = 35
 		column(table, "Gender").preferredWidth = 50

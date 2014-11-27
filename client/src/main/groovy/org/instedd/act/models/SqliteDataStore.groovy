@@ -76,4 +76,9 @@ class SqliteDataStore implements DataStore {
 	public void updateSickCase(String guid, Boolean isSick) {
 		sql.execute("update cases set sick = ${isSick}, updated = ${true} where guid = ${guid}")
 	}
+
+	@Override
+	public void markCaseAsSeen(Case aCase) {
+		sql.execute("update cases set updated = ${false} where guid = ${aCase.id}")
+	}
 }

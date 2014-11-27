@@ -26,4 +26,6 @@ public interface DataStore {
 	
 	void updateSickCase(String guid, Boolean isSick);
 	
+	void markCaseAsSeen(Case aCase);
+	
 }
