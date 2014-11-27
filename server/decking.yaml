@@ -49,6 +49,11 @@ clusters:
     - act-ssh-data
     - act
 
+  prod:
+    - act-postgres
+    - act-sync-data
+    - act-ssh-data
+    - act
 
 groups:
 
