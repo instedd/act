@@ -12,6 +12,14 @@ class User < ActiveRecord::Base
     organization.nil?
   end
 
+  def role_label
+    if admin?
+      "Administrator"
+    else
+      "#{organization.name.capitalize} user"
+    end
+  end
+
   def ability
     @ability ||= Ability.new(self)
   end

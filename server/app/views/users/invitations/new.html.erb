@@ -7,13 +7,36 @@
     <% resource.class.invite_key_fields.each do |field| -%>
       <div class="row">
         <div class="col-sm-4">
-          <%= f.label field, class: 'col-sm-2 control-label' %>
-          <div class="col-sm-10">
+          <%= f.label field, class: 'col-sm-4 control-label' %>
+          <div class="col-sm-8">
             <%= f.text_field field, class: 'form-control' %>
           </div>
         </div>
       </div>
     <% end -%>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.label :role, class: 'col-sm-4 control-label' %>
+        <div class="col-sm-8">
+          <%= select_tag(:role,\
+                         options_for_select([["Administrator", "admin"], ["Organization user", "other"]]),\
+                         id: 'role-input', class: 'form-control') %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.label :organization, class: 'col-sm-4 control-label' %>
+        <div class="col-sm-8">
+          <%= collection_select(:user, :organization_id,\
+                                Organization.all, :id, :name,\
+                                { include_blank: true },\
+                                id: 'organization-input', class: 'form-control') %>
+        </div>
+      </div>
+    </div>
 
   </div>
 
