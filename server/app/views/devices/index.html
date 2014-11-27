@@ -1,4 +1,5 @@
-<% if @devices.any? %>
+<% if @pending_devices.any? %>
+<h4>Unconfirmed devices</h4>
 
 <table class="table table-hover">
   <caption>Please confirm the following devices to allow them to upload new cases.</caption>
@@ -9,10 +10,10 @@
     <th>Action</th>
   </thead>
   <tbody>
-  <% for @device in @devices %>
+  <% for @device in @pending_devices %>
   <tr>
   
-    <td><%= @device.organization_name %></td>
+    <td><%= @device.reported_organization_name %></td>
     <td><%= @device.supervisor_name %></td>
     <td><%= @device.supervisor_phone_number %></td>
     <td>
@@ -29,10 +30,37 @@
   </tbody>
 </table>
 
-<% else %>
+<% end %>
+
+<% if @confirmed_devices.any? %>
+
+<h4>Confirmed devices</h4>
+
+<table class="table table-hover">
+  <thead>
+    <th>Organization name</th>
+    <th>Supervisor name</th>
+    <th>Supervisor phone number</th>
+  </thead>
+  <tbody>
+  <% for @device in @confirmed_devices %>
+  <tr>
+  
+    <td><%= @device.reported_organization_name %></td>
+    <td><%= @device.supervisor_name %></td>
+    <td><%= @device.supervisor_phone_number %></td>
+
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% end %>
+
+<% if @pending_devices.empty? and @confirmed_devices.empty? %>
 
 <div class="well text-center">
-  <h5>There are no devices pending for confirmation</h5>
+  <h5>No devices have yet registered</h5>
 </div>
 
 <% end %>

@@ -8,8 +8,8 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <%= navigation_item 'Devices', :devices, devices_path %>
-      <%= navigation_item 'Organizations', :organizations, organizations_path %>
-      <%= navigation_item 'Users',   :users, users_path %>
+      <%= navigation_item 'Organizations', :organizations, organizations_path, if: (current_user.can? :read, Organization) %>
+      <%= navigation_item 'Users',   :users, users_path,                       if: (current_user.can? :read, User) %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">

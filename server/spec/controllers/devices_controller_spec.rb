@@ -53,13 +53,18 @@ describe DevicesController, type: :controller do
 
     context "as organization user" do
 
-     before(:each) { sign_in_user }
+     let(:user) { FactoryGirl.create :user }
+     before(:each) { sign_in user }
+     let(:approved_device_same_organization)  { FactoryGirl.create :approved_device, organization: user.organization }
+     let(:approved_device_other_organization) { FactoryGirl.create :approved_device }
 
      # at the moment accessing the device index means the user
      # is able to confirm devices.
-     it "does not allow access to unconfirmed devices" do
+     it "allows to list confirmed devices for his organization" do
        get :index
-       expect(response).to be_unauthorized
+       expect(response).to be_successful
+       expect(assigns(:pending_devices)).to be_empty
+       expect(assigns(:confirmed_devices)).to eq([approved_device_same_organization])
      end
 
      it "does not allow confirming devices" do

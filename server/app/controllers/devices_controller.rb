@@ -3,11 +3,14 @@ class DevicesController < AuthenticatedController
   load_and_authorize_resource
 
   def index
-    unless current_user.can? :approve, Device
-      raise CanCan::AccessDenied.new("Not authorized", :create, :invitations)
+    if current_user.can? :approve, Device
+      @confirmed_devices = @devices.where(confirmed: true)
+      @pending_devices   = @devices.where(confirmed: false)
+    else
+      @confirmed_devices = @devices
+      @pending_devices   = []
     end
     
-    @devices = @devices.where(confirmed: false)
   end
 
   def update
