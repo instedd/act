@@ -25,6 +25,7 @@ class CaseList extends JFrame {
 	CaseTableModel tableModel
 	
 	def columnDefinitions = [
+		["", 					String.class],
 		["Name", 				String.class],
 		["Phone number", 		String.class],
 		["Age", 				String.class],
@@ -35,7 +36,7 @@ class CaseList extends JFrame {
 		["Follow up",			String.class]
 	]
 	
-	def toRow = { Case c -> [c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
+	def toRow = { Case c -> [c.updated ? "*" : "", c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
 	
 	CaseList(CaseListController controller) {
 		this.controller = controller
@@ -53,6 +54,7 @@ class CaseList extends JFrame {
 		def table = new JTable(tableModel)
 		table.fillsViewportHeight = true
 		table.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
+		column(table, "").preferredWidth = 5
 		column(table, "Age").preferredWidth = 35
 		column(table, "Gender").preferredWidth = 50
 		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
