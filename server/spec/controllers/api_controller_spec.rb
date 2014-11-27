@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ApiController, type: :controller do
 
   let(:device) do
-    FactoryGirl.create :device, organization_name: "instedd",\
+    FactoryGirl.create :device, reported_organization_name: "instedd",\
                                 location_id: 123,\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"

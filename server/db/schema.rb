@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126215929) do
+ActiveRecord::Schema.define(version: 20141127125521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,16 +33,19 @@ ActiveRecord::Schema.define(version: 20141126215929) do
 
   create_table "devices", force: true do |t|
     t.string   "guid"
-    t.string   "organization_name"
+    t.string   "reported_organization_name"
     t.integer  "location_id"
     t.string   "supervisor_phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "supervisor_name"
     t.text     "public_key"
-    t.boolean  "confirmed",               default: false
-    t.boolean  "public_key_allowed",      default: false
+    t.boolean  "confirmed",                  default: false
+    t.boolean  "public_key_allowed",         default: false
+    t.integer  "organization_id"
   end
+
+  add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree
 
   create_table "organizations", force: true do |t|
     t.string   "name",       null: false
@@ -70,6 +73,7 @@ ActiveRecord::Schema.define(version: 20141126215929) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.datetime "invitation_created_at"
+    t.integer  "organization_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

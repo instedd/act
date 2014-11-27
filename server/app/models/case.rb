@@ -5,6 +5,8 @@ class Case < ActiveRecord::Base
   validates_presence_of :guid
   validates_presence_of :device
 
+  delegate :organization, :organization_id, to: :device
+
   def self.save_from_sync_file(device_guid, file_content)
     json = JSON.parse file_content
     device_id = Device.where(guid: device_guid).pluck(:id)[0]

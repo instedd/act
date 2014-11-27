@@ -1,12 +1,13 @@
 class Device < ActiveRecord::Base
 
-  has_many :cases
+  has_many   :cases
+  belongs_to :organization
 
   validate :check_public_key
 
   validates_presence_of [
     :public_key,
-    :organization_name,
+    :reported_organization_name,
     :location_id,
     :supervisor_name,
     :supervisor_phone_number
