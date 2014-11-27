@@ -20,7 +20,6 @@ ADD Gemfile /home/app/webapp/
 ADD Gemfile.lock /home/app/webapp/
 RUN bundle install --without development test
 ADD . /home/app/webapp
-RUN bundle exec rake assets:precompile
 
 # Copy configuration and init files
 ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
@@ -32,6 +31,7 @@ ADD deploy/01_serve_ssh_public_key.sh /etc/my_init.d/
 ADD deploy/02_setup_sync_dir.sh       /etc/my_init.d/
 ADD deploy/03_setup_sshd.sh           /etc/my_init.d/
 ADD deploy/04_migrate_db.sh           /etc/my_init.d/
+ADD deploy/05_precompile_assets.sh    /etc/my_init.d/
 
 
 # Add background daemons
