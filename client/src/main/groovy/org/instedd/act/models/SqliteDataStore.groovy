@@ -39,7 +39,7 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public List<Case> listCases() {
 		sql.rows("select * from cases").collect { row ->
-			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced])
+			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])
 		}
 	}
 
@@ -63,7 +63,7 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public List<Case> unsyncedCases() {
 		sql.rows("select * from cases where synced = ${false}").collect { row ->
-			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced])
+			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])
 		}
 	}
 
@@ -74,6 +74,6 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public void updateSickCase(String guid, Boolean isSick) {
-		sql.execute("update cases set sick = ${isSick} where guid = ${guid}")
+		sql.execute("update cases set sick = ${isSick}, updated = ${true} where guid = ${guid}")
 	}
 }

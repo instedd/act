@@ -1,0 +1,1 @@
+ALTER TABLE cases ADD updated TINYINT DEFAULT 0;
