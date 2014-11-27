@@ -2,4 +2,4 @@
 set -ev
 cd server
 bundle exec rake db:setup
-bundle exec rspec --require rails_helper
+bundle exec rspec
