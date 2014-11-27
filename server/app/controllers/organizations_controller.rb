@@ -16,6 +16,11 @@ class OrganizationsController < AuthenticatedController
     end
   end
 
+  def destroy
+    @organization.destroy.destroy
+    redirect_to action: :index
+  end
+
   private
 
   def create_params

@@ -23,6 +23,43 @@ describe OrganizationsController, type: :controller do
       expect(response).not_to be_unauthorized
     end
 
+    it "allows to delete organizations" do
+      organization = FactoryGirl.create :organization
+      expect {
+        delete :destroy, id: organization.id
+      }.to change(Organization, :count).by(-1)
+      expect(response).not_to be_unauthorized
+    end
+
+  end
+
+  context "as organization user" do
+
+    before(:each) { sign_in_user }
+
+    it "does not allow to list organizations" do
+      get :index
+      expect(response).to be_unauthorized
+    end
+
+    it "does not allow to access new organization form" do
+      get :new
+      expect(response).to be_unauthorized
+    end
+
+    it "does not allow to create organizations" do
+      post :create, organization: FactoryGirl.attributes_for(:organization)
+      expect(response).to be_unauthorized
+    end
+
+    it "does not allow to delete organizations" do
+      organization = FactoryGirl.create :organization
+      expect {
+        delete :destroy, id: organization.id
+      }.not_to change(Organization, :count)
+      expect(response).to be_unauthorized
+    end
+
   end
 
 end
