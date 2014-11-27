@@ -1,7 +1,13 @@
 class DevicesController < AuthenticatedController
 
+  load_and_authorize_resource
+
   def index
-    @devices = Device.where(confirmed: false)
+    unless current_user.can? :approve, Device
+      raise CanCan::AccessDenied.new("Not authorized", :create, :invitations)
+    end
+    
+    @devices = @devices.where(confirmed: false)
   end
 
   def update
@@ -12,6 +18,12 @@ class DevicesController < AuthenticatedController
     device.save
     
     redirect_to action: :index
+  end
+
+  private
+
+  def update_params
+    params.require(:organization).permit(:confirmed)
   end
 
 end

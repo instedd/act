@@ -14,7 +14,7 @@ FactoryGirl.define do
   end
 
   factory :approved_device, parent: :non_approved_device, aliases: [:device] do
-    approved_at   { 1.day.ago }
+    confirmed true
     organization
   end
 

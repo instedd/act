@@ -1,15 +1,15 @@
 class OrganizationsController < AuthenticatedController
 
+  load_and_authorize_resource
+
   def index
-    @organizations = Organization.all
   end
 
   def new
-    @organization = Organization.new
   end
 
   def create
-    if @organization = Organization.create(organization_params)
+    if @organization.save
       redirect_to organizations_path
     else
       #TODO
@@ -18,7 +18,7 @@ class OrganizationsController < AuthenticatedController
 
   private
 
-  def organization_params
+  def create_params
     params.require(:organization).permit(:name)
   end
 
