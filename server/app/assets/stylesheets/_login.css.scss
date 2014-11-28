@@ -1,8 +1,16 @@
 #act-login {
-  margin-top: 40px;
+  margin-top: 120px;
   form {
+    legend {
+      margin-bottom: 25px;
+    }
+
     input {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
     }
   }
   form #error_explanation {

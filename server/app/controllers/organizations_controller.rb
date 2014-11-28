@@ -10,6 +10,7 @@ class OrganizationsController < AuthenticatedController
 
   def create
     if @organization.save
+      flash[:notice] = "#{@organization.name} organization created"
       redirect_to organizations_path
     else
       #TODO
@@ -18,6 +19,7 @@ class OrganizationsController < AuthenticatedController
 
   def destroy
     @organization.destroy.destroy
+    flash[:notice] = "#{@organization.name} organization deleted"
     redirect_to action: :index
   end
 

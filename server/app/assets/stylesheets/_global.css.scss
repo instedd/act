@@ -1,0 +1,12 @@
+.flash {
+  display: block;
+  position: absolute;
+  text-align: center;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 500px;
+  margin: 15px auto;
+  z-index: 1000;
+}

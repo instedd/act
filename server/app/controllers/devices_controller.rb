@@ -26,6 +26,7 @@ class DevicesController < AuthenticatedController
     device.organization = organization
     device.save
     
+    flash[:notice] = "Device confirmed"
     redirect_to action: :index
   end
 

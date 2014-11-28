@@ -8,20 +8,17 @@
 </head>
 <body data-controller="<%=controller_name%>" data-action="<%=action_name%>">
 
+<%= flash_message %>
+
 <div class="container">
 
 <% unless current_user.nil? -%>
 <%= render "shared/navbar" %>
 <% end %>
 
-<% if notice -%>
-  <div class="alert alert-info"><%= notice %></div>
-<% end %>
-<% if alert -%>
-  <div class="alert alert-warning"><%= alert %></div>
-<% end %>
 
 <%= yield %>
+</div>
 
 </body>
 </html>
