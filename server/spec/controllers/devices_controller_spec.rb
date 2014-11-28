@@ -2,20 +2,23 @@ require 'rails_helper'
 
 describe DevicesController, type: :controller do
 
+  let(:organization) { FactoryGirl.create :organization }
+  let(:device)       { FactoryGirl.create :non_approved_device }
+
   describe "confirming devices" do
 
     before(:each) { sign_in_admin }
-    let(:device)  { FactoryGirl.create :non_approved_device }
 
-    it "allows ssh access when device is confirmed" do
-      put :update, id: device.id, confirmed: true
+    it "sets device organization when confirmed" do
+      put :update, id: device.id, device: { confirmed: true, organization_id: organization.id }
 
       expect(device.reload).to be_confirmed
+      expect(device.organization).to eq(organization)
     end
 
     it "doesn't allow to un-confirm devices" do
       device.update_attributes(confirmed: true)
-      put :update, id: device.id, confirmed: false
+      put :update, id: device.id, device: { confirmed: false, organization_id: organization.id }
 
       expect(response).not_to be_successful      
       expect(device.reload).to be_confirmed
@@ -23,7 +26,7 @@ describe DevicesController, type: :controller do
 
     it "doesn't update other attributes" do
       expect {
-        put :update, id: device.id, confirmed: true, supervisor_name: "OTHER_NAME"
+        put :update, id: device.id, device: { confirmed: true, organization_id: organization.id, supervisor_name: "OTHER_NAME" }
       }.not_to change { device.reload.supervisor_name }
       
       expect(device.reload).to be_confirmed
@@ -32,8 +35,6 @@ describe DevicesController, type: :controller do
   end
 
   describe "authorization" do
-
-    let(:non_approved_device) { FactoryGirl.create :non_approved_device }
 
     context "as admin" do
 
@@ -45,7 +46,7 @@ describe DevicesController, type: :controller do
       end
 
       it "allows confirming devices" do
-        put :update, id: non_approved_device.id, confirmed: true
+        put :update, id: device.id, device: { confirmed: true, organization_id: organization.id }
         expect(response).not_to be_unauthorized
       end
 
@@ -68,7 +69,7 @@ describe DevicesController, type: :controller do
      end
 
      it "does not allow confirming devices" do
-       put :update, id: non_approved_device.id, confirmed: true
+       put :update, id: device.id, device: { confirmed: true, organization_id: organization.id }
        expect(response).to be_unauthorized
      end
 

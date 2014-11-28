@@ -1,29 +1,35 @@
 <% if @pending_devices.any? %>
 <h4>Unconfirmed devices</h4>
 
-<table class="table table-hover">
+<table id="devices-confirm-table" class="table table-hover">
   <caption>Please confirm the following devices to allow them to upload new cases.</caption>
   <thead>
-    <th>Organization name</th>
     <th>Supervisor name</th>
     <th>Supervisor phone number</th>
-    <th>Action</th>
+    <th>Reported organization</th>
+    <th>Real organization</th>
   </thead>
   <tbody>
   <% for @device in @pending_devices %>
   <tr>
   
-    <td><%= @device.reported_organization_name %></td>
     <td><%= @device.supervisor_name %></td>
     <td><%= @device.supervisor_phone_number %></td>
-    <td>
-      <%=
-         link_to 'Confirm',
-                 device_path(@device, confirmed: true),
-                 :method => 'put',
-                 :class => 'btn btn-default btn-sm btn-success'
-      %>
+    <td><%= @device.reported_organization_name %></td>
+    <td class="organization-confirmation">
+      <%= form_for(@device, url: device_path(@device), html: { method: :put, class: "form-inline" }) do |f| %>
+      
+        <div class="form-group">
+          <%= collection_select(:device, :organization_id,\
+              Organization.all, :id, :name,\
+              { include_blank: true },\
+              id: 'organization-input', class: 'form-control input-sm') %>
+        </div>
+        <%= f.hidden_field :confirmed, :value => true %>
+        <%= f.submit "Confirm", :class => 'btn btn-default btn-sm btn-success' %>
+      <% end %>
     </td>
+    <td>
   
   </tr>
   <% end %>
@@ -38,7 +44,7 @@
 
 <table class="table table-hover">
   <thead>
-    <th>Organization name</th>
+    <th>Organization</th>
     <th>Supervisor name</th>
     <th>Supervisor phone number</th>
   </thead>
@@ -46,7 +52,7 @@
   <% for @device in @confirmed_devices %>
   <tr>
   
-    <td><%= @device.reported_organization_name %></td>
+    <td><%= @device.organization.name %></td>
     <td><%= @device.supervisor_name %></td>
     <td><%= @device.supervisor_phone_number %></td>
 
