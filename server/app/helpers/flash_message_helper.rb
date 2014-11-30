@@ -10,7 +10,10 @@ module FlashMessageHelper
 
     keys.each do |key, value|
       if flash[key]
-        attrs = {:class => "flash #{value}"}
+        attrs = {
+          class: "flash #{value}",
+          style: "display:none"
+        }
         attrs['data-hide-timeout'] = timeout unless !timeout or flash[:flash_message_persist]
 
         res = content_tag :div, attrs do

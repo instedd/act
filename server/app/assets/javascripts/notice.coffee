@@ -4,4 +4,5 @@ $(document).ready ->
   if (message.length > 0)
     timeout = message.attr('data-hide-timeout') || 2000
     
-    window.setTimeout((() -> message.fadeOut(400)), timeout)
+    message.fadeIn()
+    window.setTimeout(( -> message.fadeOut()), timeout)
