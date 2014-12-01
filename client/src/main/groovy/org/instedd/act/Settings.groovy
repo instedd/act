@@ -63,4 +63,9 @@ class Settings {
 		"${this.dataDir()}server_signature.key"
 	}
 	
+	public Boolean isUseServerSignature() {
+		def signature = this.serverSignatureUrl()
+		signature != null && !signature.isEmpty() 
+	}
+	
 }
