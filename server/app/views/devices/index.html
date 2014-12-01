@@ -1,79 +1,9 @@
-<% if @pending_devices.any? %>
-<h4>Unconfirmed devices</h4>
+<% if @view_pending %>
 
-<table id="devices-confirm-table" class="table table-hover">
-  <caption>Please confirm the following devices to allow them to upload new cases.</caption>
-  <thead>
-    <th>Supervisor name</th>
-    <th>Supervisor phone number</th>
-    <th>Reported organization</th>
-    <th>Real organization</th>
-  </thead>
-  <tbody>
-  <% for @device in @pending_devices %>
-  <tr>
-  
-    <td><%= @device.supervisor_name %></td>
-    <td><%= @device.supervisor_phone_number %></td>
-    <td><%= @device.reported_organization_name %></td>
-    <td class="organization-confirmation">
-      <%= form_for(@device, url: device_path(@device), html: { method: :put, class: "form-inline" }) do |f| %>
-      
-        <div class="form-group">
-          <%= collection_select(:device, :organization_id,\
-              Organization.all, :id, :name,\
-              { include_blank: true },\
-              id: 'organization-input', class: 'form-control input-sm') %>
-        </div>
-        <%= f.hidden_field :confirmed, :value => true %>
-        <%= f.submit "Confirm", :class => 'btn btn-default btn-sm btn-success' %>
-        <%=
-          link_to "Dismiss",
-          device_path(@device) ,
-          method: 'delete',
-          class: 'btn btn-default btn-sm btn-warning',
-          data: { confirm: "Dismissing this devices will prevent it from upload cases in the future. Are you sure?" }
-        %>
-      <% end %>
-    </td>
-    <td>
-  
-  </tr>
-  <% end %>
-  </tbody>
-</table>
+<%= render 'devices/pending_list'%>
 
-<% end %>
+<% else %>
 
-<% if @confirmed_devices.any? %>
-
-<h4>Confirmed devices</h4>
-
-<table class="table table-hover">
-  <thead>
-    <th>Organization</th>
-    <th>Supervisor name</th>
-    <th>Supervisor phone number</th>
-  </thead>
-  <tbody>
-  <% for @device in @confirmed_devices %>
-  <tr>
-  
-    <td><%= @device.organization.name %></td>
-    <td><%= @device.supervisor_name %></td>
-    <td><%= @device.supervisor_phone_number %></td>
-
-  </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<% end %>
-
-<% if @pending_devices.empty? and @confirmed_devices.empty? %>
-
-<div class="well text-center">
-  <h5>No devices have yet registered</h5>
-</div>
+<%= render 'devices/confirmed_list'%>
 
 <% end %>

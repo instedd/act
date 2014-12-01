@@ -3,15 +3,18 @@ class DevicesController < AuthenticatedController
   load_and_authorize_resource
 
   def index
-    @devices = @devices.includes(:organization)
-    if current_user.can? :approve, Device
-      @confirmed_devices = @devices.where(confirmed: true)
-      @pending_devices   = @devices.where(confirmed: false)
+    confirmed_devices = @devices.where(confirmed: true)
+    pending_devices   = @devices.where(confirmed: false)
+
+    @view_pending = current_user.admin? && (params[:pending] || (pending_devices.any? && confirmed_devices.empty?))
+
+    if @view_pending
+      @confirmed_devices_count = confirmed_devices.count
+      @devices = pending_devices
     else
-      @confirmed_devices = @devices
-      @pending_devices   = []
+      @pending_devices_count = pending_devices.count
+      @devices = confirmed_devices
     end
-    
   end
 
   def update

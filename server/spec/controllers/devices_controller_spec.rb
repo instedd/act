@@ -79,8 +79,7 @@ describe DevicesController, type: :controller do
      it "allows to list confirmed devices for his organization" do
        get :index
        expect(response).to be_successful
-       expect(assigns(:pending_devices)).to be_empty
-       expect(assigns(:confirmed_devices)).to eq([approved_device_same_organization])
+       expect(assigns(:devices)).to eq([approved_device_same_organization])
      end
 
      it "does not allow confirming devices" do

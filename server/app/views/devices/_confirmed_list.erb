@@ -1,0 +1,39 @@
+<% if current_user.admin? && @pending_devices_count > 0 %>
+  <%= 
+      link_to \
+      "View #{@pending_devices_count} pending #{'device'.pluralize(@pending_devices_count)}",\
+      devices_path(pending: true),\
+      class: 'btn btn-primary pull-right'
+  %>
+  <div style="clear:both"></div>
+<% end %>
+
+<% if @devices.any? %>
+
+<table class="table table-hover">
+  <caption>The following devices are already approved and can upload cases.</caption>
+  <thead>
+    <th>Organization</th>
+    <th>Supervisor name</th>
+    <th>Supervisor phone number</th>
+  </thead>
+  <tbody>
+  <% for @device in @devices %>
+  <tr>
+  
+    <td><%= @device.organization.name %></td>
+    <td><%= @device.supervisor_name %></td>
+    <td><%= @device.supervisor_phone_number %></td>
+
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<div class="well text-center">
+  <h5>There are no confirmed devices to display.</h5>
+</div>
+
+<% end %>
