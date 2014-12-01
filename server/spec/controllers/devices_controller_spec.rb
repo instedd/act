@@ -32,6 +32,21 @@ describe DevicesController, type: :controller do
       expect(device.reload).to be_confirmed
     end
 
+    it "deletes unconfirmed devices on destroy action" do
+      device.save
+      expect {
+        delete :destroy, id: device.id
+      }.to change(Device, :count).by(-1)
+    end
+
+    it "fails to delete confirmed devices on destroy action" do
+      unconfirmed_device = FactoryGirl.create :approved_device
+      expect {
+        delete :destroy, id: unconfirmed_device.id
+      }.not_to change(Device, :count)
+      expect(response).to be_unauthorized
+    end
+
   end
 
   describe "authorization" do
@@ -70,6 +85,11 @@ describe DevicesController, type: :controller do
 
      it "does not allow confirming devices" do
        put :update, id: device.id, device: { confirmed: true, organization_id: organization.id }
+       expect(response).to be_unauthorized
+     end
+
+     it "does not allow deleting devices" do
+       delete :destroy, id: device.id
        expect(response).to be_unauthorized
      end
 

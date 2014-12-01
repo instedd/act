@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root 'devices#index'
 
-  resources :devices, only: [:index, :update]
+  resources :devices, only: [:index, :update, :destroy]
   resources :organizations, only: [:index, :new, :create, :destroy]
   resources :users, only:   [:index]
 

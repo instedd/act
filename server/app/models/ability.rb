@@ -30,6 +30,7 @@ class Ability
       can :manage, :all
       cannot :create, Case
       cannot :destroy, Case
+      cannot :destroy, Device, confirmed: true
   end
 
   def organization_user user

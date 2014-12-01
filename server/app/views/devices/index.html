@@ -27,6 +27,13 @@
         </div>
         <%= f.hidden_field :confirmed, :value => true %>
         <%= f.submit "Confirm", :class => 'btn btn-default btn-sm btn-success' %>
+        <%=
+          link_to "Dismiss",
+          device_path(@device) ,
+          method: 'delete',
+          class: 'btn btn-default btn-sm btn-warning',
+          data: { confirm: "Dismissing this devices will prevent it from upload cases in the future. Are you sure?" }
+        %>
       <% end %>
     </td>
     <td>

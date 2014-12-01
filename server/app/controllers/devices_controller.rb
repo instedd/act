@@ -30,6 +30,12 @@ class DevicesController < AuthenticatedController
     redirect_to action: :index
   end
 
+  def destroy
+    @device.destroy!
+    flash[:notice] = "Device deleted"
+    redirect_to action: :index
+  end
+
   private
 
   def update_params
