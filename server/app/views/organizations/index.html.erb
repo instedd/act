@@ -18,7 +18,8 @@
                  organization_path(@organization),
                  method: 'delete',
                  data: { confirm: "Are you sure you want to delete the #{@organization.name} organization?" },
-                 class: 'btn btn-default btn-sm btn-danger'
+                 class: 'btn btn-default btn-sm btn-danger',
+                 disabled: !@organization.can_be_deleted?
       %>
     </td>
   
