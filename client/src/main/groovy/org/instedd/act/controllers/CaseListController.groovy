@@ -1,5 +1,6 @@
 package org.instedd.act.controllers
 
+import org.instedd.act.events.CaseUpdatedEvent;
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
 import org.instedd.act.sync.SynchronizationProcess
@@ -7,6 +8,8 @@ import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.caselist.CaseList
 
 import com.google.common.base.Strings
+import com.google.common.eventbus.EventBus
+import com.google.common.eventbus.Subscribe;
 import com.google.inject.Inject
 
 class CaseListController {
@@ -18,6 +21,11 @@ class CaseListController {
 	
 	CaseList caseList = new CaseList(this)
 	NewCaseForm newCaseForm
+	
+	@Inject
+	CaseListController(EventBus eventBus) {
+		eventBus.register(this)
+	}
 
 	def buildView() {
 		caseList.build(dataStore.listCases());
@@ -102,6 +110,11 @@ class CaseListController {
 		if (changed) {
 			caseList.updateCases(dataStore.listCases())
 		}
+	}
+	
+	@Subscribe
+	void onCaseUpdated(CaseUpdatedEvent event) {
+		caseList.updateCases(dataStore.listCases())
 	}
 	
 }

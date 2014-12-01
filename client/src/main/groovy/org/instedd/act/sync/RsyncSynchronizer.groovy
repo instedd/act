@@ -5,10 +5,12 @@ import groovy.json.JsonSlurper
 import org.apache.commons.lang.StringUtils
 import org.instedd.act.Settings
 import org.instedd.act.authentication.Credentials
+import org.instedd.act.events.CaseUpdatedEvent
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
+import com.google.common.eventbus.EventBus;
 import com.google.inject.Inject
 
 class RsyncSynchronizer implements DocumentSynchronizer {
@@ -17,6 +19,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	
 	DataStore dataStore
 	Credentials credentials
+	@Inject EventBus eventBus
 	
 	RsyncCommandBuilder commandBuilder
 	
@@ -96,8 +99,10 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 				logger.trace "Downloaded ${filename}"
 				def matcher = filename =~ /^case-(.+)\.json$/
 				if(matcher.matches()) {
+					String caseGuid = matcher[0][1]
 					File downloadedFile = this.downloadedFile(filename)
-					dataStore.updateSickCase(matcher[0][1], new JsonSlurper().parseText(downloadedFile.text).sick)
+					dataStore.updateSickCase(caseGuid, new JsonSlurper().parseText(downloadedFile.text).sick)
+					eventBus.post([guid: caseGuid] as CaseUpdatedEvent)
 					downloadedFile.delete()
 				}
 			}

@@ -16,6 +16,7 @@ import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.RsyncSynchronizer
 import org.instedd.act.sync.SynchronizationProcess;
 
+import com.google.common.eventbus.EventBus;
 import com.google.inject.Binder
 import com.google.inject.Guice
 import com.google.inject.Module
@@ -58,6 +59,7 @@ class App {
 			binder.bind(Credentials.class).toInstance(credentials)
 			binder.bind(DatabaseConnector.class).toInstance(connector)
 			
+			binder.bind(EventBus.class).toInstance(new EventBus())
 			binder.bind(DataStore.class).to(SqliteDataStore.class).asEagerSingleton();
 			binder.bind(DocumentExporter.class).to(SqliteToJsonExporter.class).asEagerSingleton()
 			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations-packed.json')))
