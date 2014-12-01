@@ -1,5 +1,6 @@
 class ApiController < ApplicationController
 
+  before_filter :restrict_access, except: [:register]
   protect_from_forgery with: :null_session
 
   def register
@@ -44,6 +45,14 @@ class ApiController < ApplicationController
     Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
     
     render nothing: true, status: 200
+  end
+
+  private
+
+  def restrict_access
+    authenticate_or_request_with_http_token do |token, other_options|
+      ApiKey.exists?(access_token: token)
+    end
   end
 
 end

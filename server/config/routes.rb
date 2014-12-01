@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   root 'devices#index'
 
-  resources :devices, only: [:index, :update, :destroy]
+  resources :devices,       only: [:index, :update, :destroy]
   resources :organizations, only: [:index, :new, :create, :destroy]
-  resources :users, only:   [:index]
+  resources :users,         only: [:index]
+  resources :api_keys,      only: [:index, :create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

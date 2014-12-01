@@ -1,0 +1,36 @@
+<% if @api_keys.any? %>
+
+<table class="table table-hover">
+  <thead>
+    <th>Access token</th>
+    <th>Creation date</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+  <% for @api_key in @api_keys %>
+  <tr>
+  
+    <td><%= @api_key.access_token %></td>
+    <td><%= @api_key.created_at %></td>
+    <td>
+      <%=
+        link_to "Delete",
+        api_key_path(@api_key) ,
+        method: 'delete',
+        class: 'btn btn-default btn-sm btn-danger',
+        data: { confirm: "Deleting this API key may cause applications that depend on it to malfunction. Are you sure?" }
+      %>
+    </td>
+
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% else %>
+
+<div class="well text-center">
+  <h5>There are no API keys yet. <%= link_to 'Create one', api_keys_path, method: 'post' %>.</h5>
+</div>
+
+<% end %>
