@@ -1,0 +1,19 @@
+pg:
+  image:       postgres:9.3.5
+
+act:
+  image:       instedd/act
+
+  ports:
+    - "3000:80"
+    - "2222:22"
+
+  links: ["pg:act_postgres"]
+
+  environment:
+    - ACT_APP_DIR=/home/app/webapp
+    - ACT_DATABASE_HOST=act_postgres
+    - ACT_DATABASE_PASSWORD=''
+    - ACT_DATABASE_PORT=5432
+    - ACT_DATABASE_USERNAME=postgres
+    - SECRET_KEY_BASE=3b7d6e145ca34014358811429e8ad4488bcfbd756ecd7dabb655578b0b2a11463ea4becc2bed239d8548b49c7fd823d5a9fb76e5e20f620bada680f18bb83264
