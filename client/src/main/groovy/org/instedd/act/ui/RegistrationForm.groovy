@@ -44,13 +44,12 @@ class RegistrationForm extends JFrame {
 	JPanel createForm(rootLocations) {
 		def form = new JPanel(new GridBagLayout())
 		form.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
-		form.setPreferredSize(new Dimension(405, 380))
+		form.setPreferredSize(new Dimension(440, 380))
 		
 		//----- intro text
 		def c = new GBC()
 		c.gridy = 0
 		c.anchor = GBC.PAGE_START
-		c.weighty = 10
 		c.fill = GBC.HORIZONTAL
 		c.ipady = 10
 		c.ipadx = 5
@@ -61,9 +60,14 @@ class RegistrationForm extends JFrame {
 		c = new GBC()
 		c.gridy = 1
 		c.anchor = GBC.NORTH
-		c.weighty = 85
-		c.weightx = 1
 		c.fill = GBC.HORIZONTAL
+		c.ipady = 10
+		
+		// Assigning non zero weight makes this component 
+		// get all the available extra space after placing
+		// components
+		c.weighty = 1
+		c.weightx = 1
 
 		fieldsContainer = new JPanel(new GridBagLayout())
 		addField "Organization", createOrganizationInput()
@@ -75,17 +79,15 @@ class RegistrationForm extends JFrame {
 		//----- errors 
 		c = new GBC()
 		c.gridy = 2
-		c.weighty = 5
-		c.anchor = GBC.CENTER
+		c.anchor = GBC.SOUTH
 		c.fill = GBC.HORIZONTAL
-		
+		c.ipady = 10
 		errorLabel = new JLabel("")
 		form.add(errorLabel, c)
 		
 		//----- submit
 		c = new GBC()
 		c.gridy = 3
-		c.weighty = 5
 		c.anchor = GBC.PAGE_END
 		def submitButton = new JButton("Register")
 		submitButton.addActionListener { controller.submit() }
