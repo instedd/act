@@ -28,6 +28,13 @@ class Case < ActiveRecord::Base
                  note: json["note"]
   end
 
+  def confirm_sick!
+    previously_sick = self.sick
+    self.sick = true
+    Notification.case_confirmed_sick! self unless previously_sick
+    self.save
+  end
+
   def as_json_for_api
     ret = self.as_json.select do |k|
       [

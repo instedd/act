@@ -141,6 +141,22 @@ describe ApiController, type: :controller do
         expect(Case.find_by_guid("CASE1")).to be_sick
       end
 
+      it "creates notifications when case is confirmed sick" do
+        expect(Device).to receive(:sync_sick_status)
+        expect {
+          xhr :put, :update_case, id: case_id, sick: true
+        }.to change(Notification, :count).by(1)
+      end
+
+      it "does not create a notification if case was already confirmed sick" do
+        expect(Device).to receive(:sync_sick_status)
+        
+        device.cases.first.confirm_sick!
+        expect {
+          xhr :put, :update_case, id: case_id, sick: true
+        }.not_to change(Notification, :count)
+      end
+
     end
 
 
