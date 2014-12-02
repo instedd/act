@@ -23,13 +23,13 @@ FactoryGirl.define do
   end
 
   factory :admin_user, class: User do
-    email        "act_admin@instedd.org"
+    email        "foo_admin@example.com"
     password     "12345678"
     organization nil
   end
 
   factory :organization_user, aliases: [:user], class: User do
-    email        "act_admin@instedd.org"
+    email        "foo@example.com"
     password     "12345678"
     organization
   end
