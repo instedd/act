@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :invitations => 'users/invitations' }
-  post 'api/v1/registration' => 'api#register'
-  get  'api/v1/cases'     => 'api#cases'
-  put  'api/v1/cases/:id' => 'api#update_case'
+
+  scope :api do
+    scope :v1 do
+      post 'registration' => 'api#register'
+      get  'cases'        => 'api#cases'
+      put  'cases/:id'    => 'api#update_case'
+      get  'notifications'=> 'api#notifications'
+    end
+  end
 
   root 'devices#index'
 

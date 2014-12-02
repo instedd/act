@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201165850) do
+ActiveRecord::Schema.define(version: 20141202203657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
@@ -54,6 +55,13 @@ ActiveRecord::Schema.define(version: 20141201165850) do
   end
 
   add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree
+
+  create_table "notifications", force: true do |t|
+    t.string   "notification_type", null: false
+    t.hstore   "metadata"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "organizations", force: true do |t|
     t.string   "name",       null: false

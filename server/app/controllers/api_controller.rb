@@ -47,6 +47,20 @@ class ApiController < ApplicationController
     render nothing: true, status: 200
   end
 
+  def notifications
+    notifications = Notification.order(:created_at)
+    
+    if params[:since_id].present?
+      notifications = notifications.where("id > ?", params[:since_id])
+    end
+
+    if params[:notification_type].present?
+      notifications = notifications.where("notification_type = ?", params[:notification_type])
+    end
+
+    render json: notifications.map(&:as_json_for_api)
+  end
+
   private
 
   def restrict_access

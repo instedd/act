@@ -146,6 +146,65 @@ describe ApiController, type: :controller do
 
   end
 
+
+  describe "listing notifications" do
+
+    context "without access token header" do
+      it "refuses access without access token header" do
+        xhr :get, :notifications
+        expect(response.code.to_i).to eq(401)
+      end
+    end
+
+    context "with access token header" do
+
+      before(:each) { add_access_token_header }
+
+      it "returns no notifications if there are no notifications" do
+        xhr :get, :notifications
+        expect(response).to be_successful
+        expect(json_response).to eq([])
+      end
+
+      it "returns all notifications if there is no since_id specified" do
+        n1 = FactoryGirl.create :notification, metadata: { "k1" => "v1" }
+        n2 = FactoryGirl.create :notification, metadata: { "k2" => "v2" }
+        expected_response = [n1, n2].map do |n| 
+          { "id" => n.id, "notification_type" => n.notification_type.to_s, "metadata" => n.metadata }
+        end
+        
+        xhr :get, :notifications
+        
+        expect(response).to be_successful
+        expect(json_response).to eq(expected_response)
+      end
+
+      it "returns only notifications after specified since_id" do
+        3.times { FactoryGirl.create :notification }
+        first_notificaton = Notification.first
+
+        xhr :get, :notifications, since_id: first_notificaton.id
+
+        expect(response).to be_successful
+        expect(json_response.size).to eq(2)
+        expect(json_response.map {|n| n["id"]}).not_to include(first_notificaton.id)
+      end
+
+      it "allows to filter by notification_type" do
+        FactoryGirl.create :notification, notification_type: :foo
+        FactoryGirl.create :notification, notification_type: :bar
+
+        xhr :get, :notifications, notification_type: :foo
+
+        expect(response).to be_successful
+        expect(json_response.size).to eq(1)
+        expect(json_response[0]["notification_type"]).to eq("foo")
+      end
+
+    end
+
+  end
+
   def json_response
     JSON.parse(response.body)
   end

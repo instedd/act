@@ -45,4 +45,9 @@ FactoryGirl.define do
     device
   end
 
+  factory :notification do
+    notification_type :case_confirmed_sick
+    metadata {}
+  end
+
 end
