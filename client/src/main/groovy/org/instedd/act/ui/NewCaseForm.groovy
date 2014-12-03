@@ -180,7 +180,7 @@ class NewCaseForm extends JDialog {
 		def reasonsPanel = new JPanel()
 		reasonsPanel.setLayout(new BoxLayout(reasonsPanel, BoxLayout.Y_AXIS))
 		reasonsChecks = []
-		Case.CONTACT_REASONS.each { reason ->
+		controller.contactReasons().each { reason ->
 			JCheckBox reasonCheck = new JCheckBox(reason)
 			reasonsPanel.add(reasonCheck)
 			reasonsChecks.add(reasonCheck)

@@ -30,4 +30,6 @@ public interface DataStore {
 	
 	String[] availableDialects();
 	
+	String[] contactReasons();
+	
 }

@@ -86,4 +86,9 @@ class SqliteDataStore implements DataStore {
 	public String[] availableDialects() {
 		sql.rows("select name from dialects").collect { row -> row.name } as String[]
 	}
+
+	@Override
+	public String[] contactReasons() {
+		sql.rows("select reason from contact_reasons").collect { row -> row.reason } as String[]
+	}
 }

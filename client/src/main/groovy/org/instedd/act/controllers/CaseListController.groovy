@@ -121,4 +121,8 @@ class CaseListController {
 		dataStore.availableDialects()
 	}
 	
+	String[] contactReasons() {
+		dataStore.contactReasons()
+	}
+	
 }

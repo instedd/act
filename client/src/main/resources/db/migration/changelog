@@ -4,3 +4,4 @@ V3_added_cases_synced_field.sql
 V4_remove_guid_from_device_info.sql
 V5_add_updated_case_column.sql
 V6_add_supported_dialects.sql
+V7_add_contact_reasons.sql

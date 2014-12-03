@@ -17,19 +17,6 @@ class Case {
 	Boolean synced
 	Boolean updated
 
-	static String[] CONTACT_REASONS = [
-			"Fever",
-			"Severe headache",
-			"Muscle pain",
-			"Weakness",
-			"Fatigue",
-			"Diarrhea",
-			"Vomiting",
-			"Abdominal (stomach) pain",
-			"Unexplained hemorrhage (bleeding or bruising)"
-	] as String[]
-	
-	
 	String followUpLabel() {
 		if (sick == null) {
 			"-"
