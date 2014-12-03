@@ -11,9 +11,15 @@ class LocationsTreeGenerator {
     Boolean packed
     
     static main(args) {
-        def generator = new LocationsTreeGenerator(dataDir: new File('json/geonames'), packed: true)
+        def generator = new LocationsTreeGenerator(dataDir: new File('../json/geonames'), packed: false)
         def tree = generator.treeFrom([geonameId: 6255146, name: 'Africa'])
-        generator.saveTree(tree.children, "json/locations${generator.packed ? '-packed' : ''}.json")
+		tree.children.each { firstLevelDivision ->
+			firstLevelDivision.children.each { secondLevelDivision ->
+				generator.saveTree(secondLevelDivision.children, "json/locations/${secondLevelDivision.geonameId}.json")
+				secondLevelDivision.remove("children")
+			}
+		}
+		generator.saveTree(tree.children, "json/locations/locations.json")
         println "Done generating the tree"
     }
     

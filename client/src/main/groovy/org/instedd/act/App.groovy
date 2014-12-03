@@ -62,7 +62,7 @@ class App {
 			binder.bind(EventBus.class).toInstance(new EventBus())
 			binder.bind(DataStore.class).to(SqliteDataStore.class).asEagerSingleton();
 			binder.bind(DocumentExporter.class).to(SqliteToJsonExporter.class).asEagerSingleton()
-			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations-packed.json')))
+			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations/')))
 			binder.bind(DocumentSynchronizer.class).to(RsyncSynchronizer.class).asEagerSingleton();
 		}
 
