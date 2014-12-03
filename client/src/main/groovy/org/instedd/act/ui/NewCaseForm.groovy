@@ -1,6 +1,5 @@
 package org.instedd.act.ui
 
-import java.awt.BorderLayout
 import java.awt.Button
 import java.awt.Component
 import java.awt.Dialog
@@ -42,7 +41,7 @@ class NewCaseForm extends JDialog {
     JTextArea notesField
     def notesDocument
     Button addCaseButton
-    JLabel messagesField
+    JLabel messagesLabel
     
     String getPatientName() {
         this.nameField.text ?: ""
@@ -97,15 +96,12 @@ class NewCaseForm extends JDialog {
 		container.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
 		
-		def form = createForm()
-		container.add form
+		container.add createForm()
 		
-		def messages = new JPanel()
-		messages.setPreferredSize(new Dimension(80, 50))
-		messages.setLayout(new BorderLayout(10, 10))
-		messagesField = new JLabel("<html></html>")
-		messages.add(messagesField)
-		container.add messages
+		messagesLabel = new JLabel("<html></html>")
+		messagesLabel.setPreferredSize(new Dimension(80, 50))
+		messagesLabel.alignmentX = Component.CENTER_ALIGNMENT
+		container.add messagesLabel
 		
 		def submitButton = new JButton("Add case")
 		submitButton.alignmentX = Component.CENTER_ALIGNMENT
@@ -127,7 +123,7 @@ class NewCaseForm extends JDialog {
 		addField form, "Dialect preference", createDialectCombo()
 		addReasonsField form
 		addNotesField form
-		
+
 		form
 	}
 	
@@ -199,8 +195,9 @@ class NewCaseForm extends JDialog {
 		form.add label, c
 		
 		c.fill = GBC.BOTH
+		c.weighty = 1
 		notesField = new JTextArea()
-		notesField.setRows(3)
+		notesField.setRows(4)
 		notesField.setLineWrap(true)
 		notesField.setWrapStyleWord(true)
 		notesDocument = new DefaultStyledDocument()
@@ -212,11 +209,11 @@ class NewCaseForm extends JDialog {
 	}
 	
     def clearMessage() {
-        messagesField.text = ''
+        messagesLabel.text = ''
     }
     
     def displayMessage(message) {
-        messagesField.text = "<html>${message}</html>"
+        messagesLabel.text = "<html>${message}</html>"
     }
 
 }
