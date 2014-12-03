@@ -36,7 +36,7 @@ dependencies {
 }
 
 mainClassName = "org.instedd.act.App"
-def version = "1.0" // TODO: get this out of somewhere
+def version = "1.0.1" // TODO: get this out of somewhere
 println "Version ${version}"
 
 
