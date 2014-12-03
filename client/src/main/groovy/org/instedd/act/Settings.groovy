@@ -36,7 +36,7 @@ class Settings {
 	}
 	
 	public String dataDir() {
-		this.get('local.dir', './')
+		this.get('local.dir', './').replace("~", System.getProperty("user.home"))
 	}
 
 	public String databasePath() {
