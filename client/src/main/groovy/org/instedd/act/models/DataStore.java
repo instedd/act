@@ -28,4 +28,6 @@ public interface DataStore {
 	
 	void markCaseAsSeen(Case aCase);
 	
+	String[] availableDialects();
+	
 }

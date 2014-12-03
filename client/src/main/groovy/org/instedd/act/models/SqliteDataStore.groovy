@@ -81,4 +81,9 @@ class SqliteDataStore implements DataStore {
 	public void markCaseAsSeen(Case aCase) {
 		sql.execute("update cases set updated = ${false} where guid = ${aCase.id}")
 	}
+
+	@Override
+	public String[] availableDialects() {
+		sql.rows("select name from dialects").collect { row -> row.name } as String[]
+	}
 }

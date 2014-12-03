@@ -134,7 +134,7 @@ class NewCaseForm extends JDialog {
         subpanel.setLayout(new BoxLayout(subpanel, BoxLayout.X_AXIS))
         subpanel.add(new Label('Dialect preference'))
         
-        dialectCombo = new JComboBox(Case.AVAILABLE_DIALECTS)
+        dialectCombo = new JComboBox(controller.availableDialects())
         dialectCombo.setSelectedIndex(-1)
         subpanel.add(dialectCombo)
         panel.add(subpanel)

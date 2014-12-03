@@ -28,14 +28,6 @@ class Case {
 			"Abdominal (stomach) pain",
 			"Unexplained hemorrhage (bleeding or bruising)"
 	] as String[]
-
-
-	static String[] AVAILABLE_DIALECTS = [
-			"Afrikaans",
-			"English",
-			"French",
-			"Kiswahili"
-	] as String[]
 	
 	
 	String followUpLabel() {

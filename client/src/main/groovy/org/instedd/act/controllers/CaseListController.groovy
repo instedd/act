@@ -117,4 +117,8 @@ class CaseListController {
 		caseList.updateCases(dataStore.listCases())
 	}
 	
+	String[] availableDialects() {
+		dataStore.availableDialects()
+	}
+	
 }
