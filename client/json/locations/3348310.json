@@ -1,0 +1,111 @@
+[
+    {
+        "geonameId": 3351782,
+        "name": "Munic\u00edpio Bailundo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3351497,
+        "name": "Munic\u00edpio Ca\u00e1la",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3348773,
+        "name": "Munic\u00edpio Ekunha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3348311,
+        "name": "Munic\u00edpio Huambo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3348093,
+        "name": "Munic\u00edpio Katchiungo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3347879,
+        "name": "Munic\u00edpio Londuimbali",
+        "children": [
+            {
+                "geonameId": 9376229,
+                "name": "Chela",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3347852,
+        "name": "Munic\u00edpio Longonjo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3347110,
+        "name": "Munic\u00edpio Mungo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3345923,
+        "name": "Munic\u00edpio Tchikala-Tcholohanga",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3345909,
+        "name": "Munic\u00edpio Tchindjenje",
+        "children": [
+            {
+                "geonameId": 3345910,
+                "name": "Tchindjendje",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3345667,
+        "name": "Munic\u00edpio Ukuma",
+        "children": [
+            {
+                "geonameId": 3351104,
+                "name": "Caloquembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 3345668,
+                "name": "Ucuma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9383261,
+                "name": "Ukuma",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,131 @@
+[
+    {
+        "geonameId": 3351905,
+        "name": "Munic\u00edpio Amboim",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3350385,
+        "name": "Munic\u00edpio Cassongue",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3349321,
+        "name": "Munic\u00edpio Conda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3348792,
+        "name": "Munic\u00edpio Ebo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3347989,
+        "name": "Munic\u00edpio Libolo",
+        "children": [
+            {
+                "geonameId": 3351064,
+                "name": "Calulo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9383295,
+                "name": "Libolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2239861,
+                "name": "Malanje",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3347070,
+        "name": "Munic\u00edpio Mussende",
+        "children": [
+            {
+                "geonameId": 3351063,
+                "name": "Calulo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3346659,
+        "name": "Munic\u00edpio Porto Amboim",
+        "children": [
+            {
+                "geonameId": 9383272,
+                "name": "Gunza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 3346661,
+                "name": "Port Amboim",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3346597,
+        "name": "Munic\u00edpio Quibala",
+        "children": [
+            {
+                "geonameId": 7859665,
+                "name": "Dondo Muduitixe",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3346558,
+        "name": "Munic\u00edpio Quilenda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3346113,
+        "name": "Munic\u00edpio Seles",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3346014,
+        "name": "Munic\u00edpio Sumbe",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3345496,
+        "name": "Munic\u00edpio Waku Kungo",
+        "children": [
+            
+        ]
+    }
+]

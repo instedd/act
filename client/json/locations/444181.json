@@ -1,0 +1,56 @@
+[
+    {
+        "geonameId": 343291,
+        "name": "Asosa",
+        "children": [
+            {
+                "geonameId": 8643771,
+                "name": "Assosa Maekel",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8643781,
+                "name": "Komesha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8643776,
+                "name": "Oda Godere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 343292,
+                "name": "\u0100sosa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7874607,
+        "name": "Metekel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 330790,
+        "name": "Metekel \u0100wraja",
+        "children": [
+            {
+                "geonameId": 8643694,
+                "name": "Blullen",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

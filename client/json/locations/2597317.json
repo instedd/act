@@ -1,0 +1,29 @@
+[
+    {
+        "geonameId": 2293506,
+        "name": "D\u00e9partement d\u2019 Aboisso",
+        "children": [
+            {
+                "geonameId": 8032104,
+                "name": "Bakakro",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2597113,
+                "name": "Ouan\u00e9gorokro",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2595336,
+        "name": "D\u00e9partement d\u2019 Adiak\u00e9",
+        "children": [
+            
+        ]
+    }
+]

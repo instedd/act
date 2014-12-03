@@ -1,0 +1,370 @@
+[
+    {
+        "geonameId": 6690284,
+        "name": "R\u00e9union",
+        "children": [
+            {
+                "geonameId": 935266,
+                "name": "Arrondissement de Saint-Beno\u00eet",
+                "children": [
+                    {
+                        "geonameId": 6690286,
+                        "name": "Bras-Panon",
+                        "children": [
+                            {
+                                "geonameId": 936048,
+                                "name": "Bras-Panon",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690290,
+                        "name": "La Plaine-des-Palmistes",
+                        "children": [
+                            {
+                                "geonameId": 935694,
+                                "name": "La Plaine-des-Palmistes",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690293,
+                        "name": "Saint-Andr\u00e9",
+                        "children": [
+                            {
+                                "geonameId": 935268,
+                                "name": "Saint-Andr\u00e9",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690294,
+                        "name": "Saint-Beno\u00eet",
+                        "children": [
+                            {
+                                "geonameId": 935267,
+                                "name": "Saint-Beno\u00eet",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690303,
+                        "name": "Sainte-Rose",
+                        "children": [
+                            {
+                                "geonameId": 935251,
+                                "name": "Sainte-Rose",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690305,
+                        "name": "Salazie",
+                        "children": [
+                            {
+                                "geonameId": 935210,
+                                "name": "Salazie",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 935263,
+                "name": "Arrondissement de Saint-Denis",
+                "children": [
+                    {
+                        "geonameId": 6690295,
+                        "name": "Saint-Denis",
+                        "children": [
+                            {
+                                "geonameId": 935264,
+                                "name": "Saint-Denis",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690302,
+                        "name": "Sainte-Marie",
+                        "children": [
+                            {
+                                "geonameId": 935255,
+                                "name": "Sainte-Marie",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690304,
+                        "name": "Sainte-Suzanne",
+                        "children": [
+                            {
+                                "geonameId": 935248,
+                                "name": "Sainte-Suzanne",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 935220,
+                "name": "Arrondissement de Saint-Paul",
+                "children": [
+                    {
+                        "geonameId": 6690292,
+                        "name": "La Possession",
+                        "children": [
+                            {
+                                "geonameId": 935691,
+                                "name": "La Possession",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690291,
+                        "name": "Le Port",
+                        "children": [
+                            {
+                                "geonameId": 935616,
+                                "name": "Le Port",
+                                "children": [
+                                    {
+                                        "geonameId": 935737,
+                                        "name": "La Butte",
+                                        "children": [
+                                            
+                                        ]
+                                    },
+                                    {
+                                        "geonameId": 935576,
+                                        "name": "Le Titan",
+                                        "children": [
+                                            
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690297,
+                        "name": "Saint-Leu",
+                        "children": [
+                            {
+                                "geonameId": 935225,
+                                "name": "Saint-Leu",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690299,
+                        "name": "Saint-Paul",
+                        "children": [
+                            {
+                                "geonameId": 935221,
+                                "name": "Saint-Paul",
+                                "children": [
+                                    {
+                                        "geonameId": 936056,
+                                        "name": "Bout de l'\u00c9tang",
+                                        "children": [
+                                            
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690307,
+                        "name": "Trois-Bassins",
+                        "children": [
+                            {
+                                "geonameId": 935146,
+                                "name": "Trois-Bassins",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 935213,
+                "name": "Arrondissement de Saint-Pierre",
+                "children": [
+                    {
+                        "geonameId": 6690308,
+                        "name": "Cilaos",
+                        "children": [
+                            {
+                                "geonameId": 935975,
+                                "name": "Cilaos",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690287,
+                        "name": "L'Entre-Deux",
+                        "children": [
+                            {
+                                "geonameId": 935915,
+                                "name": "L'Entre-Deux",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690288,
+                        "name": "L'\u00c9tang-Sal\u00e9",
+                        "children": [
+                            {
+                                "geonameId": 935902,
+                                "name": "L'\u00c9tang-Sal\u00e9",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690306,
+                        "name": "Le Tampon",
+                        "children": [
+                            {
+                                "geonameId": 935582,
+                                "name": "Le Tampon",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690316,
+                        "name": "Les Avirons",
+                        "children": [
+                            {
+                                "geonameId": 935608,
+                                "name": "Les Avirons",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690289,
+                        "name": "Petite-\u00cele",
+                        "children": [
+                            {
+                                "geonameId": 935416,
+                                "name": "Petite-\u00cele",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690296,
+                        "name": "Saint-Joseph",
+                        "children": [
+                            {
+                                "geonameId": 935227,
+                                "name": "Saint-Joseph",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690298,
+                        "name": "Saint-Louis",
+                        "children": [
+                            {
+                                "geonameId": 935686,
+                                "name": "La Rivi\u00e8re",
+                                "children": [
+                                    
+                                ]
+                            },
+                            {
+                                "geonameId": 935223,
+                                "name": "Saint-Louis",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690301,
+                        "name": "Saint-Philippe",
+                        "children": [
+                            {
+                                "geonameId": 935215,
+                                "name": "Saint-Philippe",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 6690300,
+                        "name": "Saint-Pierre",
+                        "children": [
+                            {
+                                "geonameId": 935214,
+                                "name": "Saint-Piorre",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

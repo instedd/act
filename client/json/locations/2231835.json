@@ -1,0 +1,84 @@
+[
+    {
+        "geonameId": 2230815,
+        "name": "Departement du Haut-Nyong",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2233500,
+        "name": "D\u00e9partement de la Boumba-Ngoko",
+        "children": [
+            {
+                "geonameId": 9511691,
+                "name": "Gribe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2224797,
+                "name": "Ngato",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2230606,
+        "name": "D\u00e9partement de la Kade\u00ef",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2229251,
+        "name": "D\u00e9partement du Lom-et-Dj\u00e9rem",
+        "children": [
+            {
+                "geonameId": 2231435,
+                "name": "Gai-Ndaro",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2228412,
+                "name": "Mararaba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2225136,
+                "name": "Mbese",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2225493,
+                "name": "Ndokayo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2222203,
+                "name": "Sarambi",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2229250,
+        "name": "D\u00e9partement du Lom-et-Kade\u00ef",
+        "children": [
+            
+        ]
+    }
+]

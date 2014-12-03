@@ -1,0 +1,22 @@
+[
+    {
+        "geonameId": 921900,
+        "name": "Dzaoudzi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 1090275,
+        "name": "Labattoir",
+        "children": [
+            {
+                "geonameId": 1090282,
+                "name": "La Ferme",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

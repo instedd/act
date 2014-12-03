@@ -1,0 +1,167 @@
+[
+    {
+        "geonameId": 2313860,
+        "name": "Kwango District",
+        "children": [
+            {
+                "geonameId": 2315819,
+                "name": "Feshi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2315249,
+                "name": "Kahemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2315025,
+                "name": "Kasongo-Lunda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2314934,
+                "name": "Kenge",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2311674,
+                "name": "Popokabaka",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2313847,
+        "name": "Kwilu District",
+        "children": [
+            {
+                "geonameId": 2317497,
+                "name": "Bagata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2317395,
+                "name": "Bandundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2316258,
+                "name": "Bulungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2315639,
+                "name": "Gungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260569,
+                "name": "Idiofa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2314704,
+                "name": "Kikwit",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2313010,
+                "name": "Masi-Manimba",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2313191,
+        "name": "Mai Ndombe",
+        "children": [
+            {
+                "geonameId": 8260570,
+                "name": "Bolobo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2315416,
+                "name": "Inongo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2314194,
+                "name": "Kiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2313873,
+                "name": "Kutu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260571,
+                "name": "Kwamouth",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2312247,
+                "name": "Mushie",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2311806,
+                "name": "Oshwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260572,
+                "name": "Yumbi",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7731962,
+        "name": "Plateaux",
+        "children": [
+            
+        ]
+    }
+]

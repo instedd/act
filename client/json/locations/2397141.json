@@ -1,0 +1,29 @@
+[
+    {
+        "geonameId": 7870325,
+        "name": "Basse-Banio Department",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7870411,
+        "name": "Haute-Banio Department",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7870326,
+        "name": "Mougoutsi Department",
+        "children": [
+            {
+                "geonameId": 2396253,
+                "name": "Tchibanga",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

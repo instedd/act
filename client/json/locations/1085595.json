@@ -1,0 +1,3843 @@
+[
+    {
+        "geonameId": 8347371,
+        "name": "Eastvaal District Municipality",
+        "children": [
+            {
+                "geonameId": 8347486,
+                "name": "Albert Luthuli",
+                "children": [
+                    {
+                        "geonameId": 1022278,
+                        "name": "Armburg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1021770,
+                        "name": "Badplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014012,
+                        "name": "Carolina",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013400,
+                        "name": "Clarence",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004765,
+                        "name": "Excelsior",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001294,
+                        "name": "Goedehoop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 999071,
+                        "name": "Grootpan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997600,
+                        "name": "Hartebeeskop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 992280,
+                        "name": "Ka-Ngubane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 988432,
+                        "name": "Koffiebank",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 987281,
+                        "name": "Kranspan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982494,
+                        "name": "Lochiel",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978539,
+                        "name": "Maryvale Farm",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973935,
+                        "name": "Morgenster",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971982,
+                        "name": "Nazareth",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 967534,
+                        "name": "Oranje",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952908,
+                        "name": "Springfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952246,
+                        "name": "Steynsdorp",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 947990,
+                        "name": "Tshaka",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347613,
+                "name": "Dipaleseng",
+                "children": [
+                    {
+                        "geonameId": 1022913,
+                        "name": "Amersfoort",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1021396,
+                        "name": "Balfour",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1021394,
+                        "name": "Balfour North",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014337,
+                        "name": "Cairnleith",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012518,
+                        "name": "Crestlands",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005773,
+                        "name": "Ellisdale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1000023,
+                        "name": "Greylingstad",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 998836,
+                        "name": "Grootvlei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996892,
+                        "name": "Herbstfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 986480,
+                        "name": "Kuilspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 975556,
+                        "name": "Mkhwanazi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965965,
+                        "name": "Pelgrims Rust",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958765,
+                        "name": "Russeldene",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939852,
+                        "name": "Wilgefontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939729,
+                        "name": "Willemsdal",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347422,
+                "name": "Govan Mbeki",
+                "children": [
+                    {
+                        "geonameId": 1019760,
+                        "name": "Bethal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1019757,
+                        "name": "Bethal East",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1019756,
+                        "name": "Bethalrand",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016942,
+                        "name": "Boskrans",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015729,
+                        "name": "Brendan Village",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013716,
+                        "name": "Charl Cilliers",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1006768,
+                        "name": "Eendrag",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004875,
+                        "name": "Evander",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004508,
+                        "name": "Faith Hill Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 990825,
+                        "name": "Kinross",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 990419,
+                        "name": "Kleinfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 987662,
+                        "name": "Kortlaagte",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 984118,
+                        "name": "Leandra",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983065,
+                        "name": "Leslie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 960842,
+                        "name": "Rolyna Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 959277,
+                        "name": "Rooybank",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956767,
+                        "name": "Secunda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 949280,
+                        "name": "Theuns",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 948130,
+                        "name": "Trichardt",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939269,
+                        "name": "Witbank",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005646,
+                        "name": "eMbalenhle",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005515,
+                        "name": "eMzinoni",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347515,
+                "name": "Lekwa",
+                "children": [
+                    {
+                        "geonameId": 1023110,
+                        "name": "Alpha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1022133,
+                        "name": "Aspley",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020367,
+                        "name": "Bekkersrust",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016311,
+                        "name": "Brakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016313,
+                        "name": "Brakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015533,
+                        "name": "Bromfield",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013837,
+                        "name": "Cedarmont",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1011827,
+                        "name": "Darling",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009475,
+                        "name": "Donnelly",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008665,
+                        "name": "Dorpsplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007362,
+                        "name": "Dunoran",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001592,
+                        "name": "Glenmarsh",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 999355,
+                        "name": "Grootgewaagd",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997973,
+                        "name": "Hanover",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996145,
+                        "name": "Hoogekraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991397,
+                        "name": "Kenfield",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983590,
+                        "name": "Leeuwkraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980189,
+                        "name": "Maizefield",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979961,
+                        "name": "Makotopong",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976762,
+                        "name": "Meyerville",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973873,
+                        "name": "Morgenzon",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969843,
+                        "name": "Nooitgedacht",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969708,
+                        "name": "Norman Estate",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 967818,
+                        "name": "Onverwags",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 966608,
+                        "name": "Padgesvlei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958208,
+                        "name": "Sakhile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956271,
+                        "name": "Sewefontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952747,
+                        "name": "Standerton",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952742,
+                        "name": "Stanfieldhill",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 947486,
+                        "name": "Tutuka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 947418,
+                        "name": "Tweedronk",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 944545,
+                        "name": "Ventera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943087,
+                        "name": "Vogelstruisfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939687,
+                        "name": "Willowgrange",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 937908,
+                        "name": "Wrosemore",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347585,
+                "name": "Mkhondo",
+                "children": [
+                    {
+                        "geonameId": 1022857,
+                        "name": "Amsterdam",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1022033,
+                        "name": "Augsburg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020070,
+                        "name": "Berbice",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015712,
+                        "name": "Brereton",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015711,
+                        "name": "Brereton Park",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012968,
+                        "name": "Commondale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1011121,
+                        "name": "De Kraalen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009781,
+                        "name": "Dirkiesdorp",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008261,
+                        "name": "Driefontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008262,
+                        "name": "Driefontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005415,
+                        "name": "Enhlozana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004841,
+                        "name": "Evergreen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 998956,
+                        "name": "Grootspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 988199,
+                        "name": "Kommetjie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974305,
+                        "name": "Mooiplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974147,
+                        "name": "Moolman",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 970557,
+                        "name": "Nilgekozen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965241,
+                        "name": "Piet Retief",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 953619,
+                        "name": "Spinnekop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 951493,
+                        "name": "Sulphur Springs",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 938613,
+                        "name": "Wittenberg",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347599,
+                "name": "Msukaligwa",
+                "children": [
+                    {
+                        "geonameId": 1017522,
+                        "name": "Boomplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016314,
+                        "name": "Brakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015694,
+                        "name": "Breyten",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014220,
+                        "name": "Camden",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014077,
+                        "name": "Carlchew",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013563,
+                        "name": "Chrissiesmeer",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013187,
+                        "name": "Coalfields",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1011708,
+                        "name": "Davel",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1010245,
+                        "name": "Diepfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005125,
+                        "name": "Ermelo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004968,
+                        "name": "Estancia",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001130,
+                        "name": "Goedhoop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997446,
+                        "name": "Hartebeestspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993124,
+                        "name": "Kafferspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981906,
+                        "name": "Lothair",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971989,
+                        "name": "Nayfair Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971623,
+                        "name": "Neeuwplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971402,
+                        "name": "New Ermelo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 962602,
+                        "name": "Retvallei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958318,
+                        "name": "Saint Helen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956128,
+                        "name": "Sheepmoor",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 953181,
+                        "name": "Spitskop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 950171,
+                        "name": "Talfelkop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943616,
+                        "name": "Vlakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 940410,
+                        "name": "Wesselton",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347626,
+                "name": "Pixley Ka Seme",
+                "children": [
+                    {
+                        "geonameId": 1023982,
+                        "name": "Aankomst",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1022912,
+                        "name": "Amersfoort",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016312,
+                        "name": "Brakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005343,
+                        "name": "Enon",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997717,
+                        "name": "Hartbeesfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993975,
+                        "name": "Jantjieshoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993273,
+                        "name": "Kafferfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 992744,
+                        "name": "Kalkoenkrans",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989140,
+                        "name": "Klipplaatdrift",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974440,
+                        "name": "Mooifontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965722,
+                        "name": "Perdekop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943032,
+                        "name": "Volksrust",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 942136,
+                        "name": "Wakkerstroom",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 940610,
+                        "name": "Weltevreden",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939760,
+                        "name": "Wilhelmina",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 936797,
+                        "name": "Zoo Als Hy Lykt",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8299316,
+        "name": "Ehlanzeni District",
+        "children": [
+            {
+                "geonameId": 8347523,
+                "name": "Bushbuckridge",
+                "children": [
+                    {
+                        "geonameId": 1023366,
+                        "name": "Alexandria",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1022210,
+                        "name": "Arthur\u2019s Seat",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017354,
+                        "name": "Bosbokrand",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014306,
+                        "name": "Calcutta",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013949,
+                        "name": "Casteel",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013576,
+                        "name": "Chochocho",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1010449,
+                        "name": "Die Brug",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004739,
+                        "name": "Exeter",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003508,
+                        "name": "Ga-Boelang",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1000554,
+                        "name": "Gqweta",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1000073,
+                        "name": "Green Valley",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8986154,
+                        "name": "Inyati",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982298,
+                        "name": "London",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980661,
+                        "name": "Madras",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980632,
+                        "name": "Madyembeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978786,
+                        "name": "Marite",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977907,
+                        "name": "Maviljan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977733,
+                        "name": "Mbangwane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976550,
+                        "name": "Mhlaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 975692,
+                        "name": "Mission",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974742,
+                        "name": "Moloro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974023,
+                        "name": "Morea",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973816,
+                        "name": "Morolaneng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 968562,
+                        "name": "Oakley",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 963415,
+                        "name": "Rabelaisruskamp",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 960109,
+                        "name": "Rooiboklaagte",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955614,
+                        "name": "Silinda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 953742,
+                        "name": "Sparta",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 950023,
+                        "name": "Tasakani",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 947723,
+                        "name": "Tswafeng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 944678,
+                        "name": "Varty",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943894,
+                        "name": "Violet Bank",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 942112,
+                        "name": "Wales",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347428,
+                "name": "Mbombela",
+                "children": [
+                    {
+                        "geonameId": 1023300,
+                        "name": "Alkmaar",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1021082,
+                        "name": "Barclay Vale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020996,
+                        "name": "Barretts",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020965,
+                        "name": "Barvale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017867,
+                        "name": "Bojwana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017661,
+                        "name": "Bongani",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017115,
+                        "name": "Boschrand",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017073,
+                        "name": "Boshalte",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015547,
+                        "name": "Broham",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014563,
+                        "name": "Bushman Rock",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013143,
+                        "name": "Coetzeestroom",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012501,
+                        "name": "Crocodile Valley Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012222,
+                        "name": "Daantjielokasie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009954,
+                        "name": "Die Winkler",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009647,
+                        "name": "Dollaaskraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007610,
+                        "name": "Dudu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007195,
+                        "name": "Dwaleni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1006204,
+                        "name": "Elandshoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002708,
+                        "name": "Ga-Tshwene",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002744,
+                        "name": "Gatehouse",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 998524,
+                        "name": "Gutshwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 998525,
+                        "name": "Gutshwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997255,
+                        "name": "Hazyview",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996448,
+                        "name": "Hillsowen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996314,
+                        "name": "Hlauhlau",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993353,
+                        "name": "Kaapsehoop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991628,
+                        "name": "Katoen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991038,
+                        "name": "Kiepersol",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 986329,
+                        "name": "KuMcogwaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982846,
+                        "name": "Ligfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981331,
+                        "name": "Luphisi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980688,
+                        "name": "Madlabantu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979844,
+                        "name": "Malekutu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978352,
+                        "name": "Mataffin",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977975,
+                        "name": "Matsulu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973350,
+                        "name": "Mpakeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 972886,
+                        "name": "Mtimba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971534,
+                        "name": "Nelspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8030242,
+                        "name": "Nelspruti",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971123,
+                        "name": "Ngodini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 970487,
+                        "name": "Nkambeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969419,
+                        "name": "Nsikazi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969420,
+                        "name": "Nsikazi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 968973,
+                        "name": "Numbi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965512,
+                        "name": "Phasha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 964114,
+                        "name": "Pretoriuskop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 963881,
+                        "name": "Pumalanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 961330,
+                        "name": "Rietvlei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958852,
+                        "name": "Running Waters",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958435,
+                        "name": "Sabierivier",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958233,
+                        "name": "Saint Pauls",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 957760,
+                        "name": "Sandrivier",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 957529,
+                        "name": "Sarana Hall",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955453,
+                        "name": "Siphelanyane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 954955,
+                        "name": "Skukuza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952354,
+                        "name": "Sterkspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 951072,
+                        "name": "Swartfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 949317,
+                        "name": "The Sands",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 944283,
+                        "name": "Vergesig",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 940613,
+                        "name": "Weltevreden",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 938694,
+                        "name": "White River",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005916,
+                        "name": "eLegogoto",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005917,
+                        "name": "eLegogoto",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005707,
+                        "name": "eLundi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005677,
+                        "name": "eMahusha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005676,
+                        "name": "eMakoko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005660,
+                        "name": "eManzini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005533,
+                        "name": "eMpumalanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005474,
+                        "name": "eNgcobaneni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005292,
+                        "name": "eNumbi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005289,
+                        "name": "eNyalungu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005287,
+                        "name": "eNyamazaneni",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347416,
+                "name": "Nkomazi",
+                "children": [
+                    {
+                        "geonameId": 1018225,
+                        "name": "Bob",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017076,
+                        "name": "Bosfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014994,
+                        "name": "Buffelspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012955,
+                        "name": "Compound",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009769,
+                        "name": "Disa Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008064,
+                        "name": "Driekoppies",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007034,
+                        "name": "Dzuweni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1004279,
+                        "name": "Figtree",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1000837,
+                        "name": "Good Luck",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997184,
+                        "name": "Hectorspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 995901,
+                        "name": "Holnek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 995799,
+                        "name": "Homestead",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 994422,
+                        "name": "Ivaura Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993894,
+                        "name": "Jeppe\ufffd\ufffd\ufffds Reef",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991728,
+                        "name": "Ka-Sibhejane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993358,
+                        "name": "Kaapmuiden",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991528,
+                        "name": "Keerom",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991422,
+                        "name": "Kemps Cottage",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 988290,
+                        "name": "Komatipoort",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 987175,
+                        "name": "Krokodilbrug",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985740,
+                        "name": "KwaLugedlane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985671,
+                        "name": "KwaMandulu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985239,
+                        "name": "KwaSipunu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985173,
+                        "name": "KwaZibukwane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 984840,
+                        "name": "Landboukantoor",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 984655,
+                        "name": "Langeloop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982690,
+                        "name": "Linga Longa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982355,
+                        "name": "Lomatimond",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980768,
+                        "name": "Madadeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980457,
+                        "name": "Magogeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980404,
+                        "name": "Magudu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980255,
+                        "name": "Mahoho\ufffd\ufffd\ufffds Kraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979837,
+                        "name": "Malelane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979544,
+                        "name": "Mananga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979395,
+                        "name": "Mangweni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7289237,
+                        "name": "Marloth Park",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978429,
+                        "name": "Masibekela",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977515,
+                        "name": "Mbuzini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977516,
+                        "name": "Mbuzini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976646,
+                        "name": "Mgobode",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976470,
+                        "name": "Mhloshana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976197,
+                        "name": "Middelplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973316,
+                        "name": "Mpanganeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 972319,
+                        "name": "Mzinti",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 970856,
+                        "name": "Ngwenyeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 970857,
+                        "name": "Ngwenyeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969014,
+                        "name": "Ntunda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965452,
+                        "name": "Phiva",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 957178,
+                        "name": "Schoemansdal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956945,
+                        "name": "Schulzendal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956715,
+                        "name": "Seekoeigat",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955913,
+                        "name": "Shongwe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955911,
+                        "name": "Shongwe Mission",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955876,
+                        "name": "Sibange",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955872,
+                        "name": "Sibayeni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955708,
+                        "name": "Sihlangu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955664,
+                        "name": "Sikhwahlane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955500,
+                        "name": "Singobile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 949655,
+                        "name": "Thambokhulu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 948455,
+                        "name": "Tongwe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943753,
+                        "name": "Vlakbult",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939704,
+                        "name": "Willis-Myline",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347559,
+                "name": "Thaba Chweu",
+                "children": [
+                    {
+                        "geonameId": 1021778,
+                        "name": "Badfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1018287,
+                        "name": "Blyde",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017280,
+                        "name": "Boschfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017236,
+                        "name": "Boschjeskop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012694,
+                        "name": "Coromandel",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009081,
+                        "name": "Doornkop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008509,
+                        "name": "Draaikraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002776,
+                        "name": "Ga-Sekubu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001248,
+                        "name": "Goedewill",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8642862,
+                        "name": "Graksop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1000352,
+                        "name": "Graskop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 997953,
+                        "name": "Hanslaagte",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989053,
+                        "name": "Kliprivier",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989014,
+                        "name": "Klipskool",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983417,
+                        "name": "Lehwiting",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983098,
+                        "name": "Leroro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982299,
+                        "name": "London",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981158,
+                        "name": "Lydenburg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979793,
+                        "name": "Malieveld Valley Forestry Settlement",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979363,
+                        "name": "Mankolehlotlo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978974,
+                        "name": "Marambane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978858,
+                        "name": "Maria Trost",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978272,
+                        "name": "Matibidi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978273,
+                        "name": "Matibidi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977932,
+                        "name": "Mauchsberg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974008,
+                        "name": "Moremela",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 974009,
+                        "name": "Moremela",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973448,
+                        "name": "Mount Sheba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969847,
+                        "name": "Nooitgedacht",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 968653,
+                        "name": "Nyokosela",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 967821,
+                        "name": "Onverwag",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 967398,
+                        "name": "Oshoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965493,
+                        "name": "Phepene",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965179,
+                        "name": "Pilgrim\ufffd\ufffd\ufffds Rest",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 962467,
+                        "name": "Rhenosterhoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 962333,
+                        "name": "Richmond",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 961936,
+                        "name": "Rietfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 959109,
+                        "name": "Rosshill",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958441,
+                        "name": "Sabie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 954176,
+                        "name": "Somerplaats",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 945553,
+                        "name": "Vaalhoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 941269,
+                        "name": "Weimershoek",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347588,
+                "name": "Umjindi",
+                "children": [
+                    {
+                        "geonameId": 1021086,
+                        "name": "Barberton",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009721,
+                        "name": "Dixie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005301,
+                        "name": "Entre Nous",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003659,
+                        "name": "Frenchbobs",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 998526,
+                        "name": "Guthrie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996573,
+                        "name": "Highlands",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 995764,
+                        "name": "Honeybird",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981780,
+                        "name": "Louw\u2019s Creek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969763,
+                        "name": "Noordkaap",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 958295,
+                        "name": "Saint John\u2019s Mission",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956576,
+                        "name": "Selapi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956138,
+                        "name": "Sheba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 954335,
+                        "name": "Snymansbult",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 937073,
+                        "name": "Ziest",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8347372,
+        "name": "Nkangala District Municipality",
+        "children": [
+            {
+                "geonameId": 8347614,
+                "name": "Dr JS Moroka",
+                "children": [
+                    {
+                        "geonameId": 1105730,
+                        "name": "Allemansdrif",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105731,
+                        "name": "Bamokgoko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1018784,
+                        "name": "Bloedfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009937,
+                        "name": "Dihekeng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009897,
+                        "name": "Dikgwale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1009734,
+                        "name": "Ditllhagane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003289,
+                        "name": "Ga-Mapogo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003288,
+                        "name": "Ga-Maria",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003249,
+                        "name": "Ga-Matimpule",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1003238,
+                        "name": "Ga-Maubane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002876,
+                        "name": "Ga-Ramantshane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002089,
+                        "name": "Gertsepan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993319,
+                        "name": "Kabete",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991612,
+                        "name": "Katsibane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965531,
+                        "name": "Kwa-Phake",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985665,
+                        "name": "KwaMantlole",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983475,
+                        "name": "Lefifi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983473,
+                        "name": "Lefiswane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105739,
+                        "name": "Leonie",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982456,
+                        "name": "Loding",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981558,
+                        "name": "Luckau",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981007,
+                        "name": "Mabaneis Location",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980960,
+                        "name": "Mabhoko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980547,
+                        "name": "Magareng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979977,
+                        "name": "Makola",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979106,
+                        "name": "Mapoch",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978958,
+                        "name": "Marapjane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978959,
+                        "name": "Marapjane",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978681,
+                        "name": "Marothobolong",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978404,
+                        "name": "Masobe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977997,
+                        "name": "Matshiding",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 975404,
+                        "name": "Mmametlhake",
+                        "children": [
+                            {
+                                "geonameId": 1014742,
+                                "name": "Bultfontein",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 974768,
+                        "name": "Moletsi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973774,
+                        "name": "Morwe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973678,
+                        "name": "Motati",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 973675,
+                        "name": "Moteti",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 970203,
+                        "name": "Nokaneng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 969719,
+                        "name": "Norman",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105744,
+                        "name": "Pankop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965530,
+                        "name": "Phake",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 963190,
+                        "name": "Rankaile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105732,
+                        "name": "Rooifontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956652,
+                        "name": "Segokgo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 956497,
+                        "name": "Senotlelo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955313,
+                        "name": "Siyabuswa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 955107,
+                        "name": "Skilpadfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 954676,
+                        "name": "Sleutelfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 950151,
+                        "name": "Tambisha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 949710,
+                        "name": "Thabana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 945047,
+                        "name": "Valsfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 938221,
+                        "name": "Wolwekraal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 937877,
+                        "name": "Wyedrif",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347506,
+                "name": "Emakhazeni",
+                "children": [
+                    {
+                        "geonameId": 1021312,
+                        "name": "Bambi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020340,
+                        "name": "Belfast",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016755,
+                        "name": "Bothasberg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1012459,
+                        "name": "Crossroads",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007476,
+                        "name": "Dullstroom",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1002233,
+                        "name": "Gemsbokhoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996985,
+                        "name": "Helvetia-Noord",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 995020,
+                        "name": "Hydro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 980845,
+                        "name": "Machadodorp",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 966306,
+                        "name": "Panorama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 957169,
+                        "name": "Schoemanskloof",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952383,
+                        "name": "Sterkloop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 948360,
+                        "name": "Torburnlea",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 942198,
+                        "name": "Wagenbietjieshoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 941449,
+                        "name": "Waterval Boven",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 941436,
+                        "name": "Waterval-Onder",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347595,
+                "name": "Emalahleni",
+                "children": [
+                    {
+                        "geonameId": 1023991,
+                        "name": "Aangewysd",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1021335,
+                        "name": "Balmoral",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1020131,
+                        "name": "Benella",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1018947,
+                        "name": "Blesboklaagte",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014823,
+                        "name": "Bulpan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1014824,
+                        "name": "Bulpan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013327,
+                        "name": "Clewer",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1013186,
+                        "name": "Coalville",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007256,
+                        "name": "Duvhapark",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1006723,
+                        "name": "Eensaamheid",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 999070,
+                        "name": "Grootpan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 991407,
+                        "name": "Kendal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989540,
+                        "name": "Klipfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989222,
+                        "name": "Klippan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 987202,
+                        "name": "Kriel",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 987028,
+                        "name": "Kromfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 984843,
+                        "name": "Landau",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 983430,
+                        "name": "Lehlaka Park",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 981118,
+                        "name": "Lynnville",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 978128,
+                        "name": "Matla",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976954,
+                        "name": "Merlindale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 975775,
+                        "name": "Minnaar",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 971318,
+                        "name": "New Largo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 968442,
+                        "name": "Ogies",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 966034,
+                        "name": "Paxton",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965447,
+                        "name": "Phoenix",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 962911,
+                        "name": "Reedstream Park",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 960128,
+                        "name": "Rooibloem",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 953035,
+                        "name": "Springbok",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 946629,
+                        "name": "Uitkyk",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 945295,
+                        "name": "Vaalkrans",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 944930,
+                        "name": "Van Dyks",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 944929,
+                        "name": "Vandyksdrif",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939270,
+                        "name": "Witbank",
+                        "children": [
+                            {
+                                "geonameId": 1004320,
+                                "name": "Ferrobank",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347604,
+                "name": "Steve Tshwete",
+                "children": [
+                    {
+                        "geonameId": 1022241,
+                        "name": "Arnot",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1018973,
+                        "name": "Blesbok",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1018838,
+                        "name": "Blinkpan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1017220,
+                        "name": "Boschkloof",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016912,
+                        "name": "Bosmanspan",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1016674,
+                        "name": "Botshabelo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015805,
+                        "name": "Braybank",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1015489,
+                        "name": "Broodsnyersplaas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1008613,
+                        "name": "Douglas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001295,
+                        "name": "Goedehoop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 999538,
+                        "name": "Groot Drakenstein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996930,
+                        "name": "Hendrina",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 996929,
+                        "name": "Hendrinakrag",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 993695,
+                        "name": "Jonkerville",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 988295,
+                        "name": "Komati",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 984887,
+                        "name": "Lammerkop",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 979216,
+                        "name": "Many Waters",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977316,
+                        "name": "Meerlus",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977317,
+                        "name": "Meerlus",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976451,
+                        "name": "Mhluzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976361,
+                        "name": "Middelburg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 961712,
+                        "name": "Rietkuil",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 957050,
+                        "name": "Schoonoord",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 948966,
+                        "name": "Tienfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 946553,
+                        "name": "Uitskot",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943617,
+                        "name": "Vlakfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 940094,
+                        "name": "Wildebeesfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 939392,
+                        "name": "Winterkamp",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347513,
+                "name": "Thembisile",
+                "children": [
+                    {
+                        "geonameId": 1018098,
+                        "name": "Boekenhouthoek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985885,
+                        "name": "Kwaggafontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985886,
+                        "name": "Kwaggafontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 985268,
+                        "name": "Kwarsspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 977995,
+                        "name": "Matshipe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 961935,
+                        "name": "Rietfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 952047,
+                        "name": "Stoffberg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105728,
+                        "name": "Tweefontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943537,
+                        "name": "Vlaklaagte Een",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 943536,
+                        "name": "Vlaklaagte Twee",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1105734,
+                        "name": "Witnek",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8347554,
+                "name": "Victor Khanye",
+                "children": [
+                    {
+                        "geonameId": 1011031,
+                        "name": "Delmas",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1007158,
+                        "name": "Dwarsfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1005753,
+                        "name": "Eloff",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 1001418,
+                        "name": "Goededacht",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 989539,
+                        "name": "Klipfontein",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 988961,
+                        "name": "Klipspruit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 982660,
+                        "name": "Lionelton",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 976360,
+                        "name": "Middelburg",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 965153,
+                        "name": "Pinewood",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 961787,
+                        "name": "Rietkol",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 951832,
+                        "name": "Strazon Estates",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 951335,
+                        "name": "Sun Valley In",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

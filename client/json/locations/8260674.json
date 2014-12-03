@@ -1,0 +1,2576 @@
+[
+    {
+        "geonameId": 7056273,
+        "name": "Abim District",
+        "children": [
+            {
+                "geonameId": 230247,
+                "name": "Labwor County",
+                "children": [
+                    {
+                        "geonameId": 8657833,
+                        "name": "Abim",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658210,
+                        "name": "Abim Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658730,
+                        "name": "Alerek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658149,
+                        "name": "Lotukei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658269,
+                        "name": "Morulem",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657574,
+                        "name": "Nyakwae",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443782,
+        "name": "Adjumani District",
+        "children": [
+            {
+                "geonameId": 8644133,
+                "name": "East Moyo",
+                "children": [
+                    {
+                        "geonameId": 8658453,
+                        "name": "Adjumani Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657828,
+                        "name": "Adropi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658096,
+                        "name": "Arinyapi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657957,
+                        "name": "Ciforo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658573,
+                        "name": "Dzaipi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658627,
+                        "name": "Itirikwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658738,
+                        "name": "Ofua",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657987,
+                        "name": "Pacara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657897,
+                        "name": "Pakelle",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657753,
+                        "name": "Ukusitoni",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030566,
+        "name": "Agago District",
+        "children": [
+            {
+                "geonameId": 235459,
+                "name": "Agago County",
+                "children": [
+                    {
+                        "geonameId": 8657577,
+                        "name": "Adilang",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658252,
+                        "name": "Agago Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658358,
+                        "name": "Arum",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658681,
+                        "name": "Kalongo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657757,
+                        "name": "Kotomol",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658446,
+                        "name": "Lamiyo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657931,
+                        "name": "Lapono",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658626,
+                        "name": "Lira Palwo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8643677,
+                        "name": "Lukole",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8643680,
+                        "name": "Omiya Pachua",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658445,
+                        "name": "Omot",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658597,
+                        "name": "Paimol",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657929,
+                        "name": "Parabongo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657948,
+                        "name": "Patongo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658736,
+                        "name": "Patongo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657711,
+                        "name": "Wol",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030568,
+        "name": "Alebtong District",
+        "children": [
+            {
+                "geonameId": 229109,
+                "name": "Moroto County",
+                "children": [
+                    {
+                        "geonameId": 8658469,
+                        "name": "Abako",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657738,
+                        "name": "Abia",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657548,
+                        "name": "Akura",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658478,
+                        "name": "Alebtong Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657788,
+                        "name": "Aloi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658369,
+                        "name": "Amugo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658405,
+                        "name": "Apala",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657777,
+                        "name": "Awei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658577,
+                        "name": "Omoro",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056275,
+        "name": "Amolatar District",
+        "children": [
+            {
+                "geonameId": 231170,
+                "name": "Kioga County",
+                "children": [
+                    {
+                        "geonameId": 8658485,
+                        "name": "Agikdak",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658492,
+                        "name": "Agwingiri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658377,
+                        "name": "Akwon",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658378,
+                        "name": "Amolatar Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658424,
+                        "name": "Aputi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658119,
+                        "name": "Arwotcek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658553,
+                        "name": "Awelo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657892,
+                        "name": "Etam",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658212,
+                        "name": "Muntu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657992,
+                        "name": "Namasale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658020,
+                        "name": "Namasale Tc",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030560,
+        "name": "Amudat District",
+        "children": [
+            {
+                "geonameId": 8644147,
+                "name": "Pokot",
+                "children": [
+                    {
+                        "geonameId": 8657793,
+                        "name": "Amudat",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657943,
+                        "name": "Amudat Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657553,
+                        "name": "Karita",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657656,
+                        "name": "Loroo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056278,
+        "name": "Amuru District",
+        "children": [
+            {
+                "geonameId": 231253,
+                "name": "Kilak County",
+                "children": [
+                    {
+                        "geonameId": 8261590,
+                        "name": "Amuru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657807,
+                        "name": "Amuru Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630008,
+                        "name": "Atiak",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630017,
+                        "name": "Lamogi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8629919,
+                        "name": "Pabbo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443327,
+        "name": "Apac District",
+        "children": [
+            {
+                "geonameId": 230563,
+                "name": "Kwania County",
+                "children": [
+                    {
+                        "geonameId": 8658616,
+                        "name": "Abongomola",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657821,
+                        "name": "Aduku",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658393,
+                        "name": "Aduku Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657727,
+                        "name": "Chawente",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658296,
+                        "name": "Inomo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658105,
+                        "name": "Nambieso",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 229387,
+                "name": "Maruzi County",
+                "children": [
+                    {
+                        "geonameId": 8657675,
+                        "name": "Akokoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261613,
+                        "name": "Apac",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658131,
+                        "name": "Apac Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261614,
+                        "name": "Cegere",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261612,
+                        "name": "Ibuje",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443328,
+        "name": "Arua District",
+        "children": [
+            {
+                "geonameId": 7732730,
+                "name": "Arua Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658238,
+                        "name": "Arua Hill Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658324,
+                        "name": "Oli River Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 234911,
+                "name": "Ayivu County",
+                "children": [
+                    {
+                        "geonameId": 8657622,
+                        "name": "Adumi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657824,
+                        "name": "Aroi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658464,
+                        "name": "Ayivuni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658608,
+                        "name": "Dadamu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657558,
+                        "name": "Manibe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658074,
+                        "name": "Oluko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657561,
+                        "name": "Pajulu",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644146,
+                "name": "Madi-Okollo",
+                "children": [
+                    {
+                        "geonameId": 8657958,
+                        "name": "Anyiribu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261586,
+                        "name": "Offaka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261591,
+                        "name": "Ogoko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261585,
+                        "name": "Okollo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658077,
+                        "name": "Pawor",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261592,
+                        "name": "Rhino Camp",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658638,
+                        "name": "Rigbo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658425,
+                        "name": "Uleppi",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226158,
+                "name": "Terego County",
+                "children": [
+                    {
+                        "geonameId": 8657769,
+                        "name": "Aii-Vu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658459,
+                        "name": "Beleafe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657701,
+                        "name": "Katrini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658301,
+                        "name": "Odupi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658433,
+                        "name": "Omugo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657683,
+                        "name": "Uriama",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226029,
+                "name": "Vurra County",
+                "children": [
+                    {
+                        "geonameId": 8658545,
+                        "name": "Ajia",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658614,
+                        "name": "Arivu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657886,
+                        "name": "Logiri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657975,
+                        "name": "Vurra",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056283,
+        "name": "Dokolo District",
+        "children": [
+            {
+                "geonameId": 233559,
+                "name": "Dokolo County",
+                "children": [
+                    {
+                        "geonameId": 8658338,
+                        "name": "Adeknino",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657804,
+                        "name": "Adok",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658456,
+                        "name": "Agwata",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658382,
+                        "name": "Amwoma",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658217,
+                        "name": "Batta",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658742,
+                        "name": "Dokolo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657919,
+                        "name": "Dokolo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658388,
+                        "name": "Kangai",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657873,
+                        "name": "Kwera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658392,
+                        "name": "Okwalongwen",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658390,
+                        "name": "Okwongdul",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443331,
+        "name": "Gulu District",
+        "children": [
+            {
+                "geonameId": 235009,
+                "name": "Aswa County",
+                "children": [
+                    {
+                        "geonameId": 8645279,
+                        "name": "Awach",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658619,
+                        "name": "Bungatira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8648021,
+                        "name": "Paicho Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8629918,
+                        "name": "Palaro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657703,
+                        "name": "Patiko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657917,
+                        "name": "Unyama",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732227,
+                "name": "Gulu Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658160,
+                        "name": "Bar-Dege",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658558,
+                        "name": "Laroo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658111,
+                        "name": "Layibi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658221,
+                        "name": "Pece",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 227037,
+                "name": "Omoro County",
+                "children": [
+                    {
+                        "geonameId": 8261619,
+                        "name": "Bobi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658086,
+                        "name": "Koro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657600,
+                        "name": "Lakwana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658556,
+                        "name": "Lalogi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8629916,
+                        "name": "Odek",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732533,
+                        "name": "Ongako",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056286,
+        "name": "Kaabong District",
+        "children": [
+            {
+                "geonameId": 233569,
+                "name": "Dodoth County",
+                "children": [
+                    {
+                        "geonameId": 8658386,
+                        "name": "Kaabong East",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658525,
+                        "name": "Kaabong Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658387,
+                        "name": "Kaabong West",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658527,
+                        "name": "Kalapata",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658052,
+                        "name": "Kamion",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657626,
+                        "name": "Kapedo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657947,
+                        "name": "Kathile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658384,
+                        "name": "Kawalakol",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658385,
+                        "name": "Lobalangit",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658526,
+                        "name": "Lodiko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657670,
+                        "name": "Lolelia",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657750,
+                        "name": "Loyoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658487,
+                        "name": "Napore (Karenga)",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658540,
+                        "name": "Sidok",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443346,
+        "name": "Kitgum District",
+        "children": [
+            {
+                "geonameId": 233642,
+                "name": "Chua County",
+                "children": [
+                    {
+                        "geonameId": 8647776,
+                        "name": "Akwang Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8645294,
+                        "name": "Kitgum Matidi Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647778,
+                        "name": "Kitgum Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647777,
+                        "name": "Labongo-Amida Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647779,
+                        "name": "Labongo-Layamo Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647781,
+                        "name": "Lagoro Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647780,
+                        "name": "Muchwini Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658113,
+                        "name": "Namokora",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657734,
+                        "name": "Omiya Anyima",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658649,
+                        "name": "Orom",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056289,
+        "name": "Koboko District",
+        "children": [
+            {
+                "geonameId": 230723,
+                "name": "Koboko County",
+                "children": [
+                    {
+                        "geonameId": 8658037,
+                        "name": "Abuku",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657959,
+                        "name": "Dranya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658560,
+                        "name": "Koboko Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657758,
+                        "name": "Kuluba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658293,
+                        "name": "Lobule",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657686,
+                        "name": "Ludara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657696,
+                        "name": "Midia",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030565,
+        "name": "Kole District",
+        "children": [
+            {
+                "geonameId": 8644134,
+                "name": "Kole",
+                "children": [
+                    {
+                        "geonameId": 8658547,
+                        "name": "Aboke",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658496,
+                        "name": "Akalo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658435,
+                        "name": "Alito",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732538,
+                        "name": "Ayer",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657829,
+                        "name": "Bala",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658400,
+                        "name": "Kole Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658402,
+                        "name": "Okwerodot",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443347,
+        "name": "Kotido District",
+        "children": [
+            {
+                "geonameId": 233117,
+                "name": "Jie County",
+                "children": [
+                    {
+                        "geonameId": 8657662,
+                        "name": "Kacheri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657781,
+                        "name": "Kotido",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658219,
+                        "name": "Kotido Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658321,
+                        "name": "Nakapelimoru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658473,
+                        "name": "Panyangara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658055,
+                        "name": "Rengen",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030562,
+        "name": "Lamwo District",
+        "children": [
+            {
+                "geonameId": 230209,
+                "name": "Lamwo County",
+                "children": [
+                    {
+                        "geonameId": 8645940,
+                        "name": "Agoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8648287,
+                        "name": "Lamwo Parish",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8645939,
+                        "name": "Lokung",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647187,
+                        "name": "Madi-Opei Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647969,
+                        "name": "Ogili Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647185,
+                        "name": "Padibe East Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658635,
+                        "name": "Padibe Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8644036,
+                        "name": "Padibe West",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8644038,
+                        "name": "Palabek Gem",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647182,
+                        "name": "Palabek-Kal Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647186,
+                        "name": "Paloga Sub-County",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443349,
+        "name": "Lira District",
+        "children": [
+            {
+                "geonameId": 233491,
+                "name": "Erute County",
+                "children": [
+                    {
+                        "geonameId": 8630012,
+                        "name": "Adekokwok",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658407,
+                        "name": "Agali",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658404,
+                        "name": "Agweng",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630010,
+                        "name": "Amach",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630009,
+                        "name": "Aromo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630011,
+                        "name": "Barr",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657717,
+                        "name": "Lira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658409,
+                        "name": "Ngetta",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658331,
+                        "name": "Ogur",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732230,
+                "name": "Lira Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658134,
+                        "name": "Adyel Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657998,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8643469,
+                        "name": "Ojwina",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8643470,
+                        "name": "Railway",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056292,
+        "name": "Maracha District",
+        "children": [
+            {
+                "geonameId": 229396,
+                "name": "Maracha County",
+                "children": [
+                    {
+                        "geonameId": 8658621,
+                        "name": "Kijomoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658072,
+                        "name": "Maracha Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658329,
+                        "name": "Nyadri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657747,
+                        "name": "Oleba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658259,
+                        "name": "Oluffe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658454,
+                        "name": "Oluvu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658185,
+                        "name": "Tara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658274,
+                        "name": "Yivu",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443356,
+        "name": "Moroto District",
+        "children": [
+            {
+                "geonameId": 229332,
+                "name": "Matheniko County",
+                "children": [
+                    {
+                        "geonameId": 8630013,
+                        "name": "Kakitekile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630014,
+                        "name": "Nadunget",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630015,
+                        "name": "Rupa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8630016,
+                        "name": "Tapac",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732233,
+                "name": "Moroto Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658320,
+                        "name": "Northern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658523,
+                        "name": "Southern Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443357,
+        "name": "Moyo District",
+        "children": [
+            {
+                "geonameId": 8644127,
+                "name": "Obongi",
+                "children": [
+                    {
+                        "geonameId": 8658634,
+                        "name": "Aliba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658016,
+                        "name": "Gimara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657844,
+                        "name": "Itula",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644132,
+                "name": "West Moyo",
+                "children": [
+                    {
+                        "geonameId": 7732530,
+                        "name": "Dufile",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657955,
+                        "name": "Lefori",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657820,
+                        "name": "Metu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658370,
+                        "name": "Moyo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657625,
+                        "name": "Moyo Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448221,
+        "name": "Nakapiripirit District",
+        "children": [
+            {
+                "geonameId": 8644141,
+                "name": "Chekwii",
+                "children": [
+                    {
+                        "geonameId": 8658594,
+                        "name": "Kakomongole",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657547,
+                        "name": "Loregae",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657805,
+                        "name": "Moruita",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658190,
+                        "name": "Nakapiripirit T.Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657940,
+                        "name": "Namalu",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226767,
+                "name": "Pian County",
+                "children": [
+                    {
+                        "geonameId": 8657996,
+                        "name": "Lolachat",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658585,
+                        "name": "Lorengedwat",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657778,
+                        "name": "Nabilatuk",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030561,
+        "name": "Napak District",
+        "children": [
+            {
+                "geonameId": 234720,
+                "name": "Bokora County",
+                "children": [
+                    {
+                        "geonameId": 8658054,
+                        "name": "Iriiri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657642,
+                        "name": "Lokopo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657720,
+                        "name": "Lopei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657946,
+                        "name": "Lorengecora",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658504,
+                        "name": "Lotome",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658345,
+                        "name": "Matany",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658126,
+                        "name": "Napak Tc",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658006,
+                        "name": "Ngoleriet",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443360,
+        "name": "Nebbi District",
+        "children": [
+            {
+                "geonameId": 233111,
+                "name": "Jonam County",
+                "children": [
+                    {
+                        "geonameId": 8657650,
+                        "name": "Alwi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8080351,
+                        "name": "Pakwach Town",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261568,
+                        "name": "Panyango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261566,
+                        "name": "Panyimur",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8648147,
+                        "name": "Pawach Parish",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261584,
+                        "name": "Wadelai",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8080237,
+                "name": "Padyere",
+                "children": [
+                    {
+                        "geonameId": 8080218,
+                        "name": "Akworo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657629,
+                        "name": "Atego",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657802,
+                        "name": "Erussi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8080219,
+                        "name": "Kucwiny",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657961,
+                        "name": "Ndhew",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261564,
+                        "name": "Nebbi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658147,
+                        "name": "Nebbi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261562,
+                        "name": "Nyaravur",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261561,
+                        "name": "Parombo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7869939,
+        "name": "Nwoya District",
+        "children": [
+            {
+                "geonameId": 8644126,
+                "name": "Nwoya",
+                "children": [
+                    {
+                        "geonameId": 8200498,
+                        "name": "Alero",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8200495,
+                        "name": "Anaka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658622,
+                        "name": "Koch Goma",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658737,
+                        "name": "Nwoya Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8200494,
+                        "name": "Purongo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030567,
+        "name": "Otuke District",
+        "children": [
+            {
+                "geonameId": 8644128,
+                "name": "Otuke",
+                "children": [
+                    {
+                        "geonameId": 8657564,
+                        "name": "Adwari",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658735,
+                        "name": "Alango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657800,
+                        "name": "Ogor",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658003,
+                        "name": "Ogwete",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657702,
+                        "name": "Okwang",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657913,
+                        "name": "Olilim",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657914,
+                        "name": "Orum",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658734,
+                        "name": "Otuke Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056295,
+        "name": "Oyam District",
+        "children": [
+            {
+                "geonameId": 226883,
+                "name": "Oyam County",
+                "children": [
+                    {
+                        "geonameId": 8261615,
+                        "name": "Aber",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658397,
+                        "name": "Abok",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261617,
+                        "name": "Acaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658398,
+                        "name": "Aleka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657749,
+                        "name": "Iceme",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658395,
+                        "name": "Kamdini",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261616,
+                        "name": "Loro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261620,
+                        "name": "Minakulu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657546,
+                        "name": "Myene",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261618,
+                        "name": "Ngai",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657728,
+                        "name": "Otwal",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658396,
+                        "name": "Oyam Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448222,
+        "name": "Pader District",
+        "children": [
+            {
+                "geonameId": 8644156,
+                "name": "Aruu",
+                "children": [
+                    {
+                        "geonameId": 8647785,
+                        "name": "Acholi-Bur Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647782,
+                        "name": "Angagura Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647783,
+                        "name": "Atanga Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658213,
+                        "name": "Awere",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647784,
+                        "name": "Laguti Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647863,
+                        "name": "Lapul Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647787,
+                        "name": "Latanya Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658197,
+                        "name": "Ogom",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657916,
+                        "name": "Pader",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732524,
+                        "name": "Pader TC",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8647864,
+                        "name": "Pajule Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658650,
+                        "name": "Puranga",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448225,
+        "name": "Yumbe District",
+        "children": [
+            {
+                "geonameId": 235054,
+                "name": "Aringa County",
+                "children": [
+                    {
+                        "geonameId": 8657729,
+                        "name": "Apo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658538,
+                        "name": "Ariwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657731,
+                        "name": "Drajani",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657619,
+                        "name": "Kei",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658739,
+                        "name": "Kerwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8645292,
+                        "name": "Koch",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657839,
+                        "name": "Kululu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657986,
+                        "name": "Kuru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658058,
+                        "name": "Lodonga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658436,
+                        "name": "Midigo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658465,
+                        "name": "Odravu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732523,
+                        "name": "Rumogi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657860,
+                        "name": "Yumbe Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030563,
+        "name": "Zombo District",
+        "children": [
+            {
+                "geonameId": 227147,
+                "name": "Okoro County",
+                "children": [
+                    {
+                        "geonameId": 8657782,
+                        "name": "Atyak",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657926,
+                        "name": "Jangokoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658461,
+                        "name": "Kango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657635,
+                        "name": "Nyapea",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8261565,
+                        "name": "Paidha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658450,
+                        "name": "Paidha Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658098,
+                        "name": "Warr",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657766,
+                        "name": "Zeu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658740,
+                        "name": "Zombo Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

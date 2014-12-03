@@ -1,0 +1,113 @@
+[
+    {
+        "geonameId": 343450,
+        "name": "Arsi Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732039,
+        "name": "Borena Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732970,
+        "name": "East Harerghe Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670720,
+        "name": "East Shewa Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670721,
+        "name": "East Wellega Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8606578,
+        "name": "Gimbichu",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8299785,
+        "name": "Guji Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732965,
+        "name": "Illubabor Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 333766,
+        "name": "Jimma Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7648477,
+        "name": "Misraq Shewa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670714,
+        "name": "North Shewa Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670717,
+        "name": "South West Shewa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732969,
+        "name": "West Harerghe Zone",
+        "children": [
+            {
+                "geonameId": 8335159,
+                "name": "Tulo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7670715,
+        "name": "West Shewa Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732966,
+        "name": "West Wellaga Zone",
+        "children": [
+            
+        ]
+    }
+]

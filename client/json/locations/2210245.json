@@ -1,0 +1,57 @@
+[
+    {
+        "geonameId": 2210394,
+        "name": "Tagiura",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2210247,
+        "name": "Tripoli",
+        "children": [
+            {
+                "geonameId": 2220399,
+                "name": "Ab\u016b Sal\u012bm",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2214813,
+                "name": "Bab al-Azizia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2218942,
+                "name": "B\u0101b Qarq\u0101rish",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2218949,
+                "name": "B\u0101b \u2018Akk\u0101rah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2218077,
+                "name": "B\u016b Sittah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2213948,
+                "name": "Qaryat al Balad\u012byah",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

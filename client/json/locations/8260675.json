@@ -1,0 +1,3306 @@
+[
+    {
+        "geonameId": 8030585,
+        "name": "Buhweju District",
+        "children": [
+            {
+                "geonameId": 234484,
+                "name": "Buhweju County",
+                "children": [
+                    {
+                        "geonameId": 8658659,
+                        "name": "Bihanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658441,
+                        "name": "Bitsya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658234,
+                        "name": "Burere",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657864,
+                        "name": "Engaju",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658658,
+                        "name": "Karungu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658535,
+                        "name": "Nsiika Town Council",
+                        "children": [
+                            {
+                                "geonameId": 226646,
+                                "name": "Rugongo",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8657587,
+                        "name": "Nyakishana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657648,
+                        "name": "Rwengwe",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056281,
+        "name": "Bulisa District",
+        "children": [
+            {
+                "geonameId": 7869947,
+                "name": "Buliisa",
+                "children": [
+                    {
+                        "geonameId": 8657960,
+                        "name": "Biiso",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657545,
+                        "name": "Buliisa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657676,
+                        "name": "Buliisa Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657899,
+                        "name": "Butiaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657780,
+                        "name": "Kigwera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657910,
+                        "name": "Kihungya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658375,
+                        "name": "Ngwedo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443329,
+        "name": "Bundibugyo District",
+        "children": [
+            {
+                "geonameId": 8644162,
+                "name": "Bughendera",
+                "children": [
+                    {
+                        "geonameId": 8658718,
+                        "name": "Bukonzo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658335,
+                        "name": "Harugale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657673,
+                        "name": "Kasitu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658095,
+                        "name": "Nduguto",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657616,
+                        "name": "Ngamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657643,
+                        "name": "Ntotoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657610,
+                        "name": "Sindila",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732250,
+                "name": "Bwamba",
+                "children": [
+                    {
+                        "geonameId": 7732542,
+                        "name": "Bubandi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658204,
+                        "name": "Bubukwanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658365,
+                        "name": "Bundibugyo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657615,
+                        "name": "Busaru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657613,
+                        "name": "Kirumya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657907,
+                        "name": "Kisuba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657612,
+                        "name": "Mirambi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657611,
+                        "name": "Nyahuka Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443330,
+        "name": "Bushenyi District",
+        "children": [
+            {
+                "geonameId": 7732267,
+                "name": "Igara",
+                "children": [
+                    {
+                        "geonameId": 8657856,
+                        "name": "Bitooma",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732412,
+                        "name": "Bumbaire",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657637,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657649,
+                        "name": "Ibaare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657638,
+                        "name": "Ishaka Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658173,
+                        "name": "Kakanju",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732411,
+                        "name": "Kyabugumbi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658166,
+                        "name": "Kyamuhunga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657647,
+                        "name": "Kyeizoba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658195,
+                        "name": "Nyabubare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657646,
+                        "name": "Nyakabirizi Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657857,
+                        "name": "Ruhumuro",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443332,
+        "name": "Hoima District",
+        "children": [
+            {
+                "geonameId": 7732256,
+                "name": "Bugahya",
+                "children": [
+                    {
+                        "geonameId": 7732547,
+                        "name": "Buhanika",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8581634,
+                        "name": "Buseruka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658194,
+                        "name": "Kigorobya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657918,
+                        "name": "Kigorobya Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658568,
+                        "name": "Kitoba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657597,
+                        "name": "Kyabigambire",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644163,
+                "name": "Buhaguzi",
+                "children": [
+                    {
+                        "geonameId": 8658628,
+                        "name": "Bugambe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657810,
+                        "name": "Buhimba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657785,
+                        "name": "Kabwoya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658625,
+                        "name": "Kiziranfumbi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657663,
+                        "name": "Kyangwali",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644142,
+                "name": "Hoima Municipality",
+                "children": [
+                    {
+                        "geonameId": 8657799,
+                        "name": "Bujumbura Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657741,
+                        "name": "Busiisi Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658108,
+                        "name": "Kahoora Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658374,
+                        "name": "Mparo Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056284,
+        "name": "Ibanda District",
+        "children": [
+            {
+                "geonameId": 7732900,
+                "name": "Ibanda",
+                "children": [
+                    {
+                        "geonameId": 8658567,
+                        "name": "Bisheshe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658471,
+                        "name": "Ibanda Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658209,
+                        "name": "Igorora Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732407,
+                        "name": "Ishongororo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658231,
+                        "name": "Ishongororo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658667,
+                        "name": "Kashangura",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658661,
+                        "name": "Keihangara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658125,
+                        "name": "Kicuzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658707,
+                        "name": "Kijongo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8642900,
+                        "name": "Kikyenkye",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657591,
+                        "name": "Nsasi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658600,
+                        "name": "Nyamarebe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732408,
+                        "name": "Rukiri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658709,
+                        "name": "Rushango Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056285,
+        "name": "Isingiro District",
+        "children": [
+            {
+                "geonameId": 8644166,
+                "name": "Bukanga",
+                "children": [
+                    {
+                        "geonameId": 7732399,
+                        "name": "Endinzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658270,
+                        "name": "Kashumba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658680,
+                        "name": "Mbaare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732401,
+                        "name": "Ngarama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658430,
+                        "name": "Rugaaga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658682,
+                        "name": "Rushasha",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 233175,
+                "name": "Isingiro County",
+                "children": [
+                    {
+                        "geonameId": 7732397,
+                        "name": "Birere",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657590,
+                        "name": "Isingiro Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658666,
+                        "name": "Kaberebere Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658679,
+                        "name": "Kabingo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658676,
+                        "name": "Kabuyanda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658677,
+                        "name": "Kabuyanda Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657764,
+                        "name": "Kikagate",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732398,
+                        "name": "Masha",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658253,
+                        "name": "Nyakitunda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658581,
+                        "name": "Nyamuyanja",
+                        "children": [
+                            {
+                                "geonameId": 8714213,
+                                "name": "Nyamuyanja",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8658579,
+                        "name": "Ruborogota",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443336,
+        "name": "Kabale District",
+        "children": [
+            {
+                "geonameId": 7732229,
+                "name": "Kabale Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658511,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657889,
+                        "name": "Northern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657736,
+                        "name": "Southern Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 227915,
+                "name": "Ndorwa County",
+                "children": [
+                    {
+                        "geonameId": 8658084,
+                        "name": "Buhara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657934,
+                        "name": "Kaharo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658421,
+                        "name": "Kamuganguzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657854,
+                        "name": "Katuna Town Council",
+                        "children": [
+                            {
+                                "geonameId": 8693290,
+                                "name": "Katuna",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8658515,
+                        "name": "Kitumba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657836,
+                        "name": "Kyanamira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658136,
+                        "name": "Maziba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658073,
+                        "name": "Rubaya",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226689,
+                "name": "Rubanda County",
+                "children": [
+                    {
+                        "geonameId": 8642870,
+                        "name": "Bubare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8299546,
+                        "name": "Bufundi Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658522,
+                        "name": "Butanda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732414,
+                        "name": "Hamurwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658519,
+                        "name": "Hamurwa Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657664,
+                        "name": "Ikumba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8299544,
+                        "name": "Muko Sub-County",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658520,
+                        "name": "Nyamweru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657849,
+                        "name": "Ruhija",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226611,
+                "name": "Rukiga County",
+                "children": [
+                    {
+                        "geonameId": 8658367,
+                        "name": "Bukinda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657841,
+                        "name": "Kamwezi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657659,
+                        "name": "Kashambya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657848,
+                        "name": "Muhanga Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658347,
+                        "name": "Rwamucucu",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443337,
+        "name": "Kabarole District",
+        "children": [
+            {
+                "geonameId": 234153,
+                "name": "Bunyangabu County",
+                "children": [
+                    {
+                        "geonameId": 8658611,
+                        "name": "Buheesi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657835,
+                        "name": "Kabonero",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657976,
+                        "name": "Kateebwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657571,
+                        "name": "Kibiito",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657576,
+                        "name": "Kibiito Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657572,
+                        "name": "Kisomoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658414,
+                        "name": "Rubona Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657904,
+                        "name": "Rwimi Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732254,
+                "name": "Burahya County",
+                "children": [
+                    {
+                        "geonameId": 8658224,
+                        "name": "Bukuuku",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657651,
+                        "name": "Busoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657609,
+                        "name": "Hakibaale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658700,
+                        "name": "Karago Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657967,
+                        "name": "Karambi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658206,
+                        "name": "Karangura",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657906,
+                        "name": "Kasenda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658580,
+                        "name": "Kicwamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657930,
+                        "name": "Kijura Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658154,
+                        "name": "Kiko Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658278,
+                        "name": "Mugusu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657818,
+                        "name": "Ruteete",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657905,
+                        "name": "Rwimi",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732226,
+                "name": "Fort Portal Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658114,
+                        "name": "Eastern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658022,
+                        "name": "Southern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658169,
+                        "name": "Western Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448216,
+        "name": "Kamwenge District",
+        "children": [
+            {
+                "geonameId": 231608,
+                "name": "Kibale County",
+                "children": [
+                    {
+                        "geonameId": 8657762,
+                        "name": "Biguli",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657713,
+                        "name": "Busiriba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657667,
+                        "name": "Bwizi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658710,
+                        "name": "Kabambiro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658588,
+                        "name": "Kahunge",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732532,
+                        "name": "Kamwenge",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658467,
+                        "name": "Kamwenge",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657565,
+                        "name": "Nkoma",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732901,
+                "name": "Kitagwenda",
+                "children": [
+                    {
+                        "geonameId": 8657792,
+                        "name": "Buhanda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657874,
+                        "name": "Kanara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657867,
+                        "name": "Kicheche",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658569,
+                        "name": "Mahyoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657822,
+                        "name": "Ntara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658629,
+                        "name": "Nyabbani",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448217,
+        "name": "Kanungu District",
+        "children": [
+            {
+                "geonameId": 7732525,
+                "name": "Kinkiizi",
+                "children": [
+                    {
+                        "geonameId": 8658521,
+                        "name": "Butogota Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657963,
+                        "name": "Kambuga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658529,
+                        "name": "Kambuga Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657584,
+                        "name": "Kanungu Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657796,
+                        "name": "Kanyantorogo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658528,
+                        "name": "Kateete",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657797,
+                        "name": "Kayonza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657710,
+                        "name": "Kihiihi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658532,
+                        "name": "Kihiihi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658524,
+                        "name": "Kinaaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658557,
+                        "name": "Kirima",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732517,
+                        "name": "Mpungu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658530,
+                        "name": "Nyakinoni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657594,
+                        "name": "Nyamirama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658534,
+                        "name": "Nyanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732518,
+                        "name": "Rugyeyo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657786,
+                        "name": "Rutenga",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443342,
+        "name": "Kasese District",
+        "children": [
+            {
+                "geonameId": 7869968,
+                "name": "Bukonjo",
+                "children": [
+                    {
+                        "geonameId": 8658582,
+                        "name": "Bwera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657682,
+                        "name": "Ihandiro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658669,
+                        "name": "Isango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658327,
+                        "name": "Karambi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657714,
+                        "name": "Kisinga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657774,
+                        "name": "Kitholhu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658620,
+                        "name": "Kyarumba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658188,
+                        "name": "Kyondo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658142,
+                        "name": "Mahango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657869,
+                        "name": "Mpondwe-Lhubiriha Tc",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657868,
+                        "name": "Munkunyu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658116,
+                        "name": "Nyakatonzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657746,
+                        "name": "Nyakiyumbu",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 234040,
+                "name": "Busongora County",
+                "children": [
+                    {
+                        "geonameId": 8657760,
+                        "name": "Bugoye",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658670,
+                        "name": "Buhuhira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657759,
+                        "name": "Bwesumbu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658246,
+                        "name": "Hima Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658463,
+                        "name": "Karusandara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658637,
+                        "name": "Katwe Kabatoro T.Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657871,
+                        "name": "Kilembe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657783,
+                        "name": "Kitswamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658671,
+                        "name": "Kyabarungira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657632,
+                        "name": "L. Katwe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657556,
+                        "name": "Maliba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657765,
+                        "name": "Muhokya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657872,
+                        "name": "Rukoki",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644173,
+                "name": "Kasese Municipality",
+                "children": [
+                    {
+                        "geonameId": 8657870,
+                        "name": "Bulembia Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657983,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657846,
+                        "name": "Nyamwamba Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443343,
+        "name": "Kibale District",
+        "children": [
+            {
+                "geonameId": 8644161,
+                "name": "Bugangaizi",
+                "children": [
+                    {
+                        "geonameId": 8658064,
+                        "name": "Birembo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658262,
+                        "name": "Bwanswa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658606,
+                        "name": "Kakindo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657770,
+                        "name": "Kakumiro Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657806,
+                        "name": "Kasambya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657627,
+                        "name": "Kisiita",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658063,
+                        "name": "Mpasaana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657709,
+                        "name": "Nalweyo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657988,
+                        "name": "Nkooko",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 233860,
+                "name": "Buyaga County",
+                "children": [
+                    {
+                        "geonameId": 8657969,
+                        "name": "Burora",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657755,
+                        "name": "Bwikara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657756,
+                        "name": "Kabamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658171,
+                        "name": "Kagadi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657614,
+                        "name": "Kagadi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658559,
+                        "name": "Kiryanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657671,
+                        "name": "Kyakabadiima",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658211,
+                        "name": "Kyanaisoke",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657968,
+                        "name": "Kyaterekera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657660,
+                        "name": "Kyenzige",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657817,
+                        "name": "Mabaale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657563,
+                        "name": "Mpeefu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658340,
+                        "name": "Muhoro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658359,
+                        "name": "Muhoro Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658008,
+                        "name": "Ndaiga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657911,
+                        "name": "Paacwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657721,
+                        "name": "Rugashari",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658336,
+                        "name": "Ruteete",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644139,
+                "name": "Buyanja",
+                "children": [
+                    {
+                        "geonameId": 8658596,
+                        "name": "Bubango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658061,
+                        "name": "Bwamiramira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658434,
+                        "name": "Kibaale Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658599,
+                        "name": "Kyebando",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658062,
+                        "name": "Matale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658353,
+                        "name": "Mugarama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658630,
+                        "name": "Nyamarunda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658462,
+                        "name": "Nyamarwa",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7056288,
+        "name": "Kiruhura District",
+        "children": [
+            {
+                "geonameId": 8644177,
+                "name": "Kazo",
+                "children": [
+                    {
+                        "geonameId": 8657813,
+                        "name": "Buremba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657551,
+                        "name": "Burunga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657624,
+                        "name": "Engari",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657882,
+                        "name": "Kanoni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657748,
+                        "name": "Kazo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657923,
+                        "name": "Kazo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658011,
+                        "name": "Nkungu Sc",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732406,
+                        "name": "Rwemikoma",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7870011,
+                "name": "Nyabushozi",
+                "children": [
+                    {
+                        "geonameId": 7732403,
+                        "name": "Kanyaryeru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658586,
+                        "name": "Kashongi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657542,
+                        "name": "Kenshunga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732404,
+                        "name": "Kikatsi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658565,
+                        "name": "Kinoni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658699,
+                        "name": "Kiruhura Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658706,
+                        "name": "Kituura",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657791,
+                        "name": "Nyakashashara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657568,
+                        "name": "Sanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658517,
+                        "name": "Sanga Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030564,
+        "name": "Kiryandongo District",
+        "children": [
+            {
+                "geonameId": 231597,
+                "name": "Kibanda",
+                "children": [
+                    {
+                        "geonameId": 8658132,
+                        "name": "Bweyale Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658610,
+                        "name": "Kigumba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658376,
+                        "name": "Kigumba Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657902,
+                        "name": "Kiryandongo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657678,
+                        "name": "Kiryandongo Refugee Set.",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657965,
+                        "name": "Kiryandongo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658200,
+                        "name": "Masindi Port",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657585,
+                        "name": "Mutunda",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443345,
+        "name": "Kisoro District",
+        "children": [
+            {
+                "geonameId": 7874701,
+                "name": "Bufumbira",
+                "children": [
+                    {
+                        "geonameId": 8658592,
+                        "name": "Bukimbiri",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658576,
+                        "name": "Busanza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658184,
+                        "name": "Chahi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8642883,
+                        "name": "Kanaba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657695,
+                        "name": "Kirundo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658300,
+                        "name": "Kisoro Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658603,
+                        "name": "Muramba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658120,
+                        "name": "Murora",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657636,
+                        "name": "Nyabwishenya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8642886,
+                        "name": "Nyakabande",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658029,
+                        "name": "Nyakinama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658317,
+                        "name": "Nyarubuye",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657853,
+                        "name": "Nyarusiza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657644,
+                        "name": "Nyundo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030581,
+        "name": "Kyegegwa District",
+        "children": [
+            {
+                "geonameId": 230499,
+                "name": "Kyaka County",
+                "children": [
+                    {
+                        "geonameId": 7732541,
+                        "name": "Hapuyo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657718,
+                        "name": "Kakabara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657843,
+                        "name": "Kasule",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658598,
+                        "name": "Kyegegwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658725,
+                        "name": "Kyegegwa Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657990,
+                        "name": "Mpara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658587,
+                        "name": "Ruyonza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657991,
+                        "name": "Rwentuha",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 448219,
+        "name": "Kyenjojo District",
+        "children": [
+            {
+                "geonameId": 228643,
+                "name": "Mwenge County",
+                "children": [
+                    {
+                        "geonameId": 234622,
+                        "name": "Bufunju",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657592,
+                        "name": "Bugaaki",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657544,
+                        "name": "Butiiti",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658727,
+                        "name": "Butunduuzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657529,
+                        "name": "Butunduuzi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657541,
+                        "name": "Katoke Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658571,
+                        "name": "Katooke",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657531,
+                        "name": "Kigaraale",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658726,
+                        "name": "Kihuura",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658554,
+                        "name": "Kisojo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657559,
+                        "name": "Kyarusozi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657543,
+                        "name": "Kyarusozi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657933,
+                        "name": "Kyenjojo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657840,
+                        "name": "Nyabuharwa",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657719,
+                        "name": "Nyankwanzi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657715,
+                        "name": "Nyantungo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443351,
+        "name": "Masindi District",
+        "children": [
+            {
+                "geonameId": 234463,
+                "name": "Bujenje County",
+                "children": [
+                    {
+                        "geonameId": 8657903,
+                        "name": "Budongo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658090,
+                        "name": "Bwijanga",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644129,
+                "name": "Buruuli",
+                "children": [
+                    {
+                        "geonameId": 8657772,
+                        "name": "Kimengo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657798,
+                        "name": "Miirya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657823,
+                        "name": "Pakanyi",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644149,
+                "name": "Masindi Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658714,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657654,
+                        "name": "Karujubu Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658715,
+                        "name": "Kigulya Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657640,
+                        "name": "Nyangahya Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443355,
+        "name": "Mbarara District",
+        "children": [
+            {
+                "geonameId": 232055,
+                "name": "Kashari County",
+                "children": [
+                    {
+                        "geonameId": 8658248,
+                        "name": "Biharwe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658292,
+                        "name": "Bubaare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657850,
+                        "name": "Bukiro",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658330,
+                        "name": "Kagongi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658575,
+                        "name": "Kakiika",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658602,
+                        "name": "Kashare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657567,
+                        "name": "Rubaya",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658364,
+                        "name": "Rubindi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658731,
+                        "name": "Rwanyamahembe",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732072,
+                "name": "Mbarara Municipality",
+                "children": [
+                    {
+                        "geonameId": 8657803,
+                        "name": "Kakoba Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658645,
+                        "name": "Kamukuzi Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657966,
+                        "name": "Nyamitanga Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 226512,
+                "name": "Rwampara County",
+                "children": [
+                    {
+                        "geonameId": 8657884,
+                        "name": "Bugamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658428,
+                        "name": "Mwizi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658640,
+                        "name": "Ndaija",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658590,
+                        "name": "Nyakayojo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732395,
+                        "name": "Rugando",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030586,
+        "name": "Mitoma District",
+        "children": [
+            {
+                "geonameId": 7869954,
+                "name": "Ruhinda",
+                "children": [
+                    {
+                        "geonameId": 8657722,
+                        "name": "Bitereko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658550,
+                        "name": "Kabira",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658631,
+                        "name": "Kanyabwanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658552,
+                        "name": "Kashenshero",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658533,
+                        "name": "Kashenshero Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658422,
+                        "name": "Kitenga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658368,
+                        "name": "Kiyanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657855,
+                        "name": "Mayanga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658652,
+                        "name": "Mitooma",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658531,
+                        "name": "Mitooma Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657837,
+                        "name": "Mutara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658334,
+                        "name": "Ruhehe",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030583,
+        "name": "Ntoroko District",
+        "children": [
+            {
+                "geonameId": 8644154,
+                "name": "Ntoroko",
+                "children": [
+                    {
+                        "geonameId": 8657908,
+                        "name": "Butungama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657909,
+                        "name": "Bweramule",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657763,
+                        "name": "Kanara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657652,
+                        "name": "Kanara Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658312,
+                        "name": "Karugutu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657653,
+                        "name": "Karugutu Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657657,
+                        "name": "Kibuku Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658040,
+                        "name": "Nombe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657885,
+                        "name": "Rwebisengo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657617,
+                        "name": "Rwebisengo Town Council",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443361,
+        "name": "Ntungamo District",
+        "children": [
+            {
+                "geonameId": 7732262,
+                "name": "Kajara",
+                "children": [
+                    {
+                        "geonameId": 8657699,
+                        "name": "Bwongyera",
+                        "children": [
+                            {
+                                "geonameId": 233727,
+                                "name": "Bwongyera",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8657602,
+                        "name": "Ihunga",
+                        "children": [
+                            {
+                                "geonameId": 232827,
+                                "name": "Kagamba",
+                                "children": [
+                                    
+                                ]
+                            },
+                            {
+                                "geonameId": 227731,
+                                "name": "Nombe",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8658431,
+                        "name": "Kibatsi",
+                        "children": [
+                            {
+                                "geonameId": 226520,
+                                "name": "Rwamabondo",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "geonameId": 8657865,
+                        "name": "Nyabihoko",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658673,
+                        "name": "Rwashamaire Town Council",
+                        "children": [
+                            {
+                                "geonameId": 9518159,
+                                "name": "Rwashmaire Town",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644181,
+                "name": "Ntungamo Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658373,
+                        "name": "Central Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658089,
+                        "name": "Eastern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658655,
+                        "name": "Western Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732260,
+                "name": "Ruhaama",
+                "children": [
+                    {
+                        "geonameId": 8657794,
+                        "name": "Itojo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658674,
+                        "name": "Kitwe Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732410,
+                        "name": "Ntungamo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657808,
+                        "name": "Nyakyera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732409,
+                        "name": "Ruhaama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657887,
+                        "name": "Rukoni East",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658657,
+                        "name": "Rukoni West",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657779,
+                        "name": "Rweikiniro",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 7732261,
+                "name": "Rushenyi",
+                "children": [
+                    {
+                        "geonameId": 8658180,
+                        "name": "Kayonza",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657641,
+                        "name": "Ngoma",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657811,
+                        "name": "Rubaare",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658672,
+                        "name": "Rubaare Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658263,
+                        "name": "Rugarama",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030584,
+        "name": "Rubirizi District",
+        "children": [
+            {
+                "geonameId": 234151,
+                "name": "Bunyaruguru County",
+                "children": [
+                    {
+                        "geonameId": 8658663,
+                        "name": "Katanda",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658664,
+                        "name": "Katerera",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658551,
+                        "name": "Katerera Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658002,
+                        "name": "Katunguru",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657866,
+                        "name": "Kichwamba",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658665,
+                        "name": "Kirugu",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658083,
+                        "name": "Kyabakara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658662,
+                        "name": "Magambo",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658660,
+                        "name": "Rubirizi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658148,
+                        "name": "Rutoto",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657950,
+                        "name": "Ryeru",
+                        "children": [
+                            {
+                                "geonameId": 8714212,
+                                "name": "Mushumba",
+                                "children": [
+                                    
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 443364,
+        "name": "Rukungiri District",
+        "children": [
+            {
+                "geonameId": 8644165,
+                "name": "Bujumbura",
+                "children": [
+                    {
+                        "geonameId": 8658549,
+                        "name": "Bugangari",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732513,
+                        "name": "Buhunga",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732515,
+                        "name": "Bwambara",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732514,
+                        "name": "Nyakagyeme",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657974,
+                        "name": "Ruhinda",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644148,
+                "name": "Rubabo",
+                "children": [
+                    {
+                        "geonameId": 8658589,
+                        "name": "Buyanja",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732512,
+                        "name": "Kebisoni",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658570,
+                        "name": "Nyakishenyi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657801,
+                        "name": "Nyarushanje",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 8644150,
+                "name": "Rukungiri Municipality",
+                "children": [
+                    {
+                        "geonameId": 8658104,
+                        "name": "Eastern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658542,
+                        "name": "Southern Division",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658541,
+                        "name": "Western Division",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8030587,
+        "name": "Sheema District",
+        "children": [
+            {
+                "geonameId": 7732263,
+                "name": "Sheema",
+                "children": [
+                    {
+                        "geonameId": 8658654,
+                        "name": "Bugongi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658432,
+                        "name": "Bugongi Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658357,
+                        "name": "Kabwohe-Itendero Tc",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7732413,
+                        "name": "Kagango",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657997,
+                        "name": "Kasaana",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658291,
+                        "name": "Kibingo Town Council",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8657830,
+                        "name": "Kigarama",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658653,
+                        "name": "Kitagata",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658488,
+                        "name": "Kyangyenyi",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658656,
+                        "name": "Masheruka",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 8658282,
+                        "name": "Shuuku",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

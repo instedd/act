@@ -1,0 +1,63 @@
+[
+    {
+        "geonameId": 160321,
+        "name": "Chunya District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 159221,
+        "name": "Ileje District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 156110,
+        "name": "Kyela District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7647511,
+        "name": "Mbarali district",
+        "children": [
+            {
+                "geonameId": 159104,
+                "name": "Ipogoro",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 154379,
+        "name": "Mbeya District",
+        "children": [
+            {
+                "geonameId": 154797,
+                "name": "Mapogoro",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 154331,
+        "name": "Mbozi District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 150412,
+        "name": "Rungwe District",
+        "children": [
+            
+        ]
+    }
+]

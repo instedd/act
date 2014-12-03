@@ -1,0 +1,938 @@
+[
+    {
+        "geonameId": 2508449,
+        "name": "Ahmed Ben A\u00efda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2506457,
+        "name": "Armandville",
+        "children": [
+            {
+                "geonameId": 2499385,
+                "name": "Douar Guetna",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2499199,
+                "name": "Douar Zra\u00efb",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2506385,
+        "name": "Arzew",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494082,
+        "name": "Assi Ameur",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494065,
+        "name": "Assi Bou Nif",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494069,
+        "name": "Assi-Ben Okba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2508174,
+        "name": "A\u00efn el Bya",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2504805,
+        "name": "Ben Guermout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2504823,
+        "name": "Benfreha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503998,
+        "name": "Bettioua",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503874,
+        "name": "Bir el Djir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502328,
+        "name": "Bou Sfer",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502326,
+        "name": "Bou Sfer Plage",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502239,
+        "name": "Bou Tlelis",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503175,
+        "name": "Boufatis",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502935,
+        "name": "Bouisseville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502046,
+        "name": "Bredeah",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2501955,
+        "name": "Canastel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2570489,
+        "name": "Dar Ben Messoussa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2500835,
+        "name": "Dar Sidi Adda Ben Ariba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499547,
+        "name": "Douar Abbou Ali",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499542,
+        "name": "Douar Ahl Cadi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499540,
+        "name": "Douar Ahl el B\u00e2hi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499524,
+        "name": "Douar Bel Ga\u00efd",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499523,
+        "name": "Douar Bel Hadef",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499499,
+        "name": "Douar Bou Tlelis",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499485,
+        "name": "Douar Chouacha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499481,
+        "name": "Douar Communal",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499472,
+        "name": "Douar Djfafla",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499469,
+        "name": "Douar Doua\u00efmia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499389,
+        "name": "Douar Gotni",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499383,
+        "name": "Douar Habe\u00efchia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499374,
+        "name": "Douar Kailia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499368,
+        "name": "Douar Kheda\u00efmia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499367,
+        "name": "Douar Khe\u00efra",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499336,
+        "name": "Douar Mou\u00e2lda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499335,
+        "name": "Douar Mou\u00e2lek",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499325,
+        "name": "Douar Ouarlia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499296,
+        "name": "Douar Ould \u2019Amer",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499284,
+        "name": "Douar Ouled Ben Aou\u00e2li",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499279,
+        "name": "Douar Ouled Cherif",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499235,
+        "name": "Douar Rouached",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499226,
+        "name": "Douar Sidi Maarouf",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499227,
+        "name": "Douar Sidi Ma\u2019\u00e2chou",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499222,
+        "name": "Douar Sl\u00e2tna",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499465,
+        "name": "Douar ech Cheff\u00e2a",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499454,
+        "name": "Douar el Aya\u00efda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499436,
+        "name": "Douar el Haouaoua",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499423,
+        "name": "Douar el Krata",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499421,
+        "name": "Douar el Ksar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499418,
+        "name": "Douar el Menatsia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499404,
+        "name": "Douar er Rehamna",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499398,
+        "name": "Douar et Touama",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499536,
+        "name": "Douar \u2019A\u00efn el Be\u00efda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498697,
+        "name": "El An\u00e7or",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499456,
+        "name": "El Araba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498447,
+        "name": "El Braya",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498400,
+        "name": "El Emir Abdelkader",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498070,
+        "name": "El Haoussine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497931,
+        "name": "El Kerma",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497639,
+        "name": "El-Mehgoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497269,
+        "name": "En Nedjma",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499387,
+        "name": "En Nekala",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497060,
+        "name": "Es Senia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496813,
+        "name": "Falcon",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496564,
+        "name": "Feratsa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496376,
+        "name": "Fontaine des Gazelles",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496059,
+        "name": "Gdyel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499377,
+        "name": "Hassasna",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494032,
+        "name": "Hassi Mefso\u00fbkh",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494057,
+        "name": "Hassi el Biod",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494077,
+        "name": "Hassiane Ettoual",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494880,
+        "name": "Ha\u00ef Khemisti",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2593168,
+        "name": "Karouba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491379,
+        "name": "Kristel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491084,
+        "name": "La Macta",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491078,
+        "name": "La Marine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490877,
+        "name": "Le Portet",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490870,
+        "name": "Les Andalouses",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490852,
+        "name": "Les Ozaras",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490788,
+        "name": "L\u2019Orangerie",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488540,
+        "name": "Mekhalif",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487853,
+        "name": "Mers el Hadjad",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487852,
+        "name": "Mers el Kebir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487395,
+        "name": "Misserghin",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487195,
+        "name": "Monte-Christo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486835,
+        "name": "Moustafa Gre\u00efdia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485926,
+        "name": "Oran",
+        "children": [
+            {
+                "geonameId": 2506611,
+                "name": "Arbos Ville",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2501944,
+                "name": "Carteaux",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2501133,
+                "name": "Courbet",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2500888,
+                "name": "Dar el Be\u00efda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2500578,
+                "name": "Delmonte",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2498938,
+                "name": "Eckm\u00fchl",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2496954,
+                "name": "Eug\u00e8ne \u00c9tienne",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2496147,
+                "name": "Gambetta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2493453,
+                "name": "Illouz",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2492721,
+                "name": "Karguentah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2492677,
+                "name": "Kasbah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2491065,
+                "name": "Lamur",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2490738,
+                "name": "Lyautey",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2488805,
+                "name": "Medioni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2488262,
+                "name": "Melis",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2487403,
+                "name": "Miramar",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2487192,
+                "name": "Montplaisant",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2482535,
+                "name": "Saint-Charles",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2482513,
+                "name": "Saint-Eug\u00e8ne",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2482488,
+                "name": "Saint-Pierre",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2475093,
+                "name": "Victor Hugo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2475080,
+                "name": "Village N\u00e8gre",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2499410,
+        "name": "Ouahrani",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499326,
+        "name": "Ouardia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485559,
+        "name": "Oued Tl\u00e9lat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485322,
+        "name": "Oulad Bou He\u00efa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485094,
+        "name": "Oulad Youssef",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484184,
+        "name": "Pont-Albin",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482947,
+        "name": "Roseville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482593,
+        "name": "Sahouria",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482538,
+        "name": "Saint-Andr\u00e9",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482489,
+        "name": "Saint-Pierre",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482529,
+        "name": "Sainte-Clotilde",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2572163,
+        "name": "Salines",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2480888,
+        "name": "Sidi Benyebka",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2480618,
+        "name": "Sidi ech Chahmi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2478803,
+        "name": "Tafaraoui",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475266,
+        "name": "Tourville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475330,
+        "name": "To\u00fbmiat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475149,
+        "name": "Trouville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2474957,
+        "name": "Zahana",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2593169,
+        "name": "\u2018A\u00efn el Turc",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2508088,
+        "name": "\u2019A\u00efn Franine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2508119,
+        "name": "\u2019A\u00efn el Turk",
+        "children": [
+            
+        ]
+    }
+]

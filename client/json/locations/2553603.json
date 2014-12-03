@@ -1,0 +1,287 @@
+[
+    {
+        "geonameId": 6547294,
+        "name": "Casablanca",
+        "children": [
+            {
+                "geonameId": 6545962,
+                "name": "Ain-Chock",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545963,
+                "name": "Ain-Sebaa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545868,
+                "name": "Al-Fida",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545671,
+                "name": "Anfa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545964,
+                "name": "Assoukhour Assawda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545475,
+                "name": "Ben M'Sick",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545626,
+                "name": "Elmaarif",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545966,
+                "name": "Hay Mohammadi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545965,
+                "name": "Hay-Hassani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545985,
+                "name": "Mechouar Casablanca",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545967,
+                "name": "Mers-Sultan",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545968,
+                "name": "Moulay Rachid",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545969,
+                "name": "Sbata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545672,
+                "name": "Sidi Belyout",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545970,
+                "name": "Sidi Bernoussi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545891,
+                "name": "Sidi Moumen",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545971,
+                "name": "Sidi Othmane",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 6547303,
+        "name": "Mediouna",
+        "children": [
+            {
+                "geonameId": 6545657,
+                "name": "Almajjatia Oulad Tal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546274,
+                "name": "Lahraouyine",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546315,
+                "name": "Mediouna",
+                "children": [
+                    {
+                        "geonameId": 2542826,
+                        "name": "Mediouna",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545658,
+                "name": "Sidi Hajjaj Oued Has",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546782,
+                "name": "Tit Mellil",
+                "children": [
+                    {
+                        "geonameId": 2527271,
+                        "name": "Tit Mellil",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 6547301,
+        "name": "Mohammedia",
+        "children": [
+            {
+                "geonameId": 6545528,
+                "name": "Ain Harrouda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545655,
+                "name": "Bni Yakhlef",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546194,
+                "name": "Ech-Challalate",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546783,
+                "name": "Mohammedia",
+                "children": [
+                    {
+                        "geonameId": 2542051,
+                        "name": "Mohammedia",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545659,
+                "name": "Sidi Moussa Ben Ali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545677,
+                "name": "Sidi Moussa Majdoub",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 6547299,
+        "name": "Nouaceur",
+        "children": [
+            {
+                "geonameId": 6546277,
+                "name": "Bouskoura",
+                "children": [
+                    {
+                        "geonameId": 2554006,
+                        "name": "Bouskoura",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546784,
+                "name": "Dar Bouazza",
+                "children": [
+                    {
+                        "geonameId": 2552615,
+                        "name": "Dar Bouazza",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545431,
+                "name": "Lamkansa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545638,
+                "name": "Nouaceur",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545639,
+                "name": "Oulad Salah",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,64 @@
+[
+    {
+        "geonameId": 222570,
+        "name": "Ambouli",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7648070,
+        "name": "Balbala",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 404197,
+        "name": "Dam\u00eardj\u00f4g",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 223817,
+        "name": "Djibouti",
+        "children": [
+            {
+                "geonameId": 224457,
+                "name": "Bo\u00fbl\u2019aos",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 221981,
+                "name": "La Plaine",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9072662,
+                "name": "Seventh District",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 221915,
+        "name": "Loyada",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 220604,
+        "name": "Ou\u00ea\u2018a",
+        "children": [
+            
+        ]
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "geonameId": 8335147,
+        "name": "Ambatofinandrahana District",
+        "children": [
+            {
+                "geonameId": 1083239,
+                "name": "Ambatofinandrahana",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7670914,
+        "name": "Ambositra District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8335148,
+        "name": "Fandriana District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8335150,
+        "name": "Manandriana District",
+        "children": [
+            
+        ]
+    }
+]

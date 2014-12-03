@@ -1,0 +1,91 @@
+[
+    {
+        "geonameId": 9179534,
+        "name": "Masisi Territory",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8260563,
+        "name": "North Kivu",
+        "children": [
+            {
+                "geonameId": 219056,
+                "name": "Beni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260604,
+                "name": "Butembo",
+                "children": [
+                    {
+                        "geonameId": 217562,
+                        "name": "Butembo",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 216279,
+                "name": "Goma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 211067,
+                "name": "Lubero",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 209476,
+                "name": "Masisi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260598,
+                "name": "Nyirangongo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260605,
+                "name": "Oicha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 206045,
+                "name": "Rutshuru",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 204336,
+                "name": "Walikale",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 9179537,
+        "name": "Rutshuru Territory",
+        "children": [
+            
+        ]
+    }
+]

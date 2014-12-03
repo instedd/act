@@ -1,0 +1,6869 @@
+[
+    {
+        "geonameId": 1105840,
+        "name": "Balaka District",
+        "children": [
+            {
+                "geonameId": 931865,
+                "name": "Balaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931600,
+                "name": "Celemu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931222,
+                "name": "Chiendausiku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931058,
+                "name": "Chiladzulo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930051,
+                "name": "Dambolankhanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929275,
+                "name": "Kalembo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929212,
+                "name": "Kalowe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928812,
+                "name": "Kanyumbaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928780,
+                "name": "Kapalamula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928071,
+                "name": "Kwisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928005,
+                "name": "Ligwangwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927303,
+                "name": "Malula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927040,
+                "name": "Matola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927041,
+                "name": "Matola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927042,
+                "name": "Matola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926888,
+                "name": "Mbela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926406,
+                "name": "Mlandula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926063,
+                "name": "Mpunde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925236,
+                "name": "Namputu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925204,
+                "name": "Nandumbo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924528,
+                "name": "Nsunguliza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924202,
+                "name": "Phalula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923819,
+                "name": "Sosola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923820,
+                "name": "Sosola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923627,
+                "name": "Toleza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 7869833,
+                "name": "Ulongwe",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 931754,
+        "name": "Blantyre District",
+        "children": [
+            {
+                "geonameId": 931755,
+                "name": "Blantyre",
+                "children": [
+                    {
+                        "geonameId": 7870233,
+                        "name": "Jumbe",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7839209,
+                        "name": "Ndirande",
+                        "children": [
+                            
+                        ]
+                    },
+                    {
+                        "geonameId": 7840040,
+                        "name": "Zingwangwa",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 931671,
+                "name": "Bwanasompho",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931498,
+                "name": "Chamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931259,
+                "name": "Chichiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931206,
+                "name": "Chigaru",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931039,
+                "name": "Chileka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930684,
+                "name": "Chipalanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929521,
+                "name": "Kabula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929354,
+                "name": "Kajawo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928897,
+                "name": "Kanjedza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928863,
+                "name": "Kantukule",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928373,
+                "name": "Kausiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928203,
+                "name": "Kinsigala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927981,
+                "name": "Likulu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927955,
+                "name": "Limbe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927749,
+                "name": "Lundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927513,
+                "name": "Makala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927276,
+                "name": "Mandala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926883,
+                "name": "Mbemdela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926430,
+                "name": "Mkwapatira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926289,
+                "name": "Mount Pleasant",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926276,
+                "name": "Mpagaja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926209,
+                "name": "Mpemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926115,
+                "name": "Mpingo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926112,
+                "name": "Mpingwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925821,
+                "name": "Mudi Estate",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925780,
+                "name": "Mulima",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924862,
+                "name": "Ngumeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924379,
+                "name": "Nyambadwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923861,
+                "name": "Soche",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923847,
+                "name": "Somba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923798,
+                "name": "Sunnyside Suburb",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923533,
+                "name": "Ulaya",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 931067,
+        "name": "Chikwawa District",
+        "children": [
+            {
+                "geonameId": 931899,
+                "name": "Alimenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931896,
+                "name": "Alufasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931897,
+                "name": "Alufasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931895,
+                "name": "Alumenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931872,
+                "name": "Azyuda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931861,
+                "name": "Balala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931783,
+                "name": "Bile",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931666,
+                "name": "Bwemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931659,
+                "name": "Cabwedzeka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931580,
+                "name": "Chafudzika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931573,
+                "name": "Chagambatuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931560,
+                "name": "Chakanza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931549,
+                "name": "Chakhumbira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931533,
+                "name": "Chaletuwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931505,
+                "name": "Chamanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931506,
+                "name": "Chamanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931504,
+                "name": "Chamara",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931485,
+                "name": "Chambuluka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931418,
+                "name": "Chaonanjiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931361,
+                "name": "Chavara",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931346,
+                "name": "Chawuwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931182,
+                "name": "Chigwata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931093,
+                "name": "Chikungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931070,
+                "name": "Chikwawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931038,
+                "name": "Chileka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930947,
+                "name": "Chimbembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930894,
+                "name": "Chimpambana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930652,
+                "name": "Chipendo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930589,
+                "name": "Chipwaila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930410,
+                "name": "Chitsumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930311,
+                "name": "Chizenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930312,
+                "name": "Chizenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930141,
+                "name": "Cinyanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931653,
+                "name": "Cogaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930069,
+                "name": "Crowndi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930041,
+                "name": "Daniel",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929928,
+                "name": "Dzikolatha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929929,
+                "name": "Dzikolatha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929856,
+                "name": "Fodya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929854,
+                "name": "Fombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929776,
+                "name": "Goma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929763,
+                "name": "Gonyo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929676,
+                "name": "Imbwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929648,
+                "name": "James",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929591,
+                "name": "John",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929588,
+                "name": "John Malindeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929583,
+                "name": "Jombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929584,
+                "name": "Jombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929334,
+                "name": "Kakoma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929285,
+                "name": "Kalaundi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929209,
+                "name": "Kalulu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929064,
+                "name": "Kampani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929039,
+                "name": "Kampomo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928824,
+                "name": "Kanyimbiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928804,
+                "name": "Kanzele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928803,
+                "name": "Kanzimbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928734,
+                "name": "Kaphilijonjo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928577,
+                "name": "Kasisi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928368,
+                "name": "Kavalho",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928367,
+                "name": "Kavalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928103,
+                "name": "Kunyinda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928046,
+                "name": "Lazalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927819,
+                "name": "Lombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927748,
+                "name": "Lundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927646,
+                "name": "Machilika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927635,
+                "name": "Macikika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927584,
+                "name": "Mafunga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927573,
+                "name": "Maganga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927370,
+                "name": "Malemia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927371,
+                "name": "Malemia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927344,
+                "name": "Malikopo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927275,
+                "name": "Mandalade",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927273,
+                "name": "Mandele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927169,
+                "name": "Maperera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927147,
+                "name": "Masache",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927140,
+                "name": "Masamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927139,
+                "name": "Masanduko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927121,
+                "name": "Masenjere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927100,
+                "name": "Masseah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926948,
+                "name": "Mazongoza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926867,
+                "name": "Mbewe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926826,
+                "name": "Mbonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926816,
+                "name": "Mboza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926798,
+                "name": "Mbuzi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926710,
+                "name": "Mdzace",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926634,
+                "name": "Mikolongo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926564,
+                "name": "Misomali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926551,
+                "name": "Mitondo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926447,
+                "name": "Mkumaniza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926402,
+                "name": "Mlangeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926321,
+                "name": "Mologeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926295,
+                "name": "Moses",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926278,
+                "name": "Mozace",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926222,
+                "name": "Mpasu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926157,
+                "name": "Mpheza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926158,
+                "name": "Mpheza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926142,
+                "name": "Mphonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926135,
+                "name": "Mphuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926136,
+                "name": "Mphuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926120,
+                "name": "Mpimbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926079,
+                "name": "Mposa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926036,
+                "name": "Msamvi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925782,
+                "name": "Mulilima",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925681,
+                "name": "Mwaebwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925655,
+                "name": "Mwalija",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925637,
+                "name": "Mwanaakakula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925531,
+                "name": "Mwiza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925526,
+                "name": "Myaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925378,
+                "name": "Namanya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925288,
+                "name": "Namiserera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925092,
+                "name": "Nchalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925068,
+                "name": "Nchimika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924991,
+                "name": "Ndombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924959,
+                "name": "Ngabu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924930,
+                "name": "Ngilazi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924876,
+                "name": "Ngowo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924755,
+                "name": "Nkate",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924747,
+                "name": "Nkhalmba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924738,
+                "name": "Nkhangwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924689,
+                "name": "Nkhwangwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924626,
+                "name": "Nkuzi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924575,
+                "name": "Nsangwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924544,
+                "name": "Nsiyampanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924542,
+                "name": "Nsomo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924469,
+                "name": "Nthenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924262,
+                "name": "Padzua",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924222,
+                "name": "Pende",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924111,
+                "name": "Rodreck",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924061,
+                "name": "Salabeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924051,
+                "name": "Saliva",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924001,
+                "name": "Sanjama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924002,
+                "name": "Sanjama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924003,
+                "name": "Sanjama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923980,
+                "name": "Saopa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923966,
+                "name": "Savala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923956,
+                "name": "Sekela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923933,
+                "name": "Seseo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923906,
+                "name": "Simbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923887,
+                "name": "Singano",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923814,
+                "name": "Spooni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923758,
+                "name": "Tchigaga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923733,
+                "name": "Tendo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923695,
+                "name": "Therere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923696,
+                "name": "Therere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923691,
+                "name": "Thimba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923690,
+                "name": "Thimu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923686,
+                "name": "Thomas",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923665,
+                "name": "Thudzu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923647,
+                "name": "Timbenao",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923630,
+                "name": "Tizola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923625,
+                "name": "Tomali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923621,
+                "name": "Tombondera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923601,
+                "name": "Topoloni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923542,
+                "name": "Two Boy",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923540,
+                "name": "Ubale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923310,
+                "name": "Zimponje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923304,
+                "name": "Zironzo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 930579,
+        "name": "Chiradzulu District",
+        "children": [
+            {
+                "geonameId": 930580,
+                "name": "Chiradzulu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926357,
+                "name": "Mlungusi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925409,
+                "name": "Namadzi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924791,
+                "name": "Njuli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923446,
+                "name": "Walala",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 927642,
+        "name": "Machinga District",
+        "children": [
+            {
+                "geonameId": 931270,
+                "name": "Chibwana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931063,
+                "name": "Chikweo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930764,
+                "name": "Chinguwo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930763,
+                "name": "Chinguza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930781,
+                "name": "Ching\u2019oma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930675,
+                "name": "Chipanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930621,
+                "name": "Chipolonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930520,
+                "name": "Chisawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930493,
+                "name": "Chisiza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930471,
+                "name": "Chisuse",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930469,
+                "name": "Chisuwi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930441,
+                "name": "Chitenjere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930401,
+                "name": "Chitundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930394,
+                "name": "Chiuja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930367,
+                "name": "Chiwalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930363,
+                "name": "Chiwambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930186,
+                "name": "Cilala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929999,
+                "name": "Dinje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930000,
+                "name": "Dinje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930001,
+                "name": "Dinje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929901,
+                "name": "Ekhama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929705,
+                "name": "Halala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929682,
+                "name": "Idi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929666,
+                "name": "Issa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929651,
+                "name": "Jambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929560,
+                "name": "Juma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929318,
+                "name": "Kakutu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929295,
+                "name": "Kalambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929273,
+                "name": "Kalenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929178,
+                "name": "Kamala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928699,
+                "name": "Kapoloma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928527,
+                "name": "Kasupe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928444,
+                "name": "Katolokoso",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928393,
+                "name": "Kaugule",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928349,
+                "name": "Kawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928326,
+                "name": "Kawelama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928312,
+                "name": "Kawinga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928207,
+                "name": "Khuzumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928186,
+                "name": "Kokoti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928182,
+                "name": "Kolopa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928115,
+                "name": "Kungwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928059,
+                "name": "Lambulila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927991,
+                "name": "Likhonyowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927834,
+                "name": "Liwonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927763,
+                "name": "Lulanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927764,
+                "name": "Lulanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927659,
+                "name": "Macece",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927657,
+                "name": "Maceka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927656,
+                "name": "Macepa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927644,
+                "name": "Machina",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927643,
+                "name": "Machinga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927634,
+                "name": "Macilinga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927545,
+                "name": "Magwila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927544,
+                "name": "Mahata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927534,
+                "name": "Majaja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927488,
+                "name": "Makata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927470,
+                "name": "Makoka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927461,
+                "name": "Makome",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927430,
+                "name": "Makwakwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927431,
+                "name": "Makwakwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927421,
+                "name": "Makwemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927393,
+                "name": "Malango",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927355,
+                "name": "Maleta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927301,
+                "name": "Maluma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927297,
+                "name": "Malupi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927229,
+                "name": "Maniwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927228,
+                "name": "Maniya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927170,
+                "name": "Mapata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927171,
+                "name": "Mapata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927172,
+                "name": "Mapata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927166,
+                "name": "Mapila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927146,
+                "name": "Masaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927117,
+                "name": "Masese",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927087,
+                "name": "Mataka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927006,
+                "name": "Maunda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926982,
+                "name": "Maweha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926964,
+                "name": "Mayese",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926927,
+                "name": "Mbalame",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926919,
+                "name": "Mbalwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926898,
+                "name": "Mbawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926781,
+                "name": "Mbwezo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926641,
+                "name": "Mijombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926613,
+                "name": "Milaza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926611,
+                "name": "Milimbo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926571,
+                "name": "Misi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926452,
+                "name": "Mkula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926422,
+                "name": "Mkweya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926383,
+                "name": "Mlomba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926351,
+                "name": "Mmeta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926312,
+                "name": "Mongora",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926302,
+                "name": "Moro",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926286,
+                "name": "Mowere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926273,
+                "name": "Mpakaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926274,
+                "name": "Mpakaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926256,
+                "name": "Mpalume",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926160,
+                "name": "Mpheta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926144,
+                "name": "Mphonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926098,
+                "name": "Mponda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926080,
+                "name": "Mposa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926073,
+                "name": "Mpotola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926066,
+                "name": "Mpumbe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926061,
+                "name": "Mpunga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925989,
+                "name": "Msope",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925899,
+                "name": "Mteuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925886,
+                "name": "Mthiniwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925871,
+                "name": "Mtonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925846,
+                "name": "Mtundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925814,
+                "name": "Muepetha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925809,
+                "name": "Muhara",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925806,
+                "name": "Muhatele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925794,
+                "name": "Mula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925766,
+                "name": "Mundi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925716,
+                "name": "Muwawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925717,
+                "name": "Muwawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925672,
+                "name": "Mwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925656,
+                "name": "Mwalija",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925650,
+                "name": "Mwambala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925613,
+                "name": "Mwanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925569,
+                "name": "Mwegama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925549,
+                "name": "Mweny",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925547,
+                "name": "Mwenye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925540,
+                "name": "Mwila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925539,
+                "name": "Mwili",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925532,
+                "name": "Mwitiya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925382,
+                "name": "Namanja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925322,
+                "name": "Namikango",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925241,
+                "name": "Nampeya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925230,
+                "name": "Namuku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925221,
+                "name": "Namwini",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925200,
+                "name": "Nanganga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925149,
+                "name": "Nantwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925136,
+                "name": "Naphome",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925134,
+                "name": "Naphuthu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925108,
+                "name": "Nawanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925103,
+                "name": "Nayuci",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925085,
+                "name": "Nchelela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925062,
+                "name": "Ncimbo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925058,
+                "name": "Ncokola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925048,
+                "name": "Ndamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925047,
+                "name": "Ndambala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925009,
+                "name": "Ndenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924961,
+                "name": "Nepiyala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924926,
+                "name": "Ngokwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924912,
+                "name": "Ngomano",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924883,
+                "name": "Ngongondo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924782,
+                "name": "Nkaku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924779,
+                "name": "Nkalama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924758,
+                "name": "Nkapa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924728,
+                "name": "Nkhokwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924687,
+                "name": "Nkisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924684,
+                "name": "Nkoko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924658,
+                "name": "Nkotama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924620,
+                "name": "Nkwanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924609,
+                "name": "Nkwila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924606,
+                "name": "Nlaluwele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924607,
+                "name": "Nlaluwele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924605,
+                "name": "Nlamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924604,
+                "name": "Nlambalala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924603,
+                "name": "Nlawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924597,
+                "name": "Nlungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924598,
+                "name": "Nlungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924596,
+                "name": "Nluwila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924579,
+                "name": "Nsanama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924566,
+                "name": "Nsanyila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924540,
+                "name": "Nsonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924533,
+                "name": "Nsume",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924518,
+                "name": "Ntaja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924513,
+                "name": "Ntali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924447,
+                "name": "Ntila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924440,
+                "name": "Ntolowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924409,
+                "name": "Ntungwi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924374,
+                "name": "Nyambi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924354,
+                "name": "Nyandule",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924348,
+                "name": "Nyangatayani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924342,
+                "name": "Nyanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924336,
+                "name": "Nyanya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924334,
+                "name": "Nyanyika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924322,
+                "name": "Nyenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924320,
+                "name": "Nyenje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924321,
+                "name": "Nyenje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924162,
+                "name": "Phwiti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924155,
+                "name": "Pingo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924145,
+                "name": "Pitiya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924139,
+                "name": "Pondelani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924129,
+                "name": "Puruma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924079,
+                "name": "Saidi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924056,
+                "name": "Saleya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924033,
+                "name": "Samu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924010,
+                "name": "Sangula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924005,
+                "name": "Sani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923963,
+                "name": "Sawanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923867,
+                "name": "Siwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923844,
+                "name": "Sombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923807,
+                "name": "Sulumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923768,
+                "name": "Tanthauko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923705,
+                "name": "Thawale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923683,
+                "name": "Thomo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923518,
+                "name": "Umpuanela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923421,
+                "name": "Wethiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923315,
+                "name": "Zilale",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 927245,
+        "name": "Mangochi District",
+        "children": [
+            {
+                "geonameId": 931870,
+                "name": "Bakali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931868,
+                "name": "Bakile",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931822,
+                "name": "Baquira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931765,
+                "name": "Bitchilipa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931764,
+                "name": "Biti Kalanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931713,
+                "name": "Budu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931673,
+                "name": "Bwanali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931618,
+                "name": "Cape Maclear",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931447,
+                "name": "Changali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931402,
+                "name": "Chapola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931321,
+                "name": "Chembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931110,
+                "name": "Chikowanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931005,
+                "name": "Chilipa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930934,
+                "name": "Chimbumbuli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930920,
+                "name": "Chimesya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930895,
+                "name": "Chimpamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930852,
+                "name": "Chimwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930685,
+                "name": "Chipalamawamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930628,
+                "name": "Chipoka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930622,
+                "name": "Chipole",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930613,
+                "name": "Chiponda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930607,
+                "name": "Chiponde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930571,
+                "name": "Chirando",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930550,
+                "name": "Chirombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930444,
+                "name": "Chitele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930381,
+                "name": "Chiutula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930002,
+                "name": "Dimu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929749,
+                "name": "Gulumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929654,
+                "name": "Jalasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929631,
+                "name": "Jelamu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929434,
+                "name": "Kadango",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929433,
+                "name": "Kadanzhe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929430,
+                "name": "Kadewele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929361,
+                "name": "Kaipa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929222,
+                "name": "Kalonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929187,
+                "name": "Kaluva",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929125,
+                "name": "Kambona",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928938,
+                "name": "Kane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928549,
+                "name": "Kasugulu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928484,
+                "name": "Katema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928313,
+                "name": "Kawinga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928176,
+                "name": "Koma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928149,
+                "name": "Kukulanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928143,
+                "name": "Kuluwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928075,
+                "name": "Kwilembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928074,
+                "name": "Kwilindi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928070,
+                "name": "Kwisimba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928069,
+                "name": "Kwitambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928068,
+                "name": "Kwitanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928038,
+                "name": "Leven",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927998,
+                "name": "Likambwili",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927958,
+                "name": "Limamu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927956,
+                "name": "Limbalile",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927770,
+                "name": "Lukulungwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927653,
+                "name": "Machemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927626,
+                "name": "Madenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927518,
+                "name": "Majuni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927493,
+                "name": "Makanjila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927451,
+                "name": "Makumbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927437,
+                "name": "Makunula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927420,
+                "name": "Makwinja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927373,
+                "name": "Malemia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927362,
+                "name": "Malenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927334,
+                "name": "Malingula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927320,
+                "name": "Malombe Court",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927315,
+                "name": "Malopa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927246,
+                "name": "Mangochi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927240,
+                "name": "Mangombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927163,
+                "name": "Mapujali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927116,
+                "name": "Masimbakwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927099,
+                "name": "Masuku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927048,
+                "name": "Matiti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927028,
+                "name": "Matosa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926931,
+                "name": "Mbalamanja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926921,
+                "name": "Mbaluku Laini",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926824,
+                "name": "Mbondo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926732,
+                "name": "Mdala Chikowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926697,
+                "name": "Meso",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926694,
+                "name": "Meza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926580,
+                "name": "Mirango",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926567,
+                "name": "Misolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926446,
+                "name": "Mkumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926432,
+                "name": "Mkwalula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926308,
+                "name": "Monkey Bay",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926255,
+                "name": "Mpama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926117,
+                "name": "Mpinganjila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926099,
+                "name": "Mponda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926045,
+                "name": "Msalula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926007,
+                "name": "Msinje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925982,
+                "name": "Msumbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925926,
+                "name": "Mtapula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925920,
+                "name": "Mtelelas",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925902,
+                "name": "Mterera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925870,
+                "name": "Mtonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925847,
+                "name": "Mtundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925837,
+                "name": "Mtuwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925693,
+                "name": "Mvunguti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925673,
+                "name": "Mwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925652,
+                "name": "Mwamadi Msosa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925614,
+                "name": "Mwanjage",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925423,
+                "name": "Nalikolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925397,
+                "name": "Namalaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925391,
+                "name": "Namaloe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925371,
+                "name": "Namaso",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925228,
+                "name": "Namwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925225,
+                "name": "Namwera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925171,
+                "name": "Nankumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925140,
+                "name": "Naperi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925059,
+                "name": "Ncokola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925011,
+                "name": "Ndoka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924933,
+                "name": "Ngawo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924927,
+                "name": "Ngoji",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924884,
+                "name": "Ngongondo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924850,
+                "name": "Ngwaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924756,
+                "name": "Nkata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924753,
+                "name": "Nkaugala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924657,
+                "name": "Nkudzi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924602,
+                "name": "Nlembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924583,
+                "name": "Nsalika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924541,
+                "name": "Nsonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924514,
+                "name": "Ntali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924438,
+                "name": "Ntonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924420,
+                "name": "Ntuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924416,
+                "name": "Ntundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924257,
+                "name": "Palatini",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924256,
+                "name": "Palm Beach",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924160,
+                "name": "Pila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924075,
+                "name": "Saite Mwasungu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923910,
+                "name": "Sili",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923855,
+                "name": "Sokole",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923848,
+                "name": "Somba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923843,
+                "name": "Somve",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923842,
+                "name": "Songa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923821,
+                "name": "Sosola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923822,
+                "name": "Sosola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923783,
+                "name": "Tambala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923537,
+                "name": "Uko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923422,
+                "name": "Weta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923407,
+                "name": "Wole",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923393,
+                "name": "Yangala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923357,
+                "name": "Zambo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 925788,
+        "name": "Mulanje District",
+        "children": [
+            {
+                "geonameId": 931655,
+                "name": "Caera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929943,
+                "name": "Dyanyama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929444,
+                "name": "Kada",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928088,
+                "name": "Kwalala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927780,
+                "name": "Lujeri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926398,
+                "name": "Mlela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925789,
+                "name": "Mulanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925424,
+                "name": "Nalikati",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925135,
+                "name": "Naphungo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924217,
+                "name": "Peremwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923679,
+                "name": "Thornwood",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923423,
+                "name": "Wendewende",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 925595,
+        "name": "Mwanza District",
+        "children": [
+            {
+                "geonameId": 931532,
+                "name": "Chali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931254,
+                "name": "Chicoleca",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930926,
+                "name": "Chimbwinda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930924,
+                "name": "Chimelango",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930405,
+                "name": "Chitumbwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929814,
+                "name": "Gal\u00f4va",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929760,
+                "name": "Gouvate",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929679,
+                "name": "Ilemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929619,
+                "name": "Jeque",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929424,
+                "name": "Kadisi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929271,
+                "name": "Kaleya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928945,
+                "name": "Kanduku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928314,
+                "name": "Kawiliza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928125,
+                "name": "Kunendekude",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927617,
+                "name": "Madjamanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927106,
+                "name": "Masokosa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926371,
+                "name": "Mlongola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926322,
+                "name": "Moffat",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925596,
+                "name": "Mwanza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924957,
+                "name": "Ngadziwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924818,
+                "name": "Njaza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924610,
+                "name": "Nkwichi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924520,
+                "name": "Ntache",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924497,
+                "name": "Ntasa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924246,
+                "name": "Pandanson",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923917,
+                "name": "Sigulane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923908,
+                "name": "Silota",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923615,
+                "name": "Tomsala",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7628385,
+        "name": "Neno District",
+        "children": [
+            {
+                "geonameId": 931648,
+                "name": "Cakulembera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931611,
+                "name": "Cassapa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931223,
+                "name": "Chiembekeza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931167,
+                "name": "Chikalema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930955,
+                "name": "Chimbalanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930891,
+                "name": "Chimpanzi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930152,
+                "name": "Cincembere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930053,
+                "name": "Dambe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930054,
+                "name": "Dambe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929982,
+                "name": "Donda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929869,
+                "name": "Feremu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929800,
+                "name": "George",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929570,
+                "name": "Jonathan",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929568,
+                "name": "Joseph",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929378,
+                "name": "Kagona",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929363,
+                "name": "Kaingilira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929250,
+                "name": "Kalinde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929154,
+                "name": "Kambalame",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928628,
+                "name": "Kasamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928233,
+                "name": "Khomera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928164,
+                "name": "Konjiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928144,
+                "name": "Kulupsya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928132,
+                "name": "Kumpika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928128,
+                "name": "Kundembo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928023,
+                "name": "Lienda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927571,
+                "name": "Magareta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927388,
+                "name": "Malauli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927350,
+                "name": "Malico",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927141,
+                "name": "Masamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927027,
+                "name": "Matoto",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926272,
+                "name": "Mpakati",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926078,
+                "name": "Mposadala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925607,
+                "name": "Mwanjeti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925211,
+                "name": "Nandaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925017,
+                "name": "Ndelema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924963,
+                "name": "Neno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924556,
+                "name": "Nseula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924517,
+                "name": "Ntaja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924485,
+                "name": "Ntemankhana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923896,
+                "name": "Simon",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923579,
+                "name": "Tsenjerani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923553,
+                "name": "Tundudza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923386,
+                "name": "Yera",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 924567,
+        "name": "Nsanje District",
+        "children": [
+            {
+                "geonameId": 931902,
+                "name": "Alifandaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931766,
+                "name": "Bisenti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931520,
+                "name": "Chamaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931398,
+                "name": "Chapu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931378,
+                "name": "Chataika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931338,
+                "name": "Chazuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931277,
+                "name": "Chibuli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931241,
+                "name": "Chidikha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931145,
+                "name": "Chikhawo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931069,
+                "name": "Chikwawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930901,
+                "name": "Chimombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930851,
+                "name": "Chimwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930637,
+                "name": "Chiphwembwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930620,
+                "name": "Chipolopolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930549,
+                "name": "Chiromo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930421,
+                "name": "Chitomeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930417,
+                "name": "Chitsa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930415,
+                "name": "Chitseko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930144,
+                "name": "Cinsomba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930107,
+                "name": "Citsa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930048,
+                "name": "Dande",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929966,
+                "name": "Dumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929905,
+                "name": "Edwin",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929840,
+                "name": "Fransiku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929748,
+                "name": "Gulumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929714,
+                "name": "Gwechengwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929647,
+                "name": "James",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929599,
+                "name": "Jiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929573,
+                "name": "Jonasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929550,
+                "name": "Juwaki",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929502,
+                "name": "Kacere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929437,
+                "name": "Kadamela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929339,
+                "name": "Kakawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929220,
+                "name": "Kalonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929196,
+                "name": "Kalumbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929061,
+                "name": "Kampata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928968,
+                "name": "Kanchire",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928825,
+                "name": "Kanyimbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928411,
+                "name": "Katunga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927766,
+                "name": "Lukwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927747,
+                "name": "Lundu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927655,
+                "name": "Machado",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927595,
+                "name": "Maere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927570,
+                "name": "Magasu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927469,
+                "name": "Makoko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927428,
+                "name": "Makwalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927382,
+                "name": "Malekeza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927381,
+                "name": "Malema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927223,
+                "name": "Manjolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927152,
+                "name": "Marka Nyathando",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926907,
+                "name": "Mbangombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926906,
+                "name": "Mbangu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926880,
+                "name": "Mbenje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926873,
+                "name": "Mbeta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926843,
+                "name": "Mbisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926835,
+                "name": "Mbobo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926834,
+                "name": "Mbodi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926774,
+                "name": "Mchacha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926479,
+                "name": "Mkhucke",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926394,
+                "name": "Mleno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926305,
+                "name": "Monyo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926192,
+                "name": "Mphamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926193,
+                "name": "Mphamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926106,
+                "name": "Mpisamanja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926102,
+                "name": "Mpomba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926042,
+                "name": "Msamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926013,
+                "name": "Msilanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925917,
+                "name": "Mtema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925913,
+                "name": "Mtengampiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925636,
+                "name": "Mwanabvumbwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925558,
+                "name": "Mwendomthengo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926340,
+                "name": "M\ufffd\ufffd\ufffdnembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925154,
+                "name": "Nanthana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925138,
+                "name": "Naphaba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925096,
+                "name": "Ncaca",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925097,
+                "name": "Ncaca",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925076,
+                "name": "Nchenyela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925075,
+                "name": "Ncherenje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925046,
+                "name": "Ndamera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924958,
+                "name": "Ngabu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924866,
+                "name": "Nguluwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924853,
+                "name": "Ngwangwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924845,
+                "name": "Nhapali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924630,
+                "name": "Nkupila",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924580,
+                "name": "Nsamba Kulira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924572,
+                "name": "Nsanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924457,
+                "name": "Nthumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924429,
+                "name": "Ntondo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924404,
+                "name": "Nyachikadza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924358,
+                "name": "Nyamula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924359,
+                "name": "Nyamula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924338,
+                "name": "Nyanthumbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924333,
+                "name": "Nyapambere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924327,
+                "name": "Nyathando",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924238,
+                "name": "Panyathwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924022,
+                "name": "Sande",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923986,
+                "name": "Sankulani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923762,
+                "name": "Tawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923730,
+                "name": "Tengani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923731,
+                "name": "Tengani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923629,
+                "name": "Tizola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923472,
+                "name": "Vizharona",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923305,
+                "name": "Zirona",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 1105842,
+        "name": "Phalombe District",
+        "children": [
+            {
+                "geonameId": 931675,
+                "name": "Bwanaisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931458,
+                "name": "Chanasa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931349,
+                "name": "Chawesa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930953,
+                "name": "Chimbalenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930694,
+                "name": "Chinziri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930366,
+                "name": "Chiwalu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929553,
+                "name": "Jumwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929427,
+                "name": "Kadewere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929280,
+                "name": "Kaledzera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928944,
+                "name": "Kandulo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928179,
+                "name": "Kolowika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927999,
+                "name": "Likaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927997,
+                "name": "Likangala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927995,
+                "name": "Likangaria",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927909,
+                "name": "Liphala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927654,
+                "name": "Machedwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926696,
+                "name": "Messira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926143,
+                "name": "Mphonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925906,
+                "name": "Mtepa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925668,
+                "name": "Mwalala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925638,
+                "name": "Mwana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925403,
+                "name": "Namaja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925370,
+                "name": "Namasoko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925347,
+                "name": "Nambazu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925336,
+                "name": "Nambwale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925309,
+                "name": "Namilima",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925078,
+                "name": "Nchenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924647,
+                "name": "Nkulambe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924361,
+                "name": "Nyampalu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924314,
+                "name": "Nyezerera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924206,
+                "name": "Phalombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924177,
+                "name": "Phodgoma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923919,
+                "name": "Siana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923676,
+                "name": "Thowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923544,
+                "name": "Tuthuwa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 930283,
+        "name": "Thyolo District",
+        "children": [
+            {
+                "geonameId": 931756,
+                "name": "Blair",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931730,
+                "name": "Bonongwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930791,
+                "name": "Chingazi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929527,
+                "name": "Kabombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928194,
+                "name": "Kochiwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927792,
+                "name": "Luchenza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927505,
+                "name": "Makande",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927425,
+                "name": "Makwasa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927224,
+                "name": "Manjolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926817,
+                "name": "Mbowera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926633,
+                "name": "Mikolongwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925745,
+                "name": "Muonekera",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925294,
+                "name": "Namireno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924587,
+                "name": "Nsabwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924493,
+                "name": "Ntayambizi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924024,
+                "name": "Sandama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923652,
+                "name": "Thyolo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 923292,
+        "name": "Zomba District",
+        "children": [
+            {
+                "geonameId": 931906,
+                "name": "Alexander Liti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931862,
+                "name": "Balakasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931777,
+                "name": "Bimbi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931732,
+                "name": "Bongwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931688,
+                "name": "Burnett",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931507,
+                "name": "Chamande",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931451,
+                "name": "Chande",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931401,
+                "name": "Chapola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931306,
+                "name": "Chesenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931256,
+                "name": "Chickumbeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931235,
+                "name": "Chidote",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931233,
+                "name": "Chidothe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931226,
+                "name": "Chidyaonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931173,
+                "name": "Chikabwereza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931162,
+                "name": "Chikanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931096,
+                "name": "Chikumbu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931054,
+                "name": "Chilambe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931027,
+                "name": "Chilemele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931015,
+                "name": "Chilimani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 931014,
+                "name": "Chilimba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930995,
+                "name": "Chilombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930980,
+                "name": "Chilunga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930954,
+                "name": "Chimbalanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930835,
+                "name": "Chimwere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930824,
+                "name": "Chindambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930806,
+                "name": "Chingalanganda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930803,
+                "name": "Chingali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930674,
+                "name": "Chipanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930647,
+                "name": "Chipepola",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930645,
+                "name": "Chipeta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930359,
+                "name": "Chiwanganya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930257,
+                "name": "Chopi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930197,
+                "name": "Cikowi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930185,
+                "name": "Cilasanje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930156,
+                "name": "Cimwaye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 930129,
+                "name": "Cipwere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929998,
+                "name": "Disi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929991,
+                "name": "Domasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929723,
+                "name": "Gwalangwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929658,
+                "name": "Jailos",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929649,
+                "name": "James",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929497,
+                "name": "Kachapira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929428,
+                "name": "Kadewere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 929382,
+                "name": "Kagaso",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928992,
+                "name": "Kamwaza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928981,
+                "name": "Kanache",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928943,
+                "name": "Kandulu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928881,
+                "name": "Kankhomba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928727,
+                "name": "Kapichi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928607,
+                "name": "Kasembe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928555,
+                "name": "Kasonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928247,
+                "name": "Khaziko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928217,
+                "name": "Khulume",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928150,
+                "name": "Kukanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928138,
+                "name": "Kumbawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928131,
+                "name": "Kumtumanji",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928122,
+                "name": "Kungauma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928123,
+                "name": "Kungauma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928107,
+                "name": "Kuntemba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 928058,
+                "name": "Lambulira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927992,
+                "name": "Likhakhama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927988,
+                "name": "Likonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927987,
+                "name": "Likongaji",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927641,
+                "name": "Machinjiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927630,
+                "name": "Macmaurice",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927560,
+                "name": "Magombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927557,
+                "name": "Magomero",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927537,
+                "name": "Mainuka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927532,
+                "name": "Majawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927491,
+                "name": "Makanjira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927486,
+                "name": "Makawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927449,
+                "name": "Makungula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927409,
+                "name": "Malajira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927372,
+                "name": "Malemia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927346,
+                "name": "Malika",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927317,
+                "name": "Malonga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927316,
+                "name": "Malonje",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927211,
+                "name": "Manolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927188,
+                "name": "Maonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927101,
+                "name": "Massaula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927071,
+                "name": "Matapi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927010,
+                "name": "Matuta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 927007,
+                "name": "Maulana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926845,
+                "name": "Mbisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926844,
+                "name": "Mbisa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926788,
+                "name": "Mbwana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926789,
+                "name": "Mbwana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926763,
+                "name": "Mchenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926714,
+                "name": "Mdumu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926622,
+                "name": "Mikuyu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926598,
+                "name": "Mindano",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926521,
+                "name": "Mkagula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926514,
+                "name": "Mkanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926474,
+                "name": "Mkolama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926439,
+                "name": "Mkusagombe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926431,
+                "name": "Mkwanda II",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926385,
+                "name": "Mlolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926271,
+                "name": "Mpakati",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926261,
+                "name": "Mpalawere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926245,
+                "name": "Mpanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926137,
+                "name": "Mphuhuwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926119,
+                "name": "Mpinda Table",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926097,
+                "name": "Mponda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926076,
+                "name": "Mpota",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926034,
+                "name": "Msangeni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 926014,
+                "name": "Mseula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925988,
+                "name": "Msosa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925948,
+                "name": "Mtambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925949,
+                "name": "Mtambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925941,
+                "name": "Mtandilo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925935,
+                "name": "Mtanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925921,
+                "name": "Mte",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925882,
+                "name": "Mtima",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925874,
+                "name": "Mtokoma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925833,
+                "name": "Mtwice",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925739,
+                "name": "Muruma Settlement",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925651,
+                "name": "Mwamafumu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925645,
+                "name": "Mwambo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925548,
+                "name": "Mwenyali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925458,
+                "name": "Nachuma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925440,
+                "name": "Naisi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925432,
+                "name": "Nakhwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925413,
+                "name": "Namabalu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925410,
+                "name": "Namadingo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925399,
+                "name": "Namakhwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925398,
+                "name": "Namakoka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925392,
+                "name": "Namalindi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925344,
+                "name": "Nambesa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925244,
+                "name": "Namonde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925223,
+                "name": "Namwere",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925190,
+                "name": "Nangwale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925161,
+                "name": "Nansasala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925131,
+                "name": "Napwanda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925107,
+                "name": "Nawanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 925019,
+                "name": "Ndela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924555,
+                "name": "Nseula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924515,
+                "name": "Ntala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924511,
+                "name": "Ntamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924443,
+                "name": "Ntiya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924436,
+                "name": "Ntonda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924357,
+                "name": "Nyamuna",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924356,
+                "name": "Nyamwelo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924343,
+                "name": "Nyani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924335,
+                "name": "Nyanya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924296,
+                "name": "Nyundo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924270,
+                "name": "Onga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924252,
+                "name": "Pambiche",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924151,
+                "name": "Pirimiti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924082,
+                "name": "Saenda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924074,
+                "name": "Saiti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924052,
+                "name": "Salimukanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924032,
+                "name": "Samuel",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 924015,
+                "name": "Sangala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923964,
+                "name": "Savula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923949,
+                "name": "Selemani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923838,
+                "name": "Songo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923831,
+                "name": "Sonkho",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923808,
+                "name": "Sululu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923786,
+                "name": "Tabu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923761,
+                "name": "Tawakale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923685,
+                "name": "Thomas Matopa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923682,
+                "name": "Thondwe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923662,
+                "name": "Thulamela",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923624,
+                "name": "Tom Allen",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923519,
+                "name": "Umi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923500,
+                "name": "Uzinga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 923295,
+                "name": "Zomba",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

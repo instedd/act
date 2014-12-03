@@ -1,0 +1,78 @@
+[
+    {
+        "geonameId": 7670725,
+        "name": "Awi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670724,
+        "name": "East Gojjam Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670726,
+        "name": "North Gondar Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8051207,
+        "name": "North Shewa Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7869862,
+        "name": "North Wollo Zone",
+        "children": [
+            {
+                "geonameId": 9610560,
+                "name": "Habru",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 9165721,
+        "name": "Oromia Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7869861,
+        "name": "South Gondar Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7732961,
+        "name": "South Wollo Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8051209,
+        "name": "Wag Hemra Zone",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7670722,
+        "name": "West Gojjam Zone",
+        "children": [
+            
+        ]
+    }
+]

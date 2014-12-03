@@ -1,0 +1,36 @@
+[
+    {
+        "geonameId": 877996,
+        "name": "Mbinga District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7648510,
+        "name": "Namtumbo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 877400,
+        "name": "Songea District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 877377,
+        "name": "Tunduru District",
+        "children": [
+            {
+                "geonameId": 877611,
+                "name": "Nandembo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

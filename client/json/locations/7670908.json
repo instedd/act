@@ -1,0 +1,29 @@
+[
+    {
+        "geonameId": 8299290,
+        "name": "Farafangana District",
+        "children": [
+            {
+                "geonameId": 1065158,
+                "name": "Farafangana",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8693310,
+        "name": "Sakaraha District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8299291,
+        "name": "Vangaindrano District",
+        "children": [
+            
+        ]
+    }
+]

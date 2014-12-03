@@ -1,0 +1,70 @@
+[
+    {
+        "geonameId": 161327,
+        "name": "Arumeru District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7647661,
+        "name": "Arusha District",
+        "children": [
+            {
+                "geonameId": 8693291,
+                "name": "Singisi",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7647662,
+        "name": "Babati District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9072687,
+        "name": "Karatu District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8693317,
+        "name": "Longido District",
+        "children": [
+            {
+                "geonameId": 155848,
+                "name": "Longido",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 153246,
+        "name": "Monduli District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 151607,
+        "name": "Ngorongoro District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7647663,
+        "name": "Simanjiro",
+        "children": [
+            
+        ]
+    }
+]

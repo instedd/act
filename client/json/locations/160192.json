@@ -1,0 +1,57 @@
+[
+    {
+        "geonameId": 7628451,
+        "name": "Bahi District",
+        "children": [
+            {
+                "geonameId": 161283,
+                "name": "Bahi",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7628450,
+        "name": "Chamwino",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 160193,
+        "name": "Dodoma Rural District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7731058,
+        "name": "Dodoma Urban District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 156509,
+        "name": "Kondoa District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 7647659,
+        "name": "Kongwa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 153093,
+        "name": "Mpwapwa District",
+        "children": [
+            
+        ]
+    }
+]

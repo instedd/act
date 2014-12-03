@@ -1,0 +1,50 @@
+[
+    {
+        "geonameId": 878057,
+        "name": "Masasi District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 877745,
+        "name": "Mtwara District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9072685,
+        "name": "Nanyumbu District",
+        "children": [
+            {
+                "geonameId": 151945,
+                "name": "Nandembo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 877612,
+                "name": "Nandembo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 877533,
+        "name": "Newala District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9072692,
+        "name": "Tandahimba",
+        "children": [
+            
+        ]
+    }
+]

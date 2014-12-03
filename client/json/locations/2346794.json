@@ -1,0 +1,2334 @@
+[
+    {
+        "geonameId": 8659822,
+        "name": "Abadam",
+        "children": [
+            {
+                "geonameId": 9410055,
+                "name": "Arege",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410060,
+                "name": "Banowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410339,
+                "name": "Busuna",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410150,
+                "name": "Foguwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410151,
+                "name": "Jabullam",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410153,
+                "name": "Kessa'A",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410154,
+                "name": "Kudokurgo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410155,
+                "name": "Yau",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410158,
+                "name": "Yawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410132,
+                "name": "Yitiwa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659842,
+        "name": "Askira-Uba",
+        "children": [
+            {
+                "geonameId": 9410133,
+                "name": "Askira East",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410147,
+                "name": "Dille Huyim",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410161,
+                "name": "Hausari Tampul",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410160,
+                "name": "Hausari Zadawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410312,
+                "name": "Lassa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410156,
+                "name": "Mussa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410163,
+                "name": "Ngohi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410164,
+                "name": "Ngulde",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410162,
+                "name": "Ngurthlavu Kopa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410165,
+                "name": "Rumirgu Chul",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410149,
+                "name": "Uba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410152,
+                "name": "Uvu Uda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410083,
+                "name": "Wamdeo Giwi",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659838,
+        "name": "Bama",
+        "children": [
+            {
+                "geonameId": 9410316,
+                "name": "Abbaram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410062,
+                "name": "Amchaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410088,
+                "name": "Andara",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410090,
+                "name": "Banki",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410101,
+                "name": "Bogomari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410102,
+                "name": "Darajamal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410104,
+                "name": "Goniri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410109,
+                "name": "Gulumba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410105,
+                "name": "Kasugula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410089,
+                "name": "Kumshe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410107,
+                "name": "Shehuri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410106,
+                "name": "Soye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410210,
+                "name": "Yabiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410110,
+                "name": "Zageri",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659845,
+        "name": "Bayo",
+        "children": [
+            {
+                "geonameId": 9410166,
+                "name": "Balbaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410167,
+                "name": "Briyel",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410168,
+                "name": "Fikhayel",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410169,
+                "name": "Gamadadi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410172,
+                "name": "Jara-dali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410173,
+                "name": "Jara-gol",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410174,
+                "name": "Limanti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410175,
+                "name": "Telli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410178,
+                "name": "Wuyo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410179,
+                "name": "Zara",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659843,
+        "name": "Biu",
+        "children": [
+            {
+                "geonameId": 9410183,
+                "name": "Buratai",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410170,
+                "name": "Dugja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410176,
+                "name": "Galdimare",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410180,
+                "name": "Garubula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410186,
+                "name": "Gunda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410187,
+                "name": "Gur",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410188,
+                "name": "Mandaragirau",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410087,
+                "name": "Miringa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412374,
+                "name": "Sulumthla",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410184,
+                "name": "Yawi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410181,
+                "name": "Zarawuyaku",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659841,
+        "name": "Chibok",
+        "children": [
+            {
+                "geonameId": 9410185,
+                "name": "Garu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410157,
+                "name": "Gatamarwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410171,
+                "name": "Kautikari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410144,
+                "name": "Korongilum",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410135,
+                "name": "Kuburmbula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410189,
+                "name": "Likama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410190,
+                "name": "Mbalala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410137,
+                "name": "Mbokura",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410191,
+                "name": "Pemi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410192,
+                "name": "Shirarkir",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410193,
+                "name": "Whuntaku",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659840,
+        "name": "Damboa",
+        "children": [
+            {
+                "geonameId": 9410320,
+                "name": "Ajigin A",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410321,
+                "name": "Ajigin B",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410322,
+                "name": "Azir Multe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410295,
+                "name": "Bego",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410140,
+                "name": "Damboa Central",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410182,
+                "name": "Gumsuri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410340,
+                "name": "Kafa  Mafi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410136,
+                "name": "Mulgo Kopchi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410138,
+                "name": "Nzuda Wuyaram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410139,
+                "name": "Wawa Korode",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659834,
+        "name": "Dikwa",
+        "children": [
+            {
+                "geonameId": 9410111,
+                "name": "Afuye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410098,
+                "name": "Boboshe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410093,
+                "name": "Dikwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410065,
+                "name": "Gajibo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410066,
+                "name": "M. Kaza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410327,
+                "name": "M. Maja",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410288,
+                "name": "Margata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410335,
+                "name": "Muliye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410305,
+                "name": "Ngudoram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410326,
+                "name": "Ufaye",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659826,
+        "name": "Gubio",
+        "children": [
+            {
+                "geonameId": 9410336,
+                "name": "Ardimini",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412141,
+                "name": "Dabira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410095,
+                "name": "Felo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410337,
+                "name": "Gamawu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412104,
+                "name": "Gazabure",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412364,
+                "name": "Gobio 1",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410096,
+                "name": "Gobio 2",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412365,
+                "name": "Kingowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412366,
+                "name": "Ngetra",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412130,
+                "name": "Zowo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659825,
+        "name": "Guzamala",
+        "children": [
+            {
+                "geonameId": 9410194,
+                "name": "Aduwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410201,
+                "name": "Gudumbali East",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412337,
+                "name": "Gudumbali West",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412379,
+                "name": "Guworam",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410195,
+                "name": "Guzamala East",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410196,
+                "name": "Guzamala West",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410197,
+                "name": "Kingarawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410198,
+                "name": "Mairari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410200,
+                "name": "Moduri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410085,
+                "name": "Wamiri",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659839,
+        "name": "Gwoza",
+        "children": [
+            {
+                "geonameId": 9410202,
+                "name": "Ashigashiya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410203,
+                "name": "Bita Izge",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410204,
+                "name": "Bulabulin",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410205,
+                "name": "Chikide",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410206,
+                "name": "Gava Agapalawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410207,
+                "name": "Guduf A&B",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410208,
+                "name": "Hambagda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410209,
+                "name": "Hausari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410103,
+                "name": "Kirawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410211,
+                "name": "Kuranabasa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410212,
+                "name": "Ngoshe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410213,
+                "name": "Pulka Bokko",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410214,
+                "name": "Wala Warabe",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659844,
+        "name": "Hawul",
+        "children": [
+            {
+                "geonameId": 9410215,
+                "name": "Bilingwi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410217,
+                "name": "Grim Damchoba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410221,
+                "name": "Gwangang Chata",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410222,
+                "name": "Hizhibwala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410223,
+                "name": "Kidda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410224,
+                "name": "Kwajaffa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410225,
+                "name": "Kwayabura",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410226,
+                "name": "Marama Kidang",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410218,
+                "name": "Pama Whitambaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410228,
+                "name": "Puba Vidau",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410229,
+                "name": "Sakwa Hema",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410230,
+                "name": "Shaffa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659835,
+        "name": "Jere",
+        "children": [
+            {
+                "geonameId": 9412312,
+                "name": "Alau",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410231,
+                "name": "Dala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412358,
+                "name": "Dusuma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410313,
+                "name": "Galtimari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412384,
+                "name": "Gomari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412313,
+                "name": "Gongulong",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412350,
+                "name": "Khadammari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412338,
+                "name": "Maimusari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412317,
+                "name": "Mairi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412300,
+                "name": "Mashamari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412026,
+                "name": "Old Maiduguri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412375,
+                "name": "Tuba",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659837,
+        "name": "Kaga",
+        "children": [
+            {
+                "geonameId": 9410232,
+                "name": "Benisheikh",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410233,
+                "name": "Borgozo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410234,
+                "name": "Dogoma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410235,
+                "name": "Dongo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410236,
+                "name": "Fai",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410148,
+                "name": "Galangi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410219,
+                "name": "Guwo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410237,
+                "name": "Karagawaru",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410238,
+                "name": "Mainok",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410146,
+                "name": "Marguba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410239,
+                "name": "Ngamdu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410240,
+                "name": "Shettimari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410241,
+                "name": "Tobolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410245,
+                "name": "Wajiro",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410242,
+                "name": "Wassaram",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659832,
+        "name": "Kala-Balge",
+        "children": [
+            {
+                "geonameId": 9410325,
+                "name": "Daima",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410334,
+                "name": "Jarawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410332,
+                "name": "Jilbe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410324,
+                "name": "K Kaudi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410333,
+                "name": "K Kumaga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410247,
+                "name": "Kala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410248,
+                "name": "Mada",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410249,
+                "name": "Moholo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410251,
+                "name": "Rann",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410250,
+                "name": "Sigal",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659836,
+        "name": "Konduga",
+        "children": [
+            {
+                "geonameId": 9410252,
+                "name": "Ajiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410227,
+                "name": "Auno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410243,
+                "name": "Dalori",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410254,
+                "name": "Dalwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410255,
+                "name": "Jakana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410256,
+                "name": "Kawuri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410257,
+                "name": "Konduga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412376,
+                "name": "Malari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410258,
+                "name": "Yabal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410315,
+                "name": "Yajiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410259,
+                "name": "Yale",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659824,
+        "name": "Kukawa",
+        "children": [
+            {
+                "geonameId": 9410328,
+                "name": "Alagarno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410330,
+                "name": "Baga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410061,
+                "name": "Barwati",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410075,
+                "name": "Bundur",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410076,
+                "name": "Dogoshi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410329,
+                "name": "Doro",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410074,
+                "name": "Kauwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410077,
+                "name": "Kekeno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410080,
+                "name": "Kukawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410331,
+                "name": "Yoyo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659847,
+        "name": "Kwaya Kusar",
+        "children": [
+            {
+                "geonameId": 9410260,
+                "name": "Bila Gusi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410262,
+                "name": "Guwal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410261,
+                "name": "Gwandi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410253,
+                "name": "Kubuku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410263,
+                "name": "Kurba Gayi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410264,
+                "name": "Kwaya Kusar",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410270,
+                "name": "Peta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410271,
+                "name": "Wada",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410272,
+                "name": "Wawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410273,
+                "name": "Yimirdalang",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659833,
+        "name": "Mafa",
+        "children": [
+            {
+                "geonameId": 9412047,
+                "name": "Ajiri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412058,
+                "name": "Gawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412078,
+                "name": "Koshebe",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412326,
+                "name": "Lege",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412115,
+                "name": "Limanti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412208,
+                "name": "Loskuri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412327,
+                "name": "Ma'Afa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412307,
+                "name": "Mafa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412239,
+                "name": "Masu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412328,
+                "name": "Mujigine",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412363,
+                "name": "Tamsu Ngamdua",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412351,
+                "name": "Zangebe",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659829,
+        "name": "Magumeri",
+        "children": [
+            {
+                "geonameId": 9410274,
+                "name": "Ardoram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410265,
+                "name": "Ayi Yasku",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410069,
+                "name": "Borno Yesu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410267,
+                "name": "Furram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412234,
+                "name": "Gajigana",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412329,
+                "name": "Hoyo  Chingowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410269,
+                "name": "Kalizoram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410094,
+                "name": "Kararam",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410063,
+                "name": "Kupti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412336,
+                "name": "Magumeri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410064,
+                "name": "Ngamma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410275,
+                "name": "Ngubala Bamma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412229,
+                "name": "Titiwa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659860,
+        "name": "Maiduguri",
+        "children": [
+            {
+                "geonameId": 9412380,
+                "name": "Bolori I",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9411130,
+                "name": "Bolori Ii",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412362,
+                "name": "Bulabulin",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412381,
+                "name": "Fezzan",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412370,
+                "name": "Gamboru",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412390,
+                "name": "Gwange I",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412389,
+                "name": "Gwange Ii",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412388,
+                "name": "Gwange Iii",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412382,
+                "name": "Hausari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410317,
+                "name": "Lamisula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412391,
+                "name": "Limanti",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412392,
+                "name": "Mafoni",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410318,
+                "name": "Maisandari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412393,
+                "name": "Shehuri North",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412383,
+                "name": "Shehuri South",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659830,
+        "name": "Marte",
+        "children": [
+            {
+                "geonameId": 9410081,
+                "name": "A Lawant",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410084,
+                "name": "Ala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412018,
+                "name": "Badairi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412008,
+                "name": "Borsori",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410338,
+                "name": "Gumna",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410067,
+                "name": "Kabulawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410130,
+                "name": "Kirenowa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410068,
+                "name": "Kulli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410131,
+                "name": "Marte",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410134,
+                "name": "Musune",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410177,
+                "name": "Muwalli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410082,
+                "name": "Njine",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410278,
+                "name": "Zaga Ngalori",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659823,
+        "name": "Mobbar",
+        "children": [
+            {
+                "geonameId": 9410319,
+                "name": "Asaga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412373,
+                "name": "Bogum",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412352,
+                "name": "Chamba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412387,
+                "name": "Damasak",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412273,
+                "name": "Duji",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412385,
+                "name": "Gashigar",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412361,
+                "name": "Kareto",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412359,
+                "name": "Layi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412034,
+                "name": "Zari",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412386,
+                "name": "Zulum Umarti",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659828,
+        "name": "Monguno",
+        "children": [
+            {
+                "geonameId": 9412330,
+                "name": "Damakuli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410276,
+                "name": "Kaguram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410314,
+                "name": "Kumalia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410277,
+                "name": "Mandala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410129,
+                "name": "Mintar",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412339,
+                "name": "Mofio",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410279,
+                "name": "Mongonu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410280,
+                "name": "Ngurno",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412357,
+                "name": "Sure",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410281,
+                "name": "Wulo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410282,
+                "name": "Yele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412154,
+                "name": "Zulum",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659831,
+        "name": "Ngala",
+        "children": [
+            {
+                "geonameId": 9410283,
+                "name": "Fuye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412377,
+                "name": "Gamboru A",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412378,
+                "name": "Gamboru B",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410284,
+                "name": "Gamboru C",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410285,
+                "name": "Logumane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410286,
+                "name": "Ndufu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410072,
+                "name": "Ngala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410287,
+                "name": "Shehuri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410073,
+                "name": "Warshele",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410289,
+                "name": "Wulgo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659827,
+        "name": "Nganzai",
+        "children": [
+            {
+                "geonameId": 9410297,
+                "name": "Alarge",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410290,
+                "name": "Badu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410291,
+                "name": "Damaram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412096,
+                "name": "Gadai",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410292,
+                "name": "Gajiram",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410294,
+                "name": "Jigalta",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410296,
+                "name": "Kuda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410293,
+                "name": "Kurnawa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410979,
+                "name": "Maiwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9412268,
+                "name": "Miye",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410298,
+                "name": "Sabsabuwa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9411960,
+                "name": "Sugundare",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 8659846,
+        "name": "Shani",
+        "children": [
+            {
+                "geonameId": 9410300,
+                "name": "Bargu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410306,
+                "name": "Buma",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410307,
+                "name": "Gasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410308,
+                "name": "Gora",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410310,
+                "name": "Gwalasho",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410309,
+                "name": "Gwaskara",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410302,
+                "name": "Kombo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410301,
+                "name": "Kubo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410299,
+                "name": "Lakundum",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410304,
+                "name": "Shani",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 9410311,
+                "name": "Walama",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,1422 @@
+[
+    {
+        "geonameId": 2508722,
+        "name": "Afras",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507539,
+        "name": "Aleb el Brek",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2506656,
+        "name": "Arba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2506615,
+        "name": "Arbia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2506404,
+        "name": "Arris",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2506076,
+        "name": "Ayallalaoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507877,
+        "name": "A\u00efn Touta",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507870,
+        "name": "A\u00efn Yagout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2508134,
+        "name": "A\u00efn el Ksar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2505663,
+        "name": "Baniane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2505630,
+        "name": "Barhla",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2505629,
+        "name": "Barika",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2505572,
+        "name": "Batna City",
+        "children": [
+            {
+                "geonameId": 2494889,
+                "name": "Ha\u00ef Ch\u00eekhi Abd el Kader",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2492652,
+                "name": "Kchida",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 2474317,
+                "name": "Village N\u00e8gre",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2505161,
+        "name": "Belhiout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2504764,
+        "name": "Ben Hebal",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2504539,
+        "name": "Ben Kadach Salah",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503834,
+        "name": "Bir Sidi el Hadi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503863,
+        "name": "Bir ez Zrof",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503816,
+        "name": "Bitam",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503813,
+        "name": "Bitaoua",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2503543,
+        "name": "Bou Ahmar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502964,
+        "name": "Bou Ilef",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488923,
+        "name": "Bou Keddad",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502476,
+        "name": "Bou Rha\u00efs",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502815,
+        "name": "Boulehilet",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502112,
+        "name": "Bouzina",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2502067,
+        "name": "Bra\u00efed",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2501932,
+        "name": "Chaabat Ouled Chelih",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2501503,
+        "name": "Chemora",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2501299,
+        "name": "Chir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2500516,
+        "name": "Dermoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499839,
+        "name": "Djeniene",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2499748,
+        "name": "Djermane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498900,
+        "name": "Ed Dissa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498654,
+        "name": "El Araguib",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498593,
+        "name": "El Atouta",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498573,
+        "name": "El Baal",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498214,
+        "name": "El Guigba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498175,
+        "name": "El Hadjedj",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498108,
+        "name": "El Hammam",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2498094,
+        "name": "El Hamra",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497979,
+        "name": "El Kantara",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497806,
+        "name": "El Ksar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497758,
+        "name": "El Madher",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497389,
+        "name": "El Ouldja",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496822,
+        "name": "Fais",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496291,
+        "name": "Foum Toub",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2496000,
+        "name": "Gosbat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2494618,
+        "name": "Hamla",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491803,
+        "name": "Kherbet Mechtat el Hidek",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491337,
+        "name": "Ksar Belezma",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2497689,
+        "name": "Lambiridi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2491050,
+        "name": "Larba\u00e2",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490711,
+        "name": "Maafa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2490122,
+        "name": "Markoun\u00e2",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489860,
+        "name": "Mechgoug",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489784,
+        "name": "Mechta Ali Gader",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489783,
+        "name": "Mechta Allouah",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488879,
+        "name": "Mechta Aourir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489763,
+        "name": "Mechta Azem",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489821,
+        "name": "Mechta A\u00efadat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489817,
+        "name": "Mechta A\u00efn Be\u00efda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489798,
+        "name": "Mechta A\u00efn Legta\u00eff",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489793,
+        "name": "Mechta A\u00efn Ousfane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489790,
+        "name": "Mechta A\u00efn Tamalalet",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489808,
+        "name": "Mechta A\u00efn el Be\u00efda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489760,
+        "name": "Mechta Ba\u00efou",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489749,
+        "name": "Mechta Belkhez",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489743,
+        "name": "Mechta Ben Daas",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489714,
+        "name": "Mechta Bir Ammar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489711,
+        "name": "Mechta Bir Bou Ziane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489705,
+        "name": "Mechta Bir Nezaa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489696,
+        "name": "Mechta Bou Ari",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489694,
+        "name": "Mechta Bou Assida",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489683,
+        "name": "Mechta Bou Ikhfaoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489674,
+        "name": "Mechta Boumia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489655,
+        "name": "Mechta Chaba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2570492,
+        "name": "Mechta Chabet Lalam",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489652,
+        "name": "Mechta Chabet Lalam",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489650,
+        "name": "Mechta Chabet Sba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489645,
+        "name": "Mechta Chareb",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489642,
+        "name": "Mechta Charf el A\u00efn",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489643,
+        "name": "Mechta Charf el A\u00efn",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489628,
+        "name": "Mechta Chouafa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489614,
+        "name": "Mechta Derhamna",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489603,
+        "name": "Mechta Djerma Dahra",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489581,
+        "name": "Mechta Feltane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489574,
+        "name": "Mechta Gabel Azem",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489575,
+        "name": "Mechta Gabel Azem",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489569,
+        "name": "Mechta Gabel Yagout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489566,
+        "name": "Mechta Gosbat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489550,
+        "name": "Mechta Guimel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489525,
+        "name": "Mechta Kannda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489526,
+        "name": "Mechta Kannda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489515,
+        "name": "Mechta Khadem",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489486,
+        "name": "Mechta Lachraf",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489459,
+        "name": "Mechta Markounda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489436,
+        "name": "Mechta Mezzari",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488909,
+        "name": "Mechta M\u2019Sa\u00efd",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489379,
+        "name": "Mechta Oulad Sidi Ahmed",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489370,
+        "name": "Mechta Ouled Abdallah",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489371,
+        "name": "Mechta Ouled Abdallah",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489361,
+        "name": "Mechta Ouled Amar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489357,
+        "name": "Mechta Ouled Aouadj",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489351,
+        "name": "Mechta Ouled Ben Amar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488889,
+        "name": "Mechta Ouled Darradj",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489338,
+        "name": "Mechta Ouled Dje\u00efch",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489337,
+        "name": "Mechta Ouled Dris",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489333,
+        "name": "Mechta Ouled Gueboudj",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489320,
+        "name": "Mechta Ouled Messaoud",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489321,
+        "name": "Mechta Ouled Messaoud",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489316,
+        "name": "Mechta Ouled Rouilette",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489285,
+        "name": "Mechta Reguibet el Bir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489279,
+        "name": "Mechta Rhlalouch",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489268,
+        "name": "Mechta Roknia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489200,
+        "name": "Mechta Tadjine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489196,
+        "name": "Mechta Taga",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489190,
+        "name": "Mechta Takouist",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489187,
+        "name": "Mechta Taleb",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489185,
+        "name": "Mechta Tamarit",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489182,
+        "name": "Mechta Tanout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489156,
+        "name": "Mechta Tebalkha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489009,
+        "name": "Mechta Tiguennzaz",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489008,
+        "name": "Mechta Tiguiguennt",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489007,
+        "name": "Mechta Tikabiene",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488940,
+        "name": "Mechta Zoui",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489194,
+        "name": "Mechtat Agradou",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2493858,
+        "name": "Mechtat Hidoussa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488965,
+        "name": "Mechtat Sidi Marklouf",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488963,
+        "name": "Mechtat Tafrennt Kbira",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488961,
+        "name": "Mechtat Tifertassine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488869,
+        "name": "Mechtat Tiguernizine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488960,
+        "name": "Mechtat Titoust",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489138,
+        "name": "Mechtat el A\u00efoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489116,
+        "name": "Mechtat el Djar Messaouda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489101,
+        "name": "Mechtat el Guelaa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489091,
+        "name": "Mechtat el Hammam",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489070,
+        "name": "Mechtat el Koucha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489061,
+        "name": "Mechtat el Malahkal",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488915,
+        "name": "Mechtet el Bi\u00e2r",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488913,
+        "name": "Mechtet el Kebir",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488813,
+        "name": "Medina",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487882,
+        "name": "Merouana",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487732,
+        "name": "Messaouda",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2487632,
+        "name": "Metkaouak",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488892,
+        "name": "Msarat",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486569,
+        "name": "Mzata",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489936,
+        "name": "M\u2019Cil",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2489904,
+        "name": "M\u2019Doukal",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486406,
+        "name": "Nakhar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486362,
+        "name": "Nara",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486125,
+        "name": "Nouader",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2486177,
+        "name": "N\u2019Gaous",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485565,
+        "name": "Oued Taga",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485624,
+        "name": "Oued el Ma",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485425,
+        "name": "Oulad Abed",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485356,
+        "name": "Oulad Azouz",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485220,
+        "name": "Oulad Mannsour",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485053,
+        "name": "Ouled Achoura",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2485020,
+        "name": "Ouled Amar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484866,
+        "name": "Ouled Lakhdar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484856,
+        "name": "Ouled Mbarek",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484781,
+        "name": "Ouled Sidi Slimane",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484914,
+        "name": "Ouled el Berrani",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484556,
+        "name": "Oum er Rekha",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2484375,
+        "name": "Ourhanime",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2483418,
+        "name": "Rhassira",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2483161,
+        "name": "Rhoufi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2483968,
+        "name": "R\u00e2s el A\u00efoun",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482141,
+        "name": "Sedjef et Tine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2482024,
+        "name": "Seggana",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2488874,
+        "name": "Seguene",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2481759,
+        "name": "Seriana",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2480240,
+        "name": "Sidi Man\u00e7ar",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2478598,
+        "name": "Tahanennt",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2478180,
+        "name": "Tamchit",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2477736,
+        "name": "Tarhlissia",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2477601,
+        "name": "Taxlent",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2477528,
+        "name": "Tazoult-Lambese",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2477122,
+        "name": "Teniet el Abed",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476939,
+        "name": "Tezribine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476883,
+        "name": "Tibehirine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476742,
+        "name": "Tiffelfel",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476565,
+        "name": "Tilatou",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476409,
+        "name": "Timgad",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2476227,
+        "name": "Tine Tarine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475963,
+        "name": "Tirhanimine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475901,
+        "name": "Tisde\u00efne",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475728,
+        "name": "Tizougarine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475667,
+        "name": "Tletz",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475488,
+        "name": "Touffana",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475195,
+        "name": "Trharhet",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2475701,
+        "name": "T\u2019Kout",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2474866,
+        "name": "Zaouia Sidi Zaroual",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2474460,
+        "name": "Zfizef",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2474184,
+        "name": "Zra\u00efa",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507966,
+        "name": "\u2019A\u00efn Regada",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507930,
+        "name": "\u2019A\u00efn Sidi Ali",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2507893,
+        "name": "\u2019A\u00efn Tinibaouine",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2508210,
+        "name": "\u2019A\u00efn ed Defla",
+        "children": [
+            
+        ]
+    }
+]

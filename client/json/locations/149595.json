@@ -1,0 +1,70 @@
+[
+    {
+        "geonameId": 159673,
+        "name": "Handeni District",
+        "children": [
+            {
+                "geonameId": 152908,
+                "name": "Mswahe",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 9072688,
+        "name": "Kilindi District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 156478,
+        "name": "Korogwe District",
+        "children": [
+            {
+                "geonameId": 159630,
+                "name": "Hemkole",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 150321,
+                "name": "Sakare",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 155568,
+        "name": "Lushoto District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 152629,
+        "name": "Muheza District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 150788,
+        "name": "Pangani District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 149601,
+        "name": "Tanga District",
+        "children": [
+            
+        ]
+    }
+]

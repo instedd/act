@@ -1,0 +1,56 @@
+[
+    {
+        "geonameId": 3351306,
+        "name": "Munic\u00edpio Cahama",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3349237,
+        "name": "Munic\u00edpio Cuanhama",
+        "children": [
+            {
+                "geonameId": 3348707,
+                "name": "Evale",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3349045,
+        "name": "Munic\u00edpio Curoca",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3348986,
+        "name": "Munic\u00edpio Cuvelai",
+        "children": [
+            {
+                "geonameId": 3347092,
+                "name": "Mupa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 3347028,
+        "name": "Munic\u00edpio Namacunde",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 3346850,
+        "name": "Munic\u00edpio Ombadja",
+        "children": [
+            
+        ]
+    }
+]

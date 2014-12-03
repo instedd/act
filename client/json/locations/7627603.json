@@ -1,0 +1,105 @@
+[
+    {
+        "geonameId": 6547297,
+        "name": "Aousserd",
+        "children": [
+            {
+                "geonameId": 6546559,
+                "name": "Aghouinite",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545582,
+                "name": "Aousserd",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545580,
+                "name": "Bir Gandouz",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546558,
+                "name": "Lagouira",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545583,
+                "name": "Tichla",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545584,
+                "name": "Zoug",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 6547298,
+        "name": "Oued-Ed-Dahab",
+        "children": [
+            {
+                "geonameId": 6545634,
+                "name": "Bir Anzarane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546560,
+                "name": "Dakhla",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546233,
+                "name": "El Argoub",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545635,
+                "name": "Gleibat El Foula",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546208,
+                "name": "Imlili",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545665,
+                "name": "Mijik",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545636,
+                "name": "Oum Dreyga",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

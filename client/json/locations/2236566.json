@@ -1,0 +1,127 @@
+[
+    {
+        "geonameId": 2243908,
+        "name": "Ambuila Municipality",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2243632,
+        "name": "Concelho do Bembe",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2243921,
+        "name": "Munic\u00edpio Alto Cauale",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2243631,
+        "name": "Munic\u00edpio Bembe",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2243441,
+        "name": "Munic\u00edpio Buengas",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2243355,
+        "name": "Munic\u00edpio Bungo",
+        "children": [
+            {
+                "geonameId": 2241374,
+                "name": "Dondo",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2241498,
+        "name": "Munic\u00edpio Damba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2239352,
+        "name": "Munic\u00edpio Mucaba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2238826,
+        "name": "Munic\u00edpio Puri",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2238174,
+        "name": "Munic\u00edpio Quimbele",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2237144,
+        "name": "Munic\u00edpio Santa Cruz",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2237127,
+        "name": "Munic\u00edpio Sanza Pombo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2236985,
+        "name": "Munic\u00edpio Songo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2239731,
+        "name": "Muni\u00edpio Maquela do Zombo",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2239067,
+        "name": "Negage Municipality",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2237499,
+        "name": "Quitexe Municipality",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 2236567,
+        "name": "Uige Municipality",
+        "children": [
+            
+        ]
+    }
+]

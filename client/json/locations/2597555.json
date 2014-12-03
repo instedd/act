@@ -1,0 +1,704 @@
+[
+    {
+        "geonameId": 2556569,
+        "name": "Azilal Province",
+        "children": [
+            {
+                "geonameId": 6546811,
+                "name": "Afourar",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546526,
+                "name": "Agoudi N Lkhair",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546671,
+                "name": "Ait Abbas",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546396,
+                "name": "Ait Blal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546672,
+                "name": "Ait Bou Oulli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546367,
+                "name": "Ait M Hamed",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546808,
+                "name": "Ait Majden",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545585,
+                "name": "Ait Mazigh",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546812,
+                "name": "Ait Ouaarda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545540,
+                "name": "Ait Oumdis",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546813,
+                "name": "Ait Ouqabli",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546285,
+                "name": "Ait Taguella",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546674,
+                "name": "Ait Tamlil",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546814,
+                "name": "Anergui",
+                "children": [
+                    {
+                        "geonameId": 2559366,
+                        "name": "Anergui",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545511,
+                "name": "Anzou",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545434,
+                "name": "Azilal",
+                "children": [
+                    {
+                        "geonameId": 2556570,
+                        "name": "Azilal",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546815,
+                "name": "Bin El Ouidane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546803,
+                "name": "Bni Ayat",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546804,
+                "name": "Bni Hassane",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546286,
+                "name": "Bzou",
+                "children": [
+                    {
+                        "geonameId": 2553654,
+                        "name": "Bzou",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546525,
+                "name": "Demnate",
+                "children": [
+                    {
+                        "geonameId": 2552317,
+                        "name": "Demnate",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546805,
+                "name": "Foum Jemaa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545801,
+                "name": "Imlil",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546287,
+                "name": "Isseksi",
+                "children": [
+                    {
+                        "geonameId": 2545436,
+                        "name": "Isseksi",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546043,
+                "name": "Moulay Aissa Ben Dri",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546122,
+                "name": "Ouaouizaght",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546816,
+                "name": "Ouaouizeght",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546809,
+                "name": "Ouaoula",
+                "children": [
+                    {
+                        "geonameId": 2550684,
+                        "name": "Ouaoula",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546184,
+                "name": "Rfala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545813,
+                "name": "Sidi Boulkhalf",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546409,
+                "name": "Sidi Yacoub",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546673,
+                "name": "Tabant",
+                "children": [
+                    {
+                        "geonameId": 2532270,
+                        "name": "Tabant",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546817,
+                "name": "Tabaroucht",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546806,
+                "name": "Tabia",
+                "children": [
+                    {
+                        "geonameId": 2532214,
+                        "name": "Tabia",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545781,
+                "name": "Tagleft",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546802,
+                "name": "Tamda Noumercid",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545815,
+                "name": "Tanant",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546408,
+                "name": "Taounza",
+                "children": [
+                    {
+                        "geonameId": 2530148,
+                        "name": "Taounza",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546810,
+                "name": "Tidili Fetouaka",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546818,
+                "name": "Tiffert N Ait Hamza",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545814,
+                "name": "Tifni",
+                "children": [
+                    {
+                        "geonameId": 2528650,
+                        "name": "Tifni",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545816,
+                "name": "Tilougguite",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545817,
+                "name": "Timoulilt",
+                "children": [
+                    {
+                        "geonameId": 2528013,
+                        "name": "Timoulilt",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546807,
+                "name": "Tisqi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545790,
+                "name": "Zaouiat Ahansal",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 2555742,
+        "name": "Beni-Mellal",
+        "children": [
+            {
+                "geonameId": 6545586,
+                "name": "Aghbala",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545573,
+                "name": "Ait Oum El Bekht",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546831,
+                "name": "Alkhalfia",
+                "children": [
+                    {
+                        "geonameId": 2555745,
+                        "name": "Beni Mellal",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546819,
+                "name": "Beni Mellal",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546832,
+                "name": "Bni Chegdale",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546289,
+                "name": "Bni Oukil",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545541,
+                "name": "Boutferda",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546053,
+                "name": "Bradia",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546824,
+                "name": "Dar Ould Zidouh",
+                "children": [
+                    {
+                        "geonameId": 2552545,
+                        "name": "Dar Ould Zidouh",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546052,
+                "name": "Dir El Ksiba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546820,
+                "name": "El Ksiba",
+                "children": [
+                    {
+                        "geonameId": 2549750,
+                        "name": "El Ksiba",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546829,
+                "name": "Foum El Anceur",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546822,
+                "name": "Foum Oudi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546410,
+                "name": "Fquih Ben Salah",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546834,
+                "name": "Guettaya",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546412,
+                "name": "Had Boumoussa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546833,
+                "name": "Hel Merbaa",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546821,
+                "name": "Kasba Tadla",
+                "children": [
+                    {
+                        "geonameId": 2544720,
+                        "name": "Kasba Tadla",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546119,
+                "name": "Krifate",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546413,
+                "name": "Naour",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545549,
+                "name": "Oulad Ayad",
+                "children": [
+                    {
+                        "geonameId": 2540207,
+                        "name": "Oulad Ayad",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6546825,
+                "name": "Oulad Bourahmoune",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546288,
+                "name": "Oulad Gnaou",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546411,
+                "name": "Oulad M Barek",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546869,
+                "name": "Oulad M'Barek",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546826,
+                "name": "Oulad Nacer",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546415,
+                "name": "Oulad Said L Oued",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546823,
+                "name": "Oulad Yaich",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546414,
+                "name": "Oulad Youssef",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546827,
+                "name": "Oulad Zmam",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545418,
+                "name": "Semguet",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546828,
+                "name": "Sidi Aissa Ben Ali",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546118,
+                "name": "Sidi Hammadi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546117,
+                "name": "Sidi Jaber",
+                "children": [
+                    {
+                        "geonameId": 2534496,
+                        "name": "Sidi Jaber",
+                        "children": [
+                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "geonameId": 6545808,
+                "name": "Souk Sebt Oulad Nemm",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6546830,
+                "name": "Taghzirt",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545819,
+                "name": "Tanougha",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545807,
+                "name": "Tizi N Isly",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 6545818,
+                "name": "Zaouiat Cheikh",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]

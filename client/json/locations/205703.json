@@ -1,0 +1,291 @@
+[
+    {
+        "geonameId": 7670837,
+        "name": "Haut Katanga",
+        "children": [
+            {
+                "geonameId": 923057,
+                "name": "Kambove",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 922964,
+                "name": "Kasenga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 922805,
+                "name": "Kipushi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 922740,
+                "name": "Likasi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 922702,
+                "name": "Lubumbashi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 209012,
+                "name": "Mitwaba",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 206112,
+                "name": "Pweto",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 922244,
+                "name": "Sakania",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 7670778,
+        "name": "Haut Lomami",
+        "children": [
+            {
+                "geonameId": 217833,
+                "name": "Bukama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 215471,
+                "name": "Kabongo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 214612,
+                "name": "Kamina",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 214388,
+                "name": "Kaniama",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 209855,
+                "name": "Malemba-Nkulu",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 9179186,
+        "name": "Kalemie Ville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179191,
+        "name": "Kambove Ville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179562,
+        "name": "Kasaji",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179188,
+        "name": "Kipushi Ville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 8051180,
+        "name": "Kolwezi",
+        "children": [
+            {
+                "geonameId": 922771,
+                "name": "Kolwezi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 210985,
+                "name": "Lubudi",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 8260596,
+                "name": "Mutshatsha",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 922772,
+        "name": "Kolwezi City",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179189,
+        "name": "Kongolo Ville",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179195,
+        "name": "Likasi",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 922727,
+        "name": "Lualaba",
+        "children": [
+            {
+                "geonameId": 923216,
+                "name": "Dilolo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 214257,
+                "name": "Kapanga",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 205864,
+                "name": "Sandoa",
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "geonameId": 9165800,
+        "name": "Lubumbashi (city)",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179907,
+        "name": "Manono",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 9179199,
+        "name": "Mutumba District",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 216141,
+        "name": "Sous-R\ufffd\ufffdgion du Haut-Lomani",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 923173,
+        "name": "Sous-R\ufffd\ufffdgion du Haut-Shaba",
+        "children": [
+            
+        ]
+    },
+    {
+        "geonameId": 205253,
+        "name": "Tanganika",
+        "children": [
+            {
+                "geonameId": 215667,
+                "name": "Kabalo",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 214973,
+                "name": "Kalemie",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 212354,
+                "name": "Kongolo Tanganyika District",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 209597,
+                "name": "Manono",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 206846,
+                "name": "Nyunzu",
+                "children": [
+                    
+                ]
+            },
+            {
+                "geonameId": 208997,
+                "name": "Zone de Moba",
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+]
