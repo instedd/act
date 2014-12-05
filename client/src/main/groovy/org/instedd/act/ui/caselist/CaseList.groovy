@@ -1,5 +1,6 @@
 package org.instedd.act.ui.caselist
 
+import java.awt.Color;
 import java.awt.Component
 import java.awt.Dimension
 
@@ -12,6 +13,7 @@ import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTable
 import javax.swing.ListSelectionModel;
+import javax.swing.SwingConstants;
 import javax.swing.event.ListSelectionEvent
 import javax.swing.event.ListSelectionListener
 import javax.swing.table.DefaultTableCellRenderer
@@ -46,12 +48,16 @@ class CaseList extends JFrame {
 		this.title = "Cases"
 		this.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 	}
+	
+	def centerText(text) {
+		"<html><div style=\"text-align: center; font-size: 1.1em;\">${text}</div></html>"
+	}
 
 	void build(List<Case> cases) {
 		def container = new JPanel()
 		container.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
-		container.setPreferredSize(new Dimension(750, 450))
+		container.setPreferredSize(new Dimension(750, 480))
 		
 		tableModel = new CaseTableModel(columnDefinitions, toRow, cases)
 		def table = new JTable(tableModel)
@@ -71,6 +77,23 @@ class CaseList extends JFrame {
 		column(table, "Gender").preferredWidth = 50
 		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
 		
+		def casesCount = new JLabel(" ", SwingConstants.CENTER)
+		def updateCasesCountLabel = { event ->
+			def updatesCount = tableModel.updatesCount()
+			if (updatesCount == 1) {
+				casesCount.text = centerText("There is <b>${updatesCount}</b> case with updates")
+			} else if(updatesCount > 1) {
+				casesCount.text = centerText("There are <b>${updatesCount}</b> cases with updates")
+			} else {
+				casesCount.text = centerText("There are no cases with updates")
+			}
+		}
+		
+		casesCount.alignmentX = Component.CENTER_ALIGNMENT
+		tableModel.addTableModelListener updateCasesCountLabel
+		
+		updateCasesCountLabel()
+		
 		def gridPane = new JScrollPane(table)
 		gridPane.alignmentX = Component.CENTER_ALIGNMENT
 		
@@ -81,6 +104,7 @@ class CaseList extends JFrame {
 		})
 		
 		add container
+		container.add casesCount
 		container.add gridPane
 		container.add newCaseButton
 		

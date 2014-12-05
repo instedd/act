@@ -64,4 +64,8 @@ class CaseTableModel extends AbstractTableModel {
 	Case getCase(int rowIndex) {
 		cases[rowIndex]
 	}
+	
+	int updatesCount() {
+		cases.findAll({ aCase -> aCase.updated }).size()
+	}
 }
