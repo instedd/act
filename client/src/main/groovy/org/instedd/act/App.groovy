@@ -1,25 +1,25 @@
 package org.instedd.act
 
-import org.instedd.act.authentication.AuthenticationProcess;
+import org.instedd.act.authentication.AuthenticationProcess
 import org.instedd.act.authentication.Credentials
-import org.instedd.act.authentication.DeviceKeyRegistration
 import org.instedd.act.db.DatabaseConnector
 import org.instedd.act.db.Migrator
 import org.instedd.act.db.SqliteConnector
 import org.instedd.act.misc.DocumentExporter
 import org.instedd.act.misc.SqliteToJsonExporter
 import org.instedd.act.models.DataStore
-import org.instedd.act.models.JsonLocationTree
-import org.instedd.act.models.LocationTree
+import org.instedd.act.models.LocationIndex
 import org.instedd.act.models.SqliteDataStore
 import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.RsyncSynchronizer
-import org.instedd.act.sync.SynchronizationProcess;
+import org.instedd.act.sync.SynchronizationProcess
 
-import com.google.common.eventbus.EventBus;
+import com.google.common.base.Supplier
+import com.google.common.eventbus.EventBus
 import com.google.inject.Binder
 import com.google.inject.Guice
 import com.google.inject.Module
+import com.google.inject.name.Names
 
 class App {
 
@@ -62,7 +62,6 @@ class App {
 			binder.bind(EventBus.class).toInstance(new EventBus())
 			binder.bind(DataStore.class).to(SqliteDataStore.class).asEagerSingleton();
 			binder.bind(DocumentExporter.class).to(SqliteToJsonExporter.class).asEagerSingleton()
-			binder.bind(LocationTree.class).toInstance(new JsonLocationTree(new File('json/locations/')))
 			binder.bind(DocumentSynchronizer.class).to(RsyncSynchronizer.class).asEagerSingleton();
 		}
 

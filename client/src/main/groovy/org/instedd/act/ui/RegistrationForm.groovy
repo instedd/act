@@ -5,13 +5,18 @@ import java.awt.GridBagConstraints as GBC
 import java.awt.GridBagLayout
 
 import javax.swing.BorderFactory
+import javax.swing.BoxLayout
+import javax.swing.DefaultListModel
 import javax.swing.JButton
-import javax.swing.JComboBox
 import javax.swing.JComponent
 import javax.swing.JFrame
 import javax.swing.JLabel
+import javax.swing.JList
 import javax.swing.JPanel
+import javax.swing.JScrollPane
 import javax.swing.JTextField
+import javax.swing.ListSelectionModel
+import javax.swing.event.DocumentListener
 
 import org.instedd.act.controllers.RegistrationController
 import org.instedd.act.models.Location
@@ -23,10 +28,13 @@ class RegistrationForm extends JFrame {
 	
 	JPanel fieldsContainer
 	JTextField organizationInput
-	List<JComboBox> locationSelectors = []
 	JLabel errorLabel
 	JTextField fieldSupervisorNameInput
 	JTextField fieldSupervisorNumberInput
+	JTextField locationInput
+	
+	JScrollPane locationListScroll
+	JList locationList
 	
 	RegistrationForm(RegistrationController controller) {
 		this.controller = controller
@@ -35,16 +43,16 @@ class RegistrationForm extends JFrame {
 		this.resizable = false
 	}
 
-	void build(List<String> rootLocations) {
-		add(createForm(rootLocations))
+	void build() {
+		add(createForm())
 		pack()
 		visible = true
 	}
 	
-	JPanel createForm(rootLocations) {
+	JPanel createForm() {
 		def form = new JPanel(new GridBagLayout())
 		form.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
-		form.setPreferredSize(new Dimension(440, 380))
+		form.setPreferredSize(new Dimension(500, 400))
 		
 		//----- intro text
 		def c = new GBC()
@@ -73,7 +81,7 @@ class RegistrationForm extends JFrame {
 		addField "Organization", createOrganizationInput()
 		addField "<html>Supervisor name</html>", createSupervisorNameInput()
 		addField "<html>Supervisor number</html>", createSupervisorPhoneInput()
-		addField "Location", 	 createLocationSelector(rootLocations)
+		addLocationField()
 		form.add fieldsContainer, c
 		
 		//----- errors 
@@ -108,20 +116,6 @@ class RegistrationForm extends JFrame {
 		fieldSupervisorNumberInput = new JTextField(20)
 	}
 	
-	JComboBox createLocationSelector(locations) {
-		def selector = new JComboBox(new Vector([""] + locations))
-		locationSelectors.add(selector)
-		selector.addActionListener { 
-			def level = locationSelectors.indexOf(selector)
-			if (selector.selectedItem == "") {
-				controller.locationCleared(level)
-			} else {
-				controller.locationChosen(level)
-			}
-		}
-		selector
-	}
-
 	void addField(labelText, input) {
 		def c = new GBC()
 		c.gridwidth = GBC.RELATIVE
@@ -130,40 +124,50 @@ class RegistrationForm extends JFrame {
 		c.ipadx = 5
 		
 		def label = new JLabel(labelText)
+		label.setPreferredSize(new Dimension(130, label.preferredSize.height.toInteger()))
+		label.setMinimumSize(label.getPreferredSize())
+		label.setMaximumSize(label.getPreferredSize())
 		fieldsContainer.add(label, c)
 
 		c = new GBC()
-		c.weightx = 1
 		c.gridwidth = GBC.REMAINDER
 		c.fill = GBC.HORIZONTAL
+		c.weightx = 1
 	
 		fieldsContainer.add(input, c)
 		label.setLabelFor(input)
 				 
 	}
 
-	void removeLocationSelectorsAboveLevel(level) {
-		locationSelectors.eachWithIndex { e, i ->
-			if (i > level) {
-				fieldsContainer.remove(e)
-			}
-		}
-		locationSelectors = locationSelectors.take(level + 1)
-		fieldsContainer.updateUI()
-	}
+	void addLocationField() {
+		fieldsContainer.add new JLabel("Location"), new GBC([
+			gridwidth: GBC.RELATIVE,
+			ipady: 10,
+			ipadx: 5,
+			anchor: GBC.NORTHWEST
+		]);
 	
-	void addLocationSelector(children) {
-		def c = new GBC()
-		c.gridx = 1
-		c.fill = GBC.HORIZONTAL
-		def selector = createLocationSelector(children)
+		locationInput = new JTextField(20)
+
+		locationList = new JList<String>(new DefaultListModel<>())
+		locationList.selectionMode = ListSelectionModel.SINGLE_SELECTION
+		locationList.layoutOrientation = JList.VERTICAL
 		
-		fieldsContainer.add(selector, c)
-		fieldsContainer.updateUI()
-	}
-	
-	List<Location> locationPathUntilLevel(int level) {
-		locationPath.take(level + 1)
+		locationListScroll = new JScrollPane(locationList)
+		locationListScroll.setMinimumSize(new Dimension(locationListScroll.getPreferredSize().width as Integer, 110))
+		
+		def locationSelector = new JPanel()
+		locationSelector.setLayout(new BoxLayout(locationSelector, BoxLayout.Y_AXIS))
+		
+		fieldsContainer.add locationSelector, new GBC([
+			gridwidth: GBC.REMAINDER,
+			fill: GBC.HORIZONTAL
+		])
+		
+		locationSelector.add(locationInput)
+		locationSelector.add(locationListScroll)
+		
+		toggleLocationOptions(false)
 	}
 	
 	String getOrganizationName() {
@@ -178,8 +182,8 @@ class RegistrationForm extends JFrame {
 		fieldSupervisorNumberInput.text
 	}
 	
-	List<Location> getLocationPath() {
-		locationSelectors.collect { selector -> selector.selectedItem }.findAll { l -> l != "" }
+	Location getSelectedLocation() {
+		locationList.selectedValue
 	}
 	
 	void displayError(String error) {
@@ -189,4 +193,29 @@ class RegistrationForm extends JFrame {
 	void clearError() {
 		errorLabel.setText("")
 	}
+	
+	def clearLocationOptions() {
+		locationList.model.clear()
+	}
+	
+	def displayLocationOptions(options) {
+		options.each { l -> locationList.model.addElement(l) }
+		if (!options.empty) {
+			locationList.setSelectedIndex(0)
+		}
+	}
+	
+	def toggleLocationOptions(Boolean isVisible) {
+		locationListScroll.visible = isVisible
+		pack()
+	}
+
+	def hideLocationOptions() {
+		toggleLocationOptions(false)
+	}
+
+	def showLocationOptions() {
+		toggleLocationOptions(true)
+	}
+	
 }
