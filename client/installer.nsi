@@ -78,8 +78,6 @@ Section "Install" Install
   SetOutPath "$INSTDIR"
   File "license.txt"
 
-  CreateDirectory "C:\ACT\data"
-
   ;Add files
   SetOutPath "$INSTDIR\bin"
   File "bin\RCEDIT.exe"
