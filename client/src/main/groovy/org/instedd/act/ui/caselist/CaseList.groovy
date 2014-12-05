@@ -50,12 +50,12 @@ class CaseList extends JFrame {
 	}
 	
 	def centerText(text) {
-		"<html><div style=\"text-align: center; font-size: 1.1em;\">${text}</div></html>"
+		"<html><div style=\"font-size: 1.1em;\">${text}</div></html>"
 	}
 
 	void build(List<Case> cases) {
 		def container = new JPanel()
-		container.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
+		container.border = BorderFactory.createEmptyBorder(20, 20, 20, 20)
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
 		container.setPreferredSize(new Dimension(750, 480))
 		
@@ -77,7 +77,7 @@ class CaseList extends JFrame {
 		column(table, "Gender").preferredWidth = 50
 		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
 		
-		def casesCount = new JLabel(" ", SwingConstants.CENTER)
+		def casesCount = new JLabel(" ")
 		def updateCasesCountLabel = { event ->
 			def updatesCount = tableModel.updatesCount()
 			if (updatesCount == 1) {
@@ -103,10 +103,15 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
+		def topBar = new JPanel()
+		topBar.setLayout(new BoxLayout(topBar, BoxLayout.X_AXIS))
+		topBar.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
+		
 		add container
-		container.add casesCount
+		container.add topBar
+		topBar.add casesCount
+		topBar.add newCaseButton
 		container.add gridPane
-		container.add newCaseButton
 		
 		pack()
 		setLocationRelativeTo(null)
