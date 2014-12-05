@@ -1,8 +1,11 @@
 package org.instedd.act.ui.caselist
 
-import java.awt.Color;
+import java.awt.Color
 import java.awt.Component
 import java.awt.Dimension
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import java.awt.event.MouseListener
 
 import javax.swing.BorderFactory
 import javax.swing.BoxLayout
@@ -12,10 +15,6 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTable
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
-import javax.swing.event.ListSelectionEvent
-import javax.swing.event.ListSelectionListener
 import javax.swing.table.DefaultTableCellRenderer
 import javax.swing.table.TableColumn
 
@@ -63,21 +62,10 @@ class CaseList extends JFrame {
 		def table = new JTable(tableModel)
 		table.fillsViewportHeight = true
 		table.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
-		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
-		table.selectionModel.addListSelectionListener(new ListSelectionListener() {
-			public void valueChanged(ListSelectionEvent event) {
-				def selectedCases = table.selectedRows.collect { index ->
-					table.getModel().getCase(index)
-				}
-				this.controller.selectedCases(selectedCases)
-			}
-		})
-		column(table, "").preferredWidth = 5
-		column(table, "Age").preferredWidth = 35
-		column(table, "Gender").preferredWidth = 50
-		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
 		
 		def casesCount = new JLabel(" ")
+		def selectedCount = new JButton(" ")
+		
 		def updateCasesCountLabel = { event ->
 			def updatesCount = tableModel.updatesCount()
 			if (updatesCount == 1) {
@@ -89,6 +77,33 @@ class CaseList extends JFrame {
 			}
 		}
 		
+		container.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent event) {
+				table.clearSelection()
+			}
+			
+		})
+		
+		def updateMarkAsSeenText = { event ->
+			def selectedRowsCount = table.selectedRowCount
+			if (selectedRowsCount == 1) {
+				selectedCount.text = "<html>Mark <b>1</b> selected case as seen</html>"
+			} else if(selectedRowsCount > 1) {
+				selectedCount.text = "<html>Mark <b>${selectedRowsCount}</b> selected cases as seen</html>"
+			} else {
+				selectedCount.text = "<html>Mark <b>all cases</b> as seen</html>"
+			}
+		}
+		
+		table.selectionModel.addListSelectionListener updateMarkAsSeenText
+		updateMarkAsSeenText()
+		
+		column(table, "").preferredWidth = 5
+		column(table, "Age").preferredWidth = 35
+		column(table, "Gender").preferredWidth = 50
+		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
+		
 		casesCount.alignmentX = Component.CENTER_ALIGNMENT
 		tableModel.addTableModelListener updateCasesCountLabel
 		
@@ -97,7 +112,7 @@ class CaseList extends JFrame {
 		def gridPane = new JScrollPane(table)
 		gridPane.alignmentX = Component.CENTER_ALIGNMENT
 		
-		def newCaseButton = new JButton("New case")
+		def newCaseButton = new JButton("<html><b>New case</b></html>")
 		newCaseButton.alignmentX = Component.CENTER_ALIGNMENT
 		newCaseButton.addActionListener({
 			controller.newCaseButtonPressed()
@@ -110,6 +125,7 @@ class CaseList extends JFrame {
 		add container
 		container.add topBar
 		topBar.add casesCount
+		topBar.add selectedCount
 		topBar.add newCaseButton
 		container.add gridPane
 		
