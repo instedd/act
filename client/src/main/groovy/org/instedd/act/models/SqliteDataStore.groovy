@@ -1,5 +1,7 @@
 package org.instedd.act.models
 
+import java.util.List;
+
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import groovy.sql.Sql
@@ -35,12 +37,16 @@ class SqliteDataStore implements DataStore {
 		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes])
 		exporter.exportCase(aCase)
 	}
+	
+	def rowsToCases = { rows ->
+		rows.collect { row ->
+			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])
+		}
+	}
 
 	@Override
 	public List<Case> listCases() {
-		sql.rows("select * from cases").collect { row ->
-			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])
-		}
+		rowsToCases(sql.rows("select * from cases"))
 	}
 
 	@Override
@@ -62,9 +68,7 @@ class SqliteDataStore implements DataStore {
 	
 	@Override
 	public List<Case> unsyncedCases() {
-		sql.rows("select * from cases where synced = ${false}").collect { row ->
-			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])
-		}
+		rowsToCases(sql.rows("select * from cases where synced = ${false}"))
 	}
 
 	@Override
