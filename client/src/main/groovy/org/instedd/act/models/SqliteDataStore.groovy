@@ -95,4 +95,9 @@ class SqliteDataStore implements DataStore {
 	public String[] contactReasons() {
 		sql.rows("select reason from contact_reasons").collect { row -> row.reason } as String[]
 	}
+
+	@Override
+	public List<Case> unseenCases() {
+		rowsToCases(sql.rows("select * from cases where updated = ${true}"))
+	}
 }

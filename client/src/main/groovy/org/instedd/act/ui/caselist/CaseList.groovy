@@ -8,12 +8,14 @@ import java.awt.event.MouseEvent
 import java.awt.event.MouseListener
 
 import javax.swing.BorderFactory
+import javax.swing.Box
 import javax.swing.BoxLayout
+import javax.swing.ButtonGroup
 import javax.swing.JButton
-import javax.swing.JCheckBox
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
+import javax.swing.JRadioButton
 import javax.swing.JScrollPane
 import javax.swing.JTable
 import javax.swing.table.DefaultTableCellRenderer
@@ -28,6 +30,9 @@ class CaseList extends JFrame {
 
 	CaseListController controller
 	CaseTableModel tableModel
+	
+	def updateCasesCountLabel
+	def updateMarkAsSeenText
 	
 	def columnDefinitions = [
 		["", 					String.class],
@@ -81,14 +86,14 @@ class CaseList extends JFrame {
 			this.controller.markCasesAsSeen(selectedCases)
 		}
 		
-		def updateCasesCountLabel = { event ->
+		updateCasesCountLabel = { event ->
 			def updatesCount = tableModel.updatesCount()
 			if (updatesCount == 1) {
-				casesCount.text = centerText("There is <b>${updatesCount}</b> case with updates")
+				casesCount.text = centerText("There is <b>${updatesCount}</b> case with unseen updates")
 			} else if(updatesCount > 1) {
-				casesCount.text = centerText("There are <b>${updatesCount}</b> cases with updates")
+				casesCount.text = centerText("There are <b>${updatesCount}</b> cases with unseen updates")
 			} else {
-				casesCount.text = centerText("There are no cases with updates")
+				casesCount.text = centerText("There are no cases with unseen updates")
 			}
 		}
 		
@@ -100,7 +105,7 @@ class CaseList extends JFrame {
 			
 		})
 		
-		def updateMarkAsSeenText = { event ->
+		updateMarkAsSeenText = { event ->
 			def selectedRowsCount = table.selectedRowCount
 			if (selectedRowsCount == 1) {
 				selectedCount.text = "<html>Mark <b>1</b> selected case as seen</html>"
@@ -133,10 +138,23 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
-		def onlyShowUnseen = new JCheckBox("Only show unseen cases", true)
-		onlyShowUnseen.addActionListener {
-			controller.onlyShowUnseen(onlyShowUnseen.selected)
+		def unseenButtonsPanel = new JPanel()
+		def showUnseenButtons = new ButtonGroup()
+
+		def button = new JRadioButton("Show all")
+		button.selected = true
+		showUnseenButtons.add(button)
+		button.addActionListener {
+			controller.onlyShowUnseen = false
 		}
+		unseenButtonsPanel.add button
+		
+		button = new JRadioButton("Only unseen")
+		showUnseenButtons.add(button)
+		button.addActionListener {
+			controller.onlyShowUnseen = true
+		}
+		unseenButtonsPanel.add button
 		
 		def topBar = new JPanel()
 		topBar.setLayout(new BoxLayout(topBar, BoxLayout.X_AXIS))
@@ -147,13 +165,14 @@ class CaseList extends JFrame {
 		bottomBar.border = BorderFactory.createEmptyBorder(10, 0, 0, 0)
 		
 		add container
+		container.add casesCount
 		container.add topBar
-		topBar.add casesCount
+		topBar.add unseenButtonsPanel
+		topBar.add Box.createHorizontalGlue()
 		topBar.add selectedCount
 		topBar.add newCaseButton
 		container.add gridPane
 		container.add bottomBar
-		bottomBar.add onlyShowUnseen
 		
 		pack()
 		setLocationRelativeTo(null)

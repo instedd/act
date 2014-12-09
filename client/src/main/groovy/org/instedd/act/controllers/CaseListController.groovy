@@ -22,13 +22,15 @@ class CaseListController {
 	CaseList caseList = new CaseList(this)
 	NewCaseForm newCaseForm
 	
+	Boolean onlyShowUnseen = false
+	
 	@Inject
 	CaseListController(EventBus eventBus) {
 		eventBus.register(this)
 	}
 
 	def buildView() {
-		caseList.build(dataStore.listCases());
+		caseList.build(this.listCases());
 	}	
 
 	void newCaseButtonPressed() {
@@ -40,7 +42,7 @@ class CaseListController {
 		dataStore.register(newCase)
 		daemon.requestSync()
 		
-		caseList.updateCases(dataStore.listCases())
+		caseList.updateCases(this.listCases())
 	}
 	
 	def newCaseSubmitted() {
@@ -108,13 +110,13 @@ class CaseListController {
 			}
 		}
 		if (changed) {
-			caseList.updateCases(dataStore.listCases())
+			caseList.updateCases(this.listCases())
 		}
 	}
 	
 	@Subscribe
 	void onCaseUpdated(CaseUpdatedEvent event) {
-		caseList.updateCases(dataStore.listCases())
+		caseList.updateCases(this.listCases())
 	}
 	
 	String[] availableDialects() {
@@ -125,8 +127,23 @@ class CaseListController {
 		dataStore.contactReasons()
 	}
 	
-	void onlyShowUnseen(Boolean onlyUnseen) {
-		println "Setting show unseen: ${onlyUnseen}"
+	void setOnlyShowUnseen(Boolean onlyShowUnseen) {
+		this.onlyShowUnseen = onlyShowUnseen
+		reloadTable()
+	}
+	
+	List<Case> listCases() {
+		if(onlyShowUnseen) {
+			dataStore.unseenCases()
+		} else {
+			dataStore.listCases()
+		}
+	}
+	
+	void reloadTable() {
+		caseList.updateCases(this.listCases())
+		caseList.updateCasesCountLabel()
+		caseList.updateMarkAsSeenText()
 	}
 	
 }
