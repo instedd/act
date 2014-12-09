@@ -65,6 +65,13 @@ class CaseList extends JFrame {
 		
 		def casesCount = new JLabel(" ")
 		def selectedCount = new JButton(" ")
+		selectedCount.addActionListener { event ->
+			def seenIndexes = table.selectedRows ?: 0 .. (table.rowCount - 1)
+			def selectedCases = seenIndexes.collect { index ->
+				tableModel.getCase(index)
+			}
+			this.controller.markCasesAsSeen(selectedCases)
+		}
 		
 		def updateCasesCountLabel = { event ->
 			def updatesCount = tableModel.updatesCount()

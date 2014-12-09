@@ -99,7 +99,7 @@ class CaseListController {
 		aCase.updated = false
 	}
 	
-	void selectedCases(cases) {
+	void markCasesAsSeen(cases) {
 		def changed = false
 		cases.each { selectedCase ->
 			if(selectedCase.updated) { 
