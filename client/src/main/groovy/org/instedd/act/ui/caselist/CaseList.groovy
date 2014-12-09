@@ -10,6 +10,7 @@ import java.awt.event.MouseListener
 import javax.swing.BorderFactory
 import javax.swing.BoxLayout
 import javax.swing.JButton
+import javax.swing.JCheckBox
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
@@ -125,9 +126,18 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
+		def onlyShowUnseen = new JCheckBox("Only show unseen cases", true)
+		onlyShowUnseen.addActionListener {
+			controller.onlyShowUnseen(onlyShowUnseen.selected)
+		}
+		
 		def topBar = new JPanel()
 		topBar.setLayout(new BoxLayout(topBar, BoxLayout.X_AXIS))
 		topBar.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
+		
+		def bottomBar = new JPanel()
+		bottomBar.setLayout(new BoxLayout(bottomBar, BoxLayout.X_AXIS))
+		bottomBar.border = BorderFactory.createEmptyBorder(10, 0, 0, 0)
 		
 		add container
 		container.add topBar
@@ -135,6 +145,8 @@ class CaseList extends JFrame {
 		topBar.add selectedCount
 		topBar.add newCaseButton
 		container.add gridPane
+		container.add bottomBar
+		bottomBar.add onlyShowUnseen
 		
 		pack()
 		setLocationRelativeTo(null)

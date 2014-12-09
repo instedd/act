@@ -125,4 +125,8 @@ class CaseListController {
 		dataStore.contactReasons()
 	}
 	
+	void onlyShowUnseen(Boolean onlyUnseen) {
+		println "Setting show unseen: ${onlyUnseen}"
+	}
+	
 }
