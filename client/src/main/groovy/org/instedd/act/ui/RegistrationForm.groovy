@@ -98,7 +98,7 @@ class RegistrationForm extends JFrame {
 		c = new GBC()
 		c.gridy = 4
 		c.anchor = GBC.PAGE_END
-		def submitButton = new JButton("Register")
+		def submitButton = new JButton("<html><b>Register</b></html>")
 		submitButton.addActionListener { controller.submit() }
 		form.add submitButton, c
 		
