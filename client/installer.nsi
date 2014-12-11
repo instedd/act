@@ -86,8 +86,8 @@ Section "Install" Install
   SetOutPath "$INSTDIR\lib"
   File "lib\*.jar"
 
-  SetOutPath "$INSTDIR\json\locations"
-  File /r "locations\*.json"
+  SetOutPath "$INSTDIR\json\"
+  File /r "locations-packed.json"
 
   SetOutPath "$INSTDIR\jre"
   File /r "jre1.7.0_72\*.*"

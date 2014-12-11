@@ -158,8 +158,8 @@ task installer {
     }
 
     copy {
-        from "json/locations/"
-        into "${workDir}/locations/"
+        from file("json/locations-packed.json")
+        into workDir
     }
 
     println "Creating installer..."
