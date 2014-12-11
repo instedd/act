@@ -42,7 +42,6 @@ ADD deploy/act-keys-import.sh  /etc/service/act-keys-import/run
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-VOLUME /var/lib/postgresql/data
 VOLUME /etc/ssh
 VOLUME /act/sync
 
