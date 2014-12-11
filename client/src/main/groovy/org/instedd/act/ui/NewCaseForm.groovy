@@ -103,7 +103,7 @@ class NewCaseForm extends JDialog {
 		messagesLabel.alignmentX = Component.CENTER_ALIGNMENT
 		container.add messagesLabel
 		
-		def submitButton = new JButton("Add case")
+		def submitButton = new JButton("<html><b>Add case</b></html>")
 		submitButton.alignmentX = Component.CENTER_ALIGNMENT
 		submitButton.addActionListener({ addNewCase() })
 		container.add submitButton

@@ -16,7 +16,7 @@ import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTextField
 import javax.swing.ListSelectionModel
-import javax.swing.event.DocumentListener
+import javax.swing.SwingConstants
 
 import org.instedd.act.controllers.RegistrationController
 import org.instedd.act.models.Location
@@ -57,6 +57,14 @@ class RegistrationForm extends JFrame {
 		//----- intro text
 		def c = new GBC()
 		c.gridy = 0
+		c.anchor = GBC.NORTH
+		c.fill = GBC.HORIZONTAL
+		c.ipady = 10
+		c.ipadx = 5
+		form.add(new JLabel("<html><div style='font-size: 1.2em;'>Welcome to ACT</span></html>", SwingConstants.CENTER), c)
+		
+		c = new GBC()
+		c.gridy = 1
 		c.anchor = GBC.PAGE_START
 		c.fill = GBC.HORIZONTAL
 		c.ipady = 10
@@ -66,7 +74,7 @@ class RegistrationForm extends JFrame {
 		
 		//----- fields
 		c = new GBC()
-		c.gridy = 1
+		c.gridy = 2
 		c.anchor = GBC.NORTH
 		c.fill = GBC.HORIZONTAL
 		c.ipady = 10
@@ -86,7 +94,7 @@ class RegistrationForm extends JFrame {
 		
 		//----- errors 
 		c = new GBC()
-		c.gridy = 2
+		c.gridy = 3
 		c.anchor = GBC.SOUTH
 		c.fill = GBC.HORIZONTAL
 		c.ipady = 10
@@ -95,9 +103,9 @@ class RegistrationForm extends JFrame {
 		
 		//----- submit
 		c = new GBC()
-		c.gridy = 3
+		c.gridy = 4
 		c.anchor = GBC.PAGE_END
-		def submitButton = new JButton("Register")
+		def submitButton = new JButton("<html><b>Register</b></html>")
 		submitButton.addActionListener { controller.submit() }
 		form.add submitButton, c
 		
