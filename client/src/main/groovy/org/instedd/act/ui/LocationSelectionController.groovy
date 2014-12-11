@@ -98,4 +98,15 @@ class LocationSelectionController {
 	def unsubscribeFromQueries() {
 		queriesSubscription.unsubscribe()
 	}
+	
+	def displayLocationOptions(Collection<Location> options) {
+		clearSelection()
+		view.displayLocationOptions(options)
+	}
+	
+	def clear() {
+		clearSelection()
+		view.clearLocationOptions()
+		view.hideLocationOptions()
+	}
 }

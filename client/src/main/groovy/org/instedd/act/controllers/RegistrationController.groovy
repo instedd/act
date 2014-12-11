@@ -70,17 +70,12 @@ class RegistrationController {
 				
 				@Override
 				void done() {
-					locationController.clearSelection()
-					view.clearLocationOptions()
-					view.displayLocationOptions(get())
+					locationController.displayLocationOptions(get())
 				}
 				
 			}.execute();
 		} else {
-			locationController.clearSelection()
-			view.clearLocationOptions()
-			view.hideLocationOptions()
-			return
+			locationController.clear()
 		}
 	}
 	

@@ -207,7 +207,10 @@ class RegistrationForm extends JFrame {
 	}
 	
 	def displayLocationOptions(options) {
-		options.each { l -> locationList.model.addElement(l) }
+		def m = new DefaultListModel()
+		options.each { l -> m.addElement(l) }
+		locationList.setModel(m)
+		
 		if (!options.empty) {
 			locationList.setSelectedIndex(0)
 		}
