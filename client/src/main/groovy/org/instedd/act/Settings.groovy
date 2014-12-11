@@ -9,6 +9,7 @@ import com.google.common.base.Strings
 class Settings {
 
 	Properties props;
+	String dataDir
 	
 	Settings() {
 		InputStream inputStream = Thread.currentThread()
@@ -36,7 +37,20 @@ class Settings {
 	}
 	
 	public String dataDir() {
-		this.get('local.dir', './').replace("~", System.getProperty("user.home"))
+		if(!dataDir) {
+			dataDir = this.get('local.dir', './')
+			if(dataDir.contains("~")) {
+				String userHome = System.getProperty("user.home")
+				if(userHome.endsWith("/")) {
+					userHome = userHome[0..-2] // remove last character
+				}
+				dataDir = dataDir.replace("~", userHome)
+			}
+			if(!dataDir.endsWith("/")) {
+				dataDir += "/"
+			}
+		}
+		dataDir
 	}
 
 	public String databasePath() {

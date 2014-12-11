@@ -40,6 +40,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		])
 		
 		new File(commandBuilder.outboxLocalDir).mkdirs()
+		new File(commandBuilder.inboxLocalDir).mkdirs()
 		
 		checkRsyncAvailable()
 		

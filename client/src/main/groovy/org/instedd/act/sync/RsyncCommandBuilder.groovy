@@ -1,11 +1,15 @@
 package org.instedd.act.sync
 
 import org.apache.commons.lang.StringUtils
-import org.apache.commons.lang.SystemUtils;
+import org.apache.commons.lang.SystemUtils
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
-import com.google.common.base.Preconditions;
+import com.google.common.base.Preconditions
 
 class RsyncCommandBuilder {
+	
+	Logger logger = LoggerFactory.getLogger(RsyncCommandBuilder.class)
 
 	String remoteHost
 	String remotePort
@@ -39,8 +43,9 @@ class RsyncCommandBuilder {
 	
 	def shellCommand() {
 		def userParam = StringUtils.isEmpty(remoteUser) ? "" : "-l ${remoteUser}"
-		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=\"${cygwinPath(knownHostsFilePath)}\""
-		"ssh -p ${remotePort} ${userParam} -i \"${cygwinPath(remoteKey)}\" ${knownHostsParam} -oBatchMode=yes"
+		def knownHostsParam = StringUtils.isEmpty(knownHostsFilePath) ? "" : "-oUserKnownHostsFile=${dosPath(knownHostsFilePath)}" 
+		
+		"ssh -oBatchMode=yes -p ${remotePort} ${userParam} -i ${dosPath(remoteKey)} ${knownHostsParam}"
 	}
 
 	def localRoute(String dir) {
@@ -48,9 +53,29 @@ class RsyncCommandBuilder {
 		cygwinPath(dir)
 	}
 	
+	def dosPath(String path) {
+		if (SystemUtils.IS_OS_WINDOWS) {
+			def stdoutBuffer = new StringBuffer()
+			def stderrBuffer = new StringBuffer()
+			def shellCommand = ["cygpath", "-d", path]
+			Process process = shellCommand.execute()
+			process.consumeProcessOutput(stdoutBuffer, stderrBuffer)
+			process.waitFor()
+			
+			if(!StringUtils.isEmpty(stderrBuffer.toString().trim())) {
+				logger.warn("There could have been a problem while running {}", shellCommand)
+				logger.warn("STDOUT: {}", stdoutBuffer.toString())
+				logger.warn("STDERR: {}", stderrBuffer.toString())
+			}
+			
+			path = stdoutBuffer.toString().trim() 
+		}
+		path
+	}
+	
 	def cygwinPath(String path) {
 		if (SystemUtils.IS_OS_WINDOWS) {
-			path = path.replaceFirst(/^(.):\/*/, '/cygdrive/$1/') // replace "C:/something" with "/cygdrive/c/something" for rsync to understand it
+			path = path.replaceFirst(/^(.):[\\\/](.*)/, '/cygdrive/$1/$2') // replace "C:/something" or "C:\something" with "/cygdrive/c/something" for rsync to understand it
 			path = path.replace("\\", "/")
 		}
 		path
