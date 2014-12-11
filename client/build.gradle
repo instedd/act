@@ -37,7 +37,7 @@ dependencies {
 }
 
 mainClassName = "org.instedd.act.App"
-def version = "1.0.2" // TODO: get this out of somewhere
+def version = "development-${"git rev-parse --verify --short HEAD".execute().text.trim()}"
 println "Version ${version}"
 
 
@@ -49,6 +49,9 @@ task makeBuildDir {
 }
 
 String getViVersion(String version) {
+    if(version.startsWith("development")) {
+        return "0.0.0.0"
+    }
     def components = (version =~ /\d+(?:\.\d+)+/)[0].split(/\./) as List
     components += (["0"] * (4-components.size()))
     return components.join('.')
