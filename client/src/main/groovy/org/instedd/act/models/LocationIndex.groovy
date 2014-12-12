@@ -12,7 +12,24 @@ class LocationIndex {
 
 	static final String DEFAULT_LOCATION_JSON = "json/locations-packed.json"
 
-	List entries;
+	/*
+	 * each location is indexed in a list containing the
+	 * normalized names of each component of its path. 
+	 * 
+	 * for example, Foo>Bar>Baz will be indexed by key ["FOO", "BAR", "BAZ"]
+	 * 
+	 * 
+	 * during a lookup, the query is tokenized and normalized. the result will
+	 * be the value for all entries where all terms of the query match any of 
+	 * the entry components.
+	 * 
+	 * for example, the query "foo - bar" generates two terms: "FOO" and "BAR"
+	 * 
+	 * Foo>Bar>Baz will therefore be present in the result, since both terms
+	 * are matched by the key ["FOO", "BAR", "BAZ"]
+	 * 
+	 */
+	List<Entry<Collection<String>, Collection<Location>>> entries;
 
 	LocationIndex(List entries) {
 		this.entries = entries
@@ -28,14 +45,15 @@ class LocationIndex {
 		def matches = []
 		
 		for(Entry entry : entries) {
-			def include = terms.every { t ->
-							entry.key.any { l -> l.contains(t) }
-							}
-			
+			def include = terms.every { t -> keyMatches(entry.key, t) }
 			if (include) { matches.addAll(entry.value) }
 		}
 		
 		new TreeSet(matches)
+	}
+	
+	def keyMatches(Collection<String> key, String queryTerm) {
+		key.any { l -> l.contains(queryTerm) }
 	}
 	
 	static LocationIndex build() {
