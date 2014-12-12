@@ -1,10 +1,10 @@
 package org.instedd.act.models
 
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Ordering;
+import com.google.common.base.Preconditions
+import com.google.common.collect.Ordering
 
 
-class Location implements Comparable<Location>{
+class Location {
 
 	long id;
 	String name;
@@ -24,11 +24,6 @@ class Location implements Comparable<Location>{
 		pathString
 	}
 
-	@Override
-	public int compareTo(Location o) {
-		name.compareTo(o.name)
-	}
-
 	def buildPathString() {
 		def path = [this.name]
 		def p = parent
@@ -38,5 +33,13 @@ class Location implements Comparable<Location>{
 		}
 		path.reverse().join(" - ")
 	}
-			
+
+	
+	static Comparator<Location> listingComparator() {
+		Ordering.natural().compound([
+			Ordering.natural().onResultOf({l -> l.pathString }),
+			Ordering.natural().onResultOf({l -> l.id }),
+		])
+	}
+	
 }

@@ -48,8 +48,10 @@ class LocationIndex {
 			def include = terms.every { t -> keyMatches(entry.key, t) }
 			if (include) { matches.addAll(entry.value) }
 		}
-		
-		new TreeSet(matches)
+
+		def resultSet = new TreeSet(Location.listingComparator())
+		resultSet.addAll matches
+		resultSet
 	}
 	
 	def keyMatches(Collection<String> key, String queryTerm) {

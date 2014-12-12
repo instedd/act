@@ -138,6 +138,19 @@ class LocationIndexTest extends GroovyTestCase {
 		assert matchedNames(index, "l") == ["LA", "LB", "LC", "LD"]
 	}
 	
+	void "test result contains multiple entries for locations with conflicting names" () {
+		def index = LocationIndex.build([
+			[ geonameId: 1,
+			  name: "A"
+			],
+			[ geonameId: 2,
+			  name: "A"
+			],
+		])
+		
+		assert matches(index, "A") == [["A", 1], ["A", 2]]
+	}
+	
 	def matches(index, query) {
 		index.matches(query).collect { l -> [l.name, l.id]  }
 	}
