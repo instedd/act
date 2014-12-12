@@ -3,18 +3,18 @@ package org.instedd.act.models
 import groovy.json.JsonSlurper
 
 import java.text.Normalizer
-import java.util.Map.Entry
 import java.util.regex.Pattern
 
-import com.google.common.base.Splitter;
+import com.google.common.base.Splitter
+import com.google.common.collect.FluentIterable
 
 class LocationIndex {
 
 	static final String DEFAULT_LOCATION_JSON = "json/locations-packed.json"
 
 	/*
-	 * each location is indexed in a list containing the
-	 * normalized names of each component of its path. 
+	 * each location is indexed by a list containing the normalized names of
+	 * each component of its path. 
 	 * 
 	 * for example, Foo>Bar>Baz will be indexed by key ["FOO", "BAR", "BAZ"]
 	 * 
@@ -29,33 +29,25 @@ class LocationIndex {
 	 * are matched by the key ["FOO", "BAR", "BAZ"]
 	 * 
 	 */
-	List<Entry<Collection<String>, Collection<Location>>> entries;
+	List<Entry> entries;
 
-	LocationIndex(List entries) {
+	LocationIndex(List<Entry> entries) {
 		this.entries = entries
 	}
 			
 	Collection<Location> matches(String query) {
-		def terms = Splitter.onPattern(" |,|-")
-							.omitEmptyStrings()
-							.split(query)
-							.collect { t -> normalize(t) }
+		def terms = tokenize(query).collect { t -> normalize(t) }
 
-				
-		def matches = []
-		
-		for(Entry entry : entries) {
-			def include = terms.every { t -> keyMatches(entry.key, t) }
-			if (include) { matches.addAll(entry.value) }
-		}
-
-		def resultSet = new TreeSet(Location.listingComparator())
-		resultSet.addAll matches
-		resultSet
+		FluentIterable.from(entries)
+				.filter     { e -> e.matchesAll(terms) }
+				.transform  { e -> e.location }
+				.toImmutableSortedSet(Location.listingComparator())
 	}
 	
-	def keyMatches(Collection<String> key, String queryTerm) {
-		key.any { l -> l.contains(queryTerm) }
+	def tokenize(String query) {
+		Splitter.onPattern(" |,|-")
+				.omitEmptyStrings()
+				.split(query)
 	}
 	
 	static LocationIndex build() {
@@ -64,23 +56,19 @@ class LocationIndex {
 	}
 	
 	static def build(locationsJson) {
-		Map<List<String>, List<Location>> index = [:]
+		List<Entry<Collection<String>, Location>> index = []
 		locationsJson.each { l -> addLocation(index, [], l, null) }
 		
-		new LocationIndex(index.entrySet().toList())
+		new LocationIndex(index.toList())
 	}
 	
 	static def addLocation(index, currentPath, json, parentLocation) {
 		currentPath.add(normalize(json.name))
 		
-		def newPath = currentPath.clone();
-		def currentMatches = index[newPath]
-		if (currentMatches == null) {
-			currentMatches = []
-			index[newPath] = currentMatches
-		}
 		def newLocation = new Location(json.geonameId, json.name, parentLocation)
-		currentMatches.add(newLocation)
+		def newEntry = Entry.from(currentPath.clone(), newLocation)
+		
+		index.add(newEntry)
 		
 		if (json.containsKey("children")) {
 			json.children.each { child -> addLocation(index, currentPath, child, newLocation) }
@@ -93,5 +81,22 @@ class LocationIndex {
 		String temp = Normalizer.normalize(key, Normalizer.Form.NFD)
 		Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+")
 		return pattern.matcher(temp).replaceAll("").toUpperCase()
+	}
+	
+	static class Entry {
+		List<String> key
+		Location location
+		
+		def matches(String term) {
+			key.any { normalizedName -> normalizedName.contains(term) }
+		}
+		
+		def matchesAll(Iterable<String> terms) {
+			terms.every { t -> this.matches(t) }
+		}
+		
+		static Entry from(List<String> key, Location location) {
+			new Entry([key: key, location: location])
+		}
 	}	
 }

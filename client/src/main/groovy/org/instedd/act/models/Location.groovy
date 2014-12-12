@@ -35,7 +35,7 @@ class Location {
 	}
 
 	
-	static Comparator<Location> listingComparator() {
+	static Comparator listingComparator() {
 		Ordering.natural().compound([
 			Ordering.natural().onResultOf({l -> l.pathString }),
 			Ordering.natural().onResultOf({l -> l.id }),
