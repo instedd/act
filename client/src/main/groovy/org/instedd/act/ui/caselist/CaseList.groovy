@@ -32,7 +32,7 @@ class CaseList extends JFrame {
 	CaseTableModel tableModel
 	
 	def updateCasesCountLabel
-	def updateMarkAsSeenText
+	def updateMarkAsReadText
 	
 	def columnDefinitions = [
 		["", 					String.class],
@@ -72,28 +72,28 @@ class CaseList extends JFrame {
 		def casesCount = new JLabel(" ")
 		def selectedCount = new JButton(" ")
 		selectedCount.addActionListener { event ->
-			def seenIndexes = table.selectedRows
-			if(!seenIndexes) {
+			def readIndexes = table.selectedRows
+			if(!readIndexes) {
 				if(table.rowCount > 0) {
-					seenIndexes = 0 .. (table.rowCount - 1)
+					readIndexes = 0 .. (table.rowCount - 1)
 				} else {
-					seenIndexes = []
+					readIndexes = []
 				}
 			}
-			def selectedCases = seenIndexes.collect { index ->
+			def selectedCases = readIndexes.collect { index ->
 				tableModel.getCase(index)
 			}
-			this.controller.markCasesAsSeen(selectedCases)
+			this.controller.markCasesAsRead(selectedCases)
 		}
 		
 		updateCasesCountLabel = { event ->
 			def updatesCount = tableModel.updatesCount()
 			if (updatesCount == 1) {
-				casesCount.text = centerText("There is <b>${updatesCount}</b> case with unseen updates")
+				casesCount.text = centerText("There is <b>${updatesCount}</b> case with unread updates")
 			} else if(updatesCount > 1) {
-				casesCount.text = centerText("There are <b>${updatesCount}</b> cases with unseen updates")
+				casesCount.text = centerText("There are <b>${updatesCount}</b> cases with unread updates")
 			} else {
-				casesCount.text = centerText("There are no cases with unseen updates")
+				casesCount.text = centerText("There are no cases with unread updates")
 			}
 		}
 		
@@ -105,19 +105,19 @@ class CaseList extends JFrame {
 			
 		})
 		
-		updateMarkAsSeenText = { event ->
+		updateMarkAsReadText = { event ->
 			def selectedRowsCount = table.selectedRowCount
 			if (selectedRowsCount == 1) {
-				selectedCount.text = "<html>Mark <b>1</b> selected case as seen</html>"
+				selectedCount.text = "<html>Mark <b>1</b> selected case as read</html>"
 			} else if(selectedRowsCount > 1) {
-				selectedCount.text = "<html>Mark <b>${selectedRowsCount}</b> selected cases as seen</html>"
+				selectedCount.text = "<html>Mark <b>${selectedRowsCount}</b> selected cases as read</html>"
 			} else {
-				selectedCount.text = "<html>Mark <b>all cases</b> as seen</html>"
+				selectedCount.text = "<html>Mark <b>all cases</b> as read</html>"
 			}
 		}
 		
-		table.selectionModel.addListSelectionListener updateMarkAsSeenText
-		updateMarkAsSeenText()
+		table.selectionModel.addListSelectionListener updateMarkAsReadText
+		updateMarkAsReadText()
 		
 		column(table, "").preferredWidth = 5
 		column(table, "Age").preferredWidth = 35
@@ -138,23 +138,23 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
-		def unseenButtonsPanel = new JPanel()
-		def showUnseenButtons = new ButtonGroup()
+		def unreadButtonsPanel = new JPanel()
+		def showUnreadButtons = new ButtonGroup()
 
 		def button = new JRadioButton("Show all")
 		button.selected = true
-		showUnseenButtons.add(button)
+		showUnreadButtons.add(button)
 		button.addActionListener {
-			controller.onlyShowUnseen = false
+			controller.onlyShowUnread = false
 		}
-		unseenButtonsPanel.add button
+		unreadButtonsPanel.add button
 		
-		button = new JRadioButton("Only unseen")
-		showUnseenButtons.add(button)
+		button = new JRadioButton("Only unread")
+		showUnreadButtons.add(button)
 		button.addActionListener {
-			controller.onlyShowUnseen = true
+			controller.onlyShowUnread = true
 		}
-		unseenButtonsPanel.add button
+		unreadButtonsPanel.add button
 		
 		def topBar = new JPanel()
 		topBar.setLayout(new BoxLayout(topBar, BoxLayout.X_AXIS))
@@ -167,7 +167,7 @@ class CaseList extends JFrame {
 		add container
 		container.add casesCount
 		container.add topBar
-		topBar.add unseenButtonsPanel
+		topBar.add unreadButtonsPanel
 		topBar.add Box.createHorizontalGlue()
 		topBar.add selectedCount
 		topBar.add newCaseButton

@@ -22,13 +22,13 @@ public interface DataStore {
 	
 	List<Case> unsyncedCases();
 	
-	List<Case> unseenCases();
+	List<Case> unreadCases();
 	
 	void registerCaseSynced(String guid);
 	
 	void updateSickCase(String guid, Boolean isSick);
 	
-	void markCaseAsSeen(Case aCase);
+	void markCaseAsRead(Case aCase);
 	
 	String[] availableDialects();
 	

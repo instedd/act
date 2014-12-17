@@ -82,7 +82,7 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public void markCaseAsSeen(Case aCase) {
+	public void markCaseAsRead(Case aCase) {
 		sql.execute("update cases set updated = ${false} where guid = ${aCase.id}")
 	}
 
@@ -97,7 +97,7 @@ class SqliteDataStore implements DataStore {
 	}
 
 	@Override
-	public List<Case> unseenCases() {
+	public List<Case> unreadCases() {
 		rowsToCases(sql.rows("select * from cases where updated = ${true}"))
 	}
 }

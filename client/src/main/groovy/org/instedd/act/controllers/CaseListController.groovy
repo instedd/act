@@ -22,7 +22,7 @@ class CaseListController {
 	CaseList caseList = new CaseList(this)
 	NewCaseForm newCaseForm
 	
-	Boolean onlyShowUnseen = false
+	Boolean onlyShowUnread = false
 	
 	@Inject
 	CaseListController(EventBus eventBus) {
@@ -96,16 +96,16 @@ class CaseListController {
 		true
 	}
 	
-	def markAsSeen(Case aCase) {
-		dataStore.markCaseAsSeen(aCase)
+	def markAsRead(Case aCase) {
+		dataStore.markCaseAsRead(aCase)
 		aCase.updated = false
 	}
 	
-	void markCasesAsSeen(cases) {
+	void markCasesAsRead(cases) {
 		def changed = false
 		cases.each { selectedCase ->
 			if(selectedCase.updated) { 
-				this.markAsSeen(selectedCase)
+				this.markAsRead(selectedCase)
 				changed = true
 			}
 		}
@@ -127,14 +127,14 @@ class CaseListController {
 		dataStore.contactReasons()
 	}
 	
-	void setOnlyShowUnseen(Boolean onlyShowUnseen) {
-		this.onlyShowUnseen = onlyShowUnseen
+	void setOnlyShowUnread(Boolean onlyShowUnread) {
+		this.onlyShowUnread = onlyShowUnread
 		reloadTable()
 	}
 	
 	List<Case> listCases() {
-		if(onlyShowUnseen) {
-			dataStore.unseenCases()
+		if(onlyShowUnread) {
+			dataStore.unreadCases()
 		} else {
 			dataStore.listCases()
 		}
@@ -143,7 +143,7 @@ class CaseListController {
 	void reloadTable() {
 		caseList.updateCases(this.listCases())
 		caseList.updateCasesCountLabel()
-		caseList.updateMarkAsSeenText()
+		caseList.updateMarkAsReadText()
 	}
 	
 }
