@@ -1,6 +1,8 @@
 package org.instedd.act.ui
 
+import java.awt.BorderLayout
 import java.awt.Button
+import java.awt.Color
 import java.awt.Component
 import java.awt.Dialog
 import java.awt.Dimension
@@ -21,10 +23,10 @@ import javax.swing.JPanel
 import javax.swing.JRadioButton
 import javax.swing.JScrollPane
 import javax.swing.JTextArea
+import javax.swing.SwingConstants
 import javax.swing.text.DefaultStyledDocument
 
 import org.instedd.act.controllers.CaseListController
-import org.instedd.act.models.Case
 
 import components.DocumentSizeFilter
 
@@ -95,6 +97,15 @@ class NewCaseForm extends JDialog {
 		def container = new JPanel()
 		container.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
+		
+		JPanel headerPanel = new JPanel(new BorderLayout())
+		headerPanel.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
+		
+		headerPanel.add new JLabel("<html><div style='font-size: 1.2em;'>Register a new case</span></html>", SwingConstants.CENTER), BorderLayout.NORTH
+		
+		headerPanel.add new JLabel("<html><br />Please enter the following information for reporting a new case</html>", SwingConstants.LEFT)
+		
+		container.add headerPanel
 		
 		container.add createForm()
 		
