@@ -11,6 +11,10 @@ class Location {
 	Location parent
 	String pathString;
 	
+	Location(long id, String name) {
+		this(id, name, null)
+	}
+	
 	Location(long id, String name, Location parent) {
 		Preconditions.checkNotNull(id)
 		Preconditions.checkNotNull(name)

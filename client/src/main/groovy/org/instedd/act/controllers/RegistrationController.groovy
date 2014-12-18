@@ -55,6 +55,9 @@ class RegistrationController {
 			dataStore.storeDeviceInfo(device)
 			view.dispose()
 			app.registrationDone()
+			
+			// release memory
+			locationIndex = null
 		}
 	}
 

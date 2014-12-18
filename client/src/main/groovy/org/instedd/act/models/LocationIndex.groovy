@@ -5,6 +5,9 @@ import groovy.json.JsonSlurper
 import java.text.Normalizer
 import java.util.regex.Pattern
 
+import org.apache.commons.io.IOUtils;
+import org.instedd.act.models.LocationParser.JsonLocation;
+
 import com.google.common.base.Splitter
 import com.google.common.collect.FluentIterable
 
@@ -51,26 +54,38 @@ class LocationIndex {
 	}
 	
 	static LocationIndex build() {
-		def locationsJson = new JsonSlurper().parseText(new File(DEFAULT_LOCATION_JSON).text);
-		return build(locationsJson)
+		def stream = new FileInputStream(new File(DEFAULT_LOCATION_JSON))
+		try {
+			def locationsJson = new LocationParser().parse(stream)
+			return build(locationsJson)
+		} finally {
+			IOUtils.closeQuietly(stream)
+		}
 	}
 	
 	static def build(locationsJson) {
-		List<Entry<Collection<String>, Location>> index = []
+		List<Entry> index = []
 		locationsJson.each { l -> addLocation(index, [], l, null) }
 		
 		new LocationIndex(index.toList())
 	}
 	
-	static def addLocation(index, currentPath, json, parentLocation) {
+	static def buildEntries(locationsJson) {
+		List<Entry> index = []
+		locationsJson.each { l -> addLocation(index, [], l, null) }
+		
+		new LocationIndex(index.toList())
+	}
+	
+	static def addLocation(index, currentPath, JsonLocation json, Location parentLocation) {
 		currentPath.add(normalize(json.name))
 		
-		def newLocation = new Location(json.geonameId, json.name, parentLocation)
+		def newLocation = new Location(json.id, json.name, parentLocation)
 		def newEntry = Entry.from(currentPath.clone(), newLocation)
 		
 		index.add(newEntry)
 		
-		if (json.containsKey("children")) {
+		if (json.hasChildren()) {
 			json.children.each { child -> addLocation(index, currentPath, child, newLocation) }
 		}
 		
@@ -94,9 +109,14 @@ class LocationIndex {
 		def matchesAll(Iterable<String> terms) {
 			terms.every { t -> this.matches(t) }
 		}
-		
+
 		static Entry from(List<String> key, Location location) {
 			new Entry([key: key, location: location])
 		}
-	}	
+		
+		String toString() {
+			"${key} - ${location.id}"
+		}
+	}
+	
 }

@@ -1,11 +1,13 @@
 package org.instedd.act.models
 
+import org.instedd.act.models.LocationParser.JsonLocation
+
 class LocationIndexTest extends GroovyTestCase {
 
 	void "test matches first level locatios" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1, name: "L1" ],
-			[ geonameId: 2, name: "L2" ]
+		def index = build([
+			[ 1, "L1" ],
+			[ 2, "L2" ]
 		])
 		
 		assert matches(index, "L1") == [["L1", 1]]
@@ -13,59 +15,39 @@ class LocationIndexTest extends GroovyTestCase {
 	}
 	
 	void "test allows matching by prefix" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1, name: "L1" ],
-			[ geonameId: 2, name: "L2" ]
+		def index = build([
+			[ 1, "L1" ],
+			[ 2, "L2" ]
 		])
 		
 		assert matches(index, "L") == [["L1", 1], ["L2", 2]]
 	}
 	
 	void "test allows matching by substring" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1, name: "ABCD" ]
+		def index = build([
+			[ 1, "ABCD" ]
 		])
 		
 		assert matches(index, "B") == [["ABCD", 1]]
 	}
 	
 	void "test allows matching by multiple path components" () {
-		def index = LocationIndex.build([
-			[ geonameId: 2,
-			  name: "1",
-			  children: [
-				  [
-					  geonameId: 2,
-					  name: "2",
-					  children: [
-						  [
-							  geonameId: 3,
-							  name: "3"
-						  ]
-					  ]
-				  ]
-			  ]
-			]
+		def index = build([
+			[ 1, "1",
+				[ [ 2, "2",
+					[  [ 3, "3" ] ] ] ] ]
 		])
 		
 		assert matchedNames(index, "1 2 3") == ["3"]
-		assert matchedNames(index, "1 3") == ["3"]
 		assert matchedNames(index, "2 3") == ["3"]
 		
 		assert matchedNames(index, "1 2") == ["2", "3"]
 	}
 	
 	void "test allows splitting query with different separators"() {
-		def index = LocationIndex.build([
-			[ geonameId: 2,
-			  name: "1",
-			  children: [
-				  [
-					  geonameId: 2,
-					  name: "2"
-				  ]
-			  ]
-			]
+		def index = build([
+			[ 2, "1",
+			  [ [ 2, "2" ] ] ]
 		])
 		
 		assert matchedNames(index, "1 2") == ["2"]
@@ -74,32 +56,31 @@ class LocationIndexTest extends GroovyTestCase {
 	}
 	
 	void "test search is case insensitive" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1, name: "L1" ],
-			[ geonameId: 2, name: "L2" ]
+		def index = build([
+			[ 1, "L1" ],
+			[ 2, "L2" ]
 		])
 		
 		assert matches(index, "l") == [["L1", 1], ["L2", 2]]
 	}
 	
 	void "test search ignores accents and diacritics" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1, name: "à" ],
-			[ geonameId: 2, name: "á" ],
-			[ geonameId: 3, name: "ã" ],
-			[ geonameId: 4, name: "ä" ]
+		def index = build([
+			[ 1, "à" ],
+			[ 2, "á" ],
+			[ 3, "ã" ],
+			[ 4, "ä" ]
 		])
 		
 		assert matchedNames(index, "a") == ["à", "á", "ã", "ä"]
 	}
 	
 	void "test includes child locations" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1,
-			  name: "L1",
-			  children: [
-				  [ geonameId: 11, name: "SL1" ],
-				  [ geonameId: 12, name: "SL2" ]
+		def index = build([
+			[ 1, "L1",
+			  [
+				  [ 11, "SL1" ],
+				  [ 12, "SL2" ]
 			  ]
 			]
 		])
@@ -108,12 +89,12 @@ class LocationIndexTest extends GroovyTestCase {
 	}
 
 	void "test sublocations are indexed also by their parent name" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1,
-			  name: "A",
-			  children: [
-				  [ geonameId: 11, name: "B" ],
-				  [ geonameId: 12, name: "C" ]
+		def index = build([
+			[ 1,
+			  "A",
+			  [
+				  [ 11, "B" ],
+				  [ 12, "C" ]
 			  ]
 			]
 		])
@@ -122,16 +103,16 @@ class LocationIndexTest extends GroovyTestCase {
 	}
 	
 	void "test results are sorted in path lexicographical order" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1,
-			  name: "LB",
-			  children: [
-				  [ geonameId: 11, name: "LD" ],
-				  [ geonameId: 12, name: "LC" ]
+		def index = build([
+			[ 1,
+			  "LB",
+			  [
+				  [ 11, "LD" ],
+				  [ 12, "LC" ]
 			  ]
 			],
-			[ geonameId: 2,
-			  name: "LA"
+			[ 2,
+			  "LA"
 			],
 		])
 		
@@ -139,16 +120,25 @@ class LocationIndexTest extends GroovyTestCase {
 	}
 	
 	void "test result contains multiple entries for locations with conflicting names" () {
-		def index = LocationIndex.build([
-			[ geonameId: 1,
-			  name: "A"
-			],
-			[ geonameId: 2,
-			  name: "A"
-			],
+		def index = build([
+			[ 1, "A" ],
+			[ 2, "A" ],
 		])
 		
 		assert matches(index, "A") == [["A", 1], ["A", 2]]
+	}
+	
+	def build(jsonData) {
+		def locations = jsonLocations(jsonData)
+		LocationIndex.build(locations)
+	}
+	
+	def jsonLocations(jsonData) {
+		jsonData.collect { entry -> new JsonLocation([
+			id: entry[0],
+			name: entry[1],
+			children: entry.size() > 2 ? jsonLocations(entry[2]) : null
+		]) }
 	}
 	
 	def matches(index, query) {
