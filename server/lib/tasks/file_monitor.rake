@@ -8,6 +8,7 @@ namespace :act do
     @jobs = Queue.new
     @sync_directory = Settings.sync_directory
     @watch_expression = "#{@sync_directory}/*/inbox/*"
+    @document_store_directory = "#{@sync_directory}/documents/"
 
     init_sync_directory
     enqueue_preexisting_files
@@ -21,9 +22,8 @@ namespace :act do
   end
 
   def init_sync_directory
-    unless Dir.exists? @sync_directory
-      FileUtils.mkdir_p @sync_directory
-    end
+    FileUtils.mkdir_p @sync_directory unless Dir.exists? @sync_directory
+    FileUtils.mkdir_p @document_store_directory unless Dir.exists? @document_store_directory
   end
 
   def enqueue_preexisting_files
@@ -48,17 +48,116 @@ namespace :act do
   end
 
   def process_file(path)
-    file_content = File.read(path)
     parts = path.split(File::SEPARATOR).reverse
     filename = parts[0]
     device_id = parts[2]
 
     if filename.match(/case.*/)
+      file_content = File.read(path)
       Case.save_from_sync_file(device_id, file_content)
       File.delete(path)
     else
-      Rails.logger.warn "Unrecognized file was synchronized by client: #{filename}"      
+      begin
+        spreadsheet = Roo::Spreadsheet.open(path)
+      rescue
+        Rails.logger.warn "Unrecognized file <<#{filename}>> was synchronized by client #{device_id}"
+        return
+      end
+      rows = spreadsheet_rows(spreadsheet)
+      process_rows(rows, device_id)
+      File.rename(path, "#{@document_store_directory}/#{device_id}-#{filename}")
     end
+  end
+
+  def spreadsheet_rows(spreadsheet)
+    spreadsheet.parse(:header_search => [])
+  end
+
+  def process_rows(rows, device_id)
+    header = rows.first
+    rows = rows.drop(1) # skip header
+
+    name_key = find_key(header, 'name')
+    phone_key = find_key(header, 'phone')
+    gender_key = find_key(header, 'gender')
+    age_key = find_key(header, 'age')
+    notes_key = find_key(header, 'note')
+    dialect_key = find_key(header, 'dialect')
+
+    reasons_key = find_key(header, 'reason')
+
+    if reasons_key then
+      rows.each do | row |
+        phone = row[phone_key]
+        phone = phone.to_i if phone.is_a? Numeric
+
+        # TODO: reference the originating file
+        Case.save_from_sync_json(device_id, {
+          "guid" => SecureRandom.uuid,
+          "name" => row[name_key],
+          "phone_number" => phone,
+          "age" => row[age_key],
+          "gender" => row[gender_key],
+          "dialect_code" => row[dialect_key],
+          "symptoms" => row[reasons_key],
+          "note" => row[notes_key]
+        })
+      end
+    else
+      fever_key = find_key(header, 'fever')
+
+      if fever_key then
+        reasons = {
+          "fever" => 'Fever',
+          "headache" => 'Severe headache',
+          "muscle" => 'Muscle pain',
+          "weaknes" => 'Weakness',
+          "fatigue" => 'Fatigue',
+          "diarrhea" => 'Diarrhea',
+          "vomit" => 'Vomiting',
+          "abdominal" => 'Abdominal (stomach) pain',
+          "hemorrhage" => 'Unexplained hemorrhage (bleeding or bruising)'
+        }
+
+        reasons_titles = {}
+        reasons.each do | code, reason |
+          key = find_key(header, code)
+          if key then
+            reasons_titles[code] = key
+          end
+        end
+
+
+        rows.each do | row |
+          symptoms = []
+
+          reasons.each do | code, reason |
+            reason_key = reasons_titles[code]
+            if reason_key then
+              symptoms << reason if !row[reason_key].blank?
+            end
+          end
+
+          phone = row[phone_key]
+          phone = phone.to_i if phone.is_a? Numeric
+
+          Case.save_from_sync_json(device_id, {
+            "guid" => SecureRandom.uuid,
+            "name" => row[name_key],
+            "phone_number" => phone,
+            "age" => row[age_key],
+            "gender" => row[gender_key],
+            "dialect_code" => row[dialect_key],
+            "symptoms" => symptoms.join(","),
+            "note" => row[notes_key]
+          })
+        end
+      end
+    end
+  end
+
+  def find_key(hash, target_key)
+    hash.keys.find { |key| key.downcase.include? target_key }
   end
 
 end

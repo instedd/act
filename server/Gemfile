@@ -33,6 +33,8 @@ gem 'devise_invitable'
 
 gem 'cancancan'
 
+gem 'roo'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-byebug'

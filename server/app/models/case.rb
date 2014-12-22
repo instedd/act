@@ -13,10 +13,14 @@ class Case < ActiveRecord::Base
 
   def self.save_from_sync_file(device_guid, file_content)
     json = JSON.parse file_content
+    save_from_sync_json(device_guid, json)
+  end
+
+  def self.save_from_sync_json(device_guid, json)
     device_id = Device.where(guid: device_guid).pluck(:id)[0]
 
     if device_id.blank?
-      error_msg = "Trying to create case for inexisten device guid #{device_guid}. Posted content: #{file_content}"
+      error_msg = "Trying to create case for inexistent device guid #{device_guid}. Posted content: #{file_content}"
       Rails.logger.warn error_msg
       raise error_msg
     end
