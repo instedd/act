@@ -3,6 +3,17 @@ class ApiController < ApplicationController
   before_filter :restrict_access, except: [:register]
   protect_from_forgery with: :null_session
 
+  #
+  # We use these codes instead of boolean values to simplify
+  # interaction with Verboice (the only current method of
+  # recollection of follow up information).
+  #
+  # Ideally, Verboice would be in charge of interpreting the
+  # values entered by the user.
+  #
+  AFFIRMATIVE_ANSWER_CODE = "1"
+  NEGATIVE_ANSWER_CODE    = "2"
+
   def register
     ActiveRecord::Base.transaction do
       d = Device.create public_key: params["publicKey"],\
@@ -39,12 +50,12 @@ class ApiController < ApplicationController
       return
     end
 
-    if params[:sick]
+    case params[:sick]
+    when AFFIRMATIVE_ANSWER_CODE
       _case.follow_up_sick!
-    else
+    when NEGATIVE_ANSWER_CODE
       _case.follow_up_not_sick!
     end
-
 
     Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
     
