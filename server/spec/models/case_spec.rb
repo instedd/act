@@ -63,7 +63,14 @@ describe Device do
 
       notification = Notification.last
       expect(notification.notification_type).to eq("case_confirmed_sick")
+
       expect(notification.metadata["id"].to_i).to eq(c.id)
+      expect(notification.metadata["patient_name"]).to eq(c.patient_name)
+      expect(notification.metadata["patient_phone_number"]).to eq(c.patient_phone_number)
+      expect(notification.metadata["symptoms"]).to eq(c.symptoms.to_json)
+      expect(notification.metadata["supervisor_name"]).to eq(c.supervisor_name)
+      expect(notification.metadata["supervisor_phone_number"]).to eq(c.supervisor_phone_number)
+      expect(notification.metadata["dialect_code"]).to eq(c.dialect_code)
     end
 
     it "does not create a notification if previously confirmed sick" do

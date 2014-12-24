@@ -5,7 +5,11 @@ class Case < ActiveRecord::Base
   validates_presence_of :guid
   validates_presence_of :device
 
-  delegate :organization, :organization_id, to: :device
+  delegate :organization,
+           :organization_id,
+           :supervisor_name,
+           :supervisor_phone_number,
+           to: :device
 
   def self.save_from_sync_file(device_guid, file_content)
     json = JSON.parse file_content
@@ -47,6 +51,21 @@ class Case < ActiveRecord::Base
         "dialect_code",
         "symptoms",
         "note"
+      ].include? k
+    end
+  end
+
+  def as_json_for_notification_api
+    ret = self.as_json(methods: %w(supervisor_name supervisor_phone_number)).select do |k|
+      [
+        "dialect_code",
+        "guid",
+        "id",
+        "patient_name",
+        "patient_phone_number",
+        "supervisor_name",
+        "supervisor_phone_number",
+        "symptoms"
       ].include? k
     end
   end
