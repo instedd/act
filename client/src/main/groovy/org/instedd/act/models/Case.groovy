@@ -21,9 +21,9 @@ class Case {
 		if (sick == null) {
 			"-"
 		} else if (sick) {
-			"Confirmed sick"
+			"Reported feeling sick"
 		} else {
-			"Confirmed not sick"
+			"Reported not feeling sick"
 		}
 	}
 	
