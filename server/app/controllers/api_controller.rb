@@ -39,7 +39,12 @@ class ApiController < ApplicationController
       return
     end
 
-    _case.confirm_sick! if params[:sick]
+    if params[:sick]
+      _case.follow_up_sick!
+    else
+      _case.follow_up_not_sick!
+    end
+
 
     Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
     

@@ -32,7 +32,12 @@ class Case < ActiveRecord::Base
                  note: json["note"]
   end
 
-  def confirm_sick!
+  def follow_up_not_sick!
+    self.sick = false
+    self.save
+  end
+
+  def follow_up_sick!
     previously_sick = self.sick
     self.sick = true
     Notification.case_confirmed_sick! self unless previously_sick
