@@ -9,7 +9,7 @@ class LocationUpdateTask
   end
 
   def self.perform_async(case_id, number)
-    Resque.enqueue_in(30.seconds, self, case_id, number)
+    Resque.enqueue_in(30.minutes, self, case_id, number)
   end
 
 end
