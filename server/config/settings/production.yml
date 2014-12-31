@@ -5,3 +5,7 @@ authorized_keys_file: /act/authorized_keys
 notifiable_diseases_url: "/nndd/index.html"
 
 elasticsearch_url: "http://actelastic:9200"
+
+redis:
+  host: <%= ENV["ACT_REDIS_HOST"] %>
+  port: <%= ENV["ACT_REDIS_PORT"] %>
