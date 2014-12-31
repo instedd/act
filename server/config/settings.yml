@@ -6,3 +6,7 @@ remote_shapefiles:
   - https://www.dropbox.com/s/4ekmmwv7fyh91el/GINLBRSLE.zip?dl=1
 
 elasticsearch_locations_index: locations
+
+redis:
+  host: localhost
+  port: 6379
