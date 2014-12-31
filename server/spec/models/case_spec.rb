@@ -25,6 +25,8 @@ describe Device do
     end
 
     it "creates new cases" do
+     expect_any_instance_of(Case).to receive(:async_update_location)
+
      Case.save_from_sync_file(device.guid, sample_case_info.to_json)
      
      expect(Case.count).to eq(1)

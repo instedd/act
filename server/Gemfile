@@ -24,14 +24,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'rails_config', '= 0.4.2'
-
 gem 'filewatcher'
-
 gem 'devise'
-
 gem 'devise_invitable'
-
 gem 'cancancan'
+gem 'resque', '~> 1.0'
+gem 'resque-web'
+gem 'resque-scheduler'
+gem 'foreman'
 
 gem 'cdx-api-elasticsearch', :git => 'https://github.com/instedd/cdx-api-elasticsearch'
 

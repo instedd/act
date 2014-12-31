@@ -5,7 +5,7 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   belongs_to :device
-
+  
   after_save :update_index
 
   validates_presence_of :guid
@@ -48,7 +48,7 @@ class Case < ActiveRecord::Base
       raise error_msg
     end
 
-    Case.create! device_id: device_id,\
+    _case = Case.create! device_id: device_id,\
                  guid: json["guid"],\
                  patient_name: json["name"],\
                  patient_phone_number: json["phone_number"],\
@@ -58,6 +58,8 @@ class Case < ActiveRecord::Base
                  symptoms: json["symptoms"],\
                  note: json["note"],\
                  report_time: json["report_time"]
+
+    _case.async_update_location
   end
 
   def follow_up_not_sick!
@@ -70,6 +72,10 @@ class Case < ActiveRecord::Base
     self.sick = true
     Notification.case_confirmed_sick! self unless previously_sick
     self.save
+  end
+
+  def async_update_location
+    LocationUpdateTask.perform_async(self.id, self.patient_phone_number)
   end
 
   def as_json_for_api
@@ -121,7 +127,7 @@ class Case < ActiveRecord::Base
       dialect: dialect_code,
       location: device.location.detailed_hierarchy
     }
-  end
+end
 
   def formatted_symptoms
     symptoms.map { |symptom| symptom.parameterize.underscore }
