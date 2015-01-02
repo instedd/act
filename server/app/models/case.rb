@@ -1,6 +1,7 @@
 class Case < ActiveRecord::Base
 
   belongs_to :device
+  belongs_to :cases_file
   
   validates_presence_of :guid
   validates_presence_of :device
@@ -16,7 +17,7 @@ class Case < ActiveRecord::Base
     save_from_sync_json(device_guid, json)
   end
 
-  def self.save_from_sync_json(device_guid, json)
+  def self.save_from_sync_json(device_guid, json, cases_file = nil)
     device_id = Device.where(guid: device_guid).pluck(:id)[0]
 
     if device_id.blank?
@@ -25,7 +26,7 @@ class Case < ActiveRecord::Base
       raise error_msg
     end
 
-    Case.create! device_id: device_id,\
+    newCase = Case.create! device_id: device_id,\
                  guid: json["guid"],\
                  patient_name: json["name"],\
                  patient_phone_number: json["phone_number"],\
@@ -34,6 +35,10 @@ class Case < ActiveRecord::Base
                  dialect_code: json["dialect_code"],\
                  symptoms: json["symptoms"],\
                  note: json["note"]
+
+    newCase.cases_file = cases_file if cases_file
+
+    newCase.save!
   end
 
   def follow_up_not_sick!

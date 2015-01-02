@@ -50,22 +50,27 @@ namespace :act do
   def process_file(path)
     parts = path.split(File::SEPARATOR).reverse
     filename = parts[0]
-    device_id = parts[2]
+    device_guid = parts[2]
 
     if filename.match(/case.*/)
       file_content = File.read(path)
-      Case.save_from_sync_file(device_id, file_content)
+      Case.save_from_sync_file(device_guid, file_content)
       File.delete(path)
     else
       begin
         spreadsheet = Roo::Spreadsheet.open(path)
       rescue
-        Rails.logger.warn "Unrecognized file <<#{filename}>> was synchronized by client #{device_id}"
+        Rails.logger.warn "Unrecognized file <<#{filename}>> was synchronized by client #{device_guid}"
         return
       end
       rows = spreadsheet_rows(spreadsheet)
-      process_rows(rows, device_id)
-      File.rename(path, "#{@document_store_directory}/#{device_id}-#{filename}")
+      file_guid = SecureRandom.uuid
+      storage_path = "#{@document_store_directory}#{device_guid}-#{file_guid}-#{filename}"
+      File.rename(path, storage_path)
+      device_id = Device.where(guid: device_guid).pluck(:id)[0]
+      cases_file = CasesFile.new device_id: device_id, file: storage_path, guid: file_guid
+      cases_file.save!
+      process_rows(rows, cases_file)
     end
   end
 
@@ -73,7 +78,7 @@ namespace :act do
     spreadsheet.parse(:header_search => [])
   end
 
-  def process_rows(rows, device_id)
+  def process_rows(rows, cases_file)
     header = rows.first
     rows = rows.drop(1) # skip header
 
@@ -92,7 +97,7 @@ namespace :act do
         phone = phone.to_i if phone.is_a? Numeric
 
         # TODO: reference the originating file
-        Case.save_from_sync_json(device_id, {
+        Case.save_from_sync_json(cases_file.device.guid, {
           "guid" => SecureRandom.uuid,
           "name" => row[name_key],
           "phone_number" => phone,
@@ -101,7 +106,7 @@ namespace :act do
           "dialect_code" => row[dialect_key],
           "symptoms" => row[reasons_key],
           "note" => row[notes_key]
-        })
+        }, cases_file)
       end
     else
       fever_key = find_key(header, 'fever')
@@ -141,7 +146,7 @@ namespace :act do
           phone = row[phone_key]
           phone = phone.to_i if phone.is_a? Numeric
 
-          Case.save_from_sync_json(device_id, {
+          Case.save_from_sync_json(cases_file.device.guid, {
             "guid" => SecureRandom.uuid,
             "name" => row[name_key],
             "phone_number" => phone,
@@ -150,7 +155,7 @@ namespace :act do
             "dialect_code" => row[dialect_key],
             "symptoms" => symptoms.join(","),
             "note" => row[notes_key]
-          })
+          }, cases_file)
         end
       end
     end
