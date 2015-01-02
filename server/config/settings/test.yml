@@ -1,0 +1,4 @@
+cellcom:
+  location_endpoint: http://example.com/cellcom_location_api
+  username: cellcom_user
+  password: cellcom_pass

@@ -1,5 +1,5 @@
-keys-import: rake act:keys_import
-file-monitor: rake act:file_monitor
+keys-import: bundle exec rake act:keys_import
+file-monitor: bundle exec rake act:file_monitor
 
 resque: QUEUE=* bundle exec rake environment resque:work
 resque-scheduler: bundle exec rake resque:scheduler

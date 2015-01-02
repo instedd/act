@@ -6,3 +6,8 @@ sync_directory: "data"
 notifiable_diseases_url: "http://localhost:9000"
 
 elasticsearch_url: "http://localhost:9200/"
+
+cellcom:
+  location_endpoint: http://localhost:4567/get_location
+  username: cellcom_user
+  password: cellcom_pass
