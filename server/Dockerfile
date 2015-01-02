@@ -26,26 +26,12 @@ RUN npm install -g topojson
 # Prepare folders
 RUN mkdir /home/app/webapp
 
-# Copy configuration and init files
+ADD deploy/init            /etc/my_init.d/
+ADD deploy/services        /etc/service/
+
 ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
 ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
-ADD deploy/rrsync /act/rrsync
-
-# /etc/my_init.d/00_regen_ssh_host_keys.sh present in base image
-ADD deploy/init/* /etc/my_init.d/
-
-# Add background daemons
-RUN mkdir /etc/service/act-file-monitor \
-          /etc/service/act-keys-import \
-          /etc/service/act-resque-scheduler \
-          /etc/service/act-resque-worker \
-          /etc/service/act-resque-web
-
-ADD deploy/act-file-monitor.sh /etc/service/act-file-monitor/run
-ADD deploy/act-keys-import.sh  /etc/service/act-keys-import/run
-ADD deploy/act-resque-scheduler.sh  /etc/service/act-resque-scheduler/run
-ADD deploy/act-resque-worker.sh  /etc/service/act-resque-worker/run
-ADD deploy/act-resque-web.sh  /etc/service/act-resque-web/run
+ADD deploy/rrsync          /act/rrsync
 
 # ADD public/nndd/ /home/app/webapp/public/nndd/
 
