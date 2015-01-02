@@ -32,12 +32,7 @@ ADD deploy/nginx-env.conf  /etc/nginx/main.d/nginx-env.conf
 ADD deploy/rrsync /act/rrsync
 
 # /etc/my_init.d/00_regen_ssh_host_keys.sh present in base image
-ADD deploy/01_serve_ssh_public_key.sh /etc/my_init.d/
-ADD deploy/02_setup_sync_dir.sh       /etc/my_init.d/
-ADD deploy/03_setup_sshd.sh           /etc/my_init.d/
-ADD deploy/04_migrate_db.sh           /etc/my_init.d/
-ADD deploy/05_precompile_assets.sh    /etc/my_init.d/
-
+ADD deploy/init/* /etc/my_init.d/
 
 # Add background daemons
 RUN mkdir /etc/service/act-file-monitor \
