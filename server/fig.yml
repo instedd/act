@@ -22,6 +22,8 @@ elasticnndd:
   image:       dockerfile/elasticsearch
   volumes_from:
     - elasticdata
+redis:
+  image:       redis
 
 act:
   image:       instedd/act
@@ -33,8 +35,9 @@ act:
   ports:
     - "8000:80"
     - "2222:22"
+    - "5678:5678"
 
-  links: ["pg:act_postgres", "elasticnndd:actelastic"]
+  links: ["pg:act_postgres", "elasticnndd:actelastic", "redis:act_redis"]
 
   environment:
     - ACT_APP_DIR
@@ -42,4 +45,6 @@ act:
     - ACT_DATABASE_PASSWORD
     - ACT_DATABASE_PORT
     - ACT_DATABASE_USERNAME
+    - ACT_REDIS_HOST
+    - ACT_REDIS_PORT
     - SECRET_KEY_BASE

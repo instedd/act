@@ -40,9 +40,17 @@ ADD deploy/05_precompile_assets.sh    /etc/my_init.d/
 
 
 # Add background daemons
-RUN mkdir /etc/service/act-file-monitor /etc/service/act-keys-import
+RUN mkdir /etc/service/act-file-monitor \
+          /etc/service/act-keys-import \
+          /etc/service/act-resque-scheduler \
+          /etc/service/act-resque-worker \
+          /etc/service/act-resque-web
+
 ADD deploy/act-file-monitor.sh /etc/service/act-file-monitor/run
 ADD deploy/act-keys-import.sh  /etc/service/act-keys-import/run
+ADD deploy/act-resque-scheduler.sh  /etc/service/act-resque-scheduler/run
+ADD deploy/act-resque-worker.sh  /etc/service/act-resque-worker/run
+ADD deploy/act-resque-web.sh  /etc/service/act-resque-web/run
 
 # ADD public/nndd/ /home/app/webapp/public/nndd/
 
