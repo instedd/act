@@ -12,6 +12,7 @@ import javax.swing.Box
 import javax.swing.BoxLayout
 import javax.swing.ButtonGroup
 import javax.swing.JButton
+import javax.swing.JFileChooser
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
@@ -139,6 +140,22 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
+		def casesFileChooser = new JFileChooser()
+		casesFileChooser.fileSelectionMode = JFileChooser.FILES_ONLY
+		def uploadCasesFileButton = new JButton("<html><b>Upload</b> cases file</html>")
+		uploadCasesFileButton.alignmentX = Component.CENTER_ALIGNMENT
+		uploadCasesFileButton.addActionListener({
+			switch(casesFileChooser.showOpenDialog(this)) {
+				case JFileChooser.APPROVE_OPTION:
+					break;
+				case JFileChooser.CANCEL_OPTION:
+				case JFileChooser.ERROR_OPTION:
+				// TODO: error handling
+					break;
+			}
+			
+		})
+		
 		def unreadButtonsPanel = new JPanel()
 		def showUnreadButtons = new ButtonGroup()
 
@@ -172,6 +189,7 @@ class CaseList extends JFrame {
 		topBar.add Box.createHorizontalGlue()
 		topBar.add selectedCount
 		topBar.add newCaseButton
+		topBar.add uploadCasesFileButton
 		container.add gridPane
 		container.add bottomBar
 		
