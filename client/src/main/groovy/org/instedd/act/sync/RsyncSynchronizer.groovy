@@ -2,6 +2,9 @@ package org.instedd.act.sync
 
 import groovy.json.JsonSlurper
 
+import java.nio.file.Files
+import java.nio.file.Paths
+
 import org.apache.commons.lang.StringUtils
 import org.instedd.act.Settings
 import org.instedd.act.authentication.Credentials
@@ -129,6 +132,11 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 			logger.warn("Could not run test rsync command. Please check that the executable is available.", e)
 			throw new IllegalStateException("Could not run test rsync command. Please check that the executable is available.", e) 
 		}
+	}
+
+	@Override
+	public void queueForSync(File document) {
+		Files.copy(Paths.get(document.absolutePath), Paths.get(new File(new File(commandBuilder.outboxLocalDir), document.name).absolutePath))
 	}
 	
 }

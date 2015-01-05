@@ -147,6 +147,7 @@ class CaseList extends JFrame {
 		uploadCasesFileButton.addActionListener({
 			switch(casesFileChooser.showOpenDialog(this)) {
 				case JFileChooser.APPROVE_OPTION:
+					controller.syncCasesFile(casesFileChooser.getSelectedFile())
 					break;
 				case JFileChooser.CANCEL_OPTION:
 				case JFileChooser.ERROR_OPTION:

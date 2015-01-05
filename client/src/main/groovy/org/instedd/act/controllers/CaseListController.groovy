@@ -1,15 +1,16 @@
 package org.instedd.act.controllers
 
-import org.instedd.act.events.CaseUpdatedEvent;
+import org.instedd.act.events.CaseUpdatedEvent
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
+import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.SynchronizationProcess
 import org.instedd.act.ui.NewCaseForm
 import org.instedd.act.ui.caselist.CaseList
 
 import com.google.common.base.Strings
 import com.google.common.eventbus.EventBus
-import com.google.common.eventbus.Subscribe;
+import com.google.common.eventbus.Subscribe
 import com.google.inject.Inject
 
 class CaseListController {
@@ -18,6 +19,7 @@ class CaseListController {
 	@Inject SynchronizationProcess daemon
 
 	@Inject NewCaseController newCaseController
+	@Inject DocumentSynchronizer synchronizer
 	
 	CaseList caseList = new CaseList(this)
 	NewCaseForm newCaseForm
@@ -144,6 +146,10 @@ class CaseListController {
 		caseList.updateCases(this.listCases())
 		caseList.updateCasesCountLabel()
 		caseList.updateMarkAsReadText()
+	}
+	
+	void syncCasesFile(File casesFile) {
+		synchronizer.queueForSync(casesFile)
 	}
 	
 }
