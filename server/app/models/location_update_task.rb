@@ -3,13 +3,22 @@ include REXML
 
 class LocationUpdateTask
 
+  #
+  # amount if times a task can be retried on errors that are
+  # assumed to be recoverable or temporary.
+  #
+  TASK_RETRIES = 2
+  
   @queue = :location_update
 
-  def self.perform(case_id, number)
+  def self.perform(case_id, number, retry_count = 0)
     begin
       response = request_location(number)
-    rescue
-      # TODO
+    rescue => ex
+      Rails.logger.error "An error occurred contacting the Cellcom API "\
+                         "for location check of case #{case_id}: #{ex}\n"\
+                         "#{ex.backtrace.take(15).join("\n")}"
+      retry_later(case_id, number, retry_count)
     end
     
     begin
@@ -20,8 +29,10 @@ class LocationUpdateTask
     end
   end
 
-  def self.perform_async(case_id, number)
-    Resque.enqueue_in(30.minutes, self, case_id, number)
+  def self.retry_later(case_id, number, retry_count)
+    if (retry_count < TASK_RETRIES)
+      Resque.enqueue_in(30.minutes, self, case_id, number, retry_count + 1)
+    end
   end
 
   class QueueTaskJob

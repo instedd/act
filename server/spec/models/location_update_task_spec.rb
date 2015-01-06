@@ -44,6 +44,19 @@ describe LocationUpdateTask do
     }.not_to change(LocationRecord, :count)
   end
 
+  it "schedules up to two retries when a connection error occurs" do
+    stub_request(:any, endpoint_url).to_raise("connection error")
+
+    expect_retry(1)
+    LocationUpdateTask.perform(_case.id, _case.patient_phone_number)
+
+    expect_retry(2)
+    LocationUpdateTask.perform(_case.id, _case.patient_phone_number, 1)
+
+    expect_no_retry
+    LocationUpdateTask.perform(_case.id, _case.patient_phone_number, 2)
+  end
+
   #---------------------
 
   def set_successful_response(lat, lng)
@@ -52,6 +65,14 @@ describe LocationUpdateTask do
 
   def set_failed_response
     stub_request(:any, endpoint_url).to_return(body: soap_response("error description", false))
+  end
+
+  def expect_retry(retry_count)
+    expect(Resque).to receive(:enqueue_in).with(30.minutes, LocationUpdateTask, _case.id, _case.patient_phone_number, retry_count)
+  end
+
+  def expect_no_retry
+    expect(Resque).not_to receive(:enqueue_in)
   end
 
   def expected_soap_request
