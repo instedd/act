@@ -9,11 +9,12 @@ import org.apache.commons.lang.StringUtils
 import org.instedd.act.Settings
 import org.instedd.act.authentication.Credentials
 import org.instedd.act.events.CaseUpdatedEvent
+import org.instedd.act.models.CasesFile
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.EventBus
 import com.google.inject.Inject
 
 class RsyncSynchronizer implements DocumentSynchronizer {
@@ -136,7 +137,11 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 
 	@Override
 	public void queueForSync(File document) {
-		Files.copy(Paths.get(document.absolutePath), Paths.get(new File(new File(commandBuilder.outboxLocalDir), document.name).absolutePath))
+		String documentName = document.name
+		String documentPath = document.absolutePath 
+		String guid = UUID.randomUUID().toString()
+		dataStore.register(new CasesFile([name: documentName, path: documentPath, guid: guid]))
+		Files.copy(Paths.get(document.absolutePath), Paths.get(new File(new File(commandBuilder.outboxLocalDir), "${guid}-${documentName}").absolutePath))
 	}
 	
 }
