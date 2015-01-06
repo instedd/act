@@ -1,1 +1,0 @@
-Resque.redis = "#{Settings.redis.host}:#{Settings.redis.port}"

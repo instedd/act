@@ -1,0 +1,6 @@
+queue_poll_subscriptions:
+  every: 60m
+  class: LocationUpdateTask::QueueTaskJob
+  queue: location_update_scheduler
+  args:
+  description: Enqueue a location check job for case

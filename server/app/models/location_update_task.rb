@@ -24,6 +24,15 @@ class LocationUpdateTask
     Resque.enqueue_in(30.minutes, self, case_id, number)
   end
 
+  class QueueTaskJob
+
+    def self.perform
+      Case.select(:id, :patient_phone_number).find_each do |c|
+        Resque.enqueue(::LocationUpdateTask, c.id, c.patient_phone_number)
+      end
+    end
+
+  end
 
   private
 
