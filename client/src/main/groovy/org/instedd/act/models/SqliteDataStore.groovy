@@ -38,6 +38,11 @@ class SqliteDataStore implements DataStore {
 		exporter.exportCase(aCase)
 	}
 	
+	@Override
+	public synchronized void register(CasesFile file) {
+		sql.dataSet("cases_files").add([guid: file.guid, name: file.name, path: file.path, status: file.status.toString()])
+	}
+	
 	def rowsToCases = { rows ->
 		rows.collect { row ->
 			new Case([id: row.guid, name: row.name, phone: row.phone, age: row.age, gender: row.gender, preferredDialect: row.dialect, reasons: new JsonSlurper().parseText(row.reasons), notes: row.notes, sick: row.sick, synced: row.synced, updated: row.updated])

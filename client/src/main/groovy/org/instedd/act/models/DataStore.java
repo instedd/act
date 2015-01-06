@@ -17,6 +17,8 @@ public interface DataStore {
 	void markDeviceRegistered();
 	
 	void register(Case aCase);
+	
+	void register(CasesFile file);
 
 	List<Case> listCases();
 	
