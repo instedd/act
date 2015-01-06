@@ -48,18 +48,16 @@ class Case < ActiveRecord::Base
       raise error_msg
     end
 
-    _case = Case.create! device_id: device_id,\
-                 guid: json["guid"],\
-                 patient_name: json["name"],\
-                 patient_phone_number: json["phone_number"],\
-                 patient_age: json["age"].to_i,\
-                 patient_gender: json["gender"],\
-                 dialect_code: json["dialect_code"],\
-                 symptoms: json["symptoms"],\
+    Case.create! device_id: device_id,\
+                         guid: json["guid"],\
+                         patient_name: json["name"],\
+                         patient_phone_number: json["phone_number"],\
+                         patient_age: json["age"].to_i,\
+                         patient_gender: json["gender"],\
+                         dialect_code: json["dialect_code"],\
+                         symptoms: json["symptoms"],\
                  note: json["note"],\
                  report_time: json["report_time"]
-
-    _case.async_update_location
   end
 
   def follow_up_not_sick!
