@@ -1,5 +1,5 @@
 queue_poll_subscriptions:
-  every: 60m
+  every: 6h
   class: LocationUpdateTask::QueueTaskJob
   queue: location_update_scheduler
   args:
