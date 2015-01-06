@@ -18,15 +18,11 @@ class LocationUpdateTask
       Rails.logger.error "An error occurred contacting the Cellcom API "\
                          "for location check of case #{case_id}: #{ex}\n"\
                          "#{ex.backtrace.take(15).join("\n")}"
+      
       retry_later(case_id, number, retry_count)
     end
     
-    begin
-      lat,lng = parse_result(response)
-      LocationRecord.create! case_id: case_id, lat: lat, lng: lng
-    rescue
-      # TODO: reschedule or log depending on the error cause and retry count.
-    end
+    process_result(case_id, response) if response
   end
 
   def self.retry_later(case_id, number, retry_count)
@@ -34,6 +30,7 @@ class LocationUpdateTask
       Resque.enqueue_in(30.minutes, self, case_id, number, retry_count + 1)
     end
   end
+
 
   class QueueTaskJob
 
@@ -64,15 +61,49 @@ class LocationUpdateTask
     ERBTemplate.new(REQUEST_TEMPLATE).render(ctx)
   end
 
-  def self.parse_result(response)
-    doc = Document.new(response.body) ####
+  def self.process_result(case_id, response)
+    doc = Document.new(response.body)
     result_node = XPath.first(doc, '/s:Envelope/s:Body/SubscriberGetLocationResponse/SubscriberGetLocationResult')
-
-    success = XPath.first(result_node, '//[local-name() = "ReturnValue"]').text
-    raise "error retrieving patient location" unless success
-
-    reply_msg = XPath.first(result_node, '//[local-name() = "ReplyMsg"]').text ####
-    return reply_msg.split(",").map { |part| part.strip.to_f } ####
+    result_id = XPath.first(result_node, '//[local-name() = "ResultID"]').text
+    
+    case result_id
+    when "0"
+      reply_msg = XPath.first(result_node, '//[local-name() = "ReplyMsg"]').text
+      lat, lng = reply_msg.split(",").map { |part| part.strip.to_f }
+      LocationRecord.create! case_id: case_id, lat: lat, lng: lng
+    
+    when "1"
+      #
+      # TODO
+      #
+      # There are different result codes for non-error responses: one means
+      # that the location was found and the other that it couldn't be found
+      # but there were no errors processing the request.
+      #
+      # API documentation is not clear about which code corresponds to each
+      # of those cases.
+    
+    when "-5", "-6"
+      #
+      # TODO: notify development team?
+      #
+      Rails.logger.error "Cellcom API returned result code #{result_id}."\
+                          "This means an authentication or authorization problem, task will not be"
+    else
+      #
+      # TODO
+      #
+      # Other kind of errors could represent different things. For example:
+      #
+      # - contact does not have a cellcom account
+      # - invalid phone number
+      # - recoverable technical problem in cellcom server
+      #
+      # At the moment it is not clear how to distinguish these cases, and which
+      # (and how) we should notify to the field supervisor in charge of following
+      # the case.
+      #
+    end
   end
 
 

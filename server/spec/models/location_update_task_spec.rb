@@ -60,11 +60,11 @@ describe LocationUpdateTask do
   #---------------------
 
   def set_successful_response(lat, lng)
-    stub_request(:any, endpoint_url).to_return(body: soap_response("#{lat}, #{lng}", true))
+    stub_request(:any, endpoint_url).to_return(body: soap_response(0, "#{lat}, #{lng}", true))
   end
 
   def set_failed_response
-    stub_request(:any, endpoint_url).to_return(body: soap_response("error description", false))
+    stub_request(:any, endpoint_url).to_return(body: soap_response(-10, "error description", false))
   end
 
   def expect_retry(retry_count)
@@ -101,7 +101,7 @@ describe LocationUpdateTask do
     template.sub('##PHONE_NUMBER##', _case.patient_phone_number.to_s)
   end
 
-  def soap_response(reply_msg, return_value)
+  def soap_response(result_code, reply_msg, return_value)
       template = <<-XML
 <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
   <s:Header>
@@ -112,7 +112,7 @@ describe LocationUpdateTask do
     <SubscriberGetLocationResponse xmlns="http://tempuri.org/">
       <SubscriberGetLocationResult xmlns:b="http://schemas.datacontract.org/2004/07/CellcomAPILibrary" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <b:ReplyMsg><%= @reply_msg %></b:ReplyMsg>
-        <b:ResultID>111</b:ResultID>
+        <b:ResultID><%= @result_code %></b:ResultID>
         <b:ReturnValue><%= @return_value %></b:ReturnValue>
       </SubscriberGetLocationResult>
     </SubscriberGetLocationResponse>
@@ -120,6 +120,6 @@ describe LocationUpdateTask do
 </s:Envelope>
       XML
 
-      ERBTemplate.new(template).render(reply_msg: reply_msg, return_value: return_value)
+      ERBTemplate.new(template).render(result_code: result_code, reply_msg: reply_msg, return_value: return_value)
   end
 end
