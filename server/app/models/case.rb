@@ -181,6 +181,22 @@ end
     self.__elasticsearch__.index_document
   end
 
+  def add_error_log(error, redis = Redis.current)
+    redis.rpush error_log_key, error.to_json
+    redis.ltrim error_log_key, -10, -1
+  end
+
+  def error_logs(redis = Redis.current)
+    logs = redis.lrange error_log_key, 0, -1
+    logs.map { |l| JSON.parse(l) }
+  end
+
+  private
+
+  def error_log_key
+    "#{id}_error_log"
+  end
+
 end
 
 Case.__elasticsearch__.create_index!

@@ -87,19 +87,16 @@ class LocationUpdateTask
       log :fatal, "Cellcom API returned result code #{result_id}. "\
                   "This means an authentication or authorization problem, task will not be retried."
     else
-      #
-      # TODO
-      #
-      # Other kind of errors could represent different things. For example:
-      #
-      # - contact does not have a cellcom account
-      # - invalid phone number
-      # - recoverable technical problem in cellcom server
-      #
-      # At the moment it is not clear how to distinguish these cases, and which
-      # (and how) we should notify to the field supervisor in charge of following
-      # the case.
-      #
+      log :error, "Cellcom API returned result code #{result_id}. "\
+                  "A detailed description was attached to the case error log."
+      
+      _case = Case.find(case_id)
+      error_log = {}
+      error_log[:result_id] = result_id
+      error_log[:reply_msg] = XPath.first(result_node, '//[local-name() = "ReplyMsg"]').text
+      error_log[:response_body] = response.body
+      error_log[:timestamp] = Time.now
+      _case.add_error_log(error_log)
     end
   end
 

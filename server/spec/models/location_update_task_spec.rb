@@ -57,6 +57,15 @@ describe LocationUpdateTask do
     LocationUpdateTask.perform(_case.id, _case.patient_phone_number, 2)
   end
 
+  it "saves an error log associated to the case if unexpected error occurs" do
+    set_failed_response
+    expect_any_instance_of(Case).to receive(:add_error_log) do |c, error_log|
+      expect(c.id).to eq(_case.id)
+      expect(error_log.keys).to include(:result_id, :reply_msg, :response_body, :timestamp)
+    end
+    LocationUpdateTask.perform(_case.id, _case.patient_phone_number)
+  end
+
   #---------------------
 
   def set_successful_response(lat, lng)

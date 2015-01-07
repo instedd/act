@@ -81,5 +81,25 @@ describe Device do
 
   end
 
+  it "allows to save and retrieve error logs" do
+    c = FactoryGirl.create :case
+    
+    errors = [{ "msg" => "error #1" },
+              { "msg" => "error #2" } ]
+    
+    c.add_error_log(errors[0])
+    c.add_error_log(errors[1])
+
+    expect(c.error_logs).to eq(errors)
+  end
+
+  it "doesn't store more than 10 error logs" do
+    c = FactoryGirl.create :case
+
+    errors = (1..11).map { |i| { "msg" => i }}
+    errors.each { |e| c.add_error_log(e) }
+
+    expect(c.error_logs.map {|e| e["msg"]}).to eq((2..11).to_a)
+  end
 
 end

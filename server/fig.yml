@@ -24,6 +24,7 @@ elasticnndd:
     - elasticdata
 redis:
   image:       redis
+  command:     redis-server --appendonly yes
 
 act:
   image:       instedd/act

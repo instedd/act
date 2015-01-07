@@ -43,7 +43,9 @@ gem 'awesome_nested_set'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-mocks'
   gem 'pry-byebug'
+  gem 'mock_redis'
 end
 
 group :test do

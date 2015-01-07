@@ -112,6 +112,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.4.3)
     minitest (5.5.1)
+    mock_redis (0.14.0)
     mono_logger (1.1.0)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -243,12 +244,14 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  mock_redis
   pg
   pry-byebug
   rails (= 4.1.7)
   rails_config (= 0.4.2)
   resque (~> 1.0)
   resque-scheduler
+  rspec-mocks
   rspec-rails (~> 3.0.0)
   rubyzip
   sass-rails (~> 4.0.3)
