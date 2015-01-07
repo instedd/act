@@ -6,3 +6,4 @@ V5_add_updated_case_column.sql
 V6_add_supported_dialects.sql
 V7_add_contact_reasons.sql
 V8_added_cases_files.sql
+V9_added_cases_files_cases.sql

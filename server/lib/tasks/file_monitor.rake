@@ -60,17 +60,23 @@ namespace :act do
       begin
         spreadsheet = Roo::Spreadsheet.open(path)
       rescue
-        Rails.logger.warn "Unrecognized file <<#{filename}>> was synchronized by client #{device_guid}"
+        notify_errored_file(path, "Unrecognized file")
         return
       end
+      file_guid = filename[0..35]
+      unless file_guid =~ /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i
+        # ensure there's a file guid if client didn't send it
+        file_guid = SecureRandom.uuid
+        filename = "#{file_guid}-#{filename}"
+      end
       rows = spreadsheet_rows(spreadsheet)
-      file_guid = SecureRandom.uuid
-      storage_path = "#{@document_store_directory}#{device_guid}-#{file_guid}-#{filename}"
+      storage_path = "#{@document_store_directory}#{device_guid}-#{filename}"
       File.rename(path, storage_path)
       device_id = Device.where(guid: device_guid).pluck(:id)[0]
       cases_file = CasesFile.new device_id: device_id, file: storage_path, guid: file_guid
       cases_file.save!
       process_rows(rows, cases_file)
+      notify_parsed_cases(cases_file)
     end
   end
 
@@ -163,6 +169,15 @@ namespace :act do
 
   def find_key(hash, target_key)
     hash.keys.find { |key| key.downcase.include? target_key }
+  end
+
+  def notify_errored_file(path, reason)
+    Rails.logger.warn reason
+    # TODO: generate error notification to client
+  end
+
+  def notify_parsed_cases(cases_file)
+    Device.sync_cases_file(cases_file.device.guid, cases_file.guid, cases_file.cases)
   end
 
 end

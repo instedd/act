@@ -36,4 +36,6 @@ public interface DataStore {
 	
 	String[] contactReasons();
 	
+	void associateCasesFile(String guid, List<String> document);
+	
 }
