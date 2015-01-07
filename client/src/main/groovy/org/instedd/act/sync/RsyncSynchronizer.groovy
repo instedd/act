@@ -9,6 +9,7 @@ import org.apache.commons.lang.StringUtils
 import org.instedd.act.Settings
 import org.instedd.act.authentication.Credentials
 import org.instedd.act.events.CaseUpdatedEvent
+import org.instedd.act.events.CasesFileUpdatedEvent
 import org.instedd.act.models.CasesFile
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
@@ -102,12 +103,21 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 		this.sync(commandBuilder.buildDownloadCommand(), {files ->
 			files.each { filename ->
 				logger.trace "Downloaded ${filename}"
-				def matcher = filename =~ /^case-(.+)\.json$/
+				def matcher = filename =~ /^cases?-(file-)?(.+)\.json$/
 				if(matcher.matches()) {
-					String caseGuid = matcher[0][1]
+					String guid = matcher[0][2]
 					File downloadedFile = this.downloadedFile(filename)
-					dataStore.updateSickCase(caseGuid, new JsonSlurper().parseText(downloadedFile.text).sick)
-					eventBus.post([guid: caseGuid] as CaseUpdatedEvent)
+					def document = new JsonSlurper().parseText(downloadedFile.text)
+					switch(matcher[0][1]) {
+						case null:
+							dataStore.updateSickCase(guid, document.sick)
+							eventBus.post([guid: guid] as CaseUpdatedEvent)
+							break
+						case "file-":
+							dataStore.associateCasesFile(guid, document)
+							eventBus.post([guid: guid] as CasesFileUpdatedEvent)
+							break
+					}
 					downloadedFile.delete()
 				}
 			}

@@ -105,4 +105,11 @@ class SqliteDataStore implements DataStore {
 	public List<Case> unreadCases() {
 		rowsToCases(sql.rows("select * from cases where updated = ${true}"))
 	}
+
+	@Override
+	public void associateCasesFile(String fileGuid, List<String> casesGuids) {
+		casesGuids.each { caseGuid ->
+			sql.dataSet("cases_files_cases").add([file_guid: fileGuid, case_guid: caseGuid])
+		}
+	}
 }

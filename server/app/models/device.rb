@@ -30,10 +30,14 @@ class Device < ActiveRecord::Base
     document_name = "case-#{case_guid}.json"
     document_content = {sick: sick_condition}
 
-    outbox_path = outbox(device_guid)
-    file = File.open(File.join(outbox_path, document_name), "w")
-    file.puts document_content.to_json
-    file.close
+    export_document(document_name, document_content, device_guid)
+  end
+
+  def self.sync_cases_file(device_guid, cases_file_guid, cases)
+    document_name = "cases-file-#{cases_file_guid}.json"
+    document_content = cases.map &:guid
+
+    export_document(document_name, document_content, device_guid)
   end
 
   def self.init_sync_path(device_guid)
@@ -44,6 +48,13 @@ class Device < ActiveRecord::Base
       Dir.mkdir outbox(device_guid)
       Dir.mkdir inbox(device_guid)
     end
+  end
+
+  def self.export_document(document_name, document_content, device_guid)
+    outbox_path = outbox(device_guid)
+    file = File.open(File.join(outbox_path, document_name), "w")
+    file.puts document_content.to_json
+    file.close
   end
 
   private
