@@ -9,7 +9,7 @@ RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 
 # Install rsync
-RUN apt-get update && apt-get install -y rsync
+RUN apt-get update && apt-get install -y rsync ssmtp logcheck
 
 # Install node for NNDD
 RUN apt-get install -y nodejs

@@ -15,9 +15,9 @@ class LocationUpdateTask
     begin
       response = request_location(number)
     rescue => ex
-      Rails.logger.error "An error occurred contacting the Cellcom API "\
-                         "for location check of case #{case_id}: #{ex}\n"\
-                         "#{ex.backtrace.take(15).join("\n")}"
+      log :error, "An error occurred contacting the Cellcom API "\
+                  "for location check of case #{case_id}: #{ex}\n"\
+                  "#{ex.backtrace.take(15).join("\n")}"
       
       retry_later(case_id, number, retry_count)
     end
@@ -84,11 +84,8 @@ class LocationUpdateTask
       # of those cases.
     
     when "-5", "-6"
-      #
-      # TODO: notify development team?
-      #
-      Rails.logger.error "Cellcom API returned result code #{result_id}."\
-                          "This means an authentication or authorization problem, task will not be"
+      log :fatal, "Cellcom API returned result code #{result_id}. "\
+                  "This means an authentication or authorization problem, task will not be retried."
     else
       #
       # TODO
@@ -106,6 +103,15 @@ class LocationUpdateTask
     end
   end
 
+  def self.log level, msg
+    [Rails.logger, fatal_events_logger].each { |l| l.send level, msg }
+  end
+
+  def self.fatal_events_logger
+    @fatal_events_logger ||= Logger.new("#{Rails.root}/log/cellcom.log")
+    @fatal_events_logger.level = 4 # log only fatal events
+    @fatal_events_logger
+  end
 
 REQUEST_TEMPLATE = <<-XML
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
