@@ -72,10 +72,6 @@ class Case < ActiveRecord::Base
     self.save
   end
 
-  def async_update_location
-    LocationUpdateTask.perform_async(self.id, self.patient_phone_number)
-  end
-
   def as_json_for_api
     ret = self.as_json.select do |k|
       [

@@ -4,7 +4,7 @@ require 'erb'
 # Simplifies rendering of ERB templates with contexts defined by hashes.
 #
 # Usage:
-#         ERBTemplate.new("<%= foo %>").render(foo: 123)
+#         ERBTemplate.new("<%= @foo %>").render(foo: 123)
 #
 #
 class ERBTemplate
