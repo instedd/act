@@ -2,6 +2,7 @@ package org.instedd.act.controllers
 
 import org.instedd.act.events.CaseUpdatedEvent
 import org.instedd.act.models.Case
+import org.instedd.act.models.CasesFile;
 import org.instedd.act.models.DataStore
 import org.instedd.act.sync.DocumentSynchronizer
 import org.instedd.act.sync.SynchronizationProcess
@@ -32,7 +33,7 @@ class CaseListController {
 	}
 
 	def buildView() {
-		caseList.build(this.listCases());
+		caseList.build(this.listCases(), this.listFiles());
 	}	
 
 	void newCaseButtonPressed() {
@@ -140,6 +141,10 @@ class CaseListController {
 		} else {
 			dataStore.listCases()
 		}
+	}
+	
+	List<CasesFile> listFiles() {
+		dataStore.listCasesFiles()
 	}
 	
 	void reloadTable() {

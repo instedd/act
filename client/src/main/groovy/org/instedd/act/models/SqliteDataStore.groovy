@@ -114,4 +114,15 @@ class SqliteDataStore implements DataStore {
 			sql.dataSet("cases_files_cases").add([file_guid: fileGuid, case_guid: caseGuid])
 		}
 	}
+	
+	def rowsToCasesFiles = { rows ->
+		rows.collect { row ->
+			new CasesFile([guid: row.guid, name: row.name, path: row.path, status: row.status])
+		}
+	}
+
+	@Override
+	public List<CasesFile> listCasesFiles() {
+		rowsToCasesFiles(sql.rows("select * from cases_files"))
+	}
 }
