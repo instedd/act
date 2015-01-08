@@ -39,6 +39,8 @@ class Case < ActiveRecord::Base
     newCase.cases_file = cases_file if cases_file
 
     newCase.save!
+
+    newCase
   end
 
   def follow_up_not_sick!

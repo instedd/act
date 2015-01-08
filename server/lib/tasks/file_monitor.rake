@@ -103,7 +103,7 @@ namespace :act do
         phone = phone.to_i if phone.is_a? Numeric
 
         # TODO: reference the originating file
-        Case.save_from_sync_json(cases_file.device.guid, {
+        export_new_case Case.save_from_sync_json(cases_file.device.guid, {
           "guid" => SecureRandom.uuid,
           "name" => row[name_key],
           "phone_number" => phone,
@@ -152,7 +152,7 @@ namespace :act do
           phone = row[phone_key]
           phone = phone.to_i if phone.is_a? Numeric
 
-          Case.save_from_sync_json(cases_file.device.guid, {
+          export_new_case Case.save_from_sync_json(cases_file.device.guid, {
             "guid" => SecureRandom.uuid,
             "name" => row[name_key],
             "phone_number" => phone,
@@ -178,6 +178,10 @@ namespace :act do
 
   def notify_parsed_cases(cases_file)
     Device.sync_cases_file(cases_file.device.guid, cases_file.guid, cases_file.cases)
+  end
+
+  def export_new_case(_case)
+    Device.sync_new_case(_case.device.guid, _case.guid, _case.as_json_for_api())
   end
 
 end

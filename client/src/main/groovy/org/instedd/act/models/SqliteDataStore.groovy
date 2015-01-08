@@ -34,8 +34,10 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public synchronized void register(Case aCase) {
-		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes])
-		exporter.exportCase(aCase)
+		sql.dataSet("cases").add([guid: aCase.id, name: aCase.name, phone: aCase.phone, age: aCase.age, gender: aCase.gender, dialect: aCase.preferredDialect, reasons: new JsonBuilder(aCase.reasons), notes: aCase.notes, synced: aCase.synced, updated: aCase.updated])
+		if(!aCase.synced) {
+			exporter.exportCase(aCase)
+		}
 	}
 	
 	@Override

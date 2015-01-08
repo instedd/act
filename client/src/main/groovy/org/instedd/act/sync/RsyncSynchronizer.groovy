@@ -10,6 +10,7 @@ import org.instedd.act.Settings
 import org.instedd.act.authentication.Credentials
 import org.instedd.act.events.CaseUpdatedEvent
 import org.instedd.act.events.CasesFileUpdatedEvent
+import org.instedd.act.models.Case
 import org.instedd.act.models.CasesFile
 import org.instedd.act.models.DataStore
 import org.slf4j.Logger
@@ -110,7 +111,12 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 					def document = new JsonSlurper().parseText(downloadedFile.text)
 					switch(matcher[0][1]) {
 						case null:
-							dataStore.updateSickCase(guid, document.sick)
+							if(document.containsKey("guid")) {
+								dataStore.register(new Case([name: document.patient_name, phone: document.patient_phone, age: document.patient_age, gender: document.patient_gender, preferredDialect: document.dialect_code, reasons: document.symptoms, notes: document.note, id: document.guid, synced: true, updated: true]))
+							}
+							if(document.containsKey("sick")) {
+								dataStore.updateSickCase(guid, document.sick)
+							}
 							eventBus.post([guid: guid] as CaseUpdatedEvent)
 							break
 						case "file-":
