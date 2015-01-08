@@ -9,5 +9,5 @@ public interface DocumentSynchronizer {
 	
 	public void queueForSync(String documentName, String content);
 	
-	public void queueForSync(File document);
+	public void queueForSync(String guid, File document);
 }

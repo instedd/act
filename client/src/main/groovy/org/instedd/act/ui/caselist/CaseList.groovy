@@ -33,6 +33,7 @@ class CaseList extends JFrame {
 
 	CaseListController controller
 	CaseTableModel caseTableModel
+	CaseTableModel filesTableModel
 	
 	def updateCasesCountLabel
 	def updateMarkAsReadText
@@ -222,7 +223,7 @@ class CaseList extends JFrame {
 		}
 		
 		
-		def filesTableModel = new CaseTableModel(filesColumnDefinitions, fileToRow, files)
+		filesTableModel = new CaseTableModel(filesColumnDefinitions, fileToRow, files)
 		def filesTable = new JTable(filesTableModel)
 		filesTable.fillsViewportHeight = true
 		filesTable.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
@@ -274,6 +275,10 @@ class CaseList extends JFrame {
 	
 	void updateCases(List<Case> cases) {
 		caseTableModel.updateCases(cases)
+	}
+	
+	void updateFiles(List<CasesFile> files) {
+		filesTableModel.updateCases(files)
 	}
 		
 	def centeredHeaderTextRenderer() {

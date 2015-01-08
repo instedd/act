@@ -40,4 +40,6 @@ public interface DataStore {
 	
 	List<CasesFile> listCasesFiles();
 	
+	void registerFileSynced(String guid);
+	
 }

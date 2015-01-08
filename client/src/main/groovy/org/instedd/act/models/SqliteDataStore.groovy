@@ -125,4 +125,9 @@ class SqliteDataStore implements DataStore {
 	public List<CasesFile> listCasesFiles() {
 		rowsToCasesFiles(sql.rows("select * from cases_files"))
 	}
+
+	@Override
+	public void registerFileSynced(String guid) {
+		sql.execute("update cases_files set status = ${CasesFile.Status.UPLOADED} where guid = ${guid}")
+	}
 }
