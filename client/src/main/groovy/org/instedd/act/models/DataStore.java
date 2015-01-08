@@ -38,4 +38,6 @@ public interface DataStore {
 	
 	void associateCasesFile(String guid, List<String> document);
 	
+	List<CasesFile> listCasesFiles();
+	
 }

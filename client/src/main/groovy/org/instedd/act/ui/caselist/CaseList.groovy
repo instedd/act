@@ -18,24 +18,26 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JRadioButton
 import javax.swing.JScrollPane
+import javax.swing.JTabbedPane;
 import javax.swing.JTable
 import javax.swing.table.DefaultTableCellRenderer
 import javax.swing.table.TableColumn
 
 import org.instedd.act.controllers.CaseListController
 import org.instedd.act.models.Case
+import org.instedd.act.models.CasesFile;
 
 import sun.swing.table.DefaultTableCellHeaderRenderer
 
 class CaseList extends JFrame {
 
 	CaseListController controller
-	CaseTableModel tableModel
+	CaseTableModel caseTableModel
 	
 	def updateCasesCountLabel
 	def updateMarkAsReadText
 	
-	def columnDefinitions = [
+	def casesColumnDefinitions = [
 		["", 					String.class],
 		["Name", 				String.class],
 		["Phone number", 		String.class],
@@ -47,7 +49,7 @@ class CaseList extends JFrame {
 		["Follow up",			String.class]
 	]
 	
-	def toRow = { Case c -> [c.updated ? "*" : "", c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
+	def caseToRow = { Case c -> [c.updated ? "*" : "", c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
 	
 	CaseList(CaseListController controller) {
 		this.controller = controller
@@ -59,36 +61,36 @@ class CaseList extends JFrame {
 		"<html><div style=\"font-size: 1.1em;\">${text}</div></html>"
 	}
 
-	void build(List<Case> cases) {
-		def container = new JPanel()
-		container.border = BorderFactory.createEmptyBorder(20, 20, 20, 20)
-		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
-		container.setPreferredSize(new Dimension(750, 480))
+	void build(List<Case> cases, List<CasesFile> files) {
+		def casesContainer = new JPanel()
+		casesContainer.border = BorderFactory.createEmptyBorder(20, 20, 20, 20)
+		casesContainer.setLayout(new BoxLayout(casesContainer, BoxLayout.Y_AXIS))
+		casesContainer.setPreferredSize(new Dimension(750, 480))
 		
-		tableModel = new CaseTableModel(columnDefinitions, toRow, cases)
-		def table = new JTable(tableModel)
-		table.fillsViewportHeight = true
-		table.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
+		caseTableModel = new CaseTableModel(casesColumnDefinitions, caseToRow, cases)
+		def caseTable = new JTable(caseTableModel)
+		caseTable.fillsViewportHeight = true
+		caseTable.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
 		
 		def casesCount = new JLabel(" ")
 		def selectedCount = new JButton(" ")
 		selectedCount.addActionListener { event ->
-			def readIndexes = table.selectedRows
+			def readIndexes = caseTable.selectedRows
 			if(!readIndexes) {
-				if(table.rowCount > 0) {
-					readIndexes = 0 .. (table.rowCount - 1)
+				if(caseTable.rowCount > 0) {
+					readIndexes = 0 .. (caseTable.rowCount - 1)
 				} else {
 					readIndexes = []
 				}
 			}
 			def selectedCases = readIndexes.collect { index ->
-				tableModel.getCase(index)
+				caseTableModel.getCase(index)
 			}
 			this.controller.markCasesAsRead(selectedCases)
 		}
 		
 		updateCasesCountLabel = { event ->
-			def updatesCount = tableModel.updatesCount()
+			def updatesCount = caseTableModel.updatesCount()
 			if (updatesCount == 1) {
 				casesCount.text = centerText("There is <b>${updatesCount}</b> case with unread updates")
 			} else if(updatesCount > 1) {
@@ -98,16 +100,16 @@ class CaseList extends JFrame {
 			}
 		}
 		
-		container.addMouseListener(new MouseAdapter() {
+		casesContainer.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent event) {
-				table.clearSelection()
+				caseTable.clearSelection()
 			}
 			
 		})
 		
 		updateMarkAsReadText = { event ->
-			def selectedRowsCount = table.selectedRowCount
+			def selectedRowsCount = caseTable.selectedRowCount
 			if (selectedRowsCount == 1) {
 				selectedCount.text = "<html>Mark <b>1</b> selected case as read</html>"
 			} else if(selectedRowsCount > 1) {
@@ -117,21 +119,21 @@ class CaseList extends JFrame {
 			}
 		}
 		
-		table.selectionModel.addListSelectionListener updateMarkAsReadText
+		caseTable.selectionModel.addListSelectionListener updateMarkAsReadText
 		updateMarkAsReadText()
 		
-		column(table, "").preferredWidth = 5
-		column(table, "Age").preferredWidth = 35
-		column(table, "Gender").preferredWidth = 50
-		column(table, "Follow up").preferredWidth = 150
-		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
+		column(caseTable, "", casesColumnDefinitions).preferredWidth = 5
+		column(caseTable, "Age", casesColumnDefinitions).preferredWidth = 35
+		column(caseTable, "Gender", casesColumnDefinitions).preferredWidth = 50
+		column(caseTable, "Follow up", casesColumnDefinitions).preferredWidth = 150
+		column(caseTable, "Follow up", casesColumnDefinitions).cellRenderer = followUpInformationCellRenderer()
 		
 		casesCount.alignmentX = Component.CENTER_ALIGNMENT
-		tableModel.addTableModelListener updateCasesCountLabel
+		caseTableModel.addTableModelListener updateCasesCountLabel
 		
 		updateCasesCountLabel()
 		
-		def gridPane = new JScrollPane(table)
+		def gridPane = new JScrollPane(caseTable)
 		gridPane.alignmentX = Component.CENTER_ALIGNMENT
 		
 		def newCaseButton = new JButton("<html><b>New case</b></html>")
@@ -183,27 +185,85 @@ class CaseList extends JFrame {
 		bottomBar.setLayout(new BoxLayout(bottomBar, BoxLayout.X_AXIS))
 		bottomBar.border = BorderFactory.createEmptyBorder(10, 0, 0, 0)
 		
-		add container
-		container.add casesCount
-		container.add topBar
+		def filesContainer = new JPanel()
+		filesContainer.border = BorderFactory.createEmptyBorder(20, 20, 20, 20)
+		filesContainer.setLayout(new BoxLayout(filesContainer, BoxLayout.Y_AXIS))
+		filesContainer.setPreferredSize(new Dimension(750, 480))
+		
+		def filesHeader = new JLabel(centerText("Click the upload button to import a file with cases"))
+		
+		def filesColumnDefinitions = [
+			["Name", 				String.class],
+			["Path",		 		String.class],
+			["GUID", 				String.class],
+			["Status", 				String.class]
+		]
+		
+		def fileToRow = { CasesFile f ->
+			String status = "UNKNOWN"
+			switch(f.status) {
+				case CasesFile.Status.WAITING_UPLOAD:
+					status = "Waiting for upload"
+					break
+				case CasesFile.Status.UPLOADED:
+					status = "Uploaded"
+					break
+				case CasesFile.Status.PROCESSING:
+					status = "Processing"
+					break
+				case CasesFile.Status.IMPORTED:
+					status = "Imported"
+					break
+				case CasesFile.Status.ERROR:
+					status = "Error"
+					break
+			}
+			[f.name, f.path, f.guid[0..7], status]
+		}
+		
+		
+		def filesTableModel = new CaseTableModel(filesColumnDefinitions, fileToRow, files)
+		def filesTable = new JTable(filesTableModel)
+		filesTable.fillsViewportHeight = true
+		filesTable.tableHeader.defaultRenderer = centeredHeaderTextRenderer()
+		
+		column(filesTable, "Name", filesColumnDefinitions).preferredWidth = 140
+		column(filesTable, "Path", filesColumnDefinitions).preferredWidth = 140
+		column(filesTable, "GUID", filesColumnDefinitions).preferredWidth = 20
+		column(filesTable, "Status", filesColumnDefinitions).preferredWidth = 40
+		
+		def filesGridPane = new JScrollPane(filesTable)
+		filesGridPane.alignmentX = Component.CENTER_ALIGNMENT
+		
+		filesContainer.add filesHeader
+		filesContainer.add uploadCasesFileButton
+		filesContainer.add filesGridPane
+		
+		
+		JTabbedPane tabs = new JTabbedPane()
+		tabs.addTab("Cases", casesContainer)
+		tabs.addTab("Files", filesContainer)
+		
+		add tabs
+		casesContainer.add casesCount
+		casesContainer.add topBar
 		topBar.add unreadButtonsPanel
 		topBar.add Box.createHorizontalGlue()
 		topBar.add selectedCount
 		topBar.add newCaseButton
-		topBar.add uploadCasesFileButton
-		container.add gridPane
-		container.add bottomBar
+		casesContainer.add gridPane
+		casesContainer.add bottomBar
 		
 		pack()
 		setLocationRelativeTo(null)
 		visible = true
 	}
 
-	TableColumn column(JTable table, String name) {
-		table.columnModel.getColumn(columnIndex(name))
+	TableColumn column(JTable table, String name, columnDefinitions) {
+		table.columnModel.getColumn(columnIndex(name, columnDefinitions))
 	}
 	
-	int columnIndex(String name) {
+	int columnIndex(String name, columnDefinitions) {
 		for(int i = 0; i < columnDefinitions.size; i++) {
 		    if (columnDefinitions[i][0] == name) {
 		        return i
@@ -213,7 +273,7 @@ class CaseList extends JFrame {
 	}
 	
 	void updateCases(List<Case> cases) {
-		tableModel.updateCases(cases)
+		caseTableModel.updateCases(cases)
 	}
 		
 	def centeredHeaderTextRenderer() {
