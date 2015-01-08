@@ -122,6 +122,7 @@ class CaseList extends JFrame {
 		column(table, "").preferredWidth = 5
 		column(table, "Age").preferredWidth = 35
 		column(table, "Gender").preferredWidth = 50
+		column(table, "Follow up").preferredWidth = 150
 		column(table, "Follow up").cellRenderer = followUpInformationCellRenderer()
 		
 		casesCount.alignmentX = Component.CENTER_ALIGNMENT

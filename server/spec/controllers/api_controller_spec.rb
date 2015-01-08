@@ -133,27 +133,35 @@ describe ApiController, type: :controller do
         expect(Case.find_by_guid("CASE1").sick).to be_nil
       end
 
-      it "updates updates case sick status" do
+      it "updates updates case sick status (when user declares feeling sick)" do
         expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", true)
 
-        xhr :put, :update_case, id: case_id, sick: true
+        xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         expect(response).to be_successful
         expect(Case.find_by_guid("CASE1")).to be_sick
+      end
+
+      it "updates updates case sick status (when user declares not feeling sick)" do
+        expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", false)
+
+        xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE
+        expect(response).to be_successful
+        expect(Case.find_by_guid("CASE1")).not_to be_sick
       end
 
       it "creates notifications when case is confirmed sick" do
         expect(Device).to receive(:sync_sick_status)
         expect {
-          xhr :put, :update_case, id: case_id, sick: true
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         }.to change(Notification, :count).by(1)
       end
 
       it "does not create a notification if case was already confirmed sick" do
         expect(Device).to receive(:sync_sick_status)
         
-        device.cases.first.confirm_sick!
+        device.cases.first.follow_up_sick!
         expect {
-          xhr :put, :update_case, id: case_id, sick: true
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         }.not_to change(Notification, :count)
       end
 

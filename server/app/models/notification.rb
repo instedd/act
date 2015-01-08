@@ -9,7 +9,8 @@ class Notification < ActiveRecord::Base
   end
 
   def self.case_confirmed_sick!(c)
-    Notification.create notification_type: :case_confirmed_sick, metadata: c.as_json_for_api
+    Notification.create notification_type: :case_confirmed_sick,\
+                        metadata: c.as_json_for_notification_api
   end
 
 end

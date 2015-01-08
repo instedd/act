@@ -5,60 +5,61 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.google.common.base.Preconditions;
 
+/**
+ * Parses the location json file.
+ * Uses Jackson's low level streaming parsing API to reduce memory footprint.
+ * 
+ * Instances of this class are not reusable.
+ */
 class LocationParser {
 
+	JsonParser stream
+	
 	def parse(InputStream inputStream) {
-		def parser = new JsonFactory().createParser(inputStream)
-		checkToken parser, JsonToken.START_ARRAY
-		parseArray(parser)
+		stream = new JsonFactory().createParser(inputStream)
+		checkToken JsonToken.START_ARRAY
+		parseArray()
 	}
 	
-	def parseLocation(JsonParser parser) {
+	def parseLocation() {
 		Integer id
 		String name
 		JsonLocation[] children
 		
-		while(parser.nextToken() != JsonToken.END_OBJECT) {
-			def key = parser.getText()
-			
+		while(stream.nextToken() != JsonToken.END_OBJECT) {
+			def key = stream.getText()
 			Preconditions.checkNotNull(key)
 			
 			if (key == "geonameId") {
-				id = parser.nextIntValue(0)
+				id = stream.nextIntValue(0)
 			} else if (key == "name") {
-				name = parser.nextTextValue()
+				name = stream.nextTextValue()
 			} else if (key == "children"){
-				checkToken parser, JsonToken.START_ARRAY
-				children = parseArray(parser)
+				checkToken JsonToken.START_ARRAY
+				children = parseArray()
 			} else {
 				// skip value for unknown keys
-				parser.nextToken()
+				stream.nextToken()
 			}
 			
 		}
 		new JsonLocation([id: id, name: name, children: children])
 	}
 	
-	def parseArray(JsonParser parser) {
+	def parseArray() {
 		def ret = []
-		while(true) {
-			// we use this token's value to determine
-			// whether the child array is finished or not
-			def nextToken = parser.nextToken()
-			
-			if (nextToken == JsonToken.START_OBJECT) {
-				ret.add parseLocation(parser)
-			} else if (nextToken == JsonToken.END_ARRAY) {
-				break
-			} else {
-				throw new IllegalStateException("Unexpectec token ${nextToken}. Expected ${JsonToken.START_OBJECT} or ${JsonToken.END_ARRAY}")
-			}
+		def nextToken
+		
+		while((nextToken = stream.nextToken()) != JsonToken.END_ARRAY) {
+			checkToken(nextToken, JsonToken.START_OBJECT)
+			ret.add parseLocation()
 		}
+		
 		ret
 	}
 	
-	def checkToken(JsonParser parser, JsonToken expected) {
-		checkToken parser.nextToken(), expected
+	def checkToken(JsonToken expected) {
+		checkToken stream.nextToken(), expected
 	}
 	
 	def checkToken(JsonToken actual, JsonToken expected) {

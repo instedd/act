@@ -50,7 +50,7 @@ describe Device do
 
     it "updates sick flag when confirmed sick" do
       c = FactoryGirl.create :case, sick: nil
-      c.confirm_sick!
+      c.follow_up_sick!
       expect(c.sick).to be(true)
     end
 
@@ -58,18 +58,25 @@ describe Device do
       c = FactoryGirl.create :case, sick: nil
 
       expect {
-        c.confirm_sick!
+        c.follow_up_sick!
       }.to change(Notification, :count).by(1)
 
       notification = Notification.last
       expect(notification.notification_type).to eq("case_confirmed_sick")
+
       expect(notification.metadata["id"].to_i).to eq(c.id)
+      expect(notification.metadata["patient_name"]).to eq(c.patient_name)
+      expect(notification.metadata["patient_phone_number"]).to eq(c.patient_phone_number)
+      expect(notification.metadata["symptoms"]).to eq(c.symptoms.to_json)
+      expect(notification.metadata["supervisor_name"]).to eq(c.supervisor_name)
+      expect(notification.metadata["supervisor_phone_number"]).to eq(c.supervisor_phone_number)
+      expect(notification.metadata["dialect_code"]).to eq(c.dialect_code)
     end
 
     it "does not create a notification if previously confirmed sick" do
       c = FactoryGirl.create :case, sick: true
 
-      expect { c.confirm_sick! }.not_to change(Notification, :count)
+      expect { c.follow_up_sick! }.not_to change(Notification, :count)
     end
 
   end
