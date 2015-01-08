@@ -1,0 +1,1 @@
+ALTER TABLE cases_files_cases ADD received TINYINT DEFAULT 0;

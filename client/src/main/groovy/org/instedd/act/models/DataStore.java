@@ -42,4 +42,8 @@ public interface DataStore {
 	
 	void registerFileSynced(String guid);
 	
+	void registerCasesFileCaseReceived(String guid);
+	
+	void registerProcessingOrImportedCasesFile(String guid);
+	
 }

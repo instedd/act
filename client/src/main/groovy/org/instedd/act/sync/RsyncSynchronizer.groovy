@@ -117,6 +117,7 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 						case null:
 							if(document.containsKey("guid")) {
 								dataStore.register(new Case([name: document.patient_name, phone: document.patient_phone, age: document.patient_age, gender: document.patient_gender, preferredDialect: document.dialect_code, reasons: document.symptoms, notes: document.note, id: document.guid, synced: true, updated: true]))
+								dataStore.registerCasesFileCaseReceived(document.guid)
 							}
 							if(document.containsKey("sick")) {
 								dataStore.updateSickCase(guid, document.sick)

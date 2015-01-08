@@ -7,13 +7,16 @@ import groovy.json.JsonSlurper
 import groovy.sql.Sql
 
 import org.instedd.act.db.DatabaseConnector
+import org.instedd.act.events.CasesFileUpdatedEvent
 import org.instedd.act.misc.DocumentExporter
 
+import com.google.common.eventbus.EventBus
 import com.google.inject.Inject
 
 class SqliteDataStore implements DataStore {
 	DatabaseConnector connector
 	@Inject DocumentExporter exporter
+	@Inject EventBus eventBus
 	Sql sql
 	
 	@Inject
@@ -110,9 +113,13 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public void associateCasesFile(String fileGuid, List<String> casesGuids) {
+		String joinedGuids = casesGuids.collect {guid -> "'${guid}'"}.join(",")
+		// Avoid using GStrings (${} interpolation) as it doesn't get along well with SQLite 
+		def previouslyReceivedCases = sql.rows("select guid from cases where guid in (" + joinedGuids +")").collect { row -> row.guid }
 		casesGuids.each { caseGuid ->
-			sql.dataSet("cases_files_cases").add([file_guid: fileGuid, case_guid: caseGuid])
+			sql.dataSet("cases_files_cases").add([file_guid: fileGuid, case_guid: caseGuid, received: previouslyReceivedCases.contains(caseGuid)])
 		}
+		this.registerProcessingOrImportedCasesFile(fileGuid)
 	}
 	
 	def rowsToCasesFiles = { rows ->
@@ -129,5 +136,21 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public void registerFileSynced(String guid) {
 		sql.execute("update cases_files set status = ${CasesFile.Status.UPLOADED} where guid = ${guid}")
+	}
+
+	@Override
+	public void registerCasesFileCaseReceived(String caseGuid) {
+		def fileGuid = sql.firstRow("select file_guid from cases_files_cases where case_guid = ${caseGuid} limit 1")?.file_guid
+		if(fileGuid) {
+			sql.execute("update cases_files_cases set received = ${true} where case_guid = ${caseGuid}")
+			this.registerProcessingOrImportedCasesFile(fileGuid)
+		}
+	}
+
+	@Override
+	public void registerProcessingOrImportedCasesFile(String guid) {
+		def pendingCases = sql.firstRow("select count(1) as pendingCases from cases_files_cases where file_guid = ${guid} and received = ${false}").pendingCases
+		sql.execute("update cases_files set status = ${pendingCases > 0 ? CasesFile.Status.PROCESSING : CasesFile.Status.IMPORTED} where guid = ${guid}")
+		eventBus.post(new CasesFileUpdatedEvent([guid: guid]))
 	}
 }

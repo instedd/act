@@ -54,7 +54,7 @@ class CaseList extends JFrame {
 	
 	CaseList(CaseListController controller) {
 		this.controller = controller
-		this.title = "Cases"
+		this.title = "ACT - Assisted Contact Tracing"
 		this.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 	}
 	
@@ -213,7 +213,7 @@ class CaseList extends JFrame {
 					status = "Processing"
 					break
 				case CasesFile.Status.IMPORTED:
-					status = "Imported"
+					status = "Import done"
 					break
 				case CasesFile.Status.ERROR:
 					status = "Error"
