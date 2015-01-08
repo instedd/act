@@ -95,6 +95,10 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 				def caseMatcher = filename =~ /case-(.+)\.json/
 				if (caseMatcher.matches()) {
 					dataStore.registerCaseSynced(caseMatcher[0][1])
+				} else {
+					def possibleGuid = filename[0..35]
+					dataStore.registerFileSynced(possibleGuid)
+					eventBus.post([guid: possibleGuid] as CasesFileUpdatedEvent)
 				}
 			}
 		})
@@ -152,12 +156,8 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	}
 
 	@Override
-	public void queueForSync(File document) {
-		String documentName = document.name
-		String documentPath = document.absolutePath 
-		String guid = UUID.randomUUID().toString()
-		dataStore.register(new CasesFile([name: documentName, path: documentPath, guid: guid]))
-		Files.copy(Paths.get(document.absolutePath), Paths.get(new File(new File(commandBuilder.outboxLocalDir), "${guid}-${documentName}").absolutePath))
+	public void queueForSync(String guid, File document) {
+		Files.copy(Paths.get(document.absolutePath), Paths.get(new File(new File(commandBuilder.outboxLocalDir), "${guid}-${document.name}").absolutePath))
 	}
 	
 }

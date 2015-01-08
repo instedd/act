@@ -1,6 +1,7 @@
 package org.instedd.act.controllers
 
 import org.instedd.act.events.CaseUpdatedEvent
+import org.instedd.act.events.CasesFileUpdatedEvent;
 import org.instedd.act.models.Case
 import org.instedd.act.models.CasesFile;
 import org.instedd.act.models.DataStore
@@ -153,8 +154,19 @@ class CaseListController {
 		caseList.updateMarkAsReadText()
 	}
 	
-	void syncCasesFile(File casesFile) {
-		synchronizer.queueForSync(casesFile)
+	void syncCasesFile(File document) {
+		String documentName = document.name
+		String documentPath = document.absolutePath
+		String guid = UUID.randomUUID().toString()
+		CasesFile file = new CasesFile([name: documentName, path: documentPath, guid: guid])
+		dataStore.register(file)
+		synchronizer.queueForSync(guid, document)
+		caseList.updateFiles(this.listFiles())
+	}
+	
+	@Subscribe
+	void onCasesFileUpdated(CasesFileUpdatedEvent event) {
+		caseList.updateFiles(this.listFiles())
 	}
 	
 }
