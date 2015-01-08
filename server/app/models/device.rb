@@ -40,6 +40,12 @@ class Device < ActiveRecord::Base
     export_document(document_name, document_content, device_guid)
   end
 
+  def self.sync_new_case(device_guid, case_guid, _case)
+    document_name = "case-#{case_guid}.json"
+
+    export_document(document_name, _case, device_guid)
+  end
+
   def self.init_sync_path(device_guid)
     device_sync_path = sync_path(device_guid)
 
