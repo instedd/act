@@ -236,8 +236,13 @@ class CaseList extends JFrame {
 		def filesGridPane = new JScrollPane(filesTable)
 		filesGridPane.alignmentX = Component.CENTER_ALIGNMENT
 		
-		filesContainer.add filesHeader
-		filesContainer.add uploadCasesFileButton
+		def filesTopBar = new JPanel()
+		filesTopBar.setLayout(new BoxLayout(filesTopBar, BoxLayout.X_AXIS))
+		filesTopBar.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
+		
+		filesTopBar.add filesHeader
+		filesTopBar.add uploadCasesFileButton
+		filesContainer.add filesTopBar
 		filesContainer.add filesGridPane
 		
 		
