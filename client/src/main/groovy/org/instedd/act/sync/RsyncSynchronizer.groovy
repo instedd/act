@@ -90,15 +90,19 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 	
 	public void uploadDocuments() {
 		this.sync(commandBuilder.buildUploadCommand(), { files ->
-			files.each { filename ->
+			files.each { String filename ->
 				logger.trace "Uploaded ${filename}"
 				def caseMatcher = filename =~ /case-(.+)\.json/
 				if (caseMatcher.matches()) {
 					dataStore.registerCaseSynced(caseMatcher[0][1])
 				} else {
-					def possibleGuid = filename[0..35]
-					dataStore.registerFileSynced(possibleGuid)
-					eventBus.post([guid: possibleGuid] as CasesFileUpdatedEvent)
+					if(filename.length() >= 36) {
+						def possibleGuid = filename[0..35]
+						dataStore.registerFileSynced(possibleGuid)
+						eventBus.post([guid: possibleGuid] as CasesFileUpdatedEvent)
+					} else {
+						logger.warn("Uploaded unknown file named ${filename}")
+					}
 				}
 			}
 		})
@@ -130,6 +134,19 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 							break
 					}
 					downloadedFile.delete()
+				} else {
+					def errorMatcher = filename =~ /^errored-(cases-)?file-(.+)\.json$/
+					if(errorMatcher.matches()) {
+						File downloadedFile = this.downloadedFile(filename)
+						if(errorMatcher[0][1]) {
+							String casesFileGuid = errorMatcher[0][2]
+							dataStore.registerFailedCasesFileByGuid(casesFileGuid)
+						} else {
+							String failedFileName = errorMatcher[0][2]
+							dataStore.registerFailedCasesFileByFileName(failedFileName)
+						}
+						downloadedFile.delete()
+					}
 				}
 			}
 		})

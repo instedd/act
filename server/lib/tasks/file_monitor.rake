@@ -9,6 +9,7 @@ namespace :act do
     @sync_directory = Settings.sync_directory
     @watch_expression = "#{@sync_directory}/*/inbox/*"
     @document_store_directory = "#{@sync_directory}/documents/"
+    @errored_store_directory = "#{@sync_directory}/errored/"
 
     init_sync_directory
     enqueue_preexisting_files
@@ -24,6 +25,7 @@ namespace :act do
   def init_sync_directory
     FileUtils.mkdir_p @sync_directory unless Dir.exists? @sync_directory
     FileUtils.mkdir_p @document_store_directory unless Dir.exists? @document_store_directory
+    FileUtils.mkdir_p @errored_store_directory unless Dir.exists? @errored_store_directory
   end
 
   def enqueue_preexisting_files
@@ -57,17 +59,17 @@ namespace :act do
       Case.save_from_sync_file(device_guid, file_content)
       File.delete(path)
     else
-      begin
-        spreadsheet = Roo::Spreadsheet.open(path)
-      rescue
-        notify_errored_file(path, "Unrecognized file")
-        return
-      end
       file_guid = filename[0..35]
       unless file_guid =~ /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i
         # ensure there's a file guid if client didn't send it
-        file_guid = SecureRandom.uuid
-        filename = "#{file_guid}-#{filename}"
+        notify_errored_file(device_guid, path, reason: "Cases file #{filename} doesn't include GUID", filename: filename)
+        return
+      end
+      begin
+        spreadsheet = Roo::Spreadsheet.open(path)
+      rescue
+        notify_errored_file(device_guid, path, reason: "Unrecognized file", guid: file_guid, filename: filename)
+        return
       end
       rows = spreadsheet_rows(spreadsheet)
       storage_path = "#{@document_store_directory}#{device_guid}-#{filename}"
@@ -171,9 +173,10 @@ namespace :act do
     hash.keys.find { |key| key.downcase.include? target_key }
   end
 
-  def notify_errored_file(path, reason)
-    Rails.logger.warn reason
-    # TODO: generate error notification to client
+  def notify_errored_file(device_guid, path, opts)
+    Rails.logger.warn opts[:reason]
+    File.rename path, "#{@errored_store_directory}#{device_guid}-#{opts[:filename]}"
+    Device.sync_errored_cases_file(device_guid, opts)
   end
 
   def notify_parsed_cases(cases_file)

@@ -153,4 +153,16 @@ class SqliteDataStore implements DataStore {
 		sql.execute("update cases_files set status = ${pendingCases > 0 ? CasesFile.Status.PROCESSING : CasesFile.Status.IMPORTED} where guid = ${guid}")
 		eventBus.post(new CasesFileUpdatedEvent([guid: guid]))
 	}
+
+	@Override
+	public void registerFailedCasesFileByGuid(String guid) {
+		sql.execute("update cases_files set status = ${CasesFile.Status.ERROR} where guid = ${guid}")
+		eventBus.post(new CasesFileUpdatedEvent([guid: guid]))
+	}
+
+	@Override
+	public void registerFailedCasesFileByFileName(String filename) {
+		sql.execute("update cases_files set status = ${CasesFile.Status.ERROR} where name = ${filename} and status <> ${CasesFile.Status.IMPORTED}")
+		eventBus.post(new CasesFileUpdatedEvent())
+	}
 }

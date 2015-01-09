@@ -46,4 +46,8 @@ public interface DataStore {
 	
 	void registerProcessingOrImportedCasesFile(String guid);
 	
+	void registerFailedCasesFileByGuid(String guid);
+	
+	void registerFailedCasesFileByFileName(String filename);
+	
 }

@@ -46,6 +46,16 @@ class Device < ActiveRecord::Base
     export_document(document_name, _case, device_guid)
   end
 
+  def self.sync_errored_cases_file(device_guid, opts)
+    document_name = if opts[:guid]
+      "errored-cases-file-#{opts[:guid]}.json"
+    else
+      "errored-file-#{opts[:filename]}.json"
+    end
+
+    export_document(document_name, [reason: opts[:reason]], device_guid)
+  end
+
   def self.init_sync_path(device_guid)
     device_sync_path = sync_path(device_guid)
 
