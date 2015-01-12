@@ -38,7 +38,7 @@ dependencies {
 }
 
 mainClassName = "org.instedd.act.App"
-def version = "development-${"git rev-parse --verify --short HEAD".execute().text.trim()}"
+def version = "1.0.7"
 println "Version ${version}"
 
 
