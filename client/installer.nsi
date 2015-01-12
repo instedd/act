@@ -92,6 +92,9 @@ Section "Install" Install
   SetOutPath "$INSTDIR\jre"
   File /r "jre1.7.0_72\*.*"
 
+  CreateDirectory "$INSTDIR\logs"
+  AccessControl::GrantOnFile "$INSTDIR\logs" "(BU)" "FullAccess"
+
 ; TODO: extract to a $INSTDIR\rsync subdir
   SetOutPath "$INSTDIR"
   File /r "cwRsync\*.*"

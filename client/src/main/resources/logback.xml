@@ -6,13 +6,13 @@
 	</appender>
 	
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>act.log</file>
+		<file>logs/act.log</file>
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{30} - %msg%n</pattern>
 		</encoder>
  
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>act.%i.log.zip</FileNamePattern>
+			<FileNamePattern>logs/act.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>

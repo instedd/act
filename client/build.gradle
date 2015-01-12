@@ -134,6 +134,10 @@ task prepareNsis {
         into "${workDir}/nsis"
     }
     copy {
+        from file("dist/nsis/plugins/AccessControl.dll")
+        into "${workDir}/nsis"
+    }
+    copy {
         from "${buildDir}/cwRsync/cwRsync/bin/"
         into "${workDir}/cwRsync"
     }
