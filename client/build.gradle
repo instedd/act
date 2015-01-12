@@ -59,8 +59,8 @@ String getViVersion(String version) {
 }
 
 task downloadWinrun4j (dependsOn: 'makeBuildDir') << {
-    def filename = "winrun4J-0.4.5.zip"
-    def url = "https://www.dropbox.com/s/j7z19jksvrjy5mg/winrun4J-0.4.5.zip?dl=1"
+    def filename = "winrun4J-0.4.4.zip"
+    def url = "https://www.dropbox.com/s/i2msc0oi943o5hl/winrun4J-0.4.4.zip?dl=1"
     def zipFile = new File(buildDir, filename)
     def zipDest = new File(buildDir, "winrun4j")
     if (!buildDir.exists()) {
