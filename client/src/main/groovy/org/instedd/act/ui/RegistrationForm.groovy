@@ -46,6 +46,7 @@ class RegistrationForm extends JFrame {
 	void build() {
 		add(createForm())
 		pack()
+		setLocationRelativeTo(null)
 		visible = true
 	}
 	

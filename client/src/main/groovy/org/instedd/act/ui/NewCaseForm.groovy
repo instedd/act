@@ -121,6 +121,7 @@ class NewCaseForm extends JDialog {
 		
 		add(container)
 		pack()
+		setLocationRelativeTo(null)
 		visible = true
 	}
 	
