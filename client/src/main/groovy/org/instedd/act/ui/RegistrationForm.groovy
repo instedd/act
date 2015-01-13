@@ -110,6 +110,8 @@ class RegistrationForm extends JFrame {
 		submitButton.addActionListener { controller.submit() }
 		form.add submitButton, c
 		
+		this.getRootPane().setDefaultButton(submitButton)
+		
 		form
 	}
 	
