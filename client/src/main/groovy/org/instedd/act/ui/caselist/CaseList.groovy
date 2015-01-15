@@ -43,10 +43,11 @@ class CaseList extends JFrame {
 		["Preferred Dialect", 	String.class],
 		["Reasons", 			String.class],
 		["Notes", 				String.class],
-		["Follow up",			String.class]
+		["Follow up",			String.class],
+		["Uploaded",			String.class]
 	]
 	
-	def toRow = { Case c -> [c.updated ? "*" : "", c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel()] }
+	def toRow = { Case c -> [c.updated ? "*" : "", c.name, c.phone, c.age, c.gender, c.preferredDialect, c.reasons.join(", "), c.notes, c.followUpLabel(), c.synced ? "Yes" : ""] }
 	
 	CaseList(CaseListController controller) {
 		this.controller = controller

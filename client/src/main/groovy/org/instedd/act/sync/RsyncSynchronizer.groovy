@@ -88,7 +88,9 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 				logger.trace "Uploaded ${filename}"
 				def caseMatcher = filename =~ /case-(.+)\.json/
 				if (caseMatcher.matches()) {
-					dataStore.registerCaseSynced(caseMatcher[0][1])
+					String caseGuid = caseMatcher[0][1]
+					dataStore.registerCaseSynced(caseGuid)
+					eventBus.post(new CaseUpdatedEvent([guid: caseGuid]))
 				}
 			}
 		})
