@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { :invitations => 'users/invitations' }
+  devise_for :users, :controllers => { :invitations => 'users/invitations' }, :skip => [:registrations]                                          
+    as :user do
+      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+      patch 'users/:id' => 'devise/registrations#update', :as => 'user_registration'            
+    end
 
   scope :api do
     scope :v1 do
