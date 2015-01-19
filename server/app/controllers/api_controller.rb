@@ -18,7 +18,7 @@ class ApiController < ApplicationController
     ActiveRecord::Base.transaction do
       d = Device.create public_key: params["publicKey"],\
                         reported_organization_name: params["deviceInfo"]["organization"],\
-                        location_id: params["deviceInfo"]["location"].to_i,\
+                        location_code: params["deviceInfo"]["location"].to_i,\
                         supervisor_name: params["deviceInfo"]["supervisorName"],\
                         supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 

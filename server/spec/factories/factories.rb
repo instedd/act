@@ -2,7 +2,7 @@ FactoryGirl.define do
 
   factory :non_approved_device, class: Device do
     reported_organization_name       "instedd"
-    location_id                       123
+    location_code                     123
     supervisor_name                   "John Doe"
     supervisor_phone_number           "123"
     
