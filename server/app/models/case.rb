@@ -1,4 +1,8 @@
+require 'elasticsearch/model'
+
 class Case < ActiveRecord::Base
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   belongs_to :device
   
@@ -10,6 +14,13 @@ class Case < ActiveRecord::Base
            :supervisor_name,
            :supervisor_phone_number,
            to: :device
+
+  settings do
+    mappings dynamic: 'false' do
+      indexes :guid
+      indexes :device
+    end
+  end
 
   def self.save_from_sync_file(device_guid, file_content)
     json = JSON.parse file_content
@@ -75,4 +86,21 @@ class Case < ActiveRecord::Base
     end
   end
 
+  def as_indexed_json(options={})
+    {
+      uuid: guid,
+      device_uuid: device.guid,
+      institution_id: device.organization_id,
+      location: {
+        # FIXME: implement locations mapping
+      },
+      age: patient_age,
+      gender: patient_gender,
+      created_at: created_at,
+      updated_at: updated_at
+    }
+  end
+
 end
+
+Case.import

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/instedd/cdx-api-elasticsearch
+  revision: 6839a55c76ecc95539c5a01c4f7e53a3b2cd5af3
+  specs:
+    cdx-api-elasticsearch (0.0.1)
+      activesupport
+      elasticsearch
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +64,19 @@ GEM
       actionmailer (>= 3.2.6, < 5)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-model (0.1.6)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.6)
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -63,8 +84,11 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     filewatcher (0.3.5)
       trollop (~> 2.0)
+    hashie (3.3.2)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.4)
@@ -80,6 +104,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     pry (0.10.1)
@@ -167,9 +192,12 @@ PLATFORMS
 
 DEPENDENCIES
   cancancan
+  cdx-api-elasticsearch!
   coffee-rails (~> 4.0.0)
   devise
   devise_invitable
+  elasticsearch-model
+  elasticsearch-rails
   factory_girl_rails (~> 4.0)
   filewatcher
   jbuilder (~> 2.0)
