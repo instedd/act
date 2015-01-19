@@ -33,6 +33,11 @@ gem 'devise_invitable'
 
 gem 'cancancan'
 
+gem 'cdx-api-elasticsearch', :git => 'https://github.com/instedd/cdx-api-elasticsearch'
+
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-byebug'
