@@ -4,7 +4,7 @@ describe ApiController, type: :controller do
 
   let(:device) do
     FactoryGirl.create :device, reported_organization_name: "instedd",\
-                                location_id: 123,\
+                                location_code: 123,\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"
   end

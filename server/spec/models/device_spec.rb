@@ -5,7 +5,7 @@ describe Device do
   describe "creation" do
 
     let(:minimum_attributes) do
-      attrs = [:reported_organization_name, :location_id, :supervisor_name, :supervisor_phone_number, :public_key]
+      attrs = [:reported_organization_name, :location_code, :supervisor_name, :supervisor_phone_number, :public_key]
       FactoryGirl.attributes_for(:device).slice(*attrs)
     end
 

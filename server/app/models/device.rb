@@ -8,7 +8,7 @@ class Device < ActiveRecord::Base
   validates_presence_of [
     :public_key,
     :reported_organization_name,
-    :location_id,
+    :location_code,
     :supervisor_name,
     :supervisor_phone_number
   ]
