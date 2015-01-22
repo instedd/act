@@ -1,3 +1,5 @@
 user:
   admin_username: act_admin@instedd.org
   admin_password: Instedd123
+
+notifiable_diseases_url: "/nndd/"

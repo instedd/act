@@ -16,9 +16,21 @@ class Case < ActiveRecord::Base
            to: :device
 
   settings do
-    mappings dynamic: 'false' do
-      indexes :guid
-      indexes :device
+    mappings do
+      indexes :age_group, type: 'string', index: 'not_analyzed'
+      indexes :gender, type: 'string', index: 'not_analyzed'
+      indexes :location, type: 'nested' do
+        indexes :admin_level_0, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_1, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_2, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_3, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_4, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_5, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_6, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_7, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_8, type: 'string', index: 'not_analyzed'
+        indexes :admin_level_9, type: 'string', index: 'not_analyzed'
+      end
     end
   end
 
@@ -91,16 +103,59 @@ class Case < ActiveRecord::Base
       uuid: guid,
       device_uuid: device.guid,
       institution_id: device.organization_id,
-      location: {
-        # FIXME: implement locations mapping
-      },
-      age: patient_age,
-      gender: patient_gender,
+      gender: gender(patient_gender),
       created_at: created_at,
-      updated_at: updated_at
+      updated_at: updated_at,
+      start_time: created_at, # FIXME: receive and use test start time
+      assay_name: 'ebola',
+      result: sick ? 'positive' : 'negative',
+      age_group: age_group(patient_age),
+      location_id: device.location_code,
+      parent_locations: [
+        device.location_code # FIXME: add ancestor locations
+      ],
+      location: {
+        admin_level_2: device.location_code
+      }
     }
+  end
+
+  def gender real_gender
+    if real_gender.downcase.starts_with? 'f'
+      'F'
+    elsif real_gender.downcase.starts_with? 'm'
+      'M'
+    else
+      'U'
+    end
+  end
+
+  def age_group age
+    case age
+    when 0..1
+      "0-2"
+    when 2..4
+      "2-4"
+    when 5..8
+      "5-8"
+    when 9..17
+      "9-17"
+    when 18..24
+      "18-24"
+    when 25..49
+      "25-49"
+    when 50..64
+      "50-64"
+    when 65..74
+      "65-74"
+    when 75..84
+      "75-84"
+    else
+      age >= 85 ? "85+" : ""
+    end
   end
 
 end
 
+Case.__elasticsearch__.create_index!
 Case.import
