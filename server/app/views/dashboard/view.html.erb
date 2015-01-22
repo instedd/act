@@ -1,0 +1,73 @@
+<div id="nndd">
+  <div class="def">
+    <iframe frameborder="0" width="100%"></iframe>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  (function() {
+
+    var ifr = $("#nndd .def iframe");
+
+    var iframeSrc = "<%= Settings.notifiable_diseases_url %>";
+    var src = iframeSrc;
+    if (window.location.hash) {
+      src += "/" + window.location.hash;
+    }
+    ifr[0].src = src;
+
+    function isOriginValid(origin) {
+      var parser = document.createElement('a');
+      parser.href = iframeSrc;
+
+      return origin == parser.origin ||
+        origin == window.location.origin;
+    }
+
+    var reloading = false;
+    $(window).on('message', function(event) {
+      event = event.originalEvent;
+      if (event.origin && isOriginValid(event.origin)) {
+        if (event.data == 'reload-on-auth-failed' && !reloading) {
+          console.log('Reloading on auth failure message received from iframe');
+          window.location.reload();
+          reloading = true;
+        }
+      } else {
+        console.error('Ignoring invalid message received', event);
+      }
+    });
+
+    function nnddHeight() {
+      return $(window).height()
+               - $("#header").outerHeight()
+               - $("#footer").outerHeight()
+               - $("#nndd .nnddtabs").outerHeight();
+    }
+
+    function resizeIframe() {
+      ifr.height(nnddHeight());
+    }
+
+    // resize when iframe content is rendered
+    ifr.load(function() {
+      resizeIframe();
+    });
+
+    $(document).ready(function() {
+
+      $(".separator").remove();
+
+      // resize every time the window is resized
+      $(window).resize(function() {
+        resizeIframe();
+      });
+
+      // resize when main document is rendered
+      resizeIframe();
+
+    });
+
+  })();
+</script>

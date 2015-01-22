@@ -22,6 +22,19 @@ Rails.application.routes.draw do
   resources :users,         only: [:index]
   resources :api_keys,      only: [:index, :create, :destroy]
 
+  get 'dashboard' => 'dashboard#view'
+
+  namespace :cdx, defaults: { format: 'json' } do
+    namespace :v1 do
+      match 'events(.:format)' => "events#index", via: [:get, :post]
+      resources :events, controller: :events do
+        collection do
+          get :schema
+        end
+      end
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

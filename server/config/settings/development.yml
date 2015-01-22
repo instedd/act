@@ -2,3 +2,5 @@ authorized_keys_file: <%= File.join(ENV["HOME"], ".ssh/authorized_keys") %>
 rrsync_location: <%= File.join(ENV["HOME"], "bin", "rrsync") %>
 
 sync_directory: "data"
+
+notifiable_diseases_url: "http://localhost:9000"
