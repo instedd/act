@@ -1,46 +1,55 @@
 <% if @confirmed_devices_count > 0 -%>
-  <%= link_to 'Back', devices_path, class: 'btn btn-primary pull-right' %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'Back', devices_path, class: 'btn btn-primary pull-right' %>
+    </div>
+  </div>
 <% end %>
 
-<table id="devices-confirm-table" class="table table-hover">
-  <caption>Please confirm the following devices to allow them to upload new cases.</caption>
-  <thead>
-    <th>Supervisor name</th>
-    <th>Supervisor phone number</th>
-    <th>Reported organization</th>
-    <th>Real organization</th>
-  </thead>
-  <tbody>
-  <% for @device in @devices %>
-  <tr>
-  
-    <td><%= @device.supervisor_name %></td>
-    <td><%= @device.supervisor_phone_number %></td>
-    <td><%= @device.reported_organization_name %></td>
-    <td class="organization-confirmation">
-      <%= form_for(@device, url: device_path(@device), html: { method: :put, class: "form-inline" }) do |f| %>
-      
-        <div class="form-group">
-          <%= collection_select(:device, :organization_id,\
-              Organization.all, :id, :name,\
-              { include_blank: true },\
-              id: 'organization-input', class: 'form-control input-sm') %>
-        </div>
-        <%= f.hidden_field :confirmed, :value => true %>
-        <%= f.submit "Confirm", :class => 'btn btn-default btn-sm btn-success' %>
-        <%=
-          link_to "Dismiss",
-          device_path(@device) ,
-          method: 'delete',
-          class: 'btn btn-default btn-sm btn-warning',
-          data: { confirm: "Dismissing this devices will prevent it from upload cases in the future. Are you sure?" }
-        %>
-      <% end %>
-    </td>
-    <td>
-  
-  </tr>
-  <% end %>
-  </tbody>
-</table>
+<br>
 
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table id="devices-confirm-table" class="table table-hover act-table">
+        <caption>Please confirm the following devices to allow them to upload new cases.</caption>
+        <thead>
+          <th>Supervisor name</th>
+          <th>Supervisor phone number</th>
+          <th>Reported organization</th>
+          <th>Real organization</th>
+        </thead>
+        <tbody>
+        <% for @device in @devices %>
+        <tr>
+
+          <td><%= @device.supervisor_name %></td>
+          <td><%= @device.supervisor_phone_number %></td>
+          <td><%= @device.reported_organization_name %></td>
+          <td class="organization-confirmation">
+            <%= form_for(@device, url: device_path(@device), html: { method: :put, class: "form-inline" }) do |f| %>
+
+              <div class="form-group">
+                <%= collection_select(:device, :organization_id,\
+                    Organization.all, :id, :name,\
+                    { include_blank: true },\
+                    id: 'organization-input', class: 'form-control input-sm') %>
+              </div>
+              <%= f.hidden_field :confirmed, :value => true %>
+              <%= f.submit "Confirm", :class => 'btn btn-default btn-sm btn-primary' %>
+              <%=
+                link_to "Dismiss",
+                device_path(@device) ,
+                method: 'delete',
+                class: 'btn btn-default btn-sm',
+                data: { confirm: "Dismissing this devices will prevent it from upload cases in the future. Are you sure?" }
+              %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

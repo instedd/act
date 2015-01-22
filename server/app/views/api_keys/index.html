@@ -1,36 +1,49 @@
 <% if @api_keys.any? %>
-<%= link_to 'Generate API Key', api_keys_path, method: 'post', class: 'btn btn-primary pull-right' %>
-<table class="table table-hover">
-  <thead>
-    <th>Access token</th>
-    <th>Creation date</th>
-    <th>Actions</th>
-  </thead>
-  <tbody>
-  <% for @api_key in @api_keys %>
-  <tr>
-  
-    <td><%= @api_key.access_token %></td>
-    <td><%= @api_key.created_at %></td>
-    <td>
-      <%=
-        link_to "Delete",
-        api_key_path(@api_key) ,
-        method: 'delete',
-        class: 'btn btn-default btn-sm btn-danger',
-        data: { confirm: "Deleting this API key may cause applications that depend on it to malfunction. Are you sure?" }
-      %>
-    </td>
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'Generate API Key', api_keys_path, method: 'post', class: 'btn btn-primary pull-right' %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-hover act-table">
+          <thead>
+            <th>Access token</th>
+            <th>Creation date</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+          <% for @api_key in @api_keys %>
+          <tr>
 
-  </tr>
-  <% end %>
-  </tbody>
-</table>
+            <td><%= @api_key.access_token %></td>
+            <td><%= @api_key.created_at %></td>
+            <td>
+              <%=
+                link_to "Delete",
+                api_key_path(@api_key) ,
+                method: 'delete',
+                class: 'btn btn-default btn-sm btn-danger',
+                data: { confirm: "Deleting this API key may cause applications that depend on it to malfunction. Are you sure?" }
+              %>
+            </td>
+
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 <% else %>
-
-<div class="well text-center">
-  <h5>There are no API keys yet. <%= link_to 'Create one', api_keys_path, method: 'post' %>.</h5>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well text-center">
+        <h5>There are no API keys yet. <%= link_to 'Create one', api_keys_path, method: 'post' %>.</h5>
+      </div>
+    </div>
 </div>
-
 <% end %>

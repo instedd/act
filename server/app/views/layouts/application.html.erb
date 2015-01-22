@@ -10,11 +10,11 @@
 
 <%= flash_message %>
 
-<div class="container">
-
 <% unless current_user.nil? -%>
 <%= render "shared/navbar" %>
 <% end %>
+
+<div class="container-fluid">
 
 
 <%= yield %>

@@ -1,37 +1,50 @@
 <% if @organizations.any? %>
-<%= link_to 'New organization', new_organization_path, class: 'btn btn-primary pull-right' %>
-<table class="table table-hover">
-  <thead>
-    <th>Name</th>
-    <th>Creation date</th>
-    <th>Action</th>
-  </thead>
-  <tbody>
-  <% for @organization in @organizations %>
-  <tr>
-  
-    <td><%= @organization.name %></td>
-    <td><%= @organization.created_at %></td>
-    <td>
-      <%=
-         link_to 'Delete',
-                 organization_path(@organization),
-                 method: 'delete',
-                 data: { confirm: "Are you sure you want to delete the #{@organization.name} organization?" },
-                 class: 'btn btn-default btn-sm btn-danger',
-                 disabled: !@organization.can_be_deleted?
-      %>
-    </td>
-  
-  </tr>
-  <% end %>
-  </tbody>
-</table>
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'New organization', new_organization_path, class: 'btn btn-primary pull-right' %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-hover act-table">
+          <thead>
+            <th>Name</th>
+            <th>Creation date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <% for @organization in @organizations %>
+              <tr>
+                <td><%= @organization.name %></td>
+                <td><%= @organization.created_at %></td>
+                <td>
+                  <%=
+                     link_to 'Delete',
+                             organization_path(@organization),
+                             method: 'delete',
+                             data: { confirm: "Are you sure you want to delete the #{@organization.name} organization?" },
+                             class: 'btn btn-default btn-sm btn-danger',
+                             disabled: !@organization.can_be_deleted?
+                  %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 <% else %>
 
-<div class="well text-center">
-  <h5>There are no organizations yet. <%= link_to 'Create one', new_organization_path %>.</h5>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well text-center">
+        <h5>There are no organizations yet. <%= link_to 'Create one', new_organization_path %>.</h5>
+      </div>
+    </div>
+  </div>
 
 <% end %>

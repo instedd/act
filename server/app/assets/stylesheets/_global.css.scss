@@ -1,3 +1,32 @@
+@import 'mixins';
+
+.navbar-default {
+  @include gradient-vertical-three-colors(#ffffff, #fcfcfc, 50%, #f0f0f0);
+  @include border-radius(none);
+  border-bottom: 1px solid #d5d5d5;
+
+  .navbar-header {
+    img {
+      margin: 10px 20px;
+    }
+  }
+  .navbar-nav > li > a {
+    color: #2c3e50;
+  }
+  .navbar-nav > .active > a {
+    color: #00AEEF;
+  }
+}
+
+.btn-primary {
+  background-color: #2C3E50;
+  border-color: #2C3E50;
+}
+
+.table-responsive {
+  border: none;
+}
+
 .flash {
   display: block;
   position: absolute;
@@ -9,4 +38,38 @@
   width: 500px;
   margin: 15px auto;
   z-index: 1000;
+}
+
+.act-table {
+  background: #f8f8f8;
+  thead {
+    background: #00AEEF;
+    overflow: hidden;
+
+    tr:first-child {
+      th:first-child {
+        @include border-radius(4px 0 0 0);
+      }
+      th:last-child {
+        @include border-radius(0 4px 0 0);
+      }
+    }
+    th {
+      color: #ffffff;
+      font-weight: normal;
+    }
+  }
+  tbody {
+    tr:last-child {
+      td:first-child {
+        @include border-radius(0 0 0 4px);
+      }
+      td:last-child {
+        @include border-radius(0 0 4px 0);
+      }
+    }
+    > tr > td {
+      border-top-color: #ffffff;
+    }
+  }
 }
