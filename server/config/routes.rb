@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'devices#index'
+  root 'dashboard#view'
 
   resources :devices,       only: [:index, :update, :destroy]
   resources :organizations, only: [:index, :new, :create, :destroy]
