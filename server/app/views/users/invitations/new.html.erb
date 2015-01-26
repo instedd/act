@@ -1,44 +1,57 @@
-<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post, :class => 'form-horizontal'} do |f| %>
-  <%= devise_error_messages! %>
-  <legend>New user</legend>
+<div class="row">
+  <div class="col-md-5">
 
-  <div class="form-group">
+    <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post, :class => 'form-horizontal'} do |f| %>
 
-    <% resource.class.invite_key_fields.each do |field| -%>
-      <div class="row">
-        <div class="col-sm-4">
-          <%= f.label field, class: 'col-sm-4 control-label' %>
-          <div class="col-sm-8">
-            <%= f.text_field field, class: 'form-control' %>
+      <%= devise_error_messages! %>
+
+      <legend>New user</legend>
+
+      <div class="well-white">
+
+        <div class="form-group">
+
+          <% resource.class.invite_key_fields.each do |field| -%>
+            <div class="row">
+              <div class="col-sm-12">
+                <%= f.label field, class: 'col-sm-2 control-label' %>
+                <div class="col-sm-9">
+                  <%= f.text_field field, class: 'form-control' %>
+                </div>
+              </div>
+            </div>
+          <% end -%>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :role, class: 'col-sm-2 control-label' %>
+              <div class="col-sm-9">
+                <%= select_tag(:role,\
+                               options_for_select([["Administrator", "admin"], ["Organization user", "other"]]),\
+                               id: 'role-input', class: 'form-control') %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    <% end -%>
 
-    <div class="row">
-      <div class="col-sm-4">
-        <%= f.label :role, class: 'col-sm-4 control-label' %>
-        <div class="col-sm-8">
-          <%= select_tag(:role,\
-                         options_for_select([["Administrator", "admin"], ["Organization user", "other"]]),\
-                         id: 'role-input', class: 'form-control') %>
-        </div>
-      </div>
-    </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :organization, class: 'col-sm-2 control-label' %>
+              <div class="col-sm-9">
+                <%= collection_select(:user, :organization_id,\
+                                      Organization.all, :id, :name,\
+                                      { include_blank: true },\
+                                      id: 'organization-input', class: 'form-control') %>
+              </div>
+            </div>
+          </div>
 
-    <div class="row">
-      <div class="col-sm-4">
-        <%= f.label :organization, class: 'col-sm-4 control-label' %>
-        <div class="col-sm-8">
-          <%= collection_select(:user, :organization_id,\
-                                Organization.all, :id, :name,\
-                                { include_blank: true },\
-                                id: 'organization-input', class: 'form-control') %>
         </div>
       </div>
-    </div>
+
+      <button type="submit" class="btn btn-primary">Send invitation</button>
+      <%= link_to 'Cancel', users_path, class: 'btn btn-link' %>
+
+    <% end %>
 
   </div>
-
-  <button type="submit" class="btn btn-primary">Send invitation</button>
-<% end %>
+</div>
