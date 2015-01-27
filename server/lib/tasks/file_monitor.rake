@@ -48,16 +48,20 @@ namespace :act do
   end
 
   def process_file(path)
-    file_content = File.read(path)
-    parts = path.split(File::SEPARATOR).reverse
-    filename = parts[0]
-    device_id = parts[2]
+    begin
+      file_content = File.read(path)
+      parts = path.split(File::SEPARATOR).reverse
+      filename = parts[0]
+      device_id = parts[2]
 
-    if filename.match(/case.*/)
-      Case.save_from_sync_file(device_id, file_content)
-      File.delete(path)
-    else
-      Rails.logger.warn "Unrecognized file was synchronized by client: #{filename}"      
+      if filename.match(/case.*/)
+        Case.save_from_sync_file(device_id, file_content)
+        File.delete(path)
+      else
+        Rails.logger.warn "Unrecognized file was synchronized by client: #{filename}"      
+      end
+    rescue => exception
+      Rails.logger.error "Couldn't process #{path} - aborted with exception #{exception}"
     end
   end
 
