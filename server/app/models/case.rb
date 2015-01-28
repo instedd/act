@@ -6,6 +6,8 @@ class Case < ActiveRecord::Base
 
   belongs_to :device
 
+  after_save :update_index
+
   validates_presence_of :guid
   validates_presence_of :device
 
@@ -149,6 +151,10 @@ class Case < ActiveRecord::Base
     else
       age >= 85 ? "85+" : ""
     end
+  end
+
+  def update_index
+    self.__elasticsearch__.index_document
   end
 
 end
