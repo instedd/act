@@ -5,6 +5,8 @@ class Device < ActiveRecord::Base
 
   validate :check_public_key
 
+  has_one :location, primary_key: :location_code, foreign_key: :code
+
   validates_presence_of [
     :public_key,
     :reported_organization_name,

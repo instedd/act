@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119171455) do
+ActiveRecord::Schema.define(version: 20150126201302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,16 +38,6 @@ ActiveRecord::Schema.define(version: 20150119171455) do
     t.datetime "updated_at"
     t.string   "guid"
     t.boolean  "sick"
-    t.integer  "cases_file_id"
-  end
-
-  create_table "cases_files", force: true do |t|
-    t.string   "guid"
-    t.string   "file",       null: false
-    t.integer  "device_id"
-    t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "devices", force: true do |t|
@@ -65,6 +55,11 @@ ActiveRecord::Schema.define(version: 20150119171455) do
   end
 
   add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree
+
+  create_table "locations", force: true do |t|
+    t.string "code"
+    t.text   "parents"
+  end
 
   create_table "notifications", force: true do |t|
     t.string   "notification_type", null: false

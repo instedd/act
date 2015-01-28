@@ -5,7 +5,7 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   belongs_to :device
-  
+
   validates_presence_of :guid
   validates_presence_of :device
 
@@ -111,12 +111,8 @@ class Case < ActiveRecord::Base
       result: sick ? 'positive' : 'negative',
       age_group: age_group(patient_age),
       location_id: device.location_code,
-      parent_locations: [
-        device.location_code # FIXME: add ancestor locations
-      ],
-      location: {
-        admin_level_2: device.location_code
-      }
+      parent_locations: device.location.hierarchy,
+      location: device.location.detailed_hierarchy
     }
   end
 
