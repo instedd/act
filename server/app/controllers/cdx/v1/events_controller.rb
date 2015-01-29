@@ -37,12 +37,11 @@ class Cdx::V1::EventsController < ApplicationController
       "resolution": "day"
     },
     "gender": {
-      "title": "Sex",
+      "title": "Gender",
       "type": "string",
       "enum": [
         "M",
-        "F",
-        "U"
+        "F"
       ],
       "values": {
         "M": {
@@ -50,9 +49,6 @@ class Cdx::V1::EventsController < ApplicationController
         },
         "F": {
           "name": "Female"
-        },
-        "U": {
-          "name": "Unknown"
         }
       }
     },
@@ -133,7 +129,7 @@ class Cdx::V1::EventsController < ApplicationController
           "name": "Not sick"
         },
         "unknown": {
-          "name": "Unknown"
+          "name": "N/A"
         }
       }
     },
