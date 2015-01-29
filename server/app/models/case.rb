@@ -106,14 +106,14 @@ class Case < ActiveRecord::Base
       uuid: guid,
       device_uuid: device.guid,
       institution_id: device.organization_id,
-      gender: gender(patient_gender),
+      gender: gender,
       created_at: created_at,
       updated_at: updated_at,
       start_time: created_at, # FIXME: receive and use test start time
       assay_name: 'ebola',
       result: 'positive',
       sick: sick_status,
-      age_group: age_group(patient_age),
+      age_group: age_group,
       location_id: device.location_code,
       parent_locations: device.location.hierarchy,
       location: device.location.detailed_hierarchy
@@ -131,18 +131,18 @@ class Case < ActiveRecord::Base
     end
   end
 
-  def gender real_gender
-    if real_gender.downcase.starts_with? 'f'
+  def gender
+    if patient_gender.downcase.starts_with? 'f'
       'F'
-    elsif real_gender.downcase.starts_with? 'm'
+    elsif patient_gender.downcase.starts_with? 'm'
       'M'
     else
       'U'
     end
   end
 
-  def age_group age
-    case age
+  def age_group
+    case patient_age
     when 0..1
       "0-2"
     when 2..4
@@ -162,7 +162,7 @@ class Case < ActiveRecord::Base
     when 75..84
       "75-84"
     else
-      age >= 85 ? "85+" : ""
+      patient_age >= 85 ? "85+" : ""
     end
   end
 
