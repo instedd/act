@@ -104,32 +104,22 @@ class Cdx::V1::EventsController < ApplicationController
       "title": "Result",
       "type": "string",
       "enum": [
-        "positive"
-      ],
-      "values": {
-        "positive": {
-          "name": "Positive",
-          "kind": "positive"
-        }
-      }
-    },
-    "sick": {
-      "title": "Sick",
-      "type": "string",
-      "enum": [
         "sick",
         "not_sick",
         "unknown"
       ],
       "values": {
         "sick": {
-          "name": "Sick"
+          "name": "Sick",
+          "kind": "positive"
         },
         "not_sick": {
-          "name": "Not sick"
+          "name": "Not sick",
+          "kind": "negative"
         },
         "unknown": {
-          "name": "N/A"
+          "name": "N/A",
+          "kind": "negative"
         }
       }
     },
