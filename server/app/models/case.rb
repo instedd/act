@@ -21,6 +21,7 @@ class Case < ActiveRecord::Base
     mappings do
       indexes :age_group, type: 'string', index: 'not_analyzed'
       indexes :gender, type: 'string', index: 'not_analyzed'
+      indexes :sick, type: 'string', index: 'not_analyzed'
       indexes :location, type: 'nested' do
         indexes :admin_level_0, type: 'string', index: 'not_analyzed'
         indexes :admin_level_1, type: 'string', index: 'not_analyzed'
@@ -110,12 +111,24 @@ class Case < ActiveRecord::Base
       updated_at: updated_at,
       start_time: created_at, # FIXME: receive and use test start time
       assay_name: 'ebola',
-      result: sick ? 'positive' : 'negative',
+      result: 'positive',
+      sick: sick_status,
       age_group: age_group(patient_age),
       location_id: device.location_code,
       parent_locations: device.location.hierarchy,
       location: device.location.detailed_hierarchy
     }
+  end
+
+  def sick_status
+    case sick
+    when true
+      'sick'
+    when false
+      'not_sick'
+    else
+      'unknown'
+    end
   end
 
   def gender real_gender
