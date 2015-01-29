@@ -55,7 +55,8 @@ class Case < ActiveRecord::Base
                  patient_gender: json["gender"],\
                  dialect_code: json["dialect_code"],\
                  symptoms: json["symptoms"],\
-                 note: json["note"]
+                 note: json["note"],\
+                 report_time: json["report_time"]
   end
 
   def follow_up_not_sick!
@@ -109,7 +110,7 @@ class Case < ActiveRecord::Base
       gender: gender,
       created_at: created_at,
       updated_at: updated_at,
-      start_time: created_at, # FIXME: receive and use test start time
+      start_time: report_time || created_at,
       assay_name: 'ebola',
       result: 'positive',
       sick: sick_status,

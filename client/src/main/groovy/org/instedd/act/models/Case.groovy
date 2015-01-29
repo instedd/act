@@ -16,6 +16,7 @@ class Case {
 	Boolean sick
 	Boolean synced
 	Boolean updated
+	Date reportTime = new Date()
 
 	String followUpLabel() {
 		if (sick == null) {
@@ -37,7 +38,8 @@ class Case {
 		gender: gender,
 		dialect_code: preferredDialect,
 		symptoms: reasons,
-		note: notes
+		note: notes,
+		report_time: reportTime
 		json
 	}
 
