@@ -116,8 +116,13 @@ class Case < ActiveRecord::Base
       age_group: age_group,
       location_id: device.location_code,
       parent_locations: device.location.hierarchy,
+      symptoms: formatted_symptoms,
       location: device.location.detailed_hierarchy
     }
+  end
+
+  def formatted_symptoms
+    symptoms.map { |symptom| symptom.parameterize.underscore }
   end
 
   def sick_status

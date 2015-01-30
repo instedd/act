@@ -123,6 +123,50 @@ class Cdx::V1::EventsController < ApplicationController
         }
       }
     },
+    "symptoms": {
+      "title": "Symptoms",
+      "type": "String",
+      "enum": [
+        "fever",
+        "severe_headache",
+        "muscle_pain",
+        "weakness",
+        "fatigue",
+        "diarrhea",
+        "vomiting",
+        "abdominal_stomach_pain",
+        "unexplained_hemorrhage_bleeding_or_bruising"
+      ],
+      "values": {
+        "fever": {
+          "name": "Fever"
+        },
+        "severe_headache": {
+          "name": "Severe headache"
+        },
+        "muscle_pain": {
+          "name": "Muscle pain"
+        },
+        "weakness": {
+          "name": "Weakness"
+        },
+        "fatigue": {
+          "name": "Fatigue"
+        },
+        "diarrhea": {
+          "name": "Diarrhea"
+        },
+        "vomiting": {
+          "name": "Vomiting"
+        },
+        "abdominal_stomach_pain": {
+          "name": "Abdominal stomach pain"
+        },
+        "unexplained_hemorrhage_bleeding_or_bruising": {
+          "name": "Unexplained hemorrhage"
+        }
+      }
+    },
     "location": {
       "title": "Device Location",
       "description": "Location of the device reporting the case",

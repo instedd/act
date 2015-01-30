@@ -40,6 +40,7 @@ class ActDocumentFormat < CDPDocumentFormat
 
     field_definitions.push Cdx::Api::Elasticsearch::IndexedField.new({name: "age_group"}, self)
     field_definitions.push Cdx::Api::Elasticsearch::IndexedField.new({name: "sick"}, self)
+    field_definitions.push Cdx::Api::Elasticsearch::IndexedField.new({name: "symptoms"}, self)
 
     field_definitions
   end
