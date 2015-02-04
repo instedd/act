@@ -1,0 +1,15 @@
+{
+  "brand": "Notifiable Diseases",
+  "api": "/cdx/v1",
+  "store": "/store",
+  "useLocalStorage": true,
+  "multiQueriesEnabled": false,
+  "parentURL": "/dashboard",
+  "customStyles": "../conf/custom.local.scss",
+  "polygons": {
+
+  },
+  "onlyShowPositiveResults": false,
+  "mapCenter": [8.4, 15.9],
+  "mapBounds": [[38.8,-26.5],[-36.84,73.85]]
+}
