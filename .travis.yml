@@ -3,6 +3,8 @@ rvm:
 - 2.1.0
 jdk:
 - oraclejdk7
+services:
+- elasticsearch
 gemfile: server/Gemfile
 script:
 - sh ./client/.travis.sh
