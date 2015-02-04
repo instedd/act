@@ -22,6 +22,7 @@ class Case < ActiveRecord::Base
       indexes :age_group, type: 'string', index: 'not_analyzed'
       indexes :gender, type: 'string', index: 'not_analyzed'
       indexes :sick, type: 'string', index: 'not_analyzed'
+      indexes :dialect, type: 'string', index: 'not_analyzed'
       indexes :location, type: 'nested' do
         indexes :admin_level_0, type: 'string', index: 'not_analyzed'
         indexes :admin_level_1, type: 'string', index: 'not_analyzed'
@@ -117,6 +118,7 @@ class Case < ActiveRecord::Base
       location_id: device.location_code,
       parent_locations: device.location.hierarchy,
       symptoms: formatted_symptoms,
+      dialect: dialect_code,
       location: device.location.detailed_hierarchy
     }
   end

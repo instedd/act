@@ -167,6 +167,16 @@ class Cdx::V1::EventsController < AuthenticatedController
         }
       }
     },
+    "dialect": {
+      "title": "Dialect",
+      "type": "String",
+      "enum": [
+        "Afrikaans",
+        "English",
+        "French",
+        "Kiswahili"
+      ]
+    },
     "location": {
       "title": "Device Location",
       "description": "Location of the device reporting the case",
