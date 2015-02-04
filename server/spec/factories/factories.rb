@@ -5,12 +5,14 @@ FactoryGirl.define do
     location_code                     123
     supervisor_name                   "John Doe"
     supervisor_phone_number           "123"
-    
+
     public_key "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuNYfUAOSfCEsiV8ZETZ92LkwHHGHaaSXcgfDlDQZHSaChUjaQ"\
                "fUho/bpSG4XLVjL33F/6fEQmdR+VSXMcctYaP7YPvTRDylhynQ+Yr+hoFt8d3uxbSRTYOJ9+y94zNGEGSRX+3HiNK"\
                "aS30v3UDLkB8oXtPbfzIVnWH+0BQViy+nils0y+EpdIgTp85eVf4Ozok8r0AUZGbE5Oi7zS5YHkoN5VZLuIazL9X1"\
                "vanKK1diw9ouPf0jIdCUpWQWo04fwBoSelTfXwwEgcZNOdvGgYC7HVFdEqe93K7jXshqdYbxM5qxIzACff+pfG1mT"\
                "GImg1IM8X43fs/+t6R0BO6scX user@client"
+
+    location
   end
 
   factory :approved_device, parent: :non_approved_device, aliases: [:device] do
@@ -48,6 +50,11 @@ FactoryGirl.define do
   factory :notification do
     notification_type :case_confirmed_sick
     metadata {}
+  end
+
+  factory :location do
+    code 123
+    parents []
   end
 
 end
