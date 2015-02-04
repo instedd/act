@@ -1,4 +1,4 @@
-class Cdx::V1::EventsController < ApplicationController
+class Cdx::V1::EventsController < AuthenticatedController
 
   skip_before_filter :verify_authenticity_token
   before_filter :allow_cross_domain_access if Rails.env.development?
