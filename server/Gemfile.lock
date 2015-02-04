@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/instedd/cdx-api-elasticsearch
-  revision: 6839a55c76ecc95539c5a01c4f7e53a3b2cd5af3
+  revision: 8c047c4eebbe7b7c7a744ca331df957c6a09de24
   specs:
     cdx-api-elasticsearch (0.0.1)
       activesupport
@@ -90,19 +90,19 @@ GEM
       trollop (~> 2.0)
     hashie (3.3.2)
     hike (1.2.3)
-    i18n (0.6.11)
+    i18n (0.7.0)
     jbuilder (2.2.4)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.1)
+    json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    minitest (5.4.2)
+    minitest (5.5.1)
     multi_json (1.10.1)
     multipart-post (2.0.0)
     orm_adapter (0.5.0)

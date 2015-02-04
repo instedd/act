@@ -13,4 +13,6 @@ Cdx::Api.setup do |config|
   end
 
   config.log = !Rails.env.test?
+
+  config.elasticsearch_url = Settings.elasticsearch_url if Settings.elasticsearch_url
 end

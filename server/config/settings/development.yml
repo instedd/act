@@ -4,3 +4,5 @@ rrsync_location: <%= File.join(ENV["HOME"], "bin", "rrsync") %>
 sync_directory: "data"
 
 notifiable_diseases_url: "http://localhost:9000"
+
+elasticsearch_url: "http://localhost:9200/"

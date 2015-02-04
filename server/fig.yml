@@ -14,6 +14,15 @@ sshdata:
   image:       debian:wheezy
   volumes:     ["/etc/ssh"]
 
+elasticdata:
+  image:       debian:wheezy
+  volumes:     ["/data"]
+
+elasticnndd:
+  image:       dockerfile/elasticsearch
+  volumes_from:
+    - elasticdata
+
 act:
   image:       instedd/act
 
@@ -25,7 +34,7 @@ act:
     - "8000:80"
     - "2222:22"
 
-  links: ["pg:act_postgres"]
+  links: ["pg:act_postgres", "elasticnndd:actelastic"]
 
   environment:
     - ACT_APP_DIR

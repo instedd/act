@@ -1,3 +1,5 @@
 rrsync_location: /act/rrsync
 sync_directory: /act/sync
-authorized_keys_file: /act/authorized_keys
+authorized_keys_file: /act/authorized_keyselasticsearch_url: "http://actelastic:9200"
+
+elasticsearch_url: "http://actelastic:9200"
