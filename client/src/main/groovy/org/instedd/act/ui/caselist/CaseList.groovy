@@ -140,6 +140,13 @@ class CaseList extends JFrame {
 			controller.newCaseButtonPressed()
 		})
 		
+		def topButtons = new JPanel()
+		topButtons.add selectedCount
+		topButtons.add newCaseButton
+
+		topButtons.setAlignmentY(TOP_ALIGNMENT)
+		topButtons.setAlignmentX(RIGHT_ALIGNMENT)
+
 		def unreadButtonsPanel = new JPanel()
 		def showUnreadButtons = new ButtonGroup()
 
@@ -158,6 +165,9 @@ class CaseList extends JFrame {
 		}
 		unreadButtonsPanel.add button
 		
+		unreadButtonsPanel.setAlignmentY(TOP_ALIGNMENT)
+		unreadButtonsPanel.setAlignmentX(LEFT_ALIGNMENT)
+
 		def topBar = new JPanel()
 		topBar.setLayout(new BoxLayout(topBar, BoxLayout.X_AXIS))
 		topBar.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
@@ -166,13 +176,14 @@ class CaseList extends JFrame {
 		bottomBar.setLayout(new BoxLayout(bottomBar, BoxLayout.X_AXIS))
 		bottomBar.border = BorderFactory.createEmptyBorder(10, 0, 0, 0)
 		
+		topBar.add unreadButtonsPanel
+		topBar.add Box.createHorizontalGlue()
+		topBar.add topButtons
+		topBar.setMaximumSize(new Dimension((int)topBar.getMaximumSize().width, (int)topBar.getPreferredSize().height))
+
 		add container
 		container.add casesCount
 		container.add topBar
-		topBar.add unreadButtonsPanel
-		topBar.add Box.createHorizontalGlue()
-		topBar.add selectedCount
-		topBar.add newCaseButton
 		container.add gridPane
 		container.add bottomBar
 		
