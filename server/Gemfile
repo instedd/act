@@ -38,6 +38,10 @@ gem 'cdx-api-elasticsearch', :git => 'https://github.com/instedd/cdx-api-elastic
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+gem 'rubyzip'
+
+gem 'awesome_nested_set'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'pry-byebug'

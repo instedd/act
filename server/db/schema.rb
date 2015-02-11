@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129202302) do
+ActiveRecord::Schema.define(version: 20150211201608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,9 +57,28 @@ ActiveRecord::Schema.define(version: 20150129202302) do
 
   add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree
 
+  create_table "location_shapes", force: true do |t|
+    t.integer  "location_id"
+    t.string   "geo_id"
+    t.text     "geo_shape"
+    t.string   "geo_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "location_shapes", ["location_id"], name: "index_location_shapes_on_location_id", using: :btree
+
   create_table "locations", force: true do |t|
-    t.string "code"
-    t.text   "parents"
+    t.integer  "parent_id"
+    t.string   "name"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.float    "lat"
+    t.float    "lng"
+    t.integer  "depth"
+    t.string   "geo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "notifications", force: true do |t|

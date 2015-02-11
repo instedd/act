@@ -1,3 +1,8 @@
 user:
   admin_username: act_admin@instedd.org
   admin_password: Instedd123
+
+remote_shapefiles:
+  - https://www.dropbox.com/s/4ekmmwv7fyh91el/GINLBRSLE.zip?dl=1
+
+elasticsearch_locations_index: locations
