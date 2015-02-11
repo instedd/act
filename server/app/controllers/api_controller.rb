@@ -16,9 +16,14 @@ class ApiController < ApplicationController
 
   def register
     ActiveRecord::Base.transaction do
+      reported_location_code = params["deviceInfo"]["location"].to_s
+      location = Location.from_geo_id reported_location_code
+      Rails.logger.error "Location #{reported_location_code} not found" unless location
+
       d = Device.create public_key: params["publicKey"],\
                         reported_organization_name: params["deviceInfo"]["organization"],\
-                        location_code: params["deviceInfo"]["location"].to_i,\
+                        reported_location_code: reported_location_code,\
+                        location: location,\
                         supervisor_name: params["deviceInfo"]["supervisorName"],\
                         supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 

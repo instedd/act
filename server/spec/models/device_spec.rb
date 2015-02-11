@@ -5,8 +5,11 @@ describe Device do
   describe "creation" do
 
     let(:minimum_attributes) do
-      attrs = [:reported_organization_name, :location_code, :supervisor_name, :supervisor_phone_number, :public_key]
-      FactoryGirl.attributes_for(:device).slice(*attrs)
+      attrs = [:reported_organization_name, :reported_location_code, :supervisor_name, :supervisor_phone_number, :public_key]
+      sliced = FactoryGirl.attributes_for(:device).slice(*attrs)
+      location = FactoryGirl.create :location, geo_id: sliced[:reported_location_code]
+      sliced[:location] = location
+      sliced
     end
 
     it "validates presence of required fields" do

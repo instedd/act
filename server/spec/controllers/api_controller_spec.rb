@@ -4,7 +4,7 @@ describe ApiController, type: :controller do
 
   let(:device) do
     FactoryGirl.create :device, reported_organization_name: "instedd",\
-                                location_code: 123,\
+                                reported_location_code: "123",\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"
   end
@@ -15,12 +15,14 @@ describe ApiController, type: :controller do
     
     let(:valid_key) { FactoryGirl.attributes_for(:device)[:public_key] }
 
+    let(:location) { FactoryGirl.create :location, geo_id: "11_1"}
+
     let(:params) do
       {
         publicKey: valid_key,
         deviceInfo: {
           organization: "instedd",
-          location: 111,
+          location: "11_1",
           supervisorNumber: "222",
           supervisorName: "John Doe"
         }
@@ -28,6 +30,7 @@ describe ApiController, type: :controller do
     end
 
     it "creates unconfirmed device using suplied information" do
+      location.save!
       expect(Device).to receive(:init_sync_path).with(anything)
 
       expect { xhr :post, :register, params }.to change(Device, :count).by(1)
@@ -45,6 +48,7 @@ describe ApiController, type: :controller do
     end
 
     it "accepts trailing newline in public key" do
+      location.save!
       expect(Device).to receive(:init_sync_path)
       
       params[:publicKey] = "#{valid_key}\n"

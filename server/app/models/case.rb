@@ -115,7 +115,7 @@ class Case < ActiveRecord::Base
       assay_name: 'ebola',
       result: sick_status,
       age_group: age_group,
-      location_id: device.location_code,
+      location_id: device.location.geo_id,
       parent_locations: device.location.hierarchy,
       symptoms: formatted_symptoms,
       dialect: dialect_code,

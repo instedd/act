@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211201608) do
+ActiveRecord::Schema.define(version: 20150211204835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20150211201608) do
   create_table "devices", force: true do |t|
     t.string   "guid"
     t.string   "reported_organization_name"
-    t.integer  "location_code"
     t.string   "supervisor_phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -53,6 +52,8 @@ ActiveRecord::Schema.define(version: 20150211201608) do
     t.boolean  "confirmed",                  default: false
     t.boolean  "public_key_allowed",         default: false
     t.integer  "organization_id"
+    t.string   "reported_location_code"
+    t.integer  "location_id"
   end
 
   add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree

@@ -2,7 +2,7 @@ FactoryGirl.define do
 
   factory :non_approved_device, class: Device do
     reported_organization_name       "instedd"
-    location_code                     123
+    reported_location_code            "123"
     supervisor_name                   "John Doe"
     supervisor_phone_number           "123"
 
@@ -53,8 +53,10 @@ FactoryGirl.define do
   end
 
   factory :location do
-    code 123
-    parents []
+    geo_id "123"
+    name "Some Place"
+    lat 12.4
+    lng -5.6
   end
 
 end
