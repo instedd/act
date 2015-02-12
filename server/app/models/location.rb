@@ -108,4 +108,39 @@ class Location < ActiveRecord::Base
     self.where(geo_id: location_geo_id.to_s).first
   end
 
+  def self.from_coordinates lat, lng
+    results = Location.search(<<-QUERY
+      {
+        "_source": {
+          "exclude": [
+            "shape"
+          ]
+        },
+        "query": {
+          "filtered": {
+            "query": {
+              "match_all": {}
+            },
+            "filter": {
+              "geo_shape": {
+                "shape": {
+                  "shape": {
+                    "type": "point",
+                    "coordinates": [
+                      #{lat},
+                      #{lng}
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    QUERY
+    ).results
+    location_id = results.max_by(&:level).location_id
+    self.find(location_id)
+  end
+
 end
