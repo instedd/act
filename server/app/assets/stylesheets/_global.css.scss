@@ -7,8 +7,7 @@
 
   .navbar-header {
     img {
-      width: 50%;
-      height: 50%;
+      width: 100px;
     }
   }
   .navbar-nav > li > a {
@@ -86,4 +85,47 @@ input[type="text"].input-large {
   min-height: 20px;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+ul.user > li {
+  padding-right: 5px;
+  position: relative;
+  a {
+    width: 188px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .caret {
+    position: absolute;
+    top: 23px;
+    right: 10px;
+  }
+}
+
+/* ------Dashboard ---------
+--------------------------*/
+
+@media (min-width: 768px) {
+  .navbar-header  {
+    max-width: 125px;
+    img {
+      width: 80% !important;
+    }
+  }
+}
+
+body.dashboard {
+  padding-top: 60px;
+  height: 100%;
+  overflow: hidden;
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    & + .container-fluid {
+      padding: 0;
+    }
+  }
 }

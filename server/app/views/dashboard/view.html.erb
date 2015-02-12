@@ -41,9 +41,10 @@
 
     function nnddHeight() {
       return $(window).height()
-               - $("#header").outerHeight()
+               - $("nav").outerHeight()
                - $("#footer").outerHeight()
-               - $("#nndd .nnddtabs").outerHeight();
+               - $("#nndd .nnddtabs").outerHeight()
+               - 15;
     }
 
     function resizeIframe() {
