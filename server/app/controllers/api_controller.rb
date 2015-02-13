@@ -15,6 +15,10 @@ class ApiController < ApplicationController
   NEGATIVE_ANSWER_CODE    = "2"
 
   def register
+    unless params["apiVersion"].to_s == "2"
+      render text: "Unsupported client version - please upgrade your client", status: 400
+      return
+    end
     ActiveRecord::Base.transaction do
       reported_location_code = params["deviceInfo"]["location"].to_s
       location = Location.from_geo_id reported_location_code

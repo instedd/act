@@ -25,7 +25,8 @@ describe ApiController, type: :controller do
           location: "11_1",
           supervisorNumber: "222",
           supervisorName: "John Doe"
-        }
+        },
+        apiVersion: 2
       }
     end
 

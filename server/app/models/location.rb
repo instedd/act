@@ -143,4 +143,16 @@ class Location < ActiveRecord::Base
     self.find(location_id)
   end
 
+  def as_hierarchy_hash
+    {
+      name: name,
+      gadm_geo_id: geo_id,
+      children: children.map(&:as_hierarchy_hash)
+    }
+  end
+
+  def self.tree
+    self.roots.map &:as_hierarchy_hash
+  end
+
 end

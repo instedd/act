@@ -22,7 +22,7 @@ class LocationParser {
 	}
 	
 	def parseLocation() {
-		Integer id
+		String id
 		String name
 		JsonLocation[] children
 		
@@ -30,8 +30,8 @@ class LocationParser {
 			def key = stream.getText()
 			Preconditions.checkNotNull(key)
 			
-			if (key == "geonameId") {
-				id = stream.nextIntValue(0)
+			if (key == "gadm_geo_id") {
+				id = stream.nextTextValue()
 			} else if (key == "name") {
 				name = stream.nextTextValue()
 			} else if (key == "children"){
@@ -67,7 +67,7 @@ class LocationParser {
 	}
 	
 	static class JsonLocation {
-		int id
+		String id
 		String name
 		JsonLocation[] children
 		

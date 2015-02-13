@@ -61,7 +61,7 @@ class DeviceKeyRegistration implements AuthenticationStep {
 			http.request(Method.POST) {
 				uri.path = "registration"
 				requestContentType = ContentType.JSON
-				body = [publicKey: publicKey, deviceInfo: dataStore.deviceInfo()]
+				body = [publicKey: publicKey, deviceInfo: dataStore.deviceInfo(), apiVersion: 2]
 				
 				response.success = { r ->
 					dataStore.markDeviceRegistered()

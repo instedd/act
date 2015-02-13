@@ -6,16 +6,16 @@ import com.google.common.collect.Ordering
 
 class Location {
 
-	long id;
+	String id;
 	String name;
 	Location parent
 	String pathString;
 	
-	Location(long id, String name) {
+	Location(String id, String name) {
 		this(id, name, null)
 	}
 	
-	Location(long id, String name, Location parent) {
+	Location(String id, String name, Location parent) {
 		Preconditions.checkNotNull(id)
 		Preconditions.checkNotNull(name)
 		this.id = id

@@ -29,7 +29,7 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public synchronized void storeDeviceInfo(Device device) {
-		sql.execute("insert into device_info(organization, location, supervisor_name, supervisor_number) values (${device.organization}, ${device.location.id}, ${device.supervisorName}, ${device.supervisorNumber})")
+		sql.execute("insert into device_info(organization, location_geo_id, supervisor_name, supervisor_number) values (${device.organization}, ${device.location.id}, ${device.supervisorName}, ${device.supervisorNumber})")
 	}
 
 	@Override
@@ -58,7 +58,7 @@ class SqliteDataStore implements DataStore {
 	@Override
 	public Map<String, Object> deviceInfo() {
 		def device = sql.firstRow("select * from device_info limit 1")
-		[organization: device.organization, location: device.location, supervisorNumber: device.supervisor_number, supervisorName: device.supervisor_name]
+		[organization: device.organization, location: device.location_geo_id, supervisorNumber: device.supervisor_number, supervisorName: device.supervisor_name]
 	}
 
 	@Override

@@ -21,6 +21,7 @@
             <th>Organization</th>
             <th>Supervisor name</th>
             <th>Supervisor phone number</th>
+            <th>Location</th>
           </thead>
           <tbody>
           <% for @device in @devices %>
@@ -29,6 +30,7 @@
             <td><%= @device.organization.name %></td>
             <td><%= @device.supervisor_name %></td>
             <td><%= @device.supervisor_phone_number %></td>
+            <td><%= @device.location.name %></td>
 
           </tr>
           <% end %>

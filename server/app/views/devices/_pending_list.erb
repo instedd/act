@@ -16,6 +16,7 @@
         <thead>
           <th>Supervisor name</th>
           <th>Supervisor phone number</th>
+          <th>Location</th>
           <th>Reported organization</th>
           <th>Real organization</th>
         </thead>
@@ -25,6 +26,7 @@
 
           <td><%= @device.supervisor_name %></td>
           <td><%= @device.supervisor_phone_number %></td>
+          <td><%= @device.location.name %></td>
           <td><%= @device.reported_organization_name %></td>
           <td class="organization-confirmation">
             <%= form_for(@device, url: device_path(@device), html: { method: :put, class: "form-inline" }) do |f| %>
