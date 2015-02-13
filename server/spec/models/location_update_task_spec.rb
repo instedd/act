@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe LocationUpdateTask do
 
+  WebMock.disable_net_connect!(:allow_localhost => true)
+
   let(:_case)         { FactoryGirl.create :case, patient_phone_number: 111000 }
   let(:endpoint_url)  { Settings.cellcom.location_endpoint }
 

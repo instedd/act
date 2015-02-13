@@ -70,8 +70,9 @@ class LocationUpdateTask
     when "0"
       reply_msg = XPath.first(result_node, '//[local-name() = "ReplyMsg"]').text
       lat, lng = reply_msg.split(",").map { |part| part.strip.to_f }
-      LocationRecord.create! case_id: case_id, lat: lat, lng: lng
     
+      location = Location.from_coordinates lat, lng
+      LocationRecord.create! case_id: case_id, lat: lat, lng: lng, location: location
     when "1"
       #
       # TODO

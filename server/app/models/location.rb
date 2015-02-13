@@ -109,7 +109,7 @@ class Location < ActiveRecord::Base
   end
 
   def self.from_coordinates lat, lng
-    results = Location.search(<<-QUERY
+    query = Location.search(<<-QUERY
       {
         "_source": {
           "exclude": [
@@ -138,9 +138,15 @@ class Location < ActiveRecord::Base
         }
       }
     QUERY
-    ).results
-    location_id = results.max_by(&:level).location_id
-    self.find(location_id)
+    )
+    begin
+      results = query.results
+      location_id = results.max_by(&:level).location_id
+      self.find(location_id)
+    rescue Elasticsearch::Transport::Transport::Errors::BadRequest => ex
+      Rails.logger.warn "Couldn't find location from coordinates #{lat}/#{lng}: #{ex}"
+      nil
+    end
   end
 
   def as_hierarchy_hash
