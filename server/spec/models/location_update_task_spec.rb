@@ -2,12 +2,22 @@ require 'rails_helper'
 
 describe LocationUpdateTask do
 
-  WebMock.disable_net_connect!(:allow_localhost => true)
+  before(:each) {
+    stub_request(:head, "http://localhost:9200/cases").
+      with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Faraday v0.9.1'}).
+      to_return(:status => 200, :body => "", :headers => {})
+
+    stub_request(:put, /http:\/\/localhost:9200\/cases\/case\/.*/).
+      to_return(:status => 200, :body => "", :headers => {})
+
+  }
 
   let(:_case)         { FactoryGirl.create :case, patient_phone_number: 111000 }
   let(:endpoint_url)  { Settings.cellcom.location_endpoint }
+  let(:location)      { FactoryGirl.create :location, geo_id: "15_2" }
 
   it "performs SOAP request to retrieve last known location of contact's phone" do
+    expect(Location).to receive(:from_coordinates) { nil }
     set_successful_response(123, 456)
 
     LocationUpdateTask.perform(_case.id, _case.patient_phone_number)
@@ -15,6 +25,7 @@ describe LocationUpdateTask do
   end
 
   it "should create a new location record when API call is successful" do
+    expect(Location).to receive(:from_coordinates) { nil }
     set_successful_response(123, 456)
 
     expect {
@@ -27,9 +38,11 @@ describe LocationUpdateTask do
   end
 
   it "should create multiple records after repeated calls" do
+    expect(Location).to receive(:from_coordinates) { nil }
     set_successful_response(123, 456)
     LocationUpdateTask.perform(_case.id, _case.patient_phone_number)
 
+    expect(Location).to receive(:from_coordinates) { nil }
     set_successful_response(111, 222)
     LocationUpdateTask.perform(_case.id, _case.patient_phone_number)
 

@@ -2,6 +2,16 @@ require 'rails_helper'
 
 describe Device do
 
+  before(:each) {
+    stub_request(:head, "http://localhost:9200/cases").
+      with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Faraday v0.9.1'}).
+      to_return(:status => 200, :body => "", :headers => {})
+
+    stub_request(:put, /http:\/\/localhost:9200\/cases\/case\/.*/).
+      to_return(:status => 200, :body => "", :headers => {})
+
+  }
+
   describe "creation from synchronized json content" do
     let(:device) {
       FactoryGirl.create :device, guid: "GUID",\

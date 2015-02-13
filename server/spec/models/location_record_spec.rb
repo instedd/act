@@ -2,7 +2,15 @@ require 'rails_helper'
 
 describe LocationRecord do
 
-  WebMock.disable_net_connect!(:allow_localhost => true)
+  before(:each) {
+    stub_request(:head, "http://localhost:9200/cases").
+      with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Faraday v0.9.1'}).
+      to_return(:status => 200, :body => "", :headers => {})
+
+    stub_request(:put, /http:\/\/localhost:9200\/cases\/case\/.*/).
+      to_return(:status => 200, :body => "", :headers => {})
+
+  }
 
   let(:_case) { FactoryGirl.create :case }
   let(:location) { FactoryGirl.create :location, lat: 1.1, lng: 0.9, geo_id: "777_5_2" }

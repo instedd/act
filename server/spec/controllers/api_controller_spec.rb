@@ -11,6 +11,16 @@ describe ApiController, type: :controller do
 
   let!(:access_token) { ApiKey.create!.access_token }
 
+  before(:each) {
+    stub_request(:head, "http://localhost:9200/cases").
+      with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Faraday v0.9.1'}).
+      to_return(:status => 200, :body => "", :headers => {})
+
+    stub_request(:put, /http:\/\/localhost:9200\/cases\/case\/.*/).
+      to_return(:status => 200, :body => "", :headers => {})
+
+  }
+
   describe "device registration" do
     
     let(:valid_key) { FactoryGirl.attributes_for(:device)[:public_key] }
