@@ -22,13 +22,6 @@ RUN npm install -g bower grunt-cli
 
 # Prepare folders
 RUN mkdir /home/app/webapp
-WORKDIR /home/app/webapp
-
-# Install bundle and copy app files
-ADD Gemfile /home/app/webapp/
-ADD Gemfile.lock /home/app/webapp/
-RUN bundle install --without development test
-ADD . /home/app/webapp
 
 # Copy configuration and init files
 ADD deploy/nginx-site.conf /etc/nginx/sites-enabled/webapp.conf
@@ -58,12 +51,19 @@ RUN bower --allow-root install
 ADD config/nndd-production-settings.json /tmp/notifiable-diseases/conf/settings.local.json
 ADD config/nndd-production-custom.scss /tmp/notifiable-diseases/conf/custom.local.scss
 RUN grunt build
+
+WORKDIR /home/app/webapp
+
+# Install bundle and copy app files
+ADD Gemfile /home/app/webapp/
+ADD Gemfile.lock /home/app/webapp/
+RUN bundle install --without development test
+ADD . /home/app/webapp
+
 RUN cp -r /tmp/notifiable-diseases/dist/nndd /home/app/webapp/public/nndd
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-WORKDIR /home/app/webapp
 
 VOLUME /etc/ssh
 VOLUME /act/sync

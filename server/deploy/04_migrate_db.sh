@@ -7,4 +7,4 @@ if (bundle exec rake db:version &> /dev/null);
   else bundle exec rake db:setup;
 fi;
 
-bundle exec rake act:locations:hierarchy
+bundle exec rake geo:all
