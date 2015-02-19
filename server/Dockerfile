@@ -20,6 +20,9 @@ RUN npm config set ca ""
 # Install bower & grunt for NNDD
 RUN npm install -g bower grunt-cli
 
+# topojson for converting shapefiles for NNDD
+RUN npm install -g topojson
+
 # Prepare folders
 RUN mkdir /home/app/webapp
 

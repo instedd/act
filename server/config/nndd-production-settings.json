@@ -8,5 +8,14 @@
   "customStyles": "../conf/custom.local.scss",
   "onlyShowPositiveResults": false,
   "mapCenter": [8.4, 15.9],
-  "mapBounds": [[38.8,-26.5],[-36.84,73.85]]
+  "mapBounds": [[38.8,-26.5],[-36.84,73.85]],
+  "polygons": {
+    "location": {
+      "0": "/polygons/GINLBRSLE_adm0_id.topo.json",
+      "1": "/polygons/GINLBRSLE_adm1_id.topo.json",
+      "2": "/polygons/GINLBRSLE_adm2_id.topo.json",
+      "3": "/polygons/GINLBRSLE_adm3_id.topo.json"
+    }
+  },
+  "mapProviderUrl": "http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png"
 }

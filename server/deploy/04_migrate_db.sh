@@ -8,3 +8,5 @@ if (bundle exec rake db:version &> /dev/null);
 fi;
 
 bundle exec rake geo:all
+
+scripts/00--adapt_polygons.sh
