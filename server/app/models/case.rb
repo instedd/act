@@ -127,6 +127,10 @@ class Case < ActiveRecord::Base
     symptoms.map { |symptom| symptom.parameterize.underscore }
   end
 
+  def symptoms_joined
+    symptoms.join "\n"
+  end
+
   def sick_status
     case sick
     when true
