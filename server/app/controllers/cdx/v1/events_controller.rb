@@ -5,6 +5,7 @@ class Cdx::V1::EventsController < AuthenticatedController
 
   def index
     params.delete :event # FIXME: this delete shouldn't be necessary
+    params['institution'] = current_user.organization_id unless current_user.admin?
     query = Cdx::Api::Elasticsearch::Query.new(params)
     results = query.execute
     render json: results
@@ -12,6 +13,9 @@ class Cdx::V1::EventsController < AuthenticatedController
 
   def schema
     # FIXME: cache this?
+    user_organizations = Organization.accessible_by current_ability
+    user_organizations_ids = user_organizations.map(&:id)
+    user_organizations_values = Hash[user_organizations.map { |org| [ org.id, { name: org.name} ] }]
     schema_start = <<-JSON
 {
   "type": "object",
@@ -35,6 +39,12 @@ class Cdx::V1::EventsController < AuthenticatedController
       "type": "string",
       "format": "date-time",
       "resolution": "day"
+    },
+    "institution": {
+      "title": "Organization",
+      "type": "string",
+      "enum": #{ user_organizations_ids.to_json },
+      "values": #{ user_organizations_values.to_json }
     },
     "gender": {
       "title": "Gender",

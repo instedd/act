@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe OrganizationsController, type: :controller do
 
+  let(:manas) { FactoryGirl.create :organization, name: "Manas" }
+  let(:instedd) { FactoryGirl.create :organization, name: "Instedd" }
+
   context "as admin" do
 
     before(:each) { sign_in_admin }
@@ -9,6 +12,11 @@ describe OrganizationsController, type: :controller do
     it "allows listing organizations" do
       get :index
       expect(response).to be_successful
+    end
+
+    it "lists all organizations" do
+      get :index
+      expect(assigns(:organizations)).to eq([manas, instedd])
     end
 
     it "allows access to new organization form" do
@@ -37,9 +45,14 @@ describe OrganizationsController, type: :controller do
 
     before(:each) { sign_in_user }
 
-    it "does not allow to list organizations" do
+    it "allows to list organizations" do
       get :index
-      expect(response).to be_unauthorized
+      expect(response).to be_successful
+    end
+
+    it "lists only the user's organization" do
+      get :index
+      expect(assigns(:organizations)).to eq([subject.current_user.organization])
     end
 
     it "does not allow to access new organization form" do
