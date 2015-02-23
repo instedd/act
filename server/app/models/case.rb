@@ -182,6 +182,3 @@ class Case < ActiveRecord::Base
   end
 
 end
-
-Case.__elasticsearch__.create_index!
-Case.import
