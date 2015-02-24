@@ -116,7 +116,7 @@ class Cdx::V1::EventsController < AuthenticatedController
       "enum": [
         "sick",
         "not_sick",
-        "unknown"
+        "not_reported"
       ],
       "values": {
         "sick": {
@@ -127,7 +127,7 @@ class Cdx::V1::EventsController < AuthenticatedController
           "name": "Not sick",
           "kind": "negative"
         },
-        "unknown": {
+        "not_reported": {
           "name": "N/A",
           "kind": "negative"
         }

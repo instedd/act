@@ -150,7 +150,7 @@ class Case < ActiveRecord::Base
     when false
       'not_sick'
     else
-      'unknown'
+      'not_reported'
     end
   end
 
