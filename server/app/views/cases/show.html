@@ -1,0 +1,42 @@
+<div class="case_details">
+  <h2><%= @case.patient_name %> <% if @case.sick? %><span class="case_reported_sick_alert">(reported sick)</span><% end %></h2>
+  <dl>
+    <dt>Name</dt><dl><%= @case.patient_name %></dl>
+    <dt>Case Identifier</dt><dl><%= @case.guid %></dl>
+    <dt>Sick status</dt><dl><%= @case.sick_status.humanize %></dl>
+    <dt>Phone number</dt><dl><%= @case.patient_phone_number %></dl>
+    <dt>Age</dt><dl><%= @case.patient_age %></dl>
+    <dt>Gender</dt><dl><%= @case.gender %></dl>
+    <dt>Preferred dialect</dt><dl><%= @case.dialect_code %></dl>
+    <dt>Symptoms</dt><dl><%= @case.symptoms.join ', ' %></dl>
+    <dt>Notes</dt><dl><%= @case.note %></dl>
+    <dt>Report time</dt><dl><%= @case.report_time %> (<%= time_ago_in_words @case.report_time %> ago)</dl>
+  </dl>
+</div>
+
+<h3>Call log</h3>
+
+<% if @case.call_records.any? %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-hover act-table">
+        <thead>
+          <th>Call time</th>
+          <th>Reported sick?</th>
+        </thead>
+        <tbody>
+          <% for @call in @case.call_records %>
+          <tr>
+            <td><%= @call.created_at %> (<%= time_ago_in_words @call.created_at %> ago)</td>
+            <td><%= @call.sick? ? "Sick" : "Not sick" %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<% else %>
+There have been no succesful calls to this patient yet
+<% end %>

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :users,         only: [:index]
   resources :api_keys,      only: [:index, :create, :destroy]
 
-  resources :cases, as: "list_cases", only: [:index]
+  resources :cases, as: "list_cases", only: [:index, :show]
 
   get 'dashboard' => 'dashboard#view'
 
