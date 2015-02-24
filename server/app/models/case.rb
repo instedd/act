@@ -5,6 +5,7 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   belongs_to :device
+  has_many :call_records
 
   after_save :update_index
 
@@ -58,6 +59,17 @@ class Case < ActiveRecord::Base
                  symptoms: json["symptoms"],\
                  note: json["note"],\
                  report_time: json["report_time"]
+  end
+
+  def sick
+    return nil if call_records.last.nil?
+    call_records.last.sick
+  end
+
+  alias_method :sick?, :sick
+
+  def sick= sick
+    call_records << (CallRecord.new sick: sick)
   end
 
   def follow_up_not_sick!
@@ -132,7 +144,7 @@ class Case < ActiveRecord::Base
   end
 
   def sick_status
-    case sick
+    case sick?
     when true
       'sick'
     when false
