@@ -59,12 +59,14 @@ class ApiController < ApplicationController
       return
     end
 
-    case params[:sick]
-    when AFFIRMATIVE_ANSWER_CODE
-      _case.follow_up_sick!
-    when NEGATIVE_ANSWER_CODE
-      _case.follow_up_not_sick!
-    end
+    known_symptoms = CallRecord.known_symptoms.keys
+
+    symptoms = {}
+    params.each { |key, value|
+      symptoms[key] = value.downcase == "true" if known_symptoms.include? key and !value.blank?
+    }
+
+    CallRecord.create! case: _case, sick: params[:patient_sick], family_sick: params[:family_sick], community_sick: params[:community_sick], symptoms: symptoms
 
     Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
     

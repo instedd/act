@@ -23,13 +23,15 @@
       <table class="table table-hover act-table">
         <thead>
           <th>Call time</th>
-          <th>Reported sick?</th>
+          <th>Anyone sick?</th>
+          <th>Symptoms</th>
         </thead>
         <tbody>
-          <% for @call in @case.call_records %>
+          <% for @call in @case.call_records.reverse %>
           <tr>
-            <td><%= @call.created_at %> (<%= time_ago_in_words @call.created_at %> ago)</td>
-            <td><%= @call.sick? ? "Sick" : "Not sick" %></td>
+            <td><span title="<%= time_ago_in_words @call.created_at %> ago"><%= @call.created_at %></span></td>
+            <td><%= @call.who_is_sick %></td>
+            <td><%= @call.formated_symptoms %></td>
           </tr>
           <% end %>
         </tbody>
