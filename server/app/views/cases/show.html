@@ -3,7 +3,7 @@
   <dl>
     <dt>Name</dt><dl><%= @case.patient_name %></dl>
     <dt>Case Identifier</dt><dl><%= @case.guid %></dl>
-    <dt>Sick status</dt><dl><%= @case.last_call.who_is_sick %></dl>
+    <dt>Sick status</dt><dl><%= if @case.last_call then @case.last_call.who_is_sick else "Not contacted yet" end %></dl>
     <dt>Phone number</dt><dl><%= @case.patient_phone_number %></dl>
     <dt>Age</dt><dl><%= @case.patient_age %></dl>
     <dt>Gender</dt><dl><%= @case.patient_gender %></dl>
