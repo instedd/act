@@ -1,7 +1,9 @@
 class CallRecord < ActiveRecord::Base
-  belongs_to :case
+  belongs_to :_case, class_name: 'Case', foreign_key: 'case_id'
 
   serialize :symptoms, JSON
+
+  before_create :notify_if_sick
 
   def self.known_symptoms
     {
@@ -44,6 +46,10 @@ class CallRecord < ActiveRecord::Base
     positive_symptoms = (symptoms.select { |symptom, value| value }).keys
     symptoms_descriptions = positive_symptoms.map {|key| CallRecord.known_symptoms[key] }
     symptoms_descriptions.join ", "
+  end
+
+  def notify_if_sick
+    Notification.case_confirmed_sick! _case if sick? and !_case.sick?
   end
 
 end

@@ -164,10 +164,26 @@ describe ApiController, type: :controller do
       it "does not create a notification if case was already confirmed sick" do
         expect(Device).to receive(:sync_sick_status)
         
-        device.cases.first.follow_up_sick!
+        CallRecord.create! _case: device.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: []
+
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         }.not_to change(Notification, :count)
+      end
+
+      it "records a family member has fever, no rash" do
+        expect(Device).to receive(:sync_sick_status)
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_family: ApiController::NEGATIVE_ANSWER_CODE
+        }.not_to change(Notification, :count)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.last_call.sick).to be(false)
+        expect(_case.last_call.family_sick).to be(true)
+        expect(_case.last_call.symptoms["fever_family"]).to be(true)
+        expect(_case.last_call.symptoms["rash_family"]).to be(false)
       end
 
     end

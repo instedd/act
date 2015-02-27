@@ -3,14 +3,14 @@
   <dl>
     <dt>Name</dt><dl><%= @case.patient_name %></dl>
     <dt>Case Identifier</dt><dl><%= @case.guid %></dl>
-    <dt>Sick status</dt><dl><%= @case.sick_status.humanize %></dl>
+    <dt>Sick status</dt><dl><%= @case.last_call.who_is_sick %></dl>
     <dt>Phone number</dt><dl><%= @case.patient_phone_number %></dl>
     <dt>Age</dt><dl><%= @case.patient_age %></dl>
-    <dt>Gender</dt><dl><%= @case.gender %></dl>
+    <dt>Gender</dt><dl><%= @case.patient_gender %></dl>
     <dt>Preferred dialect</dt><dl><%= @case.dialect_code %></dl>
-    <dt>Symptoms</dt><dl><%= @case.symptoms.join ', ' %></dl>
-    <dt>Notes</dt><dl><%= @case.note %></dl>
+    <dt>Original symptoms</dt><dl><%= @case.symptoms.join ', ' %></dl>
     <dt>Report time</dt><dl><%= @case.report_time %> (<%= time_ago_in_words @case.report_time %> ago)</dl>
+    <dt>Notes</dt><dl><%= @case.note %></dl>
   </dl>
 </div>
 
