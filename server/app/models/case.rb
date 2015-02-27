@@ -62,27 +62,15 @@ class Case < ActiveRecord::Base
   end
 
   def sick
-    return nil if call_records.last.nil?
-    call_records.last.sick
+    return nil if last_call.nil?
+    last_call.sick == true
+  end
+
+  def last_call
+    call_records.last
   end
 
   alias_method :sick?, :sick
-
-  def sick= sick
-    call_records << (CallRecord.new sick: sick)
-  end
-
-  def follow_up_not_sick!
-    self.sick = false
-    self.save
-  end
-
-  def follow_up_sick!
-    previously_sick = self.sick
-    self.sick = true
-    Notification.case_confirmed_sick! self unless previously_sick
-    self.save
-  end
 
   def as_json_for_api
     ret = self.as_json.select do |k|

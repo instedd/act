@@ -49,16 +49,18 @@ describe Device do
   describe "sick status updates" do
 
     it "updates sick flag when confirmed sick" do
-      c = FactoryGirl.create :case, sick: nil
-      c.follow_up_sick!
+      c = FactoryGirl.create :case
+      
+      CallRecord.create! _case: c, sick: true, symptoms: []
+
       expect(c.sick).to be(true)
     end
 
     it "creates a notification when confirmed sick" do
-      c = FactoryGirl.create :case, sick: nil
+      c = FactoryGirl.create :case
 
       expect {
-        c.follow_up_sick!
+        CallRecord.create! _case: c, sick: true, symptoms: []
       }.to change(Notification, :count).by(1)
 
       notification = Notification.last
@@ -74,9 +76,10 @@ describe Device do
     end
 
     it "does not create a notification if previously confirmed sick" do
-      c = FactoryGirl.create :case, sick: true
+      c = FactoryGirl.create :case
+      FactoryGirl.create :call_sick, _case: c
 
-      expect { c.follow_up_sick! }.not_to change(Notification, :count)
+      expect { CallRecord.create! _case: c, sick: true, symptoms: [] }.not_to change(Notification, :count)
     end
 
   end

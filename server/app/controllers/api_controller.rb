@@ -11,8 +11,8 @@ class ApiController < ApplicationController
   # Ideally, Verboice would be in charge of interpreting the
   # values entered by the user.
   #
-  AFFIRMATIVE_ANSWER_CODE = "1"
-  NEGATIVE_ANSWER_CODE    = "2"
+  AFFIRMATIVE_ANSWER_CODE = "2"
+  NEGATIVE_ANSWER_CODE    = "1"
 
   def register
     unless params["apiVersion"].to_s == "2"
@@ -63,10 +63,10 @@ class ApiController < ApplicationController
 
     symptoms = {}
     params.each { |key, value|
-      symptoms[key] = value.downcase == "true" if known_symptoms.include? key and !value.blank?
+      symptoms[key] = value == AFFIRMATIVE_ANSWER_CODE if known_symptoms.include? key and !value.blank?
     }
 
-    CallRecord.create! case: _case, sick: params[:patient_sick], family_sick: params[:family_sick], community_sick: params[:community_sick], symptoms: symptoms
+    CallRecord.create! _case: _case, sick: params[:sick] == AFFIRMATIVE_ANSWER_CODE, family_sick: params[:family_sick] == AFFIRMATIVE_ANSWER_CODE, community_sick: params[:community_sick] == AFFIRMATIVE_ANSWER_CODE, symptoms: symptoms
 
     Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
     
