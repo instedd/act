@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-5">
+
+    <%= form_for @api_key, :url => api_key_path, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+
+      <legend>Rename API Key</legend>
+
+      <div class="well-white">
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :label, class: 'col-sm-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_field :label, class: 'form-control', autofocus: true %>
+              </div>
+              <%= f.label :access_token, class: 'col-sm-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_field :access_token, class: 'form-control', readonly: true %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <%= link_to 'Cancel', api_keys_path, class: 'btn btn-link' %>
+
+    <% end %>
+
+  </div>
+</div>

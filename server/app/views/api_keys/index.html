@@ -10,6 +10,7 @@
       <div class="table-responsive">
         <table class="table table-hover act-table">
           <thead>
+            <th>Label</th>
             <th>Access token</th>
             <th>Creation date</th>
             <th>Actions</th>
@@ -17,10 +18,15 @@
           <tbody>
           <% for @api_key in @api_keys %>
           <tr>
-
+            <td><%= @api_key.label %></td>
             <td><%= @api_key.access_token %></td>
             <td><%= @api_key.created_at %></td>
             <td>
+              <%=
+                link_to "Edit label",
+                edit_api_key_path(@api_key),
+                class: 'btn btn-default btn-sm'
+              %>
               <%=
                 link_to "Delete",
                 api_key_path(@api_key) ,
