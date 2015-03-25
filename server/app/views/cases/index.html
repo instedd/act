@@ -28,7 +28,7 @@
             <td><span title="<%= @case.symptoms_joined %>"><%= @case.symptoms.join(', ').truncate 40 %></span></td>
             <td><span title="<%= @case.note %>"><%= @case.note.truncate 50 %></span></td>
             <td><span title="<%= @case.report_time %>"><%= time_ago_in_words @case.report_time %> ago</span></td>
-            <td><%= link_to "See", list_case_path(@case), class: 'btn btn-default btn-sm' %></td>
+            <td><%= link_to "See", case_path(@case), class: 'btn btn-default btn-sm' %></td>
 
           </tr>
           <% end %>
