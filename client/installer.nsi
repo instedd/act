@@ -56,6 +56,10 @@ VIAddVersionKey LegalTrademarks  "ACT"
 !define MUI_ABORTWARNING
 
 ;--------------------------------
+;Icons
+!define MUI_ICON "bin\act.ico"
+
+;--------------------------------
 ;Pages
 
 !insertmacro MUI_PAGE_LICENSE "license.txt"
@@ -83,6 +87,7 @@ Section "Install" Install
   File "bin\RCEDIT.exe"
   File /oname=ACT-client.exe "bin\WinRun4J.exe"
   File "bin\act-client.ini"
+  File "bin\act.ico"
   SetOutPath "$INSTDIR\lib"
   File "lib\*.jar"
 
@@ -106,7 +111,9 @@ Section "Build Launcher"
   DetailPrint "Building launcher..."
   SetOutPath "$INSTDIR\bin"
   ExecDos::exec 'RCEDIT.exe /N ACT-client.exe act-client.ini' "" "$TEMP/act-installer.log"
+  ExecDos::exec 'RCEDIT.exe /I ACT-client.exe act.ico' "" "$TEMP/act-installer.log"
   Delete "act-client.ini"
+  Delete "act.ico"
   Delete "rcedit.exe"
 SectionEnd
 
