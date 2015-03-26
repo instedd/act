@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211204835) do
+ActiveRecord::Schema.define(version: 20150325215130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,20 @@ ActiveRecord::Schema.define(version: 20150211204835) do
     t.string   "access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "label"
   end
 
   add_index "api_keys", ["access_token"], name: "index_api_keys_on_access_token", unique: true, using: :btree
+
+  create_table "call_records", force: true do |t|
+    t.integer  "case_id"
+    t.boolean  "sick"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "family_sick"
+    t.boolean  "community_sick"
+    t.text     "symptoms"
+  end
 
   create_table "cases", force: true do |t|
     t.integer  "device_id"
@@ -37,7 +48,6 @@ ActiveRecord::Schema.define(version: 20150211204835) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "guid"
-    t.boolean  "sick"
     t.datetime "report_time"
   end
 

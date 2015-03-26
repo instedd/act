@@ -59,4 +59,11 @@ FactoryGirl.define do
     lng -5.6
   end
 
+  factory :call_sick, class: CallRecord do
+    sick true
+    family_sick false
+    community_sick false
+    symptoms []
+  end
+
 end

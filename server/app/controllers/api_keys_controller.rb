@@ -3,7 +3,17 @@ class ApiKeysController < AuthenticatedController
   load_and_authorize_resource
 
   def index
-    @api_keys = ApiKey.all
+    @api_keys = ApiKey.order created_at: :desc
+  end
+
+  def edit
+  end
+
+  def update
+    label_params = params.require(:api_key).permit(:label)
+    @api_key.update! label_params
+    flash[:notice] = "API key renamed successfully"
+    redirect_to action: :index
   end
 
   def create

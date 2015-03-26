@@ -34,7 +34,7 @@ class Ability
   end
 
   def organization_user user
-    can :read, user.organization
+    can :read, Organization, id: user.organization_id
     can :read, Device, organization_id: user.organization_id
     can :read, Case,   device: { organization_id: user.organization_id, confirmed: true }
   end

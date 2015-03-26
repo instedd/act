@@ -5,6 +5,7 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   belongs_to :device
+  has_many :call_records
 
   after_save :update_index
 
@@ -60,17 +61,16 @@ class Case < ActiveRecord::Base
                  report_time: json["report_time"]
   end
 
-  def follow_up_not_sick!
-    self.sick = false
-    self.save
+  def sick
+    return nil if last_call.nil?
+    last_call.sick == true
   end
 
-  def follow_up_sick!
-    previously_sick = self.sick
-    self.sick = true
-    Notification.case_confirmed_sick! self unless previously_sick
-    self.save
+  def last_call
+    call_records.last
   end
+
+  alias_method :sick?, :sick
 
   def as_json_for_api
     ret = self.as_json.select do |k|
@@ -127,14 +127,18 @@ class Case < ActiveRecord::Base
     symptoms.map { |symptom| symptom.parameterize.underscore }
   end
 
+  def symptoms_joined
+    symptoms.join "\n"
+  end
+
   def sick_status
-    case sick
+    case sick?
     when true
       'sick'
     when false
       'not_sick'
     else
-      'unknown'
+      'not_reported'
     end
   end
 
@@ -178,6 +182,3 @@ class Case < ActiveRecord::Base
   end
 
 end
-
-Case.__elasticsearch__.create_index!
-Case.import
