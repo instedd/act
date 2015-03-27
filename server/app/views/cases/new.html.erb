@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col-xs-12">
+
+    <%= form_for @case, :url => cases_path, :html => {:method => :post, :class => 'form-horizontal'} do |f| %>
+
+      <legend>Report new case</legend>
+
+      <% if @case.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @case.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="well-white">
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :device_id, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.select :device_id, @devices.collect {|device| [if current_user.admin? then "#{device.location.name} - #{device.supervisor_name} (#{device.organization.name})" else "#{device.location.name} - #{device.supervisor_name}" end, device.id] }, include_blank: true, autofocus: true %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :patient_name, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_field :patient_name, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :patient_phone_number, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_field :patient_phone_number, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :patient_age, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_field :patient_age, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :patient_gender, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.select :patient_gender, [["Male", "Male"], ["Female", "Female"]], include_blank: true %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :dialect_code, 'Dialect', class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.select :dialect_code, [ ["Afrikaans", "Afrikaans"], ["English", "English"], ["French", "French"], ["Kiswahili", "Kiswahili"] ], include_blank: true %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :symptoms, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= collection_check_boxes :case, :symptoms, ["Fever", "Severe headache", "Muscle pain", "Weakness", "Fatigue", "Diarrhea", "Vomiting", "Abdominal (stomach) pain", "Unexplained hemorrhage (bleeding or bruising)"], 'to_s', 'to_s' do |b| %>
+                    <%= b.label do %>
+                        <%= b.check_box %>
+                        <%= b.object %>
+                    <% end %>
+                    <br />
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= f.label :note, class: 'col-sm-3 col-md-2 control-label' %>
+              <div class="col-sm-9">
+                <%= f.text_area :note, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <%= link_to 'Cancel', cases_path, class: 'btn btn-link' %>
+
+    <% end %>
+
+  </div>
+</div>

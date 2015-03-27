@@ -43,7 +43,8 @@ FactoryGirl.define do
     patient_gender         "M"
     dialect_code           "123"
     symptoms               ["fever"]
-    guid                   { SecureRandom.hex(16).upcase }
+    guid                   { SecureRandom.uuid }
+    report_time            { DateTime.now - rand(0..30).days - rand(0..24).hours - rand(0..60).minutes }
     device
   end
 

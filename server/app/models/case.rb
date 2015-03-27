@@ -9,8 +9,7 @@ class Case < ActiveRecord::Base
 
   after_save :update_index
 
-  validates_presence_of :guid
-  validates_presence_of :device
+  validates_presence_of :guid, :device, :report_time, :patient_phone_number
 
   delegate :organization,
            :organization_id,
@@ -83,6 +82,7 @@ class Case < ActiveRecord::Base
         "patient_gender",
         "dialect_code",
         "symptoms",
+        "report_time",
         "note"
       ].include? k
     end

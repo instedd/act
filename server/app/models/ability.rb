@@ -28,7 +28,6 @@ class Ability
 
   def admin user
       can :manage, :all
-      cannot :create, Case
       cannot :destroy, Case
       cannot :destroy, Device, confirmed: true
   end

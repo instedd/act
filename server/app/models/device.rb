@@ -17,7 +17,7 @@ class Device < ActiveRecord::Base
   ]
 
   before_save do |device|
-    device.guid ||= SecureRandom.hex(16).upcase
+    device.guid ||= SecureRandom.uuid
     true
   end
 

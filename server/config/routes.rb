@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       patch 'users/:id' => 'devise/registrations#update', :as => 'user_registration'
     end
 
-  resources :cases, only: [:index, :new, :update, :show]
+  resources :cases, only: [:index, :new, :create, :show]
   
   scope :api do
     scope :v1 do

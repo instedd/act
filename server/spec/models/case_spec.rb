@@ -20,6 +20,7 @@ describe Device do
        gender: "M",
        dialect_code: "D123",
        symptoms: [ :fever, :vomiting ],
+       report_time: "2015-03-31T19:04:19.750Z",
        note: "Nothing in particular.",
      }
     end

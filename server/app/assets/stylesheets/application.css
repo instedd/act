@@ -14,3 +14,13 @@
  *= require_tree .
  *= require_self
  */
+
+.field_with_errors input {
+  padding: 1px;
+  border: 1px solid #a94442;
+}
+
+.field_with_errors label {
+  color: #a94442;
+  text-shadow: 1px 1px 1px #ebccd1;
+}
