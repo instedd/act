@@ -20,9 +20,9 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-12">
-              <%= f.label :device_id, class: 'col-sm-3 col-md-2 control-label' %>
+              <%= f.label :office_id, class: 'col-sm-3 col-md-2 control-label' %>
               <div class="col-sm-9">
-                <%= f.select :device_id, @devices.collect {|device| [if current_user.admin? then "#{device.location.name} - #{device.supervisor_name} (#{device.organization.name})" else "#{device.location.name} - #{device.supervisor_name}" end, device.id] }, include_blank: true, autofocus: true %>
+                <%= f.select :office_id, @offices.collect {|office| [if current_user.admin? then "#{office.location.name} - #{office.supervisor_name} (#{office.organization.name})" else "#{office.location.name} - #{office.supervisor_name}" end, office.id] }, include_blank: true, autofocus: true %>
               </div>
             </div>
           </div>

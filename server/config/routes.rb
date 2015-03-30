@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   root 'dashboard#view'
 
-  resources :devices,       only: [:index, :update, :destroy]
+  resources :offices,       only: [:index, :update, :destroy]
   resources :organizations, only: [:index, :new, :create, :destroy]
   resources :users,         only: [:index]
   resources :api_keys,      only: [:index, :edit, :update, :create, :destroy]

@@ -10,7 +10,7 @@ class CasesController < AuthenticatedController
   end
 
   def new
-    @devices = Device.all
+    @offices = Office.all
   end
 
   def create
@@ -21,7 +21,7 @@ class CasesController < AuthenticatedController
       flash[:notice] = "Case of #{@case.patient_name} reported"
       redirect_to cases_path
     else
-      @devices = Device.all
+      @offices = Office.all
       flash[:error] = "Please fix the erroneous data for reporting a new case"
       render action: "new"
     end
@@ -34,7 +34,7 @@ class CasesController < AuthenticatedController
   end
 
   def create_params
-    params.require(:case).permit(:device_id, :patient_name, :patient_phone_number, :patient_age, :patient_gender, :dialect_code, :symptoms, :note)
+    params.require(:case).permit(:office_id, :patient_name, :patient_phone_number, :patient_age, :patient_gender, :dialect_code, :symptoms, :note)
   end
 
 

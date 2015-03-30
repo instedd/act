@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe ApiController, type: :controller do
 
-  let(:device) do
-    FactoryGirl.create :device, reported_organization_name: "instedd",\
+  let(:office) do
+    FactoryGirl.create :office, reported_organization_name: "instedd",\
                                 reported_location_code: "123",\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"
@@ -11,9 +11,9 @@ describe ApiController, type: :controller do
 
   let!(:access_token) { ApiKey.create!.access_token }
 
-  describe "device registration" do
+  describe "office registration" do
     
-    let(:valid_key) { FactoryGirl.attributes_for(:device)[:public_key] }
+    let(:valid_key) { FactoryGirl.attributes_for(:office)[:public_key] }
 
     let(:location) { FactoryGirl.create :location, geo_id: "11_1"}
 
@@ -30,17 +30,17 @@ describe ApiController, type: :controller do
       }
     end
 
-    it "creates unconfirmed device using suplied information" do
+    it "creates unconfirmed office using suplied information" do
       location.save!
-      expect(Device).to receive(:init_sync_path).with(anything)
+      expect(Office).to receive(:init_sync_path).with(anything)
 
-      expect { xhr :post, :register, params }.to change(Device, :count).by(1)
+      expect { xhr :post, :register, params }.to change(Office, :count).by(1)
       expect(response).to be_successful
-      expect(Device.first).not_to be_confirmed
+      expect(Office.first).not_to be_confirmed
     end
 
     it "rejects invalid public keys" do
-      expect(Device).not_to receive(:init_sync_path)
+      expect(Office).not_to receive(:init_sync_path)
       
       params[:publicKey] = "#{valid_key}\n#{valid_key}"
       xhr :post, :register, params
@@ -50,7 +50,7 @@ describe ApiController, type: :controller do
 
     it "accepts trailing newline in public key" do
       location.save!
-      expect(Device).to receive(:init_sync_path)
+      expect(Office).to receive(:init_sync_path)
       
       params[:publicKey] = "#{valid_key}\n"
       xhr :post, :register, params
@@ -83,7 +83,7 @@ describe ApiController, type: :controller do
       end
 
       it "returns all available events if no since_id is specified" do    
-        device.cases.create! sample_params
+        office.cases.create! sample_params
 
         xhr :get, :cases
 
@@ -92,14 +92,14 @@ describe ApiController, type: :controller do
 
         case_json = json_response[0]
         expect(case_json.keys).to match_array(sample_params.keys + ["id"])
-        expect(case_json["id"]).to eq(device.cases.first.id)
+        expect(case_json["id"]).to eq(office.cases.first.id)
         sample_params.each { |k, v| expect(case_json[k]).to eq(v) }
       end
 
       it "returns only events strictly after specified id" do
-        device.cases.create! sample_params({guid: "CASE1"})
-        since_id = device.cases.create!(sample_params({guid: "CASE2"})).id
-        device.cases.create! sample_params({guid: "CASE3"})
+        office.cases.create! sample_params({guid: "CASE1"})
+        since_id = office.cases.create!(sample_params({guid: "CASE2"})).id
+        office.cases.create! sample_params({guid: "CASE3"})
 
         xhr :get, :cases, { since_id: since_id }
 
@@ -111,8 +111,8 @@ describe ApiController, type: :controller do
 
   describe "update case with call follow up information" do
 
-    before(:each) { device.cases.create! sample_params({guid: "CASE1"}) }
-    let(:case_id)  { device.cases.first.id }
+    before(:each) { office.cases.create! sample_params({guid: "CASE1"}) }
+    let(:case_id)  { office.cases.first.id }
 
     context "without access token header" do
   
@@ -139,7 +139,7 @@ describe ApiController, type: :controller do
       end
 
       it "updates updates case sick status (when user declares feeling sick)" do
-        expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", true)
+        expect(Office).to receive(:sync_sick_status).with(office.guid, "CASE1", true)
 
         xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         expect(response).to be_successful
@@ -147,7 +147,7 @@ describe ApiController, type: :controller do
       end
 
       it "updates updates case sick status (when user declares not feeling sick)" do
-        expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", false)
+        expect(Office).to receive(:sync_sick_status).with(office.guid, "CASE1", false)
 
         xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE
         expect(response).to be_successful
@@ -155,16 +155,16 @@ describe ApiController, type: :controller do
       end
 
       it "creates notifications when case is confirmed sick" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         }.to change(Notification, :count).by(1)
       end
 
       it "does not create a notification if case was already confirmed sick" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
         
-        CallRecord.create! _case: device.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: []
+        CallRecord.create! _case: office.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: []
 
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
@@ -172,7 +172,7 @@ describe ApiController, type: :controller do
       end
 
       it "records a family member has fever, no rash" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
 
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_family: ApiController::NEGATIVE_ANSWER_CODE

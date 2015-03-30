@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325215130) do
+ActiveRecord::Schema.define(version: 20150330210539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150325215130) do
   end
 
   create_table "cases", force: true do |t|
-    t.integer  "device_id"
+    t.integer  "office_id"
     t.string   "patient_name"
     t.string   "patient_phone_number"
     t.integer  "patient_age"
@@ -50,23 +50,6 @@ ActiveRecord::Schema.define(version: 20150325215130) do
     t.string   "guid"
     t.datetime "report_time"
   end
-
-  create_table "devices", force: true do |t|
-    t.string   "guid"
-    t.string   "reported_organization_name"
-    t.string   "supervisor_phone_number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "supervisor_name"
-    t.text     "public_key"
-    t.boolean  "confirmed",                  default: false
-    t.boolean  "public_key_allowed",         default: false
-    t.integer  "organization_id"
-    t.string   "reported_location_code"
-    t.integer  "location_id"
-  end
-
-  add_index "devices", ["organization_id"], name: "index_devices_on_organization_id", using: :btree
 
   create_table "location_shapes", force: true do |t|
     t.integer  "location_id"
@@ -98,6 +81,23 @@ ActiveRecord::Schema.define(version: 20150325215130) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "offices", force: true do |t|
+    t.string   "guid"
+    t.string   "reported_organization_name"
+    t.string   "supervisor_phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "supervisor_name"
+    t.text     "public_key"
+    t.boolean  "confirmed",                  default: false
+    t.boolean  "public_key_allowed",         default: false
+    t.integer  "organization_id"
+    t.string   "reported_location_code"
+    t.integer  "location_id"
+  end
+
+  add_index "offices", ["organization_id"], name: "index_offices_on_organization_id", using: :btree
 
   create_table "organizations", force: true do |t|
     t.string   "name",       null: false

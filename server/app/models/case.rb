@@ -4,18 +4,18 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  belongs_to :device
+  belongs_to :office
   has_many :call_records
 
   after_save :update_index
 
-  validates_presence_of :guid, :device, :report_time, :patient_phone_number
+  validates_presence_of :guid, :office, :report_time, :patient_phone_number
 
   delegate :organization,
            :organization_id,
            :supervisor_name,
            :supervisor_phone_number,
-           to: :device
+           to: :office
 
   settings do
     mappings do
@@ -38,17 +38,17 @@ class Case < ActiveRecord::Base
     end
   end
 
-  def self.save_from_sync_file(device_guid, file_content)
+  def self.save_from_sync_file(office_guid, file_content)
     json = JSON.parse file_content
-    device_id = Device.where(guid: device_guid).pluck(:id)[0]
+    office_id = Office.where(guid: office_guid).pluck(:id)[0]
 
-    if device_id.blank?
-      error_msg = "Trying to create case for inexisten device guid #{device_guid}. Posted content: #{file_content}"
+    if office_id.blank?
+      error_msg = "Trying to create case for inexistent office guid #{office_guid}. Posted content: #{file_content}"
       Rails.logger.warn error_msg
       raise error_msg
     end
 
-    Case.create! device_id: device_id,\
+    Case.create! office_id: office_id,\
                  guid: json["guid"],\
                  patient_name: json["name"],\
                  patient_phone_number: json["phone_number"],\
@@ -106,8 +106,8 @@ class Case < ActiveRecord::Base
   def as_indexed_json(options={})
     {
       uuid: guid,
-      device_uuid: device.guid,
-      institution_id: device.organization_id,
+      office_uuid: office.guid,
+      institution_id: office.organization_id,
       gender: gender,
       created_at: created_at,
       updated_at: updated_at,
@@ -115,11 +115,11 @@ class Case < ActiveRecord::Base
       assay_name: 'ebola',
       result: sick_status,
       age_group: age_group,
-      location_id: device.location.geo_id,
-      parent_locations: device.location.hierarchy,
+      location_id: office.location.geo_id,
+      parent_locations: office.location.hierarchy,
       symptoms: formatted_symptoms,
       dialect: dialect_code,
-      location: device.location.detailed_hierarchy
+      location: office.location.detailed_hierarchy
     }
   end
 

@@ -52,10 +52,10 @@ namespace :act do
       file_content = File.read(path)
       parts = path.split(File::SEPARATOR).reverse
       filename = parts[0]
-      device_id = parts[2]
+      office_id = parts[2]
 
       if filename.match(/case.*/)
-        Case.save_from_sync_file(device_id, file_content)
+        Case.save_from_sync_file(office_id, file_content)
         File.delete(path)
       else
         Rails.logger.warn "Unrecognized file was synchronized by client: #{filename}"      

@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe Device do
+describe Office do
 
   describe "creation from synchronized json content" do
-    let(:device) {
-      FactoryGirl.create :device, guid: "GUID",\
+    let(:office) {
+      FactoryGirl.create :office, guid: "GUID",\
                                   reported_organization_name: "instedd",\
                                   reported_location_code: 123,\
                                   supervisor_name: "John Doe",\
@@ -26,12 +26,12 @@ describe Device do
     end
 
     it "creates new cases" do
-     Case.save_from_sync_file(device.guid, sample_case_info.to_json)
+     Case.save_from_sync_file(office.guid, sample_case_info.to_json)
      
      expect(Case.count).to eq(1)
      c = Case.first
      
-     expect(c.device).to eq(device)
+     expect(c.office).to eq(office)
      expect(c.guid).to eq(sample_case_info[:guid])
      expect(c.patient_name).to eq(sample_case_info[:name])
      expect(c.patient_phone_number).to eq(sample_case_info[:phone_number])
@@ -42,8 +42,8 @@ describe Device do
      expect(c.note).to eq(sample_case_info[:note])
     end
 
-    it "fails if device doesn't exist" do
-     expect { Case.save_from_sync_file("inexistent_device", sample_case_info.to_json) }.to raise_error
+    it "fails if office doesn't exist" do
+     expect { Case.save_from_sync_file("inexistent_office", sample_case_info.to_json) }.to raise_error
     end
   end
 

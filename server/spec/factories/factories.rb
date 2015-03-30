@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :non_approved_device, class: Device do
+  factory :non_approved_office, class: Office do
     reported_organization_name       "instedd"
     reported_location_code            "123"
     supervisor_name                   "John Doe"
@@ -15,7 +15,7 @@ FactoryGirl.define do
     location
   end
 
-  factory :approved_device, parent: :non_approved_device, aliases: [:device] do
+  factory :approved_office, parent: :non_approved_office, aliases: [:office] do
     confirmed true
     organization
   end
@@ -45,7 +45,7 @@ FactoryGirl.define do
     symptoms               ["fever"]
     guid                   { SecureRandom.uuid }
     report_time            { DateTime.now - rand(0..30).days - rand(0..24).hours - rand(0..60).minutes }
-    device
+    office
   end
 
   factory :notification do

@@ -29,13 +29,13 @@ class Ability
   def admin user
       can :manage, :all
       cannot :destroy, Case
-      cannot :destroy, Device, confirmed: true
+      cannot :destroy, Office, confirmed: true
   end
 
   def organization_user user
     can :read, Organization, id: user.organization_id
-    can :read, Device, organization_id: user.organization_id
-    can :read, Case,   device: { organization_id: user.organization_id, confirmed: true }
+    can :read, Office, organization_id: user.organization_id
+    can :read, Case,   office: { organization_id: user.organization_id, confirmed: true }
   end
 
 end

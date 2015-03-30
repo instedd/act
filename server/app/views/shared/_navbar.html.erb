@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav">
         <%= navigation_item 'Dashboard', :dashboard, dashboard_path %>
         <%= navigation_item 'Cases', :cases, cases_path %>
-        <%= navigation_item 'Devices', :devices, devices_path %>
+        <%= navigation_item 'Offices', :offices, offices_path %>
         <%= navigation_item 'Organizations', :organizations, organizations_path, if: (current_user.can? :read, Organization) %>
         <%= navigation_item 'Users',   :users,    users_path,                       if: (current_user.can? :read, User) %>
         <%= navigation_item 'API Keys',:api_keys, api_keys_path,                    if: (current_user.can? :read, ApiKey) %>

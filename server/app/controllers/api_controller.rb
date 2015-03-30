@@ -24,7 +24,7 @@ class ApiController < ApplicationController
       location = Location.from_geo_id reported_location_code
       Rails.logger.error "Location #{reported_location_code} not found" unless location
 
-      d = Device.create public_key: params["publicKey"],\
+      d = Office.create public_key: params["publicKey"],\
                         reported_organization_name: params["deviceInfo"]["organization"],\
                         reported_location_code: reported_location_code,\
                         location: location,\
@@ -32,7 +32,7 @@ class ApiController < ApplicationController
                         supervisor_phone_number: params["deviceInfo"]["supervisorNumber"]
 
       if d.save
-        Device.init_sync_path(d.guid)
+        Office.init_sync_path(d.guid)
         
         render nothing: true, status: 200
       elsif d.errors.any?
@@ -50,8 +50,8 @@ class ApiController < ApplicationController
   end
 
   def update_case
-    _case = Case.joins(:device)
-                .select("cases.*, devices.guid as device_guid")
+    _case = Case.joins(:office)
+                .select("cases.*, offices.guid as office_guid")
                 .find_by_id(params[:id])
     
     unless (_case.present? && !params[:sick].nil?)
@@ -78,7 +78,7 @@ class ApiController < ApplicationController
 
     CallRecord.create! _case: _case, sick: params[:sick] == AFFIRMATIVE_ANSWER_CODE, family_sick: params[:family_sick] == AFFIRMATIVE_ANSWER_CODE, community_sick: params[:community_sick] == AFFIRMATIVE_ANSWER_CODE, symptoms: symptoms
 
-    Device.sync_sick_status(_case.device_guid, _case.guid, _case.sick)
+    Office.sync_sick_status(_case.office_guid, _case.guid, _case.sick)
     
     render nothing: true, status: 200
   end

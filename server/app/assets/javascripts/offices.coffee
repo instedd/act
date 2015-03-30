@@ -1,6 +1,6 @@
-ACT.devices = ->
+ACT.offices = ->
 
-ACT.devices["index"] = ->
+ACT.offices["index"] = ->
 
   $('.organization-confirmation').bind 'change', (e) ->
     organization_id = e.target.value

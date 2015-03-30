@@ -188,8 +188,8 @@ class Cdx::V1::EventsController < AuthenticatedController
       ]
     },
     "location": {
-      "title": "Device Location",
-      "description": "Location of the device reporting the case",
+      "title": "Office Location",
+      "description": "Location of the office reporting the case",
       "type": "location",
       "locations":
         JSON

@@ -11,19 +11,19 @@ describe Organization do
   end
 
   it "references registered containers" do
-    device = create_device(organization)
+    office = create_office(organization)
 
-    expect(organization.reload.devices).to include(device)
+    expect(organization.reload.offices).to include(office)
   end
 
-  it "can be deleted if it has no registered devices" do
+  it "can be deleted if it has no registered offices" do
     expect{
       organization.destroy!
     }.to change(Organization, :count).by(-1)
   end
 
-  it "cannot be deleted if it has registered devices" do
-    device = create_device(organization)
+  it "cannot be deleted if it has registered offices" do
+    office = create_office(organization)
     
     expect{
       organization.destroy!
@@ -34,8 +34,8 @@ describe Organization do
     }.not_to raise_error
   end
 
-  def create_device(organization)
-    FactoryGirl.create :device, organization: organization
+  def create_office(organization)
+    FactoryGirl.create :office, organization: organization
   end
 
 end

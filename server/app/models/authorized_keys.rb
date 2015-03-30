@@ -1,8 +1,8 @@
 module AuthorizedKeys
 
-  def self.add(device_guid, public_key)
-    device_sandbox = Device.sync_path(device_guid)
-    ssh_command = "#{Settings.rrsync_location} #{device_sandbox}"
+  def self.add(office_guid, public_key)
+    office_sandbox = Office.sync_path(office_guid)
+    ssh_command = "#{Settings.rrsync_location} #{office_sandbox}"
     
     authorized_keys_entry = "\ncommand=\"#{ssh_command}\",no-agent-forwarding,no-port-forwarding,no-pty,no-user-rc,no-X11-forwarding #{public_key}"
     File.open(Settings.authorized_keys_file, "a+") do |authorized_keys|
