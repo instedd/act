@@ -64,7 +64,7 @@ FactoryGirl.define do
     sick true
     family_sick false
     community_sick false
-    symptoms []
+    symptoms { {} } # a block that returns an empty array
   end
 
 end

@@ -78,6 +78,8 @@ class ApiController < ApplicationController
 
     CallRecord.create! _case: _case, sick: params[:sick] == AFFIRMATIVE_ANSWER_CODE, family_sick: params[:family_sick] == AFFIRMATIVE_ANSWER_CODE, community_sick: params[:community_sick] == AFFIRMATIVE_ANSWER_CODE, symptoms: symptoms
 
+    _case.reload
+
     Office.sync_sick_status(_case.office_guid, _case.guid, _case.sick)
     
     render nothing: true, status: 200

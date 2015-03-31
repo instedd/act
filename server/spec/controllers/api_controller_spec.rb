@@ -164,7 +164,7 @@ describe ApiController, type: :controller do
       it "does not create a notification if case was already confirmed sick" do
         expect(Office).to receive(:sync_sick_status)
         
-        CallRecord.create! _case: office.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: []
+        CallRecord.create! _case: office.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: {}
 
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
@@ -180,10 +180,32 @@ describe ApiController, type: :controller do
 
         _case = Case.find_by_guid("CASE1")
 
-        expect(_case.last_call.sick).to be(false)
-        expect(_case.last_call.family_sick).to be(true)
-        expect(_case.last_call.symptoms["fever_family"]).to be(true)
-        expect(_case.last_call.symptoms["rash_family"]).to be(false)
+        expect(_case.call_records.last.sick).to be(false)
+        expect(_case.call_records.last.family_sick).to be(true)
+        expect(_case.call_records.last.symptoms["fever_family"]).to be(true)
+        expect(_case.call_records.last.symptoms["rash_family"]).to be(false)
+      end
+
+      it "generates a report from multilpe calls" do
+        expect(Office).to receive(:sync_sick_status).twice
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_family: ApiController::NEGATIVE_ANSWER_CODE
+
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, community_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_community: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_community: ApiController::NEGATIVE_ANSWER_CODE
+        }.not_to change(Notification, :count)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(true)
+        expect(_case.calls_report[:community_sick]).to be(true)
+        expect(_case.calls_report[:symptoms]).not_to include("individual_fever")
+        expect(_case.calls_report[:symptoms]).to include("fever_family")
+        expect(_case.calls_report[:symptoms]).to include("fever_community")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_individual")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_family")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_community")
       end
 
     end

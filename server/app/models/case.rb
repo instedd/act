@@ -60,13 +60,30 @@ class Case < ActiveRecord::Base
                  report_time: json["report_time"]
   end
 
-  def sick
-    return nil if last_call.nil?
-    last_call.sick == true
+  def calls_report
+    report = call_records.inject({sick: nil, family_sick: nil, community_sick: nil, symptoms: []}) { | result, call |
+      {
+        sick: result[:sick] | call.sick,
+        family_sick: result[:family_sick] | call.family_sick,
+        community_sick: result[:community_sick] | call.community_sick,
+        symptoms: result[:symptoms] | call.symptoms.select { |key, value| value }.keys
+      }
+    }
+    if call_records.empty? then
+      report[:who_is_sick] = "Not contacted yet"
+    else
+      report[:who_is_sick] = []
+      report[:who_is_sick] << "Patient sick" if report[:sick]
+      report[:who_is_sick] << "Family member sick" if report[:family_sick]
+      report[:who_is_sick] << "Community member sick" if report[:community_sick]
+      report[:who_is_sick] = report[:who_is_sick].join ", "
+    end
+
+    report.with_indifferent_access
   end
 
-  def last_call
-    call_records.last
+  def sick
+    calls_report[:sick]
   end
 
   alias_method :sick?, :sick

@@ -41,11 +41,15 @@ class CallRecord < ActiveRecord::Base
     "Not sick"
   end
 
-  def formated_symptoms
-    known_symptoms = CallRecord.known_symptoms
+  def formatted_symptoms
     positive_symptoms = (symptoms.select { |symptom, value| value }).keys
-    symptoms_descriptions = positive_symptoms.map {|key| CallRecord.known_symptoms[key] }
+    symptoms_descriptions = CallRecord.formatted_symptoms positive_symptoms
     symptoms_descriptions.join ", "
+  end
+
+  def self.formatted_symptoms symptoms
+    known_symptoms = CallRecord.known_symptoms
+    symptoms.map {|key| known_symptoms[key] }
   end
 
   def notify_if_sick

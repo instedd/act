@@ -52,7 +52,9 @@ describe Office do
     it "updates sick flag when confirmed sick" do
       c = FactoryGirl.create :case
       
-      CallRecord.create! _case: c, sick: true, symptoms: []
+      CallRecord.create! _case: c, sick: true, symptoms: {}
+
+      c.reload
 
       expect(c.sick).to be(true)
     end
@@ -77,10 +79,12 @@ describe Office do
     end
 
     it "does not create a notification if previously confirmed sick" do
-      c = FactoryGirl.create :case
-      FactoryGirl.create :call_sick, _case: c
+      _case = FactoryGirl.create :case
+      FactoryGirl.create :call_sick, _case: _case
 
-      expect { CallRecord.create! _case: c, sick: true, symptoms: [] }.not_to change(Notification, :count)
+      _case.reload
+
+      expect { CallRecord.create! _case: _case, sick: true, symptoms: {} }.not_to change(Notification, :count)
     end
 
   end
