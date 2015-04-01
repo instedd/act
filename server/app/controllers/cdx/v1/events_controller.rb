@@ -146,7 +146,7 @@ class Cdx::V1::EventsController < AuthenticatedController
         "vomiting",
         "abdominal_stomach_pain",
         "unexplained_hemorrhage_bleeding_or_bruising",
-        "sorethroat",
+        "sore_throat",
         "rash"
       ],
       "values": {
