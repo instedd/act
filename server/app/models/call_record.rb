@@ -4,6 +4,7 @@ class CallRecord < ActiveRecord::Base
   serialize :symptoms, JSON
 
   before_create :notify_if_sick
+  after_create :update_case_index
 
   def self.known_symptoms
     {
@@ -83,6 +84,10 @@ class CallRecord < ActiveRecord::Base
 
   def notify_if_sick
     Notification.case_confirmed_sick! _case if sick? and !_case.sick?
+  end
+
+  def update_case_index
+    _case.reload.update_index
   end
 
 end

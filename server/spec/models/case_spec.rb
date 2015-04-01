@@ -63,7 +63,7 @@ describe Office do
       c = FactoryGirl.create :case
 
       expect {
-        CallRecord.create! _case: c, sick: true, symptoms: []
+        CallRecord.create! _case: c, sick: true, symptoms: {}
       }.to change(Notification, :count).by(1)
 
       notification = Notification.last
