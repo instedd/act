@@ -134,18 +134,24 @@ class Case < ActiveRecord::Base
       age_group: age_group,
       location_id: office.location.geo_id,
       parent_locations: office.location.hierarchy,
-      symptoms: formatted_symptoms,
+      symptoms: symptoms_for_index,
       dialect: dialect_code,
       location: office.location.detailed_hierarchy
     }
   end
 
-  def formatted_symptoms
-    symptoms.map { |symptom| symptom.parameterize.underscore }
+  def all_symptoms
+    # original symptoms + the ones reported during calls
+    symptoms | calls_report[:symptoms].map { |symptom | CallRecord.reports_to_symptoms[symptom] }
+  end
+
+  def symptoms_for_index
+    # TODO: standardize symptoms (see #82)
+    all_symptoms.map { |symptom| symptom.parameterize.underscore } 
   end
 
   def symptoms_joined
-    symptoms.join "\n"
+    all_symptoms.join "\n"
   end
 
   def sick_status

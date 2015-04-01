@@ -34,6 +34,35 @@ class CallRecord < ActiveRecord::Base
     }
   end
 
+  def self.reports_to_symptoms
+    {
+      "diarreah_community" => "Diarreah",
+      "diarreah_family" => "Diarreah",
+      "diarreah_individual" => "Diarreah",
+      "fever_community" => "Fever",
+      "fever_family" => "Fever",
+      "headache_community" => "Severe headache",
+      "headache_family" => "Severe headache",
+      "headache_individual" => "Severe headache",
+      "hemorrhage_community" => "Unexplained hemorrhage, bleeding or bruising",
+      "hemorrhage_family" => "Unexplained hemorrhage, bleeding or bruising",
+      "hemorrhage_individual" => "Unexplained hemorrhage, bleeding or bruising",
+      "individual_fever" => "Fever",
+      "nausea_vomiting_community" => "Vomiting",
+      "nausea_vomiting_family" => "Vomiting",
+      "nausea_vomiting_individual" => "Vomiting",
+      "rash_community" => "Rash",
+      "rash_family" => "Rash",
+      "rash_individual" => "Rash",
+      "sorethroat_community" => "Sore throat",
+      "sorethroat_family" => "Sore throat",
+      "sorethroat_individual" => "Sore throat",
+      "weakness_pain_community" => "Weakness",
+      "weakness_pain_family" => "Weakness",
+      "weakness_pain_individual" => "Weakness"
+    }
+  end
+
   def who_is_sick
     return "Patient sick" if sick?
     return "Family member sick" if family_sick?

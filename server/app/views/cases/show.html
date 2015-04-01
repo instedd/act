@@ -9,7 +9,7 @@
     <dt>Age</dt><dl><%= @case.patient_age %></dl>
     <dt>Gender</dt><dl><%= @case.patient_gender %></dl>
     <dt>Preferred dialect</dt><dl><%= @case.dialect_code %></dl>
-    <dt>Symptoms</dt><dl><%= (@case.symptoms | CallRecord.formatted_symptoms(calls_report[:symptoms])).join ", " %></dl>
+    <dt>Original symptoms</dt><dl><%= @case.symptoms.join ", " %></dl>
     <dt>Report time</dt><dl><%= @case.report_time %> (<%= time_ago_in_words @case.report_time %> ago)</dl>
     <dt>Notes</dt><dl><%= @case.note %></dl>
   </dl>
@@ -25,7 +25,7 @@
         <thead>
           <th>Call time</th>
           <th>Anyone sick?</th>
-          <th>Symptoms</th>
+          <th>Reported symptoms</th>
         </thead>
         <tbody>
           <% for @call in @case.call_records.reverse %>

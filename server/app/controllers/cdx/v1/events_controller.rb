@@ -145,7 +145,9 @@ class Cdx::V1::EventsController < AuthenticatedController
         "diarrhea",
         "vomiting",
         "abdominal_stomach_pain",
-        "unexplained_hemorrhage_bleeding_or_bruising"
+        "unexplained_hemorrhage_bleeding_or_bruising",
+        "sorethroat",
+        "rash"
       ],
       "values": {
         "fever": {
@@ -174,6 +176,12 @@ class Cdx::V1::EventsController < AuthenticatedController
         },
         "unexplained_hemorrhage_bleeding_or_bruising": {
           "name": "Unexplained hemorrhage"
+        },
+        "sorethroat": {
+          "name": "Sore throat"
+        },
+        "rash": {
+          "name": "Rash"
         }
       }
     },
