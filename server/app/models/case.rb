@@ -79,6 +79,8 @@ class Case < ActiveRecord::Base
       report[:who_is_sick] = report[:who_is_sick].join ", "
     end
 
+    report[:anyone_sick] = report[:sick] || report[:family_sick] || report[:community_sick]
+
     report.with_indifferent_access
   end
 
@@ -130,7 +132,7 @@ class Case < ActiveRecord::Base
       updated_at: updated_at,
       start_time: report_time || created_at,
       assay_name: 'ebola',
-      result: sick_status,
+      result: anyone_sick,
       age_group: age_group,
       location_id: office.location.geo_id,
       parent_locations: office.location.hierarchy,
@@ -156,6 +158,17 @@ class Case < ActiveRecord::Base
 
   def sick_status
     case sick?
+    when true
+      'sick'
+    when false
+      'not_sick'
+    else
+      'not_reported'
+    end
+  end
+
+  def anyone_sick
+    case calls_report[:anyone_sick]
     when true
       'sick'
     when false
