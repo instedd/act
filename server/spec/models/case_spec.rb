@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe Device do
+describe Office do
 
   describe "creation from synchronized json content" do
-    let(:device) {
-      FactoryGirl.create :device, guid: "GUID",\
+    let(:office) {
+      FactoryGirl.create :office, guid: "GUID",\
                                   reported_organization_name: "instedd",\
                                   reported_location_code: 123,\
                                   supervisor_name: "John Doe",\
@@ -20,17 +20,18 @@ describe Device do
        gender: "M",
        dialect_code: "D123",
        symptoms: [ :fever, :vomiting ],
+       report_time: "2015-03-31T19:04:19.750Z",
        note: "Nothing in particular.",
      }
     end
 
     it "creates new cases" do
-     Case.save_from_sync_file(device.guid, sample_case_info.to_json)
+     Case.save_from_sync_file(office.guid, sample_case_info.to_json)
      
      expect(Case.count).to eq(1)
      c = Case.first
      
-     expect(c.device).to eq(device)
+     expect(c.office).to eq(office)
      expect(c.guid).to eq(sample_case_info[:guid])
      expect(c.patient_name).to eq(sample_case_info[:name])
      expect(c.patient_phone_number).to eq(sample_case_info[:phone_number])
@@ -41,8 +42,8 @@ describe Device do
      expect(c.note).to eq(sample_case_info[:note])
     end
 
-    it "fails if device doesn't exist" do
-     expect { Case.save_from_sync_file("inexistent_device", sample_case_info.to_json) }.to raise_error
+    it "fails if office doesn't exist" do
+     expect { Case.save_from_sync_file("inexistent_office", sample_case_info.to_json) }.to raise_error
     end
   end
 
@@ -51,7 +52,9 @@ describe Device do
     it "updates sick flag when confirmed sick" do
       c = FactoryGirl.create :case
       
-      CallRecord.create! _case: c, sick: true, symptoms: []
+      CallRecord.create! _case: c, sick: true, symptoms: {}
+
+      c.reload
 
       expect(c.sick).to be(true)
     end
@@ -60,7 +63,7 @@ describe Device do
       c = FactoryGirl.create :case
 
       expect {
-        CallRecord.create! _case: c, sick: true, symptoms: []
+        CallRecord.create! _case: c, sick: true, symptoms: {}
       }.to change(Notification, :count).by(1)
 
       notification = Notification.last
@@ -76,10 +79,12 @@ describe Device do
     end
 
     it "does not create a notification if previously confirmed sick" do
-      c = FactoryGirl.create :case
-      FactoryGirl.create :call_sick, _case: c
+      _case = FactoryGirl.create :case
+      FactoryGirl.create :call_sick, _case: _case
 
-      expect { CallRecord.create! _case: c, sick: true, symptoms: [] }.not_to change(Notification, :count)
+      _case.reload
+
+      expect { CallRecord.create! _case: _case, sick: true, symptoms: {} }.not_to change(Notification, :count)
     end
 
   end

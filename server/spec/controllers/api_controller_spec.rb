@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe ApiController, type: :controller do
 
-  let(:device) do
-    FactoryGirl.create :device, reported_organization_name: "instedd",\
+  let(:office) do
+    FactoryGirl.create :office, reported_organization_name: "instedd",\
                                 reported_location_code: "123",\
                                 supervisor_name: "John Doe",\
                                 supervisor_phone_number: "123"
@@ -11,9 +11,9 @@ describe ApiController, type: :controller do
 
   let!(:access_token) { ApiKey.create!.access_token }
 
-  describe "device registration" do
+  describe "office registration" do
     
-    let(:valid_key) { FactoryGirl.attributes_for(:device)[:public_key] }
+    let(:valid_key) { FactoryGirl.attributes_for(:office)[:public_key] }
 
     let(:location) { FactoryGirl.create :location, geo_id: "11_1"}
 
@@ -30,17 +30,17 @@ describe ApiController, type: :controller do
       }
     end
 
-    it "creates unconfirmed device using suplied information" do
+    it "creates unconfirmed office using suplied information" do
       location.save!
-      expect(Device).to receive(:init_sync_path).with(anything)
+      expect(Office).to receive(:init_sync_path).with(anything)
 
-      expect { xhr :post, :register, params }.to change(Device, :count).by(1)
+      expect { xhr :post, :register, params }.to change(Office, :count).by(1)
       expect(response).to be_successful
-      expect(Device.first).not_to be_confirmed
+      expect(Office.first).not_to be_confirmed
     end
 
     it "rejects invalid public keys" do
-      expect(Device).not_to receive(:init_sync_path)
+      expect(Office).not_to receive(:init_sync_path)
       
       params[:publicKey] = "#{valid_key}\n#{valid_key}"
       xhr :post, :register, params
@@ -50,7 +50,7 @@ describe ApiController, type: :controller do
 
     it "accepts trailing newline in public key" do
       location.save!
-      expect(Device).to receive(:init_sync_path)
+      expect(Office).to receive(:init_sync_path)
       
       params[:publicKey] = "#{valid_key}\n"
       xhr :post, :register, params
@@ -83,7 +83,7 @@ describe ApiController, type: :controller do
       end
 
       it "returns all available events if no since_id is specified" do    
-        device.cases.create! sample_params
+        office.cases.create! sample_params
 
         xhr :get, :cases
 
@@ -92,14 +92,14 @@ describe ApiController, type: :controller do
 
         case_json = json_response[0]
         expect(case_json.keys).to match_array(sample_params.keys + ["id"])
-        expect(case_json["id"]).to eq(device.cases.first.id)
+        expect(case_json["id"]).to eq(office.cases.first.id)
         sample_params.each { |k, v| expect(case_json[k]).to eq(v) }
       end
 
       it "returns only events strictly after specified id" do
-        device.cases.create! sample_params({guid: "CASE1"})
-        since_id = device.cases.create!(sample_params({guid: "CASE2"})).id
-        device.cases.create! sample_params({guid: "CASE3"})
+        office.cases.create! sample_params({guid: "CASE1"})
+        since_id = office.cases.create!(sample_params({guid: "CASE2"})).id
+        office.cases.create! sample_params({guid: "CASE3"})
 
         xhr :get, :cases, { since_id: since_id }
 
@@ -111,8 +111,8 @@ describe ApiController, type: :controller do
 
   describe "update case with call follow up information" do
 
-    before(:each) { device.cases.create! sample_params({guid: "CASE1"}) }
-    let(:case_id)  { device.cases.first.id }
+    before(:each) { office.cases.create! sample_params({guid: "CASE1"}) }
+    let(:case_id)  { office.cases.first.id }
 
     context "without access token header" do
   
@@ -139,7 +139,7 @@ describe ApiController, type: :controller do
       end
 
       it "updates updates case sick status (when user declares feeling sick)" do
-        expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", true)
+        expect(Office).to receive(:sync_sick_status).with(office.guid, "CASE1", true)
 
         xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         expect(response).to be_successful
@@ -147,7 +147,7 @@ describe ApiController, type: :controller do
       end
 
       it "updates updates case sick status (when user declares not feeling sick)" do
-        expect(Device).to receive(:sync_sick_status).with(device.guid, "CASE1", false)
+        expect(Office).to receive(:sync_sick_status).with(office.guid, "CASE1", false)
 
         xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE
         expect(response).to be_successful
@@ -155,16 +155,16 @@ describe ApiController, type: :controller do
       end
 
       it "creates notifications when case is confirmed sick" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
         }.to change(Notification, :count).by(1)
       end
 
       it "does not create a notification if case was already confirmed sick" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
         
-        CallRecord.create! _case: device.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: []
+        CallRecord.create! _case: office.cases.first, sick: true, family_sick: false, community_sick: false, symptoms: {}
 
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE
@@ -172,7 +172,7 @@ describe ApiController, type: :controller do
       end
 
       it "records a family member has fever, no rash" do
-        expect(Device).to receive(:sync_sick_status)
+        expect(Office).to receive(:sync_sick_status)
 
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_family: ApiController::NEGATIVE_ANSWER_CODE
@@ -180,10 +180,32 @@ describe ApiController, type: :controller do
 
         _case = Case.find_by_guid("CASE1")
 
-        expect(_case.last_call.sick).to be(false)
-        expect(_case.last_call.family_sick).to be(true)
-        expect(_case.last_call.symptoms["fever_family"]).to be(true)
-        expect(_case.last_call.symptoms["rash_family"]).to be(false)
+        expect(_case.call_records.last.sick).to be(false)
+        expect(_case.call_records.last.family_sick).to be(true)
+        expect(_case.call_records.last.symptoms["fever_family"]).to be(true)
+        expect(_case.call_records.last.symptoms["rash_family"]).to be(false)
+      end
+
+      it "generates a report from multilpe calls" do
+        expect(Office).to receive(:sync_sick_status).twice
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_family: ApiController::NEGATIVE_ANSWER_CODE
+
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, community_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_community: ApiController::AFFIRMATIVE_ANSWER_CODE, rash_community: ApiController::NEGATIVE_ANSWER_CODE
+        }.not_to change(Notification, :count)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(true)
+        expect(_case.calls_report[:community_sick]).to be(true)
+        expect(_case.calls_report[:symptoms]).not_to include("individual_fever")
+        expect(_case.calls_report[:symptoms]).to include("fever_family")
+        expect(_case.calls_report[:symptoms]).to include("fever_community")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_individual")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_family")
+        expect(_case.calls_report[:symptoms]).not_to include("rash_community")
       end
 
     end
@@ -264,6 +286,7 @@ describe ApiController, type: :controller do
      "dialect_code" => "D123",
      "symptoms" => [ "fever", "vomiting" ],
      "note" => "Nothing in particular.",
+     "report_time" => "2015-03-31T19:04:19.750Z"
    }.merge(overrides) 
   end
 

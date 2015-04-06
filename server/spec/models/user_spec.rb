@@ -7,34 +7,34 @@ describe User do
 
     let(:user)    { FactoryGirl.create :organization_user }
 
-    describe "access to devices" do
+    describe "access to offices" do
 
-      it "cannot access non-approved devices" do
-        device = FactoryGirl.create :non_approved_device
-        expect(user).not_to be_able_to(:read,    device)
-        expect(user).not_to be_able_to(:create,  device)
-        expect(user).not_to be_able_to(:update,  device)
-        expect(user).not_to be_able_to(:destroy, device)
+      it "cannot access non-approved offices" do
+        office = FactoryGirl.create :non_approved_office
+        expect(user).not_to be_able_to(:read,    office)
+        expect(user).not_to be_able_to(:create,  office)
+        expect(user).not_to be_able_to(:update,  office)
+        expect(user).not_to be_able_to(:destroy, office)
       end
 
-      it "can access devices approved for his organzation" do
-        device = FactoryGirl.build :approved_device, organization: user.organization
-        expect(user).to be_able_to(:read, device)
+      it "can access offices approved for his organzation" do
+        office = FactoryGirl.build :approved_office, organization: user.organization
+        expect(user).to be_able_to(:read, office)
       end
 
-      it "cannot modify devices approved for his organzation" do
-        device = FactoryGirl.build :approved_device, organization: user.organization
-        expect(user).not_to be_able_to(:create, device)
-        expect(user).not_to be_able_to(:update, device)
-        expect(user).not_to be_able_to(:destroy, device)
+      it "cannot modify offices approved for his organzation" do
+        office = FactoryGirl.build :approved_office, organization: user.organization
+        expect(user).not_to be_able_to(:create, office)
+        expect(user).not_to be_able_to(:update, office)
+        expect(user).not_to be_able_to(:destroy, office)
       end
 
-      it "cannot access devices approved for other organizations" do
-        device = FactoryGirl.build :approved_device
-        expect(user).not_to be_able_to(:read,    device)
-        expect(user).not_to be_able_to(:create,  device)
-        expect(user).not_to be_able_to(:update,  device)
-        expect(user).not_to be_able_to(:destroy, device)
+      it "cannot access offices approved for other organizations" do
+        office = FactoryGirl.build :approved_office
+        expect(user).not_to be_able_to(:read,    office)
+        expect(user).not_to be_able_to(:create,  office)
+        expect(user).not_to be_able_to(:update,  office)
+        expect(user).not_to be_able_to(:destroy, office)
       end
 
     end
@@ -75,8 +75,8 @@ describe User do
     describe "access to cases" do
 
       let(:same_organization_case) do
-        device = FactoryGirl.create :device, organization: user.organization
-        FactoryGirl.create :case, device: device
+        office = FactoryGirl.create :office, organization: user.organization
+        FactoryGirl.create :case, office: office
       end
 
       let(:other_organization_case) do

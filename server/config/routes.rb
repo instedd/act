@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       patch 'users/:id' => 'devise/registrations#update', :as => 'user_registration'
     end
 
+  resources :cases, only: [:index, :new, :create, :show]
+  
   scope :api do
     scope :v1 do
       post 'registration' => 'api#register'
@@ -17,12 +19,10 @@ Rails.application.routes.draw do
 
   root 'dashboard#view'
 
-  resources :devices,       only: [:index, :update, :destroy]
+  resources :offices,       only: [:index, :update, :destroy]
   resources :organizations, only: [:index, :new, :create, :destroy]
   resources :users,         only: [:index]
   resources :api_keys,      only: [:index, :edit, :update, :create, :destroy]
-
-  resources :cases, as: "list_cases", only: [:index, :show]
 
   get 'dashboard' => 'dashboard#view'
 

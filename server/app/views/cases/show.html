@@ -1,14 +1,15 @@
+<% calls_report = @case.calls_report %>
 <div class="case_details">
   <h2><%= @case.patient_name %> <% if @case.sick? %><span class="case_reported_sick_alert">(reported sick)</span><% end %></h2>
   <dl>
     <dt>Name</dt><dl><%= @case.patient_name %></dl>
     <dt>Case Identifier</dt><dl><%= @case.guid %></dl>
-    <dt>Sick status</dt><dl><%= if @case.last_call then @case.last_call.who_is_sick else "Not contacted yet" end %></dl>
+    <dt>Sick status</dt><dl><%= calls_report[:who_is_sick] %></dl>
     <dt>Phone number</dt><dl><%= @case.patient_phone_number %></dl>
     <dt>Age</dt><dl><%= @case.patient_age %></dl>
     <dt>Gender</dt><dl><%= @case.patient_gender %></dl>
     <dt>Preferred dialect</dt><dl><%= @case.dialect_code %></dl>
-    <dt>Original symptoms</dt><dl><%= @case.symptoms.join ', ' %></dl>
+    <dt>Original symptoms</dt><dl><%= @case.symptoms.join ", " %></dl>
     <dt>Report time</dt><dl><%= @case.report_time %> (<%= time_ago_in_words @case.report_time %> ago)</dl>
     <dt>Notes</dt><dl><%= @case.note %></dl>
   </dl>
@@ -24,14 +25,14 @@
         <thead>
           <th>Call time</th>
           <th>Anyone sick?</th>
-          <th>Symptoms</th>
+          <th>Reported symptoms</th>
         </thead>
         <tbody>
           <% for @call in @case.call_records.reverse %>
           <tr>
             <td><span title="<%= time_ago_in_words @call.created_at %> ago"><%= @call.created_at %></span></td>
             <td><%= @call.who_is_sick %></td>
-            <td><%= @call.formated_symptoms %></td>
+            <td><%= @call.formatted_symptoms %></td>
           </tr>
           <% end %>
         </tbody>

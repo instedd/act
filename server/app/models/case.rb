@@ -4,19 +4,18 @@ class Case < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  belongs_to :device
+  belongs_to :office
   has_many :call_records
 
   after_save :update_index
 
-  validates_presence_of :guid
-  validates_presence_of :device
+  validates_presence_of :guid, :office, :report_time, :patient_phone_number
 
   delegate :organization,
            :organization_id,
            :supervisor_name,
            :supervisor_phone_number,
-           to: :device
+           to: :office
 
   settings do
     mappings do
@@ -39,17 +38,17 @@ class Case < ActiveRecord::Base
     end
   end
 
-  def self.save_from_sync_file(device_guid, file_content)
+  def self.save_from_sync_file(office_guid, file_content)
     json = JSON.parse file_content
-    device_id = Device.where(guid: device_guid).pluck(:id)[0]
+    office_id = Office.where(guid: office_guid).pluck(:id)[0]
 
-    if device_id.blank?
-      error_msg = "Trying to create case for inexisten device guid #{device_guid}. Posted content: #{file_content}"
+    if office_id.blank?
+      error_msg = "Trying to create case for inexistent office guid #{office_guid}. Posted content: #{file_content}"
       Rails.logger.warn error_msg
       raise error_msg
     end
 
-    Case.create! device_id: device_id,\
+    Case.create! office_id: office_id,\
                  guid: json["guid"],\
                  patient_name: json["name"],\
                  patient_phone_number: json["phone_number"],\
@@ -61,13 +60,32 @@ class Case < ActiveRecord::Base
                  report_time: json["report_time"]
   end
 
-  def sick
-    return nil if last_call.nil?
-    last_call.sick == true
+  def calls_report
+    report = call_records.inject({sick: nil, family_sick: nil, community_sick: nil, symptoms: []}) { | result, call |
+      {
+        sick: result[:sick] | call.sick,
+        family_sick: result[:family_sick] | call.family_sick,
+        community_sick: result[:community_sick] | call.community_sick,
+        symptoms: result[:symptoms] | call.symptoms.select { |key, value| value }.keys
+      }
+    }
+    if call_records.empty? then
+      report[:who_is_sick] = "Not contacted yet"
+    else
+      report[:who_is_sick] = []
+      report[:who_is_sick] << "Patient sick" if report[:sick]
+      report[:who_is_sick] << "Family member sick" if report[:family_sick]
+      report[:who_is_sick] << "Community member sick" if report[:community_sick]
+      report[:who_is_sick] = report[:who_is_sick].join ", "
+    end
+
+    report[:anyone_sick] = report[:sick] || report[:family_sick] || report[:community_sick]
+
+    report.with_indifferent_access
   end
 
-  def last_call
-    call_records.last
+  def sick
+    calls_report[:sick]
   end
 
   alias_method :sick?, :sick
@@ -83,6 +101,7 @@ class Case < ActiveRecord::Base
         "patient_gender",
         "dialect_code",
         "symptoms",
+        "report_time",
         "note"
       ].include? k
     end
@@ -106,33 +125,50 @@ class Case < ActiveRecord::Base
   def as_indexed_json(options={})
     {
       uuid: guid,
-      device_uuid: device.guid,
-      institution_id: device.organization_id,
+      office_uuid: office.guid,
+      institution_id: office.organization_id,
       gender: gender,
       created_at: created_at,
       updated_at: updated_at,
       start_time: report_time || created_at,
       assay_name: 'ebola',
-      result: sick_status,
+      result: anyone_sick,
       age_group: age_group,
-      location_id: device.location.geo_id,
-      parent_locations: device.location.hierarchy,
-      symptoms: formatted_symptoms,
+      location_id: office.location.geo_id,
+      parent_locations: office.location.hierarchy,
+      symptoms: symptoms_for_index,
       dialect: dialect_code,
-      location: device.location.detailed_hierarchy
+      location: office.location.detailed_hierarchy
     }
   end
 
-  def formatted_symptoms
-    symptoms.map { |symptom| symptom.parameterize.underscore }
+  def all_symptoms
+    # original symptoms + the ones reported during calls
+    symptoms | calls_report[:symptoms].map { |symptom | CallRecord.reports_to_symptoms[symptom] }
+  end
+
+  def symptoms_for_index
+    # TODO: standardize symptoms (see #82)
+    all_symptoms.map { |symptom| symptom.parameterize.underscore } 
   end
 
   def symptoms_joined
-    symptoms.join "\n"
+    all_symptoms.join "\n"
   end
 
   def sick_status
     case sick?
+    when true
+      'sick'
+    when false
+      'not_sick'
+    else
+      'not_reported'
+    end
+  end
+
+  def anyone_sick
+    case calls_report[:anyone_sick]
     when true
       'sick'
     when false

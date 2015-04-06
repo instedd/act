@@ -1,9 +1,9 @@
 class Organization < ActiveRecord::Base
 
-  has_many :devices, dependent: :restrict_with_error
+  has_many :offices, dependent: :restrict_with_error
 
   def can_be_deleted?
-    not devices.any?
+    not offices.any?
   end
 
 end

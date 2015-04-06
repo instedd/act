@@ -1,22 +1,22 @@
-<% if current_user.admin? && @pending_devices_count > 0 %>
+<% if current_user.admin? && @pending_offices_count > 0 %>
   <div class="row">
     <div class="col-md-12">
       <%=
           link_to \
-          "View #{@pending_devices_count} pending #{'device'.pluralize(@pending_devices_count)}",\
-          devices_path(pending: true),\
+          "View #{@pending_offices_count} pending #{'office'.pluralize(@pending_offices_count)}",\
+          offices_path(pending: true),\
           class: 'btn btn-primary pull-right'
       %>
     </div>
   </div>
 <% end %>
 <br>
-<% if @devices.any? %>
+<% if @offices.any? %>
   <div class="row">
     <div class="col-md-12">
       <div class="table-responsive">
         <table class="table table-hover act-table">
-          <caption>The following devices are already approved and can upload cases.</caption>
+          <caption>The following offices are already approved and can upload cases.</caption>
           <thead>
             <th>Organization</th>
             <th>Supervisor name</th>
@@ -24,13 +24,13 @@
             <th>Location</th>
           </thead>
           <tbody>
-          <% for @device in @devices %>
+          <% for @office in @offices %>
           <tr>
 
-            <td><%= @device.organization.name %></td>
-            <td><%= @device.supervisor_name %></td>
-            <td><%= @device.supervisor_phone_number %></td>
-            <td><%= @device.location.name %></td>
+            <td><%= @office.organization.name %></td>
+            <td><%= @office.supervisor_name %></td>
+            <td><%= @office.supervisor_phone_number %></td>
+            <td><%= @office.location.name %></td>
 
           </tr>
           <% end %>
@@ -42,7 +42,7 @@
 <% else %>
 
   <div class="well text-center">
-    <h5>There are no confirmed devices to display.</h5>
+    <h5>There are no confirmed offices to display.</h5>
   </div>
 
 <% end %>

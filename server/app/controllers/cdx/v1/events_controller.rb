@@ -145,7 +145,9 @@ class Cdx::V1::EventsController < AuthenticatedController
         "diarrhea",
         "vomiting",
         "abdominal_stomach_pain",
-        "unexplained_hemorrhage_bleeding_or_bruising"
+        "unexplained_hemorrhage_bleeding_or_bruising",
+        "sore_throat",
+        "rash"
       ],
       "values": {
         "fever": {
@@ -174,6 +176,12 @@ class Cdx::V1::EventsController < AuthenticatedController
         },
         "unexplained_hemorrhage_bleeding_or_bruising": {
           "name": "Unexplained hemorrhage"
+        },
+        "sorethroat": {
+          "name": "Sore throat"
+        },
+        "rash": {
+          "name": "Rash"
         }
       }
     },
@@ -188,8 +196,8 @@ class Cdx::V1::EventsController < AuthenticatedController
       ]
     },
     "location": {
-      "title": "Device Location",
-      "description": "Location of the device reporting the case",
+      "title": "Office Location",
+      "description": "Location of the office reporting the case",
       "type": "location",
       "locations":
         JSON

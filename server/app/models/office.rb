@@ -1,4 +1,4 @@
-class Device < ActiveRecord::Base
+class Office < ActiveRecord::Base
 
   has_many   :cases
   belongs_to :organization
@@ -16,8 +16,8 @@ class Device < ActiveRecord::Base
     :supervisor_phone_number
   ]
 
-  before_save do |device|
-    device.guid ||= SecureRandom.hex(16).upcase
+  before_save do |office|
+    office.guid ||= SecureRandom.uuid
     true
   end
 
@@ -29,38 +29,38 @@ class Device < ActiveRecord::Base
   end
 
   
-  def self.sync_sick_status(device_guid, case_guid, sick_condition)
+  def self.sync_sick_status(office_guid, case_guid, sick_condition)
     document_name = "case-#{case_guid}.json"
     document_content = {sick: sick_condition}
 
-    outbox_path = outbox(device_guid)
+    outbox_path = outbox(office_guid)
     file = File.open(File.join(outbox_path, document_name), "w")
     file.puts document_content.to_json
     file.close
   end
 
-  def self.init_sync_path(device_guid)
-    device_sync_path = sync_path(device_guid)
+  def self.init_sync_path(office_guid)
+    office_sync_path = sync_path(office_guid)
 
-    unless Dir.exists? device_sync_path
-      Dir.mkdir device_sync_path
-      Dir.mkdir outbox(device_guid)
-      Dir.mkdir inbox(device_guid)
+    unless Dir.exists? office_sync_path
+      Dir.mkdir office_sync_path
+      Dir.mkdir outbox(office_guid)
+      Dir.mkdir inbox(office_guid)
     end
   end
 
   private
 
-  def self.sync_path(device_guid)
-    File.expand_path File.join(Settings.sync_directory, device_guid)
+  def self.sync_path(office_guid)
+    File.expand_path File.join(Settings.sync_directory, office_guid)
   end
 
-  def self.outbox(device_guid)
-    File.join(sync_path(device_guid), "outbox")
+  def self.outbox(office_guid)
+    File.join(sync_path(office_guid), "outbox")
   end
 
-  def self.inbox(device_guid)
-    File.join(sync_path(device_guid), "inbox")
+  def self.inbox(office_guid)
+    File.join(sync_path(office_guid), "inbox")
   end
 
 end
