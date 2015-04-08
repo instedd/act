@@ -1,6 +1,19 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_mailer.default_url_options = { :host => 'act.instedd.org' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              ENV['ACT_SMTP_SERVER'],
+    port:                 ENV['ACT_SMTP_PORT'],
+    domain:               ENV['ACT_SMTP_DOMAIN'],
+    user_name:            ENV['ACT_SMTP_USER'],
+    password:             ENV['ACT_SMTP_PASS'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
