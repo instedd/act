@@ -13,3 +13,5 @@ export ACT_SMTP_PORT=587
 export ACT_SMTP_DOMAIN=gmail.com
 export ACT_SMTP_USER=username@gmail.com
 export ACT_SMTP_PASS=yourpassword
+
+export ACT_APP_DOMAIN=dockerhost

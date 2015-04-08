@@ -48,4 +48,5 @@ act:
     - ACT_SMTP_DOMAIN
     - ACT_SMTP_USER
     - ACT_SMTP_PASS
+    - ACT_APP_DOMAIN
 
