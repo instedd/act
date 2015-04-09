@@ -49,8 +49,6 @@ RUN echo "Just invalidating the cache"
 
 RUN git clone https://github.com/instedd/notifiable-diseases /tmp/notifiable-diseases
 WORKDIR /tmp/notifiable-diseases
-RUN git fetch
-RUN git checkout 14-hotfix-dependencies
 RUN gem install compass
 RUN npm install
 RUN bower --allow-root install
