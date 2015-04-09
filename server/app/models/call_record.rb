@@ -83,11 +83,15 @@ class CallRecord < ActiveRecord::Base
   end
 
   def notify_if_sick
-    Notification.case_confirmed_sick! _case if sick? and !_case.sick?
+    Notification.case_confirmed_sick! _case if successful and sick? and !_case.sick?
   end
 
   def update_case_index
-    _case.reload.update_index
+    _case.reload.update_index if successful
+  end
+
+  def self.failed! _case: _case, reported_status: reported_status
+    CallRecord.create! _case: _case, successful: false, reported_status: reported_status
   end
 
 end

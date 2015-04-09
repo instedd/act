@@ -59,6 +59,16 @@ class ApiController < ApplicationController
       return
     end
 
+    # assume the call is completed if no status reported
+    # as Verboice isn't reporting the status at the moment
+    call_status = params.delete(:call_status) || "completed"
+
+    unless call_status == "completed"
+      CallRecord.failed! _case: _case, reported_status: call_status
+      render nothing: true, status: 200
+      return
+    end
+
     symptoms = {}
     known_symptoms = []
 

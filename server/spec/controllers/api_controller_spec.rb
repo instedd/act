@@ -208,6 +208,73 @@ describe ApiController, type: :controller do
         expect(_case.calls_report[:symptoms]).not_to include("rash_community")
       end
 
+      it "records a call as failed with error" do
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'failed (busy)'
+        }.not_to change(Notification, :count)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.call_records.count).to eq(1)
+        expect(_case.calls_report[:sick]).to be_nil
+        expect(_case.calls_report[:family_sick]).to be_nil
+        expect(_case.calls_report[:community_sick]).to be_nil
+        expect(_case.calls_report[:anyone_sick]).to be_nil
+        expect(_case.calls_report[:who_is_sick]).to eq('Not contacted yet')
+        expect(_case.calls_report[:symptoms]).to be_empty
+      end
+
+      it "records a successful call" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.call_records.count).to eq(1)
+        expect(_case.calls_report[:sick]).to be_truthy
+        expect(_case.calls_report[:family_sick]).to be_falsy
+        expect(_case.calls_report[:community_sick]).to be_falsy
+        expect(_case.calls_report[:anyone_sick]).to be_truthy
+        expect(_case.calls_report[:who_is_sick]).to eq('Patient sick')
+        expect(_case.calls_report[:symptoms].count).to eq(1)
+        expect(_case.calls_report[:symptoms]).to include('rash_individual')
+      end
+
+      it "takes successful calls into account for a call report" do
+        expect(Office).to receive(:sync_sick_status).twice
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_family: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+
+          _case.reload
+        }.to change(_case, :calls_report)
+      end
+
+      it "doesn't take into account failed calls for a call report" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_family: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'failed (busy)'
+
+          _case.reload
+        }.not_to change(_case, :calls_report)
+      end
+
     end
 
 
