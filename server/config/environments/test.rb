@@ -37,3 +37,19 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+require 'elasticsearch/model'
+module Elasticsearch
+  module Model
+    class << self
+      
+      def included_with_index_rename base
+        included_without_index_rename base
+        base.instance_eval do
+          index_name ["act", ::Rails.env, model_name.collection.gsub(/\//, '-')].join("_")
+        end
+      end
+      alias_method_chain :included, :index_rename
+    end    
+  end
+end
