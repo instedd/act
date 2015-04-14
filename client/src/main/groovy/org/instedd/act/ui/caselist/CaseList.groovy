@@ -3,6 +3,7 @@ package org.instedd.act.ui.caselist
 import java.awt.Color
 import java.awt.Component
 import java.awt.Dimension
+import java.awt.FlowLayout
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.awt.event.MouseListener
@@ -61,7 +62,7 @@ class CaseList extends JFrame {
 
 	void build(List<Case> cases) {
 		def container = new JPanel()
-		container.border = BorderFactory.createEmptyBorder(20, 20, 20, 20)
+		container.border = BorderFactory.createEmptyBorder(20, 20, 10, 20)
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS))
 		container.setPreferredSize(new Dimension(750, 480))
 		
@@ -173,8 +174,11 @@ class CaseList extends JFrame {
 		topBar.border = BorderFactory.createEmptyBorder(0, 0, 10, 0)
 		
 		def bottomBar = new JPanel()
-		bottomBar.setLayout(new BoxLayout(bottomBar, BoxLayout.X_AXIS))
-		bottomBar.border = BorderFactory.createEmptyBorder(10, 0, 0, 0)
+		bottomBar.setLayout(new FlowLayout(FlowLayout.RIGHT))
+		
+		def versionLabel = new JLabel(controller.settings.appVersion())
+		versionLabel.setForeground(Color.GRAY)
+		bottomBar.add versionLabel
 		
 		topBar.add unreadButtonsPanel
 		topBar.add Box.createHorizontalGlue()

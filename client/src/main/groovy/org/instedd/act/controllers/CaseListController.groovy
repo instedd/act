@@ -1,5 +1,6 @@
 package org.instedd.act.controllers
 
+import org.instedd.act.Settings
 import org.instedd.act.events.CaseUpdatedEvent;
 import org.instedd.act.models.Case
 import org.instedd.act.models.DataStore
@@ -18,6 +19,8 @@ class CaseListController {
 	@Inject SynchronizationProcess daemon
 
 	@Inject NewCaseController newCaseController
+	
+	@Inject Settings settings
 	
 	CaseList caseList = new CaseList(this)
 	NewCaseForm newCaseForm

@@ -3,6 +3,7 @@ package org.instedd.act.controllers
 import javax.swing.SwingWorker
 
 import org.instedd.act.AppUI
+import org.instedd.act.Settings
 import org.instedd.act.models.DataStore
 import org.instedd.act.models.Device
 import org.instedd.act.models.Location
@@ -19,6 +20,7 @@ class RegistrationController {
 
 	@Inject AppUI app
 	@Inject DataStore dataStore
+	@Inject Settings settings
 	
 	def locationIndex
 	
