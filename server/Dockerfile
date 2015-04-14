@@ -44,9 +44,6 @@ RUN mkdir /etc/service/act-file-monitor /etc/service/act-keys-import
 ADD deploy/act-file-monitor.sh /etc/service/act-file-monitor/run
 ADD deploy/act-keys-import.sh  /etc/service/act-keys-import/run
 
-# ADD public/nndd/ /home/app/webapp/public/nndd/
-RUN echo "Just invalidating the cache"
-
 RUN git clone https://github.com/instedd/notifiable-diseases /tmp/notifiable-diseases
 WORKDIR /tmp/notifiable-diseases
 RUN gem install compass
