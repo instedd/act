@@ -9,6 +9,7 @@
     img {
       width: 100px;
     }
+
   }
   .navbar-nav > li > a {
     color: #2c3e50;
@@ -16,6 +17,13 @@
   .navbar-nav > .active > a {
     color: #00AEEF;
   }
+
+  .app_version {
+      color: #bbbbbb;
+      vertical-align: bottom;
+      padding: 15px 5px 15px 5px;
+      float: left;
+    }
 }
 
 .btn-primary {

@@ -8,3 +8,6 @@ config/environments/*.local.yml
 
 etc/
 data/
+
+Dockerfile
+.dockerignore

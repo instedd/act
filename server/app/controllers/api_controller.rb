@@ -59,16 +59,33 @@ class ApiController < ApplicationController
       return
     end
 
+    # assume the call is completed if no status reported
+    # as Verboice isn't reporting the status at the moment
+    call_status = params.delete(:call_status) || "completed"
+
+    unless call_status == "completed"
+      CallRecord.failed! _case: _case, reported_status: call_status
+      render nothing: true, status: 200
+      return
+    end
+
     symptoms = {}
     known_symptoms = []
+
+    patient_sick = false
+    family_sick = false
+    community_sick = false
 
     # As Verboice/Hub are reporting random answers for unasked questions, we only
     # pay attention to the answers we expect the user to have been asked
     if (params[:sick] == AFFIRMATIVE_ANSWER_CODE)
+      patient_sick = true
       known_symptoms = ["diarreah_individual", "headache_individual", "hemorrhage_individual", "nausea_vomiting_individual", "rash_individual", "sorethroat_individual", "weakness_pain_individual", "individual_fever"]
     elsif (params[:family_sick] == AFFIRMATIVE_ANSWER_CODE)
+      family_sick = true
       known_symptoms = ["diarreah_family", "fever_family", "headache_family", "hemorrhage_family", "nausea_vomiting_family", "rash_family", "sorethroat_family", "weakness_pain_family"]
     elsif (params[:community_sick] == AFFIRMATIVE_ANSWER_CODE)
+      community_sick = true
       known_symptoms = ["diarreah_community", "fever_community", "headache_community", "hemorrhage_community", "nausea_vomiting_community", "rash_community", "sorethroat_community", "weakness_pain_community"]
     end
     
@@ -76,7 +93,7 @@ class ApiController < ApplicationController
       symptoms[key] = value == AFFIRMATIVE_ANSWER_CODE if known_symptoms.include? key and !value.blank?
     }
 
-    CallRecord.create! _case: _case, sick: params[:sick] == AFFIRMATIVE_ANSWER_CODE, family_sick: params[:family_sick] == AFFIRMATIVE_ANSWER_CODE, community_sick: params[:community_sick] == AFFIRMATIVE_ANSWER_CODE, symptoms: symptoms
+    CallRecord.create! _case: _case, sick: patient_sick, family_sick: family_sick, community_sick: community_sick, symptoms: symptoms
 
     _case.reload
 

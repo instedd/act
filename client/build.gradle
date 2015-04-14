@@ -37,11 +37,33 @@ dependencies {
 	compile 'com.fasterxml.jackson.core:jackson-core:2.4.4'
 }
 
+String getProjectVersion() {
+    def currentTag = "git describe --all --exact-match".execute().text.trim()
+    if(currentTag.startsWith("tags/")) {
+        currentTag -= "tags/"
+    } else if (currentTag.startsWith("heads/")) {
+        currentTag = null;
+    }
+    def commitHash = "git rev-parse --verify --short HEAD".execute().text.trim()
+
+    println "Tag ${currentTag}\nCommit ${commitHash}"
+
+    return currentTag ?: "dev-${commitHash}"
+}
+
 mainClassName = "org.instedd.act.App"
-def version = "1.2"
+def version = getProjectVersion()
 println "Version ${version}"
 
-
+jar {
+    manifest {
+        attributes(
+            "Implementation-Title": "org.instedd.act",
+            "Implementation-Version": version,
+            "Implementation-Vendor": "InSTEDD"
+        )
+    }
+}
 
 task makeBuildDir {
     description 'Makes build directory ./build'

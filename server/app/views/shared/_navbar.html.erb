@@ -23,6 +23,7 @@
         <%= navigation_item 'API Keys',:api_keys, api_keys_path,                    if: (current_user.can? :read, ApiKey) %>
       </ul>
       <ul class="nav navbar-nav navbar-right user">
+        <span class="app_version"><%= Rails.application.config.act_version %></span>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=<%= current_user.email %>><%= current_user.email %> <b class="caret"></b></a>
           <ul class="dropdown-menu">

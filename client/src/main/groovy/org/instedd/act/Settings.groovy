@@ -82,4 +82,8 @@ class Settings {
 		signature != null && !signature.isEmpty() 
 	}
 	
+	public String appVersion() {
+		this.getClass().getPackage().getImplementationVersion() ?: "development version";
+	}
+	
 }

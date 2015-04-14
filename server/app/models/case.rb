@@ -61,7 +61,8 @@ class Case < ActiveRecord::Base
   end
 
   def calls_report
-    report = call_records.inject({sick: nil, family_sick: nil, community_sick: nil, symptoms: []}) { | result, call |
+    successful_calls = call_records.select &:successful
+    report = successful_calls.inject({sick: nil, family_sick: nil, community_sick: nil, symptoms: []}) { | result, call |
       {
         sick: result[:sick] | call.sick,
         family_sick: result[:family_sick] | call.family_sick,
@@ -69,7 +70,7 @@ class Case < ActiveRecord::Base
         symptoms: result[:symptoms] | call.symptoms.select { |key, value| value }.keys
       }
     }
-    if call_records.empty? then
+    if successful_calls.empty? then
       report[:who_is_sick] = "Not contacted yet"
     else
       report[:who_is_sick] = []

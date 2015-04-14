@@ -1,8 +1,13 @@
 package org.instedd.act.ui
 
+import java.awt.BorderLayout
+import java.awt.Color
+import java.awt.Component;
 import java.awt.Dimension
+import java.awt.FlowLayout
 import java.awt.GridBagConstraints as GBC
 import java.awt.GridBagLayout
+import java.awt.GridLayout
 
 import javax.swing.BorderFactory
 import javax.swing.BoxLayout
@@ -104,11 +109,26 @@ class RegistrationForm extends JFrame {
 		
 		//----- submit
 		c = new GBC()
+		c.fill = GBC.HORIZONTAL
+		c.ipadx = 5
 		c.gridy = 4
 		c.anchor = GBC.PAGE_END
+		
+		def bottomBar = new JPanel()
+		bottomBar.setLayout(new GridLayout(1, 3))
+		
+		bottomBar.add new JLabel("")
+		
 		def submitButton = new JButton("<html><b>Register</b></html>")
 		submitButton.addActionListener { controller.submit() }
-		form.add submitButton, c
+		bottomBar.add submitButton
+		
+		def versionLabel = new JLabel(controller.settings.appVersion())
+		versionLabel.setForeground(Color.GRAY)
+		versionLabel.setHorizontalAlignment(SwingConstants.RIGHT)
+		bottomBar.add versionLabel
+		
+		form.add bottomBar, c
 		
 		this.getRootPane().setDefaultButton(submitButton)
 		

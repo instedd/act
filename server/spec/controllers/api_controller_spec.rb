@@ -208,6 +208,73 @@ describe ApiController, type: :controller do
         expect(_case.calls_report[:symptoms]).not_to include("rash_community")
       end
 
+      it "records a call as failed with error" do
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'failed (busy)'
+        }.not_to change(Notification, :count)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.call_records.count).to eq(1)
+        expect(_case.calls_report[:sick]).to be_nil
+        expect(_case.calls_report[:family_sick]).to be_nil
+        expect(_case.calls_report[:community_sick]).to be_nil
+        expect(_case.calls_report[:anyone_sick]).to be_nil
+        expect(_case.calls_report[:who_is_sick]).to eq('Not contacted yet')
+        expect(_case.calls_report[:symptoms]).to be_empty
+      end
+
+      it "records a successful call" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect(_case.call_records.count).to eq(1)
+        expect(_case.calls_report[:sick]).to be_truthy
+        expect(_case.calls_report[:family_sick]).to be_falsy
+        expect(_case.calls_report[:community_sick]).to be_falsy
+        expect(_case.calls_report[:anyone_sick]).to be_truthy
+        expect(_case.calls_report[:who_is_sick]).to eq('Patient sick')
+        expect(_case.calls_report[:symptoms].count).to eq(1)
+        expect(_case.calls_report[:symptoms]).to include('rash_individual')
+      end
+
+      it "takes successful calls into account for a call report" do
+        expect(Office).to receive(:sync_sick_status).twice
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_family: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+
+          _case.reload
+        }.to change(_case, :calls_report)
+      end
+
+      it "doesn't take into account failed calls for a call report" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'completed'
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find_by_guid("CASE1")
+
+        expect {
+          xhr :put, :update_case, id: case_id, sick: ApiController::NEGATIVE_ANSWER_CODE, family_sick: ApiController::AFFIRMATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_family: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'failed (busy)'
+
+          _case.reload
+        }.not_to change(_case, :calls_report)
+      end
+
     end
 
 
@@ -269,6 +336,198 @@ describe ApiController, type: :controller do
       end
 
     end
+
+  end
+
+  describe "handling Hub's call notifications" do
+    # cases taken from real Hub invocations
+
+    before(:each) { office.cases.create! sample_params({guid: "CASE1"}) }
+    before(:each) { add_access_token_header }
+    let(:case_id)  { office.cases.first.id }
+
+    it "records a not sick patient" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"1", "diarreah_community"=>"2", "diarreah_family"=>"1", "diarreah_individual"=>"1", "family_sick"=>"1", "fever_community"=>"2", "fever_family"=>"1", "headache_community"=>"1", "headache_family"=>"1", "headache_individual"=>"1", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"1", "individual_fever"=>"1", "nausea_vomiting_community"=>"1", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"1", "rash_community"=>"1", "rash_family"=>"1", "rash_individual"=>"1", "sick"=>"1", "sorethroat_community"=>"3", "sorethroat_family"=>"2", "sorethroat_individual"=>"1", "weakness_pain_community"=>"1", "weakness_pain_family"=>"2", "weakness_pain_individual"=>"1", "id"=>case_id}
+
+        }.not_to change(Notification, :count)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(false)
+        expect(_case.calls_report[:community_sick]).to be(false)
+
+        expect(_case.calls_report[:symptoms]).to be_empty
+      end
+
+      it "records a sick patient with all symptoms" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"1", "diarreah_community"=>"2", "diarreah_family"=>"1", "diarreah_individual"=>"2", "family_sick"=>"1", "fever_community"=>"2", "fever_family"=>"1", "headache_community"=>"1", "headache_family"=>"1", "headache_individual"=>"2", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"2", "individual_fever"=>"2", "nausea_vomiting_community"=>"1", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"2", "rash_community"=>"1", "rash_family"=>"1", "rash_individual"=>"2", "sick"=>"2", "sorethroat_community"=>"3", "sorethroat_family"=>"2", "sorethroat_individual"=>"2", "weakness_pain_community"=>"1", "weakness_pain_family"=>"2", "weakness_pain_individual"=>"2", "id"=>case_id}
+
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(true)
+        expect(_case.calls_report[:family_sick]).to be(false)
+        expect(_case.calls_report[:community_sick]).to be(false)
+
+        expect(_case.calls_report[:symptoms]).to include("diarreah_individual")
+        expect(_case.calls_report[:symptoms]).to include("headache_individual")
+        expect(_case.calls_report[:symptoms]).to include("hemorrhage_individual")
+        expect(_case.calls_report[:symptoms]).to include("nausea_vomiting_individual")
+        expect(_case.calls_report[:symptoms]).to include("rash_individual")
+        expect(_case.calls_report[:symptoms]).to include("sorethroat_individual")
+        expect(_case.calls_report[:symptoms]).to include("weakness_pain_individual")
+        expect(_case.calls_report[:symptoms]).to include("individual_fever")
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_family")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_family")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_family")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_family")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_family")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_family")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_family")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_family")
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_community")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_community")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_community")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_community")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_community")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_community")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_community")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_community")
+      end
+
+      it "records a patient with a sick family member" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"1", "diarreah_community"=>"2", "diarreah_family"=>"2", "diarreah_individual"=>"2", "family_sick"=>"2", "fever_community"=>"2", "fever_family"=>"1", "headache_community"=>"1", "headache_family"=>"1", "headache_individual"=>"2", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"2", "individual_fever"=>"2", "nausea_vomiting_community"=>"1", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"2", "rash_community"=>"1", "rash_family"=>"3", "rash_individual"=>"2", "sick"=>"1", "sorethroat_community"=>"3", "sorethroat_family"=>"2", "sorethroat_individual"=>"2", "weakness_pain_community"=>"1", "weakness_pain_family"=>"1", "weakness_pain_individual"=>"2", "id"=>case_id}
+
+        }.to_not change(Notification, :count)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(true)
+        expect(_case.calls_report[:community_sick]).to be(false)
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("individual_fever")
+
+        expect(_case.calls_report[:symptoms]).to include("diarreah_family")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_family")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_family")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_family")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_family")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_family")
+        expect(_case.calls_report[:symptoms]).to include("sorethroat_family")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_family")
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_community")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_community")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_community")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_community")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_community")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_community")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_community")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_community")
+      end
+
+      it "fails when not sure if there's a sick family member" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"1", "diarreah_community"=>"2", "diarreah_family"=>"2", "diarreah_individual"=>"2", "family_sick"=>"undefined", "fever_community"=>"2", "fever_family"=>"1", "headache_community"=>"1", "headache_family"=>"1", "headache_individual"=>"2", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"2", "individual_fever"=>"2", "nausea_vomiting_community"=>"1", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"2", "rash_community"=>"1", "rash_family"=>"3", "rash_individual"=>"2", "sick"=>"1", "sorethroat_community"=>"3", "sorethroat_family"=>"2", "sorethroat_individual"=>"2", "weakness_pain_community"=>"1", "weakness_pain_family"=>"1", "weakness_pain_individual"=>"2", "id"=>case_id}
+
+        }.to_not change(Notification, :count)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(false)
+        expect(_case.calls_report[:community_sick]).to be(false)
+
+        expect(_case.calls_report[:symptoms]).to be_empty
+      end
+
+      it "records a community member is sick with unknown symptoms" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"2", "diarreah_community"=>"1", "diarreah_family"=>"2", "diarreah_individual"=>"2", "family_sick"=>"1", "fever_community"=>"3", "fever_family"=>"1", "headache_community"=>"3", "headache_family"=>"1", "headache_individual"=>"2", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"2", "individual_fever"=>"2", "nausea_vomiting_community"=>"2", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"2", "rash_community"=>"1", "rash_family"=>"3", "rash_individual"=>"2", "sick"=>"1", "sorethroat_community"=>"1", "sorethroat_family"=>"2", "sorethroat_individual"=>"2", "weakness_pain_community"=>"2", "weakness_pain_family"=>"1", "weakness_pain_individual"=>"2", "id"=>case_id}
+
+        }.to_not change(Notification, :count)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(false)
+        expect(_case.calls_report[:family_sick]).to be(false)
+        expect(_case.calls_report[:community_sick]).to be(true)
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_individual")
+        expect(_case.calls_report[:symptoms]).to_not include("individual_fever")
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_family")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_family")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_family")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_family")
+        expect(_case.calls_report[:symptoms]).to_not include("nausea_vomiting_family")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_family")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_family")
+        expect(_case.calls_report[:symptoms]).to_not include("weakness_pain_family")
+
+        expect(_case.calls_report[:symptoms]).to_not include("diarreah_community")
+        expect(_case.calls_report[:symptoms]).to_not include("fever_community")
+        expect(_case.calls_report[:symptoms]).to_not include("headache_community")
+        expect(_case.calls_report[:symptoms]).to_not include("hemorrhage_community")
+        expect(_case.calls_report[:symptoms]).to include("nausea_vomiting_community")
+        expect(_case.calls_report[:symptoms]).to_not include("rash_community")
+        expect(_case.calls_report[:symptoms]).to_not include("sorethroat_community")
+        expect(_case.calls_report[:symptoms]).to include("weakness_pain_community")
+      end
+
+      it "records a sick patient with no symptoms" do
+        expect(Office).to receive(:sync_sick_status)
+
+        expect {
+
+          xhr :put, :update_case, {"community_sick"=>"2", "diarreah_community"=>"1", "diarreah_family"=>"2", "diarreah_individual"=>"1", "family_sick"=>"1", "fever_community"=>"3", "fever_family"=>"1", "headache_community"=>"3", "headache_family"=>"1", "headache_individual"=>"1", "hemorrhage_community"=>"1", "hemorrhage_family"=>"1", "hemorrhage_individual"=>"1", "individual_fever"=>"1", "nausea_vomiting_community"=>"2", "nausea_vomiting_family"=>"1", "nausea_vomiting_individual"=>"1", "rash_community"=>"1", "rash_family"=>"3", "rash_individual"=>"1", "sick"=>"2", "sorethroat_community"=>"1", "sorethroat_family"=>"2", "sorethroat_individual"=>"1", "weakness_pain_community"=>"2", "weakness_pain_family"=>"1", "weakness_pain_individual"=>"1", "id"=>case_id}
+
+        }.to change(Notification, :count).by(1)
+
+        _case = Case.find(case_id)
+
+        expect(_case.calls_report[:sick]).to be(true)
+        expect(_case.calls_report[:family_sick]).to be(false)
+        expect(_case.calls_report[:community_sick]).to be(false)
+
+        expect(_case.calls_report[:symptoms]).to be_empty
+      end
 
   end
 
