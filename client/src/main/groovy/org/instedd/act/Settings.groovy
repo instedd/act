@@ -3,11 +3,14 @@ package org.instedd.act
 import java.io.InputStream
 import java.util.Properties
 
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
 import com.google.common.base.Optional;
 import com.google.common.base.Strings
 
 class Settings {
-
+	Logger logger = LoggerFactory.getLogger(Settings.class)
 	Properties props;
 	String dataDir
 	
@@ -38,16 +41,22 @@ class Settings {
 	
 	public String dataDir() {
 		if(!dataDir) {
-			dataDir = this.get('local.dir', './')
-			if(dataDir.contains("~")) {
-				String userHome = System.getProperty("user.home")
-				if(userHome.endsWith("/")) {
-					userHome = userHome[0..-2] // remove last character
+			dataDir = System.getProperty('act.datadir')
+			if(dataDir) {
+				logger.info "Setting data dir ${dataDir} from system property"
+			} else {
+				dataDir = this.get('local.dir', './')
+				if(dataDir.contains("~")) {
+					String userHome = System.getProperty("user.home")
+					if(userHome.endsWith("/")) {
+						userHome = userHome[0..-2] // remove last character
+					}
+					dataDir = dataDir.replace("~", userHome)
 				}
-				dataDir = dataDir.replace("~", userHome)
-			}
-			if(!dataDir.endsWith("/")) {
-				dataDir += "/"
+				if(!dataDir.endsWith("/")) {
+					dataDir += "/"
+				}
+				logger.info "Setting data dir ${dataDir} from settings file"
 			}
 		}
 		dataDir

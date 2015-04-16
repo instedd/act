@@ -31,6 +31,8 @@ ShowUninstDetails "nevershow"
   InstallDir "$PROGRAMFILES\ACT\Client"
 !endif
 
+!define ACT_APP_DATA "$PROFILE\.ACT\"
+
 !define START_MENU_GROUP "ACT Client"
 
 ;Get installation folder from registry if available
@@ -87,6 +89,13 @@ Section "Install" Install
   File "bin\RCEDIT.exe"
   File /oname=ACT-client.exe "bin\WinRun4J.exe"
   File "bin\act-client.ini"
+
+  ;Append datadir to executable's settings
+  FileOpen $4 "act-client.ini" a
+  FileSeek $4 0 END
+  FileWrite $4 "$\nvmarg.1=-Dact.datadir=${ACT_APP_DATA}$\n"
+  FileClose $4
+
   File "bin\act.ico"
   SetOutPath "$INSTDIR\lib"
   File "lib\*.jar"
@@ -171,4 +180,10 @@ Section "un.Remove ACT Client"
   DeleteRegKey /ifempty HKLM "${ACT_REGKEY}"
 
   RMDir /r "$INSTDIR"
+SectionEnd
+
+Section /o "un.Remove ACT Client's data"
+  DetailPrint "Removing all ACT Client's data"
+  RMDir /REBOOTOK /r "${ACT_APP_DATA}"
+  RMDir /REBOOTOK "${ACT_APP_DATA}"
 SectionEnd
