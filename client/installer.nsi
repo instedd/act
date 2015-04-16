@@ -14,7 +14,7 @@ CRCCheck On
 ;General
 
 Name "${MUI_PRODUCT}"
-BrandingText "${MUI_PRODUCT} v${VERSION}"
+BrandingText "${MUI_PRODUCT} ${VERSION}"
 
 OutFile "ACT-${PLATFORM}-${VERSION}.exe"
 
