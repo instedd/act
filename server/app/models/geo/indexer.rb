@@ -17,9 +17,12 @@ module Geo
       index_all
     end
 
+    def index_exist?
+      client.indices.exists(index: index_name)
+    end
 
     def delete_index
-      if client.indices.exists(index: index_name)
+      if self.index_exist?
         client.indices.delete index: index_name
         Rails.logger.info "Deleted locations index #{index_name}"
       else
