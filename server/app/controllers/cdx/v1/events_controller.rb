@@ -3,6 +3,8 @@ class Cdx::V1::EventsController < AuthenticatedController
   skip_before_filter :verify_authenticity_token
   before_filter :allow_cross_domain_access if Rails.env.development?
 
+  @@locations = File.read(Rails.public_path.join("cdx-locations-packed.json"))
+  
   def index
     params.delete :event # FIXME: this delete shouldn't be necessary
     params['institution'] = current_user.organization_id unless current_user.admin?
@@ -209,9 +211,7 @@ class Cdx::V1::EventsController < AuthenticatedController
 }
     JSON
 
-    locations = File.read(Rails.public_path.join("cdx-locations-packed.json"))
-
-    render text: "#{schema_start}#{locations}#{schema_end}"
+    render text: "#{schema_start}#{@@locations}#{schema_end}"
   end
 
   private
