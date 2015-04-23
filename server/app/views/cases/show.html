@@ -24,6 +24,7 @@
       <table class="table table-hover act-table">
         <thead>
           <th>Call time</th>
+          <th>Call status</th>
           <th>Anyone sick?</th>
           <th>Reported symptoms</th>
         </thead>
@@ -31,8 +32,9 @@
           <% for @call in @case.call_records.reverse %>
           <tr>
             <td><span title="<%= time_ago_in_words @call.created_at %> ago"><%= @call.created_at %></span></td>
-            <td><%= @call.who_is_sick %></td>
-            <td><%= @call.formatted_symptoms %></td>
+            <td><%= @call.successful ? "Successful" : "Failed: #{@call.reported_status}" %></td>
+            <td><%= @call.who_is_sick if @call.successful %></td>
+            <td><%= @call.formatted_symptoms if @call.successful %></td>
           </tr>
           <% end %>
         </tbody>
