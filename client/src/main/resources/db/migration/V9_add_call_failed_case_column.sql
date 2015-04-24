@@ -1,0 +1,1 @@
+ALTER TABLE cases ADD call_failed TINYINT DEFAULT 0;

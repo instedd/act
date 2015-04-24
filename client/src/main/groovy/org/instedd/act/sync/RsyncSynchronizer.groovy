@@ -104,8 +104,14 @@ class RsyncSynchronizer implements DocumentSynchronizer {
 				if(matcher.matches()) {
 					String caseGuid = matcher[0][1]
 					File downloadedFile = this.downloadedFile(filename)
-					dataStore.updateSickCase(caseGuid, new JsonSlurper().parseText(downloadedFile.text).sick)
-					eventBus.post([guid: caseGuid] as CaseUpdatedEvent)
+					def documentContent = new JsonSlurper().parseText(downloadedFile.text)
+					if (documentContent.containsKey("sick")) {
+						dataStore.updateSickCase(caseGuid, documentContent.sick)
+						eventBus.post([guid: caseGuid] as CaseUpdatedEvent)
+					} else if (documentContent.containsKey("call_failed")) {
+						dataStore.updateCallFailed(caseGuid, documentContent.call_failed)
+						eventBus.post([guid: caseGuid] as CaseUpdatedEvent)
+					}
 					downloadedFile.delete()
 				}
 			}

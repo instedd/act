@@ -78,7 +78,12 @@ class SqliteDataStore implements DataStore {
 
 	@Override
 	public void updateSickCase(String guid, Boolean isSick) {
-		sql.execute("update cases set sick = ${isSick}, updated = ${true} where guid = ${guid}")
+		sql.execute("update cases set sick = ${isSick}, updated = ${true}, call_failed = ${false} where guid = ${guid}")
+	}
+	
+	@Override
+	public void updateCallFailed(String guid, String failReason) {
+		sql.execute("update cases set call_failed = ${true}, updated = ${true} where guid = ${guid}")
 	}
 
 	@Override

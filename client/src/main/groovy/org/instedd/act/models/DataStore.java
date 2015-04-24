@@ -28,6 +28,8 @@ public interface DataStore {
 	
 	void updateSickCase(String guid, Boolean isSick);
 	
+	void updateCallFailed(String guid, String failReason);
+	
 	void markCaseAsRead(Case aCase);
 	
 	String[] availableDialects();
