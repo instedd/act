@@ -16,11 +16,16 @@ class Case {
 	Boolean sick
 	Boolean synced
 	Boolean updated
+	Boolean callFailed
 	Date reportTime = new Date()
 
 	String followUpLabel() {
 		if (sick == null) {
-			"-"
+			if (callFailed) {
+				"Call failed"
+			} else {
+				"-"
+			}
 		} else if (sick) {
 			"Reported feeling sick"
 		} else {
