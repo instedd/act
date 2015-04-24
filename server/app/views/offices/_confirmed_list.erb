@@ -18,6 +18,7 @@
         <table class="table table-hover act-table">
           <caption>The following offices are already approved and can upload cases.</caption>
           <thead>
+            <th>GUID</th>
             <th>Organization</th>
             <th>Supervisor name</th>
             <th>Supervisor phone number</th>
@@ -26,7 +27,7 @@
           <tbody>
           <% for @office in @offices %>
           <tr>
-
+            <td><span title="<%= @office.guid %>"><%= @office.guid[0..7] %></span></td>
             <td><%= @office.organization.name %></td>
             <td><%= @office.supervisor_name %></td>
             <td><%= @office.supervisor_phone_number %></td>
