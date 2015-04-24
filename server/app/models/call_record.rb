@@ -3,7 +3,7 @@ class CallRecord < ActiveRecord::Base
 
   serialize :symptoms, JSON
 
-  before_create :notify_if_sick
+  before_create :notify_if_sick, :sync_call_failed
   after_create :update_case_index
 
   def self.known_symptoms
@@ -84,6 +84,10 @@ class CallRecord < ActiveRecord::Base
 
   def notify_if_sick
     Notification.case_confirmed_sick! _case if successful and sick? and !_case.sick?
+  end
+
+  def sync_call_failed
+    Office.sync_call_failed(_case.office_guid, _case.guid, reported_status) if !successful and _case.successful_calls.empty?
   end
 
   def update_case_index

@@ -60,8 +60,12 @@ class Case < ActiveRecord::Base
                  report_time: json["report_time"]
   end
 
+  def successful_calls
+    call_records.select &:successful
+  end
+
   def calls_report
-    successful_calls = call_records.select &:successful
+    successful_calls = self.successful_calls
     report = successful_calls.inject({sick: nil, family_sick: nil, community_sick: nil, symptoms: []}) { | result, call |
       {
         sick: result[:sick] | call.sick,

@@ -209,6 +209,7 @@ describe ApiController, type: :controller do
       end
 
       it "records a call as failed with error" do
+        expect(Office).to receive(:sync_call_failed)
         expect {
           xhr :put, :update_case, id: case_id, sick: ApiController::AFFIRMATIVE_ANSWER_CODE, family_sick: ApiController::NEGATIVE_ANSWER_CODE, fever_family: ApiController::NEGATIVE_ANSWER_CODE, rash_individual: ApiController::AFFIRMATIVE_ANSWER_CODE, call_status: 'failed (busy)'
         }.not_to change(Notification, :count)

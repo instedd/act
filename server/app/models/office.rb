@@ -28,15 +28,21 @@ class Office < ActiveRecord::Base
     end
   end
 
-  
-  def self.sync_sick_status(office_guid, case_guid, sick_condition)
+  def self.sync_case_update(office_guid, case_guid, document_content)
     document_name = "case-#{case_guid}.json"
-    document_content = {sick: sick_condition}
 
     outbox_path = outbox(office_guid)
     file = File.open(File.join(outbox_path, document_name), "w")
     file.puts document_content.to_json
     file.close
+  end
+
+  def self.sync_call_failed(office_guid, case_guid, fail_reason)
+    self.sync_case_update(office_guid, case_guid, {call_failed: fail_reason})
+  end
+
+  def self.sync_sick_status(office_guid, case_guid, sick_condition)
+    self.sync_case_update(office_guid, case_guid, {sick: sick_condition})
   end
 
   def self.init_sync_path(office_guid)
