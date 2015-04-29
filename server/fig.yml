@@ -24,7 +24,7 @@ elasticnndd:
     - elasticdata
 
 act:
-  image:       instedd/act
+  image:       "instedd/act:production"
 
   volumes_from:
     - sshdata
